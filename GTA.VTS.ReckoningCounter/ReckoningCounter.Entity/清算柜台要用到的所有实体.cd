@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.SpotTradeEntity">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAABAAIAIARBAAAICEQAIAEAIwEgAgAAAQAIAAAEAAA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\SpotTradeEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.SpotHoldEntity">
+    <Position X="0.5" Y="4" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAABUAAAICAUEAAEBAwIAAAACBAAAIAAgAAg=</HashCode>
+      <FileName>AccountManagementAndFindEntity\SpotHoldEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.SpotEntrustEntity">
+    <Position X="5.75" Y="4.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAlAIIAIgBBEAAIGg4CYAEAIwAAgAAAAQAIAAAEAAg=</HashCode>
+      <FileName>AccountManagementAndFindEntity\SpotEntrustEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.SpotCapitalEntity">
+    <Position X="3" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EMYAAEALBQyABAAAEkCACAAgAAABIQEAAAAgBAgAAAA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\SpotCapitalEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.FuturesTradeEntity">
+    <Position X="5.75" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAABAIIAIARJGAAIAAAAIEAA4gAAAAAAAUAIQAAmCAA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\FuturesTradeEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.FuturesHoldEntity">
+    <Position X="3" Y="4.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAgAECAAIAwBEAUAJwgAIgABIEEIAQAAiYQA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\FuturesHoldEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.FuturesEntrustEntity">
+    <Position X="0.5" Y="7" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAlAIIAIgBJGAAIEgoCYEAAIgAAgAAAAUAIQAAmCAg=</HashCode>
+      <FileName>AccountManagementAndFindEntity\FuturesEntrustEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.FuturesCapitalEntity">
+    <Position X="3.25" Y="8" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EMIAAEALBSGABAAAEECACAAwAAABIQEAEACiBAgAAAA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\FuturesCapitalEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.BankCapitalEntity">
+    <Position X="5.75" Y="8.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAARCIAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\BankCapitalEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.CapitalAccountTransferFlowEntity">
+    <Position X="0.5" Y="11.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgAAAAEAAIAACBACIAAAAAAAQACAAAAAQAAAAgAAACA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\CapitalAccountTransferFlowEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.SpotTradeFeeFlowEntity">
+    <Position X="6.25" Y="12.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAABAAAgAAQAAACIKEAAAAAAwAAAAgAAQAAAAQAAACA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\SpotTradeFeeFlowEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.FuturesTradeFeeFlowEntity">
+    <Position X="3.25" Y="11.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAABAAAgAAQACAAACEAAAEAAwAAAAgAAQEAAAAACACA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\FuturesTradeFeeFlowEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.SpotEntrustConditionFindEntity">
+    <Position X="0.5" Y="13.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAABQAAAIMAIAQAAAIgEggAAAQAAAIQAAACA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\SpotEntrustConditionFindEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.FuturesEntrustConditionFindEntity">
+    <Position X="3.25" Y="14.5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAEAAIAAABYAAAIEgIAQEIAIgEggAAAQAAAIAACCAA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\FuturesEntrustConditionFindEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.SpotTradeConditionFindEntity">
+    <Position X="5.75" Y="10" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAABQAAAIMAIAQAAAIgEggAAAQAAAIQAEACA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\SpotTradeConditionFindEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.FuturesTradeConditionFindEntity">
+    <Position X="6.25" Y="15" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAABYAAAIAAAAAEIAIgEgAAAAQAAAIAAGCAA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\FuturesTradeConditionFindEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.FreeTransferEntity">
+    <Position X="6.25" Y="17.75" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgAgAEBAAAAADAACAAAABAQAAADAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\FreeTransferEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.AddCapitalEntity">
+    <Position X="3" Y="17.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAkAAAAAAAADAAAAoAAEAAAAAAAAAAAACAAEAAAAAA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\AddCapitalEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.FindAccountEntity">
+    <Position X="3" Y="19.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIIAAAAgBAAAAAAAgAAgAAAIACAAAgAAAAAIAAAA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\FindAccountEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.AccountFindResultEntity">
+    <Position X="5.5" Y="19.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAkABAAAAAABAAAAgAAAAAAAEAAAAAAAAQBAAAAAAA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\AccountFindResultEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.AssetSummaryEntity">
+    <Position X="3" Y="21.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAABAQAAAQAAAAAAAAIAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\AssetSummaryEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.AdministratorFindEntity">
+    <Position X="3.25" Y="23.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAQAAAAAABAAAQAAAAAAAAAIAAAAAAAAgCACAAAA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\AdministratorFindEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.Entity.AccountManagementAndFindEntity.AccountEntity">
+    <Position X="5.5" Y="21.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAMAAAAABRUAAAQAgAAACAAIAACAAAAAAAIAEAFA=</HashCode>
+      <FileName>AccountManagementAndFindEntity\AccountEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ReckoningCounter.Entity.SpotEntrustType">
+    <Position X="0.5" Y="16.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReckoningCounterEnum\SpotEntrustType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReckoningCounter.Entity.FuturesEntrustType">
+    <Position X="0.5" Y="18" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAAACAAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReckoningCounterEnum\FuturesEntrustType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReckoningCounter.Entity.SpotTradeType">
+    <Position X="0.5" Y="23.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAABAAAQAAgAAAAAAAAAAA=</HashCode>
+      <FileName>ReckoningCounterEnum\SpotTradeType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReckoningCounter.Entity.FuturesTradeType">
+    <Position X="0.5" Y="19.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAACAAgAAAAAAAAgBAAAAAAAAAA=</HashCode>
+      <FileName>ReckoningCounterEnum\FuturesTradeType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReckoningCounter.Entity.TransferType">
+    <Position X="3.25" Y="25.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAEAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReckoningCounterEnum\TransferType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReckoningCounter.Entity.EntrustState">
+    <Position X="5.5" Y="24.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAACABAAQQAAAAAAIASAAAAAAAw=</HashCode>
+      <FileName>ReckoningCounterEnum\EntrustState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReckoningCounter.Entity.WithdrawnLogoType">
+    <Position X="0.5" Y="21.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReckoningCounterEnum\WithdrawnLogoType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReckoningCounter.Entity.OutMessage">
+    <Position X="0.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAEAAAAAAAgAA=</HashCode>
+      <FileName>ReckoningCounterEnum\OutMessage.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

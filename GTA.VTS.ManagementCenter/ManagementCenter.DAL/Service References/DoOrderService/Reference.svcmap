@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6f1c7230-2961-4da2-a652-775214ea289c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ArrayList" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:9288/DoOrderService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="c5a2552b-c9c6-49da-92ef-18387af9f456" SourceId="1" SourceUrl="net.tcp://localhost:9288/DoOrderService/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="04d025cf-d3d8-4369-bed9-6d252c911a33" SourceId="1" SourceUrl="net.tcp://localhost:9288/DoOrderService/mex" />
+    <MetadataFile FileName="service4.xsd" MetadataType="Schema" ID="6be1d24a-c65f-47d4-8989-49c5792e7143" SourceId="1" SourceUrl="net.tcp://localhost:9288/DoOrderService/mex" />
+    <MetadataFile FileName="MatchCenter.Entity.xsd" MetadataType="Schema" ID="70207486-0b7c-454c-8ff8-5d774cd8205f" SourceId="1" SourceUrl="net.tcp://localhost:9288/DoOrderService/mex" />
+    <MetadataFile FileName="GTA.VTS.Common.CommonObject2.xsd" MetadataType="Schema" ID="1d29b6d5-b311-400b-a6c9-1344f9e5c4fb" SourceId="1" SourceUrl="net.tcp://localhost:9288/DoOrderService/mex" />
+    <MetadataFile FileName="MatchCenter.Entity.HK.xsd" MetadataType="Schema" ID="4fd7ca2e-8f47-451c-a4cc-f482207891c8" SourceId="1" SourceUrl="net.tcp://localhost:9288/DoOrderService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

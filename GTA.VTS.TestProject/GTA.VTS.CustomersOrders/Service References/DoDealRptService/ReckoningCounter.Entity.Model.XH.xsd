@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.XH" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.XH" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfStockPushDealEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StockPushDealEntity" nillable="true" type="tns:StockPushDealEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStockPushDealEntity" nillable="true" type="tns:ArrayOfStockPushDealEntity" />
+  <xs:complexType name="StockPushDealEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClearingFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Commission" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MonitoringFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StampTax" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="TradeNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TradePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeProceduresFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TradeTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="TradingSystemUseFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransferAccountFee" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockPushDealEntity" nillable="true" type="tns:StockPushDealEntity" />
+</xs:schema>

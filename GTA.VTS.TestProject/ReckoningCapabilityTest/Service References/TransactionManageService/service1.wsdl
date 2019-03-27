@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="TransactionManageService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ITransactionManage_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model.CommonClass" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model.UserManage" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITransactionManage_BatchAddTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:BatchAddTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_BatchAddTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BatchAddTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_BatchAddTransactionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:BatchAddTransactionList" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_BatchAddTransactionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BatchAddTransactionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_UpdateTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_UpdateTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_UpdateTransactionAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransactionAll" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_UpdateTransactionAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransactionAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_BatchDelectTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:BatchDelectTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_BatchDelectTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BatchDelectTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_TransactionConfirm_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionConfirm" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_TransactionConfirm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionConfirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_AddFund_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFund" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_AddFund_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFundResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_ClearTrialData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearTrialData" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_ClearTrialData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearTrialDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_PersonalizationCapital_InputMessage">
+    <wsdl:part name="parameters" element="tns:PersonalizationCapital" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_PersonalizationCapital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PersonalizationCapitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_AddTransactionFP_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTransactionFP" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_AddTransactionFP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTransactionFPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_AdminFindTraderCapitalAccountInfoByIDFP_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdminFindTraderCapitalAccountInfoByIDFP" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_AdminFindTraderCapitalAccountInfoByIDFP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdminFindTraderCapitalAccountInfoByIDFPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_ConvertFreeTransferEntityFP_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertFreeTransferEntityFP" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_ConvertFreeTransferEntityFP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertFreeTransferEntityFPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_AddFundFP_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFundFP" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_AddFundFP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFundFPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_CheckChannel_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckChannel" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionManage_CheckChannel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckChannelResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITransactionManage">
+    <wsdl:operation name="BatchAddTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/BatchAddTransaction" message="tns:ITransactionManage_BatchAddTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/BatchAddTransactionResponse" message="tns:ITransactionManage_BatchAddTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchAddTransactionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/BatchAddTransactionList" message="tns:ITransactionManage_BatchAddTransactionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/BatchAddTransactionListResponse" message="tns:ITransactionManage_BatchAddTransactionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/UpdateTransaction" message="tns:ITransactionManage_UpdateTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/UpdateTransactionResponse" message="tns:ITransactionManage_UpdateTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransactionAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/UpdateTransactionAll" message="tns:ITransactionManage_UpdateTransactionAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/UpdateTransactionAllResponse" message="tns:ITransactionManage_UpdateTransactionAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchDelectTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/BatchDelectTransaction" message="tns:ITransactionManage_BatchDelectTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/BatchDelectTransactionResponse" message="tns:ITransactionManage_BatchDelectTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransactionConfirm">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/TransactionConfirm" message="tns:ITransactionManage_TransactionConfirm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/TransactionConfirmResponse" message="tns:ITransactionManage_TransactionConfirm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFund">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/AddFund" message="tns:ITransactionManage_AddFund_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/AddFundResponse" message="tns:ITransactionManage_AddFund_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearTrialData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/ClearTrialData" message="tns:ITransactionManage_ClearTrialData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/ClearTrialDataResponse" message="tns:ITransactionManage_ClearTrialData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonalizationCapital">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/PersonalizationCapital" message="tns:ITransactionManage_PersonalizationCapital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/PersonalizationCapitalResponse" message="tns:ITransactionManage_PersonalizationCapital_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTransactionFP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/AddTransactionFP" message="tns:ITransactionManage_AddTransactionFP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/AddTransactionFPResponse" message="tns:ITransactionManage_AddTransactionFP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminFindTraderCapitalAccountInfoByIDFP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/AdminFindTraderCapitalAccountInfoByIDFP" message="tns:ITransactionManage_AdminFindTraderCapitalAccountInfoByIDFP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/AdminFindTraderCapitalAccountInfoByIDFPResponse" message="tns:ITransactionManage_AdminFindTraderCapitalAccountInfoByIDFP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertFreeTransferEntityFP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/ConvertFreeTransferEntityFP" message="tns:ITransactionManage_ConvertFreeTransferEntityFP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/ConvertFreeTransferEntityFPResponse" message="tns:ITransactionManage_ConvertFreeTransferEntityFP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFundFP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/AddFundFP" message="tns:ITransactionManage_AddFundFP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/AddFundFPResponse" message="tns:ITransactionManage_AddFundFP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckChannel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionManage/CheckChannel" message="tns:ITransactionManage_CheckChannel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionManage/CheckChannelResponse" message="tns:ITransactionManage_CheckChannel_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ITransactionManage" type="tns:ITransactionManage">
+    <wsp:PolicyReference URI="#NetTcpBinding_ITransactionManage_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="BatchAddTransaction">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/BatchAddTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchAddTransactionList">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/BatchAddTransactionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransaction">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/UpdateTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransactionAll">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/UpdateTransactionAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchDelectTransaction">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/BatchDelectTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransactionConfirm">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/TransactionConfirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFund">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/AddFund" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearTrialData">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/ClearTrialData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonalizationCapital">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/PersonalizationCapital" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTransactionFP">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/AddTransactionFP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminFindTraderCapitalAccountInfoByIDFP">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/AdminFindTraderCapitalAccountInfoByIDFP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertFreeTransferEntityFP">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/ConvertFreeTransferEntityFP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFundFP">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/AddFundFP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckChannel">
+      <soap12:operation soapAction="http://tempuri.org/ITransactionManage/CheckChannel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransactionManageService">
+    <wsdl:port name="NetTcpBinding_ITransactionManage" binding="tns:NetTcpBinding_ITransactionManage">
+      <soap12:address location="net.tcp://localhost:9381/WcfTransactionManageProvider" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:9381/WcfTransactionManageProvider</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

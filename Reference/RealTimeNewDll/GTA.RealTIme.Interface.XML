@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTA.RealTIme.Interface</name>
+    </assembly>
+    <members>
+        <member name="T:RealTime.Common.Interface.Users.ICheckUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RealTime.Common.Interface.Users.ICheckUser.Login(RealTime.Server.SModelData.Users.UserData)">
+            <summary>
+            登录
+            </summary>
+            <param name="_UserData">用户信息</param>
+            <returns>登录结果</returns>
+        </member>
+        <member name="M:RealTime.Common.Interface.Users.ICheckUser.Logout(RealTime.Server.SModelData.Users.UserData)">
+            <summary>
+            登出
+            </summary>
+            <param name="_UserData">用户信息</param>
+            <returns>登录结果</returns>
+        </member>
+        <member name="M:RealTime.Common.Interface.WebServiceData.IDataService.GetAllDataNo(System.String)">
+            <summary>
+            取得所有目前可以取得的資料項目代碼(參數1)
+            </summary>
+            <param name="Sep">分隔符號</param>
+            <returns>所有目前可以取得的資料項目代碼(參數1，如開高低收等資料)</returns>       
+        </member>
+        <member name="M:RealTime.Common.Interface.WebServiceData.IDataService.GetAllStockCodeByMarketCode(System.String,System.String)">
+            <summary>
+            依市場代碼取得所有屬於該市場的股票代碼
+            </summary>
+            <param name="MarketCode">市場代碼(參數2)</param>
+            <param name="Sep">分隔符號</param>
+            <returns>依據市場別來區分的股票代碼</returns>       
+        </member>
+        <member name="M:RealTime.Common.Interface.WebServiceData.IDataService.GetCompMarket(System.String)">
+            <summary>
+            依股票代碼取得所有屬於該股票的市場代碼
+            </summary>
+            <param name="CompCode">股票代碼</param>
+            <returns>該股票代碼所屬的市場代碼(參數2)</returns>        
+        </member>
+        <member name="M:RealTime.Common.Interface.WebServiceData.IDataService.GetData(System.String,System.Int32)">
+            <summary>
+            依資料項目代碼取得某支股票的細部資料項目
+            </summary>
+            <param name="Code">股票代碼</param>
+            <param name="DataNo">資料項目代碼(參數1)</param>
+            <returns>該股票代碼的細部資料項目(如開高低收等資料)</returns>        
+        </member>
+        <member name="M:RealTime.Common.Interface.WebServiceData.IDataService.GetDataNoExplanation(System.Int32)">
+            <summary>
+            取得目前資料項目代碼的中文解釋
+            </summary>
+            <param name="DataNo">資料項目代碼(參數1)</param>
+            <returns>某資料項目代碼的說明解釋(如開盤價、收盤價等中文解釋)</returns>        
+        </member>
+        <member name="M:RealTime.Common.Interface.WebServiceData.IDataService.GetName(System.String)">
+            <summary>
+            取得某股票代碼的中文名稱
+            </summary>
+            <param name="CompCode">股票代碼</param>
+            <returns>某股票的中文名稱</returns>        
+        </member>
+        <member name="T:RealTime.Common.Interface.WebServiceData.IDataServiceEx">
+            <summary>
+            为ITS提供的行情扩展方法
+            </summary>
+        </member>
+        <member name="M:RealTime.Common.Interface.WebServiceData.IDataServiceEx.GetStockMarketInfoByCode(System.String)">
+            <summary>
+            依据现货代码获取对应的行情快照
+            </summary>
+            <param name="strCode">股票代码</param>
+            <returns>行情实体</returns>
+        </member>
+        <member name="M:RealTime.Common.Interface.WebServiceData.IDataServiceEx.GetFutureMarketInfoByCode(System.String)">
+            <summary>
+            依据期货合约获取对应的行情快照
+            </summary>
+            <param name="strCode">期货合约</param>
+            <returns>行情实体</returns>
+        </member>
+    </members>
+</doc>

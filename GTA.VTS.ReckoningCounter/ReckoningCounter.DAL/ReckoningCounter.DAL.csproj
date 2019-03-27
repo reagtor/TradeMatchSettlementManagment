@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{587E84C1-95E7-4D12-A70A-CDA3EB1FE71D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReckoningCounter.DAL</RootNamespace>
+    <AssemblyName>ReckoningCounter.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ReckoningCounter.DAL.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Practices\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Practices\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountManagementAndFindDAL\TraderAccountManagement.cs" />
+    <Compile Include="CustomDataAccess\DaoUtil.cs" />
+    <Compile Include="CustomDataAccess\HKDataAccess.cs" />
+    <Compile Include="CustomDataAccess\QHDataAccess.cs" />
+    <Compile Include="CustomDataAccess\XHDataAccess.cs" />
+    <Compile Include="Data\DB\BD_AccountTypeDal.cs" />
+    <Compile Include="Data\DB\BD_BuySellTypeDal.cs" />
+    <Compile Include="Data\DB\BD_CurrencyTypeDal.cs" />
+    <Compile Include="Data\DB\BD_FreezeTypeDal.cs" />
+    <Compile Include="Data\DB\BD_OpenCloseTypeDal.cs" />
+    <Compile Include="Data\DB\BD_RescueTableDal.cs" />
+    <Compile Include="Data\DB\BD_StatusTableDal.cs" />
+    <Compile Include="Data\DB\BD_TradeTypeDal.cs" />
+    <Compile Include="Data\DB\BD_TradeUnitDal.cs" />
+    <Compile Include="Data\DB\BD_TransferTypeTableDal.cs" />
+    <Compile Include="Data\DB\BD_UnReckonedDealTableDal.cs" />
+    <Compile Include="Data\DB\BD_UserRoleTypeDal.cs" />
+    <Compile Include="Data\CommonDALOperate.cs" />
+    <Compile Include="Data\DataManager.cs" />
+    <Compile Include="Data\DbHelperSQL.cs" />
+    <Compile Include="Data\DB\DB_AccountTypeClassDal.cs" />
+    <Compile Include="Data\DB\DB_OrderStatusDal.cs" />
+    <Compile Include="Data\HK\HK_AcccountHoldFreezeDal.cs" />
+    <Compile Include="Data\HK\HK_AccountHoldDal.cs" />
+    <Compile Include="Data\HK\HK_CapitalAccountDal.cs" />
+    <Compile Include="Data\HK\HK_CapitalAccountFreezeDal.cs" />
+    <Compile Include="Data\HK\HK_CapitalAccount_DeltaDal.cs" />
+    <Compile Include="Data\HK\HK_HistoryEntrustDal.cs" />
+    <Compile Include="Data\HK\HK_HistoryModifyOrderRequestDal.cs" />
+    <Compile Include="Data\HK\HK_HistoryTradeDal.cs" />
+    <Compile Include="Data\HK\HK_ModifyOrderDetailsDal.cs" />
+    <Compile Include="Data\HK\HK_ModifyOrderPushBackDal.cs" />
+    <Compile Include="Data\HK\HK_ModifyOrderRequestDal.cs" />
+    <Compile Include="Data\HK\HK_PushBackOrderDal.cs" />
+    <Compile Include="Data\HK\HK_TodayEntrustDal.cs" />
+    <Compile Include="Data\HK\HK_TodayTradeDal.cs" />
+    <Compile Include="Data\QH\QH_CapitalAccountFreezeTableDal.cs" />
+    <Compile Include="Data\QH\QH_CapitalAccountTableDal.cs" />
+    <Compile Include="Data\QH\QH_CapitalAccountTable_DeltaDal.cs" />
+    <Compile Include="Data\QH\QH_HistoryEntrustTableDal.cs" />
+    <Compile Include="Data\QH\QH_HistoryTradeTableDal.cs" />
+    <Compile Include="Data\QH\QH_HoldAccountFreezeTableDal.cs" />
+    <Compile Include="Data\QH\QH_HoldAccountTableDal.cs" />
+    <Compile Include="Data\QH\QH_PushBackOrderTableDal.cs" />
+    <Compile Include="Data\QH\QH_TodayEntrustTableDal.cs" />
+    <Compile Include="Data\QH\QH_TodaySettlementPriceDal.cs" />
+    <Compile Include="Data\QH\QH_TodayTradeTableDal.cs" />
+    <Compile Include="Data\QH\QH_TradeCapitalFlowDetailDal.cs" />
+    <Compile Include="Data\UA\UA_BankAccountTableDal.cs" />
+    <Compile Include="Data\UA\UA_CapitalFlowTableDal.cs" />
+    <Compile Include="Data\UA\UA_UserAccountAllocationTableDal.cs" />
+    <Compile Include="Data\UA\UA_UserBasicInformationTableDal.cs" />
+    <Compile Include="Data\XH\XH_AcccountHoldFreezeTableDal.cs" />
+    <Compile Include="Data\XH\XH_AccountHoldTableDal.cs" />
+    <Compile Include="Data\XH\XH_AccountHoldTable_FlowInfoDal.cs" />
+    <Compile Include="Data\XH\XH_CapitalAccountFreezeTableDal.cs" />
+    <Compile Include="Data\XH\XH_CapitalAccountTableDal.cs" />
+    <Compile Include="Data\XH\XH_CapitalAccountTable_DeltaInfoDal.cs" />
+    <Compile Include="Data\XH\XH_HistoryEntrustTableDal.cs" />
+    <Compile Include="Data\XH\XH_HistoryTradeTableDal.cs" />
+    <Compile Include="Data\XH\XH_MelonCutRegisterTableDal.cs" />
+    <Compile Include="Data\XH\XH_PushBackOrderTableDal.cs" />
+    <Compile Include="Data\XH\XH_TodayEntrustTableDal.cs" />
+    <Compile Include="Data\XH\XH_TodayTradeTableDal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\DevolveVerifyCommonService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FuturesDevolveService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HKTradingRulesService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MatchCenterOrderDealRpt\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MatchCenterService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SpotTradingDevolveService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GTA.VTS.Common\GTA.VTS.Common.CommonObject\GTA.VTS.Common.CommonObject.csproj">
+      <Project>{17E3419C-E66D-42B0-84F8-B0A15636D44C}</Project>
+      <Name>GTA.VTS.Common.CommonObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GTA.VTS.Common\GTA.VTS.Common.CommonUtility\GTA.VTS.Common.CommonUtility.csproj">
+      <Project>{1203CAC4-E92D-4948-BD36-F45B065C37AC}</Project>
+      <Name>GTA.VTS.Common.CommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReckoningCounter.Entity\ReckoningCounter.Entity.csproj">
+      <Project>{77AC0573-1DE9-4B91-A811-F59FB358B325}</Project>
+      <Name>ReckoningCounter.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DevolveVerifyCommonService\" />
+    <WCFMetadataStorage Include="Service References\FuturesDevolveService\" />
+    <WCFMetadataStorage Include="Service References\HKTradingRulesService\" />
+    <WCFMetadataStorage Include="Service References\MatchCenterOrderDealRpt\" />
+    <WCFMetadataStorage Include="Service References\MatchCenterService\" />
+    <WCFMetadataStorage Include="Service References\SpotTradingDevolveService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DevolveVerifyCommonService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DevolveVerifyCommonService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FuturesDevolveService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FuturesDevolveService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MatchCenterOrderDealRpt\MatchCenter.Entity.HK2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MatchCenterOrderDealRpt\MatchCenter.Entity2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MatchCenterOrderDealRpt\service1.wsdl" />
+    <None Include="Service References\MatchCenterOrderDealRpt\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MatchCenterOrderDealRpt\service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MatchCenterService\GTA.VTS.Common.CommonObject1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MatchCenterService\MatchCenter.Entity.HK2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MatchCenterService\MatchCenter.Entity3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MatchCenterService\ReckoningCounter.DAL.MatchCenterService.CancelResultEntity1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MatchCenterService\ReckoningCounter.DAL.MatchCenterService.HKModifyResultEntity1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MatchCenterService\ReckoningCounter.DAL.MatchCenterService.ResultDataEntity1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MatchCenterService\service2.wsdl" />
+    <None Include="Service References\MatchCenterService\service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MatchCenterService\service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SpotTradingDevolveService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SpotTradingDevolveService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="AccountManagementAndFindDAL\柜台账户管理模块及查询模块DAL.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DevolveVerifyCommonService\configuration91.svcinfo" />
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_BourseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_BreedClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_BreedClassType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_Commodity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_CommodityFuse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_CurrencyType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_StockMelonCash.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_StockMelonStock.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_TradeTime.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_TradeWay.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_UnitConversion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_Units.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_ValueType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FuturesDevolveService\configuration91.svcinfo" />
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_AgreementDeliveryMonth.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_CFPositionMonth.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_ConsignInstructionType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_ConsignQuantum.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_FutureCosts.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_FuturesTradeRules.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_HighLowStopScopeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_LastTradingDay.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_LastTradingDayType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_Month.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_SIFBail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_SIFPosition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_SingleRequestQuantity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SpotTradingDevolveService\configuration91.svcinfo" />
+    <None Include="Service References\SpotTradingDevolveService\ReckoningCounter.DAL.SpotTradingDevolveService.XH_MinVolumeOfBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradingDevolveService\ReckoningCounter.DAL.SpotTradingDevolveService.XH_SpotCosts.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradingDevolveService\ReckoningCounter.DAL.SpotTradingDevolveService.XH_SpotHighLowControlType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradingDevolveService\ReckoningCounter.DAL.SpotTradingDevolveService.XH_SpotPosition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradingDevolveService\ReckoningCounter.DAL.SpotTradingDevolveService.XH_SpotTradeRules.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_FuseTimesection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_NotTradeDate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CT_Counter1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.RC_MatchCenter1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.RC_MatchMachine1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.RC_TradeCommodityAssign1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.UM_AccountType1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.ZFInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_CFBailScaleValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_PositionBailType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_PositionLimitValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FuturesDevolveService\ReckoningCounter.DAL.FuturesDevolveService.QH_PositionValueType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradingDevolveService\ReckoningCounter.DAL.SpotTradingDevolveService.XH_RightHightLowPrices.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradingDevolveService\ReckoningCounter.DAL.SpotTradingDevolveService.XH_SpotHighLowValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradingDevolveService\ReckoningCounter.DAL.SpotTradingDevolveService.XH_ValidDeclareType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradingDevolveService\ReckoningCounter.DAL.SpotTradingDevolveService.XH_ValidDeclareValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MatchCenterService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MatchCenterService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MatchCenterService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MatchCenterOrderDealRpt\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MatchCenterOrderDealRpt\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DevolveVerifyCommonService\ManagementCenter.Model.CommonTable1.xsd" />
+    <None Include="Service References\DevolveVerifyCommonService\ManagementCenter.Model1.xsd" />
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.CM_CurrencyBreedClassType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.OnstageCommodity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.Profession1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.UM_DealerTradeBreedClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevolveVerifyCommonService\service1.wsdl" />
+    <None Include="Service References\DevolveVerifyCommonService\service2.xsd" />
+    <None Include="Service References\DevolveVerifyCommonService\service21.xsd" />
+    <None Include="Service References\FuturesDevolveService\ManagementCenter.Model1.xsd" />
+    <None Include="Service References\FuturesDevolveService\service1.wsdl" />
+    <None Include="Service References\FuturesDevolveService\service2.xsd" />
+    <None Include="Service References\FuturesDevolveService\service21.xsd" />
+    <None Include="Service References\HKTradingRulesService\ManagementCenter.Model.xsd" />
+    <None Include="Service References\HKTradingRulesService\service.wsdl" />
+    <None Include="Service References\HKTradingRulesService\service.xsd" />
+    <None Include="Service References\HKTradingRulesService\service1.xsd" />
+    <None Include="Service References\MatchCenterOrderDealRpt\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SpotTradingDevolveService\ManagementCenter.Model1.xsd" />
+    <None Include="Service References\SpotTradingDevolveService\service1.wsdl" />
+    <None Include="Service References\SpotTradingDevolveService\service2.xsd" />
+    <None Include="Service References\SpotTradingDevolveService\service21.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HKTradingRulesService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HKTradingRulesService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DevolveVerifyCommonService\ReckoningCounter.DAL.DevolveVerifyCommonService.ClosePriceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\ReckoningCounter.DAL.HKTradingRulesService.HKProfessionInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\ReckoningCounter.DAL.HKTradingRulesService.HK_Commodity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\ReckoningCounter.DAL.HKTradingRulesService.HK_MinPriceFieldRange.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\ReckoningCounter.DAL.HKTradingRulesService.HK_SpotCosts.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\ReckoningCounter.DAL.HKTradingRulesService.HK_SpotTradeRules.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\ReckoningCounter.DAL.HKTradingRulesService.OnstageHK_Commodity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\ReckoningCounter.DAL.HKTradingRulesService.XH_MinVolumeOfBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\ReckoningCounter.DAL.HKTradingRulesService.XH_SpotPosition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

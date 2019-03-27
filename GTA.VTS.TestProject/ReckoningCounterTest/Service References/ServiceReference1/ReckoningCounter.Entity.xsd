@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="EntityBaseCore">
+    <xs:sequence>
+      <xs:element name="entityHashCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityBaseCore" nillable="true" type="tns:EntityBaseCore" />
+  <xs:complexType name="XhTodayEntrustTableBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BuySellTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CallbackChannlId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CancelAmount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CancelLogo" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CapitalAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EntrustAmount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EntrustNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntrustPrice" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="EntrustTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FreezeCapitalAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IsMarketValue" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MarketTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="McOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OfferTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderStatusId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderStatusMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalEntrustNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OwnershipMarket" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PortfolioLogo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpotCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpotName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StockAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TradeAmount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TradeAveragePrice" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TradeUnitId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="VarietyType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VarietyTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="XhAcccountHoldFreezeTableCollection" nillable="true" type="tns:ArrayOfXhAcccountHoldFreezeTable" />
+          <xs:element minOccurs="0" name="XhCapitalAccountFreezeTableCollection" nillable="true" type="tns:ArrayOfXhCapitalAccountFreezeTable" />
+          <xs:element minOccurs="0" name="XhTodayTradeTableCollection" nillable="true" type="tns:ArrayOfXhTodayTradeTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XhTodayEntrustTableBase" nillable="true" type="tns:XhTodayEntrustTableBase" />
+  <xs:complexType name="EntityBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityBaseCore">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityBase" nillable="true" type="tns:EntityBase" />
+  <xs:complexType name="ArrayOfXhAcccountHoldFreezeTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XhAcccountHoldFreezeTable" nillable="true" type="tns:XhAcccountHoldFreezeTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXhAcccountHoldFreezeTable" nillable="true" type="tns:ArrayOfXhAcccountHoldFreezeTable" />
+  <xs:complexType name="XhAcccountHoldFreezeTable">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XhAcccountHoldFreezeTableBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XhAcccountHoldFreezeTable" nillable="true" type="tns:XhAcccountHoldFreezeTable" />
+  <xs:complexType name="XhAcccountHoldFreezeTableBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountHoldLogo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EntrustNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FreezeTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FreezeTypeLogo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HoldFreezeLogoId" type="xs:int" />
+          <xs:element minOccurs="0" name="PrepareFreezeAmount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ThawTime" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XhAcccountHoldFreezeTableBase" nillable="true" type="tns:XhAcccountHoldFreezeTableBase" />
+  <xs:complexType name="ArrayOfXhCapitalAccountFreezeTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XhCapitalAccountFreezeTable" nillable="true" type="tns:XhCapitalAccountFreezeTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXhCapitalAccountFreezeTable" nillable="true" type="tns:ArrayOfXhCapitalAccountFreezeTable" />
+  <xs:complexType name="XhCapitalAccountFreezeTable">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XhCapitalAccountFreezeTableBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XhCapitalAccountFreezeTable" nillable="true" type="tns:XhCapitalAccountFreezeTable" />
+  <xs:complexType name="XhCapitalAccountFreezeTableBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CapitalAccountLogo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CapitalFreezeLogoId" type="xs:int" />
+          <xs:element minOccurs="0" name="EntrustNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FreezeCapitalAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FreezeCost" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FreezeTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FreezeTypeLogo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="OweCosting" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ThawTime" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XhCapitalAccountFreezeTableBase" nillable="true" type="tns:XhCapitalAccountFreezeTableBase" />
+  <xs:complexType name="ArrayOfXhTodayTradeTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XhTodayTradeTable" nillable="true" type="tns:XhTodayTradeTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXhTodayTradeTable" nillable="true" type="tns:ArrayOfXhTodayTradeTable" />
+  <xs:complexType name="XhTodayTradeTable">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XhTodayTradeTableBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XhTodayTradeTable" nillable="true" type="tns:XhTodayTradeTable" />
+  <xs:complexType name="XhTodayTradeTableBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BuySellTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CapitalAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Commission" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CurrencyTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EntrustNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntrustPrice" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MarketTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="MonitoringFee" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OriginalTradeNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OwnershipMarket" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PortfolioLogo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpotCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpotName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StampTax" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="StockAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TradeAmount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TradeCapitalAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TradeNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TradePrice" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TradeProceduresFee" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TradeTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TradeTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TradeUnitId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TradingSystemUseFee" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TransferAccountFee" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="VarietyType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VarietytypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XhTodayTradeTableBase" nillable="true" type="tns:XhTodayTradeTableBase" />
+  <xs:complexType name="XhCapitalAccountTable">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:XhCapitalAccountTableBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XhCapitalAccountTable" nillable="true" type="tns:XhCapitalAccountTable" />
+  <xs:complexType name="XhCapitalAccountTableBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AvailableCapital" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BalanceOfTheDay" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CapitalAccountLogo" type="xs:int" />
+          <xs:element minOccurs="0" name="CapitalBalance" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FreezeCapitalTotal" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TodayOutInCapital" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TradeCurrencyType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UserAccountDistributeLogo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XhCapitalAccountFreezeTableCollection" nillable="true" type="tns:ArrayOfXhCapitalAccountFreezeTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XhCapitalAccountTableBase" nillable="true" type="tns:XhCapitalAccountTableBase" />
+</xs:schema>

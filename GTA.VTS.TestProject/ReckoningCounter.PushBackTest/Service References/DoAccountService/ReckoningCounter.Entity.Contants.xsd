@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="Types.OrderPriceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OPTMarketPrice" />
+      <xs:enumeration value="OPTLimited" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Types.OrderPriceType" nillable="true" type="tns:Types.OrderPriceType" />
+</xs:schema>

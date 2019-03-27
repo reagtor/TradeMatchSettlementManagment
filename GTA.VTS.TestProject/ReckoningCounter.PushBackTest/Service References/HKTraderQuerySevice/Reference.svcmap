@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ba1673d7-29b4-46ab-83cf-485fda726984" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:9188/DoHKCommonQuery/MEX" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d9a5fafd-10df-43f0-9567-1c4e19ca7a79" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoHKCommonQuery/MEX" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="39fd0802-bfac-4e72-8dba-70f751fdd5fe" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoHKCommonQuery/MEX" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="c0e33152-89de-4989-955a-7dc0248629d3" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoHKCommonQuery/MEX" />
+    <MetadataFile FileName="GTA.VTS.Common.CommonObject.xsd" MetadataType="Schema" ID="1b7c16e3-4998-4a60-af6d-a30c928e6c0b" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoHKCommonQuery/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.AccountManagementAndFindEntity.HK.xsd" MetadataType="Schema" ID="caf53cf0-7ff2-4c5a-adf3-5c4b93222341" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoHKCommonQuery/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.Model.HK.xsd" MetadataType="Schema" ID="652e72d4-adb9-4660-aa82-c022365a3237" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoHKCommonQuery/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.Model.QueryFilter.xsd" MetadataType="Schema" ID="44bf77e0-a61a-42c7-b664-1f44f585a8f2" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoHKCommonQuery/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.Model.xsd" MetadataType="Schema" ID="3aff606f-2cdf-4d93-9cc1-fbe224ac1ffa" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoHKCommonQuery/MEX" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,3384 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTA.RealTIme.GTAMarketransfers</name>
+    </assembly>
+    <members>
+        <member name="T:GTAMarketransfers.CodeCheck">
+            <summary>
+            对行情代码进行检验，检验成功返回true,否则返回false.
+            只在udp包分解时使用。
+            作者：段进雄
+            日期：2009-7-3
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.CodeCheck.CheckStockCode(System.String)">
+            <summary>
+            检验股票代码
+            使用上下文只能是在UDP包分解时，因为分解后的现货代码不全是数字,一些指数是以s开头。
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.CodeCheck.CheckFutDataCode(System.String)">
+            <summary>
+            检验股指期货代码
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.CodeCheck.CheckDLMerFutCode(System.String)">
+            <summary>
+            检验大连商品期货代码
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.CodeCheck.CheckSHMerFutCode(System.String)">
+            <summary>
+            检验上海商品期货代码
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.CodeCheck.CheckZZMerFutCode(System.String)">
+            <summary>
+            检验郑州商品期货代码
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.CodeCheck.CheckHKStockCode(System.String)">
+            <summary>
+            检验港股代码
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GTAMarketransfers.GZipHandle">
+            <summary>
+            对字节流进行压缩或解压缩.
+            只在打包解包时使用。
+            作者：段进雄
+            日期：2009-9-10
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.GZipHandle.CompressData(System.Byte[])">
+            <summary>
+            压缩
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.GZipHandle.DecompressData(System.Byte[])">
+            <summary>
+            解压缩
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.GZipHandle.ReadAllBytesFromStream(System.IO.Stream,System.IO.MemoryStream)">
+            <summary>
+            返回已完成解压缩的内存流
+            </summary>
+            <param name="stream"></param>
+            <param name="ms"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.ProtocolBuilder.BuildProtocol">
+            <summary>
+            打包--包头结构:包长(包体长=4，包头长=4),返回类型，包头内容体,包体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.ProtocolBuilder.BuildProtocolRequest">
+            <summary>
+            打包--将ResponseType加到包尾-请求的打包格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.ProtocolBuilder.UnBuildProtocol">
+            <summary>
+            不再使用包尾，以免发生粘包现象时无法解析
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.ProtocolBuilder.UnBuildProtocolRequest">
+            <summary>
+            请求的解包格式
+            及UDP包解包格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:GTAMarketransfers.ProtocolBuilder.sendDateTime">
+            <summary>
+            从子类提到基类
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.ResponseHeaderBuilder">
+            <summary>
+            类名：解包头类
+            作者：段进雄
+            日期：20100316
+            内容：解包头信息，静态方法
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.ResponseHeaderBuilder.UnResponseType(System.Byte[])">
+            <summary>
+            解回复包类型 ----硬码，第9-12个字段为类型-- 需要先解包类型
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.ResponseHeaderBuilder.UnMessageLength(System.Byte[])">
+            <summary>
+            解回复包包长 ----硬码，第0-4个字段为包体信息长,5-8为包头长
+            解决粘包问题--再解包长度
+            <para>解包长,只要大于8的度</para>
+            <para>0--包长度，1包头长度</para>
+            </summary>
+            <param name="sData"></param>
+            <returns>0--包长度，1包头长度</returns>
+        </member>
+        <member name="T:GTAMarketransfers.TcpDeleteSubscibeRequestProtocolBuilder">
+            <summary>
+            删除订阅代码的请求
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.TcpRequestProtocolBuilder">
+            <summary>
+            这里写TCP请求公共部分
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.TcpProtocolBuilder">
+            <summary>
+            这里写TCP协议公共部分
+            对包头包尾的打包和解包
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpProtocolBuilder.BuildProtocolHeader">
+            <summary>
+            组装包头
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpProtocolBuilder.BuildProtocolFooter">
+            <summary>
+            组装包尾
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpProtocolBuilder.UnBuildProtocolHeader(System.Byte[])">
+            <summary>
+            解包--包头
+            </summary>
+            <param name="headerDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpProtocolBuilder.UnBuildProtocolFooter(System.Byte[])">
+            <summary>
+            解包--包尾
+            </summary>
+            <param name="footerData"></param>
+            <returns></returns>
+        </member>
+        <member name="P:GTAMarketransfers.TcpProtocolBuilder.IncTcpPacketId">
+            <summary>
+            包编号
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpRequestProtocolBuilder.UnBuildProtocolHeader(System.Byte[])">
+            <summary>
+            解析包头和请求类型
+            </summary>
+            <param name="headerDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpRequestProtocolBuilder.GetRequestType(System.Byte[])">
+            <summary>
+            解包，获取客户端请示类型,最后一位为请示类型
+            </summary>
+            <param name="transData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpGetCompleteDataRequestProtocolBuilder.BuildProtocolRequest(System.String)">
+            <summary>
+            打包--将ResponseType加到包尾-请求的打包格式
+            <para>因为加入了自定义的参数打包,所以从基类中提出来单独实现</para>
+            </summary>
+            <param name="customerContent">自定义参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpGetCompleteDataRequestProtocolBuilder.BuildProtocolHeader(System.String)">
+            <summary>
+            打包包头
+            </summary>
+            <param name="customerContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpGetCompleteDataRequestProtocolBuilder.#ctor">
+            <summary>
+            打包应用
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpGetCompleteDataRequestProtocolBuilder.#ctor(System.Byte[])">
+            <summary>
+            解包应用
+            </summary>
+            <param name="sData"></param>
+        </member>
+        <member name="M:GTAMarketransfers.TcpGetCompleteDataRequestProtocolBuilder.MyUnBuildProtocolHeader(System.Byte[])">
+            <summary>
+            全量订阅时,加入了自定义参数,在这里进行了解析
+            </summary>
+            <param name="headerDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GTAMarketransfers.TcpSubscibeRequestProtocolBuilder">
+            <summary>
+            如果是订阅请求，则需要加上订阅方的类型，如果是分发服务器，则订阅请求也为全量订阅 by 黄利华
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.TcpSubscibeRequestProtocolBuilder.ClientUseServerType">
+            <summary>
+            连接客户使用的程序类型
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpTestConnectionRequestProtocolBuilder.BuildProtocolBody">
+            <summary>
+            将本地IP及服务器传到服务器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpTestConnectionRequestProtocolBuilder.UnBuildProtocolBody(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpTestConnectionRequestProtocolBuilder.UnBuildProtocol">
+            <summary>
+            解包，返回信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpTestConnectionRequestProtocolBuilder.#ctor(System.String)">
+            <summary>
+            用于协议组包
+            </summary>
+            <param name="IPAndPort">客户端IP与端口</param>
+        </member>
+        <member name="F:GTAMarketransfers.TcpTestConnectionRequestProtocolBuilder._iPAndPort">
+            <summary>
+            客户端IP与端口
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.TcpTestConnectionRequestProtocolBuilder.IPAndPort">
+            <summary>
+            客户端IP与端口
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder">
+            <summary>
+            外汇行情打包
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.TcpResponseProtocolBuilder">
+            <summary>
+            这里写TCP回复公共部分
+            修改：段进雄
+            内容：重写协议，处理粘包问题
+            header 流水号 4 byte	发送时间 8 byte 	回复类型 4byte	包长 4byte
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpResponseProtocolBuilder.BuildProtocolHeader">
+            <summary>
+            二级分发打包头
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpResponseProtocolBuilder.BuildProtocolFooter">
+            <summary>
+            二级分发打包尾
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpResponseProtocolBuilder.UnBuildProtocolHeader(System.Byte[])">
+             <summary>
+            二级解包头
+             </summary>
+             <param name="headerDatas"></param>
+             <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpResponseProtocolBuilder.GetResponseType(System.Byte[])">
+            <summary>
+            解包回复类型 --此方法不再使用
+            </summary>
+            <param name="transData"></param>
+            <returns></returns>
+        </member>
+        <member name="F:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder._socketSendTime">
+            <summary>
+            SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder._pureSocketSendTime">
+            <summary>
+            纯SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder._mergeSpan">
+            <summary>
+            合并时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder._marketAnalysisSpan">
+            <summary>
+            分解时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.FESerializer">
+            <summary>
+            外汇转换器
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.BuildFOREXContractEntityList">
+            <summary>
+            序列化TCP外汇实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.BuildFOREXContractEntity">
+            <summary>
+            序列化TCP外汇实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.BuildFOREXClosingPirceEntityList">
+            <summary>
+            序列化TCP外汇收盘价实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.BuildFOREXClosingPirceEntity">
+            <summary>
+            序列化TCP外汇收盘价实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.BuildFOREXBatchEntityList">
+            <summary>
+            序列化TCP外汇初始实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.BuildFOREXBatchEntity">
+            <summary>
+            序列化TCP外汇初始实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.UnBuildProtocolBody(System.Byte[])">
+            <summary>
+            解包
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.UnBuildFOREXBatchUdpList(System.Byte[])">
+            <summary>
+            反序列化外汇初始列表 
+            </summary>
+            <param name="bodydatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.UnBuildFOREXBatchUdp(System.Byte[])">
+            <summary>
+            反序列化外汇初始
+            </summary>
+            <param name="bodydatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.UnBuildFOREXDataList(System.Byte[])">
+            <summary>
+            反序列化外汇列表 
+            </summary>
+            <param name="bodydatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.UnBuildFOREXData(System.Byte[])">
+            <summary>
+            反序列化外汇列表 
+            </summary>
+            <param name="bodydatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.UnBuildFOREXClosingPirceUdpEntityList(System.Byte[])">
+            <summary>
+            反序列化外汇收盘列表 
+            </summary>
+            <param name="bodydatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.UnBuildFOREXClosingPirceUdpEntity(System.Byte[])">
+            <summary>
+            反序列化外汇收盘列表 
+            </summary>
+            <param name="bodydatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.#ctor(System.Byte[],RealTime.Common.CommonClass.GTASocketResponseType)">
+            <summary>
+            tcp解包时使用
+            </summary>
+            <param name="bData"></param>
+            <param name="ForexType">外汇数据类型</param>
+        </member>
+        <member name="P:GTAMarketransfers.TcpFOREXDataResponseProtocolBuilder.ResponseType">
+            <summary>
+            回复类型
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpGetAllCodeResponseProtocolBuilder.BuildProtocolBody">
+            <summary>
+            组装包体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:GTAMarketransfers.TcpHKStockPreMarketStaticResponseProtocolBuilder._socketSendTime">
+            <summary>
+            SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpHKStockPreMarketStaticResponseProtocolBuilder._pureSocketSendTime">
+            <summary>
+            纯SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpHKStockPreMarketStaticResponseProtocolBuilder._mergeSpan">
+            <summary>
+            合并时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpHKStockPreMarketStaticResponseProtocolBuilder._marketAnalysisSpan">
+            <summary>
+            分解时间
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockPreMarketStaticResponseProtocolBuilder.BuildHKStaticData">
+            <summary>
+            序列化单个港股盘前静态实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockPreMarketStaticResponseProtocolBuilder.BuildHKPreMarketPriceData">
+            <summary>
+            序列化单个港股盘前静态实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockPreMarketStaticResponseProtocolBuilder.BuildHKStaticDataList">
+            <summary>
+            序列化港股盘前静态列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockPreMarketStaticResponseProtocolBuilder.BuildHKPreMarketPriceDataList">
+            <summary>
+            序列化港股最小价格变动实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockPreMarketStaticResponseProtocolBuilder.UnBuildHKStaticData(System.Byte[])">
+            <summary>
+            反序列化单个港股盘前静态实体
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockPreMarketStaticResponseProtocolBuilder.UnBuildHKStaticList(System.Byte[])">
+            <summary>
+            反序列化港股盘前静态列表 
+            </summary>
+            <param name="bodydatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockPreMarketStaticResponseProtocolBuilder.UnBuildHKMinPriceFluData(System.Byte[])">
+            <summary>
+            反序列化单个港股最小价位变动实体
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="F:GTAMarketransfers.TcpQhResponseProtocolBuilder._socketSendTime">
+            <summary>
+            SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpQhResponseProtocolBuilder._pureSocketSendTime">
+            <summary>
+            纯SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpQhResponseProtocolBuilder._mergeSpan">
+            <summary>
+            合并时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpQhResponseProtocolBuilder._marketAnalysisSpan">
+            <summary>
+            分解时间
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpQhResponseProtocolBuilder.BuildFutData">
+            <summary>
+            序列化单个股指期货行情实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpQhResponseProtocolBuilder.BuildQhDataList">
+            <summary>
+            序列化股指期货实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpQhResponseProtocolBuilder.UnBuildFutData(System.Byte[])">
+            <summary>
+            反序列化单个股指期货行情实体
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpQhResponseProtocolBuilder.UnBuildFutDataList(System.Byte[])">
+            <summary>
+            反序列化股指期货列表 
+            </summary>
+            <param name="bodydatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpQhResponseProtocolBuilder.#ctor(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            单个股指期货入口
+            </summary>
+            <param name="sendData"></param>
+        </member>
+        <member name="F:GTAMarketransfers.TcpSubscibeResponseProtocolBuilder._mergeSpan">
+            <summary>
+            合并时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpSubscibeResponseProtocolBuilder._marketAnalysisSpan">
+            <summary>
+            分解时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpSubscibeResponseProtocolBuilder._socketSendTime">
+            <summary>
+            SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpSubscibeResponseProtocolBuilder._pureSocketSendTime">
+            <summary>
+            纯SOCKET发送时间
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpSubscibeResponseProtocolBuilder.BuildProtocolBody">
+            <summary>
+            打包数据体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpSubscibeResponseProtocolBuilder.BuildHqExData">
+            <summary>
+            序列化单个现货行情实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpSubscibeResponseProtocolBuilder.BuildHqExDataList">
+            <summary>
+            序列化现货实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpSubscibeResponseProtocolBuilder.UnBuildHqExDataList(System.Byte[])">
+            <summary>
+            反序列化现货列表
+            (分发时调试:注册数据变化事情.分发机接收到主机数据.将tcp包.转换为实体对象)
+            </summary>
+            <param name="bodydatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpSubscibeResponseProtocolBuilder.UnBuildHqExData(System.Byte[])">
+            <summary>
+            反序列化单个现货行情实体
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpSubscibeResponseProtocolBuilder.#ctor(RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            单个现货入口
+            </summary>
+            <param name="sendData"></param>
+        </member>
+        <member name="M:GTAMarketransfers.TcpSubscibeResponseProtocolBuilder.#ctor(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            现货列表入口
+            </summary>
+            <param name="sendDataList"></param>
+        </member>
+        <member name="F:GTAMarketransfers.TcpTestConnectionResponseProtocolBuilder._iPAndPort">
+            <summary>
+            返回一个保存的客户端验证字段 IP：Port
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.TcpTestConnectionResponseProtocolBuilder.IPAndPort">
+            <summary>
+            返回一个保存的客户端验证字段 IP：Port
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpMerQhResponseProtocolBuilder._socketSendTime">
+            <summary>
+            SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpMerQhResponseProtocolBuilder._pureSocketSendTime">
+            <summary>
+            纯SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpMerQhResponseProtocolBuilder._mergeSpan">
+            <summary>
+            合并时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpMerQhResponseProtocolBuilder._marketAnalysisSpan">
+            <summary>
+            分解时间
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpMerQhResponseProtocolBuilder.BuildMerFutData">
+            <summary>
+            序列化单个商品期货行情实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpMerQhResponseProtocolBuilder.BuildMerQhDataList">
+            <summary>
+            序列化商品期货实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpMerQhResponseProtocolBuilder.UnBuildMerFutData(System.Byte[])">
+            <summary>
+            反序列化单个商品期货行情实体
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpMerQhResponseProtocolBuilder.UnBuildMerFutDataList(System.Byte[])">
+            <summary>
+            反序列化商品期货列表 
+            </summary>
+            <param name="bodydatas"></param>
+            <returns></returns>
+        </member>
+        <member name="F:GTAMarketransfers.TcpHKStockResponseProtocolBuilder._socketSendTime">
+            <summary>
+            SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpHKStockResponseProtocolBuilder._pureSocketSendTime">
+            <summary>
+            纯SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpHKStockResponseProtocolBuilder._mergeSpan">
+            <summary>
+            合并时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TcpHKStockResponseProtocolBuilder._marketAnalysisSpan">
+            <summary>
+            分解时间
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockResponseProtocolBuilder.BuildHKStockData">
+            <summary>
+            序列化单个港股行情实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockResponseProtocolBuilder.BuildHKStockDataList">
+            <summary>
+            序列化港股实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockResponseProtocolBuilder.BuildHKStockStatusData">
+            <summary>
+            序列化单个港股行情实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockResponseProtocolBuilder.BuildHKStockStatusDataList">
+            <summary>
+            序列化港股交易状态实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockResponseProtocolBuilder.UnBuildHKStockData(System.Byte[])">
+            <summary>
+            反序列化单个港股行情实体
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockResponseProtocolBuilder.UnBuildHKStockList(System.Byte[])">
+            <summary>
+            反序列化港股列表 
+            </summary>
+            <param name="bodydatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockResponseProtocolBuilder.UnBuildHKStockStatusData(System.Byte[])">
+            <summary>
+            反序列化单个港股交易状态实体
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpHKStockResponseProtocolBuilder.UnBuildHKStockStatusList(System.Byte[])">
+            <summary>
+            反序列化港股交易状态列表 
+            </summary>
+            <param name="bodydatas"></param>
+            <returns></returns>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder._headerByteLength">
+            <summary>
+            协议头长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder._footerByteLength">
+            <summary>
+            协议尾长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder._bodyByteLength">
+            <summary>
+            协议数据体长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder._udpHqData">
+            <summary>
+            行情实体
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder._udpFutData">
+            <summary>
+            期货实体
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder._entitySerializer">
+            <summary>
+            序列化帮助对象
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder._messageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder._packetSource">
+            <summary>
+            数据包来源
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder._udpDataType">
+            <summary>
+            数据包中数据类型（单记录或记录集合）
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder._sendDate">
+            <summary>
+            包发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder.sSendDate">
+            <summary>
+            包发送日期
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder.sSendTime">
+            <summary>
+            包发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder._compart">
+            <summary>
+            协议数据体分隔符（保留）
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder._strSendDate">
+            <summary>
+            发送日期
+            </summary>
+            
+        </member>
+        <member name="F:GTAMarketransfers.UdpCPlussProtocolBuilder._strSendTime">
+            <summary>
+            发送时间
+            </summary>
+            
+        </member>
+        <member name="M:GTAMarketransfers.UdpCPlussProtocolBuilder.BuildProtocolHeader">
+            <summary>
+            打包协议头
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpCPlussProtocolBuilder.BuildProtocolBody">
+            <summary>
+            打包协议数据体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpCPlussProtocolBuilder.BuildProtocolFooter">
+            <summary>
+            打包协议尾
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpCPlussProtocolBuilder.BuildUdpHqDataBody">
+            <summary>
+            打包行情数据体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpCPlussProtocolBuilder.BuildUdpInitDataBody">
+            <summary>
+            打包初始数据体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpCPlussProtocolBuilder.BuildUdpFutDataBody">
+            <summary>
+            打包期货数据体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpCPlussProtocolBuilder.UnBuildProtocolHeader(System.Byte[])">
+            <summary>
+            解包协议头
+            </summary>
+            <param name="headerDatas"></param>
+        </member>
+        <member name="M:GTAMarketransfers.UdpCPlussProtocolBuilder.UnBuildProtocolBody(System.Byte[])">
+            <summary>
+            解包协议体
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpCPlussProtocolBuilder.UnBuildProtocolFooter(System.Byte[])">
+            <summary>
+            解包协议尾
+            </summary>
+            <param name="footerDatas"></param>
+        </member>
+        <member name="M:GTAMarketransfers.UdpCPlussProtocolBuilder.UnBuildProtocol">
+            <summary>
+            解包协议入口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:GTAMarketransfers.UdpCPlussProtocolBuilder.bodyBuildHandler">
+            <summary>
+            包体构造事件
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpCPlussProtocolBuilder.MessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpCPlussProtocolBuilder.PacketSource">
+            <summary>
+            数据包来源
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpCPlussProtocolBuilder.DataType">
+            <summary>
+            数据包中数据类型（单记录或记录集合）
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpCPlussProtocolBuilder.sendDateTime">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpCPlussProtocolBuilder.HeaderByteLength">
+            <summary>
+            协议头长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpCPlussProtocolBuilder.BodyByteLength">
+            <summary>
+            协议体长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpCPlussProtocolBuilder.FooterByteLength">
+            <summary>
+            协议尾长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpCPlussProtocolBuilder.CompartChar">
+            <summary>
+            协议数据体分隔符（保留）
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.UdpDLMerFutProtocolBuilder">
+            <summary>
+            大连商品期货Udp解包类,解包上海商品期货Udp数据包
+            作者：段进雄
+            日期：2009-7-7
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder._headerByteLength">
+            <summary>
+            协议头长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder._footerByteLength">
+            <summary>
+            协议尾长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder._bodyByteLength">
+            <summary>
+            协议数据体长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder._udpHqData">
+            <summary>
+            行情实体
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder._entitySerializer">
+            <summary>
+            序列化帮助对象
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder._messageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder._packetSource">
+            <summary>
+            数据包来源
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder._udpDataType">
+            <summary>
+            数据包中数据类型（单记录或记录集合）
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder._sendDate">
+            <summary>
+            包发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder.sSendDate">
+            <summary>
+            包发送日期
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder.sSendTime">
+            <summary>
+            包发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder._compart">
+            <summary>
+            协议数据体分隔符（保留）
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder._strSendDate">
+            <summary>
+            发送日期
+            </summary>
+            
+        </member>
+        <member name="F:GTAMarketransfers.UdpDLMerFutProtocolBuilder._strSendTime">
+            <summary>
+            发送时间
+            </summary>
+            
+        </member>
+        <member name="M:GTAMarketransfers.UdpDLMerFutProtocolBuilder.UnBuildProtocolHeader(System.Byte[])">
+            <summary>
+            解包协议头
+            </summary>
+            <param name="headerDatas"></param>
+        </member>
+        <member name="M:GTAMarketransfers.UdpDLMerFutProtocolBuilder.UnBuildProtocolBody(System.Byte[])">
+            <summary>
+            解包协议体
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpDLMerFutProtocolBuilder.UnBuildProtocolFooter(System.Byte[])">
+            <summary>
+            解包协议尾
+            </summary>
+            <param name="footerDatas"></param>
+        </member>
+        <member name="M:GTAMarketransfers.UdpDLMerFutProtocolBuilder.UnBuildProtocol">
+            <summary>
+            解包协议入口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:GTAMarketransfers.UdpDLMerFutProtocolBuilder.bodyBuildHandler">
+            <summary>
+            包体构造事件
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpDLMerFutProtocolBuilder.MessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpDLMerFutProtocolBuilder.PacketSource">
+            <summary>
+            数据包来源
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpDLMerFutProtocolBuilder.DataType">
+            <summary>
+            数据包中数据类型（单记录或记录集合）
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpDLMerFutProtocolBuilder.sendDateTime">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpDLMerFutProtocolBuilder.HeaderByteLength">
+            <summary>
+            协议头长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpDLMerFutProtocolBuilder.BodyByteLength">
+            <summary>
+            协议体长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpDLMerFutProtocolBuilder.FooterByteLength">
+            <summary>
+            协议尾长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpDLMerFutProtocolBuilder.CompartChar">
+            <summary>
+            协议数据体分隔符（保留）
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpDLMerFutProtocolBuilder.IsDesert">
+            <summary>
+            是否废弃数据
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.UdpShMerFutProtocolBuilder">
+            <summary>
+            上海商品期货Udp解包类,解包上海商品期货Udp数据包
+            作者：段进雄
+            日期：2009-7-7
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder._headerByteLength">
+            <summary>
+            协议头长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder._footerByteLength">
+            <summary>
+            协议尾长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder._bodyByteLength">
+            <summary>
+            协议数据体长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder._udpFutData">
+            <summary>
+            期货实体
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder._entitySerializer">
+            <summary>
+            序列化帮助对象
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder._messageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder._packetSource">
+            <summary>
+            数据包来源
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder._udpDataType">
+            <summary>
+            数据包中数据类型（单记录或记录集合）
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder._sendDate">
+            <summary>
+            包发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder.sSendDate">
+            <summary>
+            包发送日期
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder.sSendTime">
+            <summary>
+            包发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder._compart">
+            <summary>
+            协议数据体分隔符（保留）
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.UdpShMerFutProtocolBuilder.UnBuildProtocolHeader(System.Byte[])">
+            <summary>
+            解包协议头
+            </summary>
+            <param name="headerDatas"></param>
+        </member>
+        <member name="M:GTAMarketransfers.UdpShMerFutProtocolBuilder.UnBuildProtocolBody(System.Byte[])">
+            <summary>
+            解包协议体
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpShMerFutProtocolBuilder.UnBuildProtocolFooter(System.Byte[])">
+            <summary>
+            解包协议尾
+            </summary>
+            <param name="footerDatas"></param>
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder._strSendDate">
+            <summary>
+            发送日期
+            </summary>
+            
+        </member>
+        <member name="F:GTAMarketransfers.UdpShMerFutProtocolBuilder._strSendTime">
+            <summary>
+            发送时间
+            </summary>
+            
+        </member>
+        <member name="M:GTAMarketransfers.UdpShMerFutProtocolBuilder.UnBuildProtocol">
+            <summary>
+            解包协议入口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:GTAMarketransfers.UdpShMerFutProtocolBuilder.bodyBuildHandler">
+            <summary>
+            包体构造事件
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpShMerFutProtocolBuilder.MessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpShMerFutProtocolBuilder.PacketSource">
+            <summary>
+            数据包来源
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpShMerFutProtocolBuilder.DataType">
+            <summary>
+            数据包中数据类型（单记录或记录集合）
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpShMerFutProtocolBuilder.sendDateTime">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpShMerFutProtocolBuilder.HeaderByteLength">
+            <summary>
+            协议头长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpShMerFutProtocolBuilder.BodyByteLength">
+            <summary>
+            协议体长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpShMerFutProtocolBuilder.FooterByteLength">
+            <summary>
+            协议尾长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpShMerFutProtocolBuilder.CompartChar">
+            <summary>
+            协议数据体分隔符（保留）
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.UdpZZMerFutProtocolBuilder">
+            <summary>
+            郑州商品期货Udp解包类,解包上海商品期货Udp数据包
+            作者：段进雄
+            日期：2009-7-7
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpZZMerFutProtocolBuilder._headerByteLength">
+            <summary>
+            协议头长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpZZMerFutProtocolBuilder._footerByteLength">
+            <summary>
+            协议尾长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpZZMerFutProtocolBuilder._bodyByteLength">
+            <summary>
+            协议数据体长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpZZMerFutProtocolBuilder._isError">
+            <summary>
+            数据是否错误
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpZZMerFutProtocolBuilder._entitySerializer">
+            <summary>
+            序列化帮助对象
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpZZMerFutProtocolBuilder._messageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpZZMerFutProtocolBuilder._packetSource">
+            <summary>
+            数据包来源
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpZZMerFutProtocolBuilder._udpDataType">
+            <summary>
+            数据包中数据类型（单记录或记录集合）
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpZZMerFutProtocolBuilder._sendDate">
+            <summary>
+            包发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpZZMerFutProtocolBuilder.sSendDate">
+            <summary>
+            包发送日期
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpZZMerFutProtocolBuilder.sSendTime">
+            <summary>
+            包发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpZZMerFutProtocolBuilder._compart">
+            <summary>
+            协议数据体分隔符（保留）
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.UdpZZMerFutProtocolBuilder.UnBuildProtocolHeader(System.Byte[])">
+            <summary>
+            解包协议头
+            按数据结构依次进行解码
+            </summary>
+            <param name="headerDatas"></param>
+        </member>
+        <member name="M:GTAMarketransfers.UdpZZMerFutProtocolBuilder.UnBuildProtocolBody(System.Byte[])">
+            <summary>
+            解包协议体
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpZZMerFutProtocolBuilder.UnBuildProtocolFooter(System.Byte[])">
+            <summary>
+            解包协议尾
+            </summary>
+            <param name="footerDatas"></param>
+        </member>
+        <member name="M:GTAMarketransfers.UdpZZMerFutProtocolBuilder.UnBuildProtocol">
+            <summary>
+            解包协议入口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:GTAMarketransfers.UdpZZMerFutProtocolBuilder.bodyBuildHandler">
+            <summary>
+            包体构造事件
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpZZMerFutProtocolBuilder.MessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpZZMerFutProtocolBuilder.PacketSource">
+            <summary>
+            数据包来源
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpZZMerFutProtocolBuilder.DataType">
+            <summary>
+            数据包中数据类型（单记录或记录集合）
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpZZMerFutProtocolBuilder.sendDateTime">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpZZMerFutProtocolBuilder.HeaderByteLength">
+            <summary>
+            协议头长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpZZMerFutProtocolBuilder.BodyByteLength">
+            <summary>
+            协议体长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpZZMerFutProtocolBuilder.FooterByteLength">
+            <summary>
+            协议尾长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpZZMerFutProtocolBuilder.CompartChar">
+            <summary>
+            协议数据体分隔符（保留）
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.UdpHKStockProtocolBuilder">
+            <summary>
+            上海商品期货Udp解包类,解包上海商品期货Udp数据包
+            作者：段进雄
+            日期：2009-7-7
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder._headerByteLength">
+            <summary>
+            协议头长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder._footerByteLength">
+            <summary>
+            协议尾长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder._bodyByteLength">
+            <summary>
+            协议数据体长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder._udpFutData">
+            <summary>
+            期货实体
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder._entitySerializer">
+            <summary>
+            序列化帮助对象
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder._messageType">
+            <summary>
+            港股消息类型
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder._udpMsgType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder._packetSource">
+            <summary>
+            数据包来源
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder._udpDataType">
+            <summary>
+            数据包中数据类型（单记录或记录集合）
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder._sendDate">
+            <summary>
+            包发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder.sSendDate">
+            <summary>
+            包发送日期
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder.sSendTime">
+            <summary>
+            包发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder._compart">
+            <summary>
+            协议数据体分隔符（保留）
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.UdpHKStockProtocolBuilder.UnBuildProtocolHeader(System.Byte[])">
+            <summary>
+            解包协议头
+            </summary>
+            <param name="headerDatas"></param>
+        </member>
+        <member name="M:GTAMarketransfers.UdpHKStockProtocolBuilder.UnBuildProtocolBody(System.Byte[])">
+            <summary>
+            解包协议体
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpHKStockProtocolBuilder.UnBuildProtocolFooter(System.Byte[])">
+            <summary>
+            解包协议尾
+            </summary>
+            <param name="footerDatas"></param>
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder._strSendDate">
+            <summary>
+            发送日期
+            </summary>
+            
+        </member>
+        <member name="F:GTAMarketransfers.UdpHKStockProtocolBuilder._strSendTime">
+            <summary>
+            发送时间
+            </summary>
+            
+        </member>
+        <member name="M:GTAMarketransfers.UdpHKStockProtocolBuilder.UnBuildProtocol">
+            <summary>
+            解包协议入口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:GTAMarketransfers.UdpHKStockProtocolBuilder.bodyBuildHandler">
+            <summary>
+            包体构造事件
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpHKStockProtocolBuilder.MessageType">
+            <summary>
+            港股消息类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpHKStockProtocolBuilder.UdpMsgType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpHKStockProtocolBuilder.PacketSource">
+            <summary>
+            数据包来源
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpHKStockProtocolBuilder.DataType">
+            <summary>
+            数据包中数据类型（单记录或记录集合）
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpHKStockProtocolBuilder.HeaderByteLength">
+            <summary>
+            协议头长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpHKStockProtocolBuilder.BodyByteLength">
+            <summary>
+            协议体长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpHKStockProtocolBuilder.FooterByteLength">
+            <summary>
+            协议尾长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpHKStockProtocolBuilder.CompartChar">
+            <summary>
+            协议数据体分隔符（保留）
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.Services.FOREXDataSerializer">
+            <summary>
+            外汇
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.Services.FOREXDataSerializer.DeserializeFOREXBatchUdpEntity(System.Byte[])">
+            <summary>
+            解析外汇的udp包
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.Services.FOREXDataSerializer.DeserializeFOREXClosingPirceUdpEntity(System.Byte[])">
+            <summary>
+            解析外汇收盘数据udp
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.Services.FOREXDataSerializer.SerializeFOREXClosingPirceEntity(RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity)">
+            <summary>
+            TCP序列化外汇收盘行情数据
+            <para>把源udp包的数据内容.序列为tcp传输字节数组</para>
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.Services.FOREXDataSerializer.SerializeFOREXBatchEntity(RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity)">
+            <summary>
+            TCP序列化外汇初始行情数据
+            <para>把源udp包的数据内容.序列为tcp传输字节数组</para>
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.Services.FOREXDataSerializer.SerializeFOREXEntityEntity(RealTime.Server.SModelData.HqData.FOREXContractEntity)">
+            <summary>
+            TCP序列化外汇交易行情数据
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.Services.FOREXDataSerializer.DeserializeFOREXContractTcpEntity(System.Byte[])">
+            <summary>
+            反序列化tcp包
+            <para>外汇交易数据</para>
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.Services.FOREXDataSerializer.CopyByteArrayFromSourceByteArray(System.Array,System.Int32@,System.Int32)">
+            <summary>
+            复制字节数组
+            </summary>
+            <param name="sourceArray"></param>
+            <param name="startIndex"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GTAMarketransfers.TransfersResultArg">
+            <summary>
+            数据解包返回结果对象基类
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.TransfersResultArg.ResultObject">
+            <summary>
+            解包后的数据实体
+            或者数据实体的集合        
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.TransfersResultArg.ResultObjectList">
+            <summary>
+            解包后的数据实体
+            或者数据实体的集合
+            <para>集合中有不同类型，用于外汇</para>
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.TransfersResultArg.SendTime">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.UdpResultArg">
+            <summary>
+            数据解包返回结果对象
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpResultArg.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpResultArg.MessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpResultArg.HKMsgType">
+            <summary>
+            港股消息类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpResultArg.PacketSource">
+            <summary>
+            数据来源类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpResultArg.SendingTime">
+            <summary>
+            数据发送时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpResultArg.SendDate">
+            <summary>
+            数据发送日期
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpResultArg.SendTime">
+            <summary>
+            数据发送时间
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.ResponseArg">
+            <summary>
+            回复
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.LoginResponseArg">
+            <summary>
+            登陆回复
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.SubscibeResponseArg._mergeSpan">
+            <summary>
+            合并时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.SubscibeResponseArg._marketAnalysisSpan">
+            <summary>
+            分解时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.SubscibeResponseArg._socketSendTime">
+            <summary>
+            SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.SubscibeResponseArg._pureSocketSendTime">
+            <summary>
+            纯SOCKET发送时间
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.QhResponseArg">
+            <summary>
+            股指期货解包消息参数类
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.QhResponseArg._socketSendTime">
+            <summary>
+            SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.QhResponseArg._pureSocketSendTime">
+            <summary>
+            纯SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.QhResponseArg._packBuildType">
+            <summary>
+            包体类型
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.MerQhResponseArg">
+            <summary>
+            商品期货解包消息参数类
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.MerQhResponseArg._socketSendTime">
+            <summary>
+            SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.MerQhResponseArg._pureSocketSendTime">
+            <summary>
+            纯SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.MerQhResponseArg._packBuildType">
+            <summary>
+            包体类型
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.HKStockResponseArg">
+            <summary>
+            港股解包消息参数类
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.HKStockResponseArg._socketSendTime">
+            <summary>
+            SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.HKStockResponseArg._pureSocketSendTime">
+            <summary>
+            纯SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.HKStockResponseArg._packBuildType">
+            <summary>
+            包体类型
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.FOREXResponseArg">
+            <summary>
+            包汇解包消息参数类
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.FOREXResponseArg._socketSendTime">
+            <summary>
+            SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.FOREXResponseArg._pureSocketSendTime">
+            <summary>
+            纯SOCKET发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.FOREXResponseArg._packBuildType">
+            <summary>
+            包体类型
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.CompleteDataResponse">
+            <summary>
+            全量订阅主服务器这边的响应
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.RequestArg">
+            <summary>
+            请求
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.RequestArg.ClientUseServerType">
+            <summary>
+            TCP连接客户使用的程序类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.RequestArg.RequestType">
+            <summary>
+            客户端请求内容的类型
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.LoginRequestArg">
+            <summary>
+            登陆请求
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.LoginRequestArg.#ctor(System.String,System.String,System.DateTime,System.Object,RealTime.Common.CommonClass.GTASocketRequestType)">
+            <summary>
+            新增用户品种验证方法
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="lastcodeUpdateTime"></param>
+            <param name="resultObject"></param>
+            <param name="requestType"></param>
+            <param name="level"></param>
+            <param name="guids"></param>
+        </member>
+        <member name="T:GTAMarketransfers.CompleteDataRequestArg">
+            <summary>
+            全量请求返回参数
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.CompleteDataRequestArg.CustomerContent">
+            <summary>
+            参数中自定义内容
+            <para>本次添加主要加入GUID唯一标记</para>
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.SubscribeRequestArg">
+            <summary>
+            订阅请求返回参数
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.SubscribeRequestArg.#ctor(System.String,RealTime.Common.CommonClass.GTASocketRequestType)">
+            <summary>
+            删除订阅代码时使用
+            </summary>
+            <param name="subscribeCodes"></param>
+            <param name="requestType"></param>
+        </member>
+        <member name="T:GTAMarketransfers.GetAllCodeRequestArg">
+            <summary>
+            获取全部原代码请求
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.GetAllCodeResponseArg">
+            <summary>
+            获取全部原代码回复
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.TestConnectionRequestArg">
+            <summary>
+            连接测试请求
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TestConnectionRequestArg._ipPort">
+            <summary>
+            客户端IP+端口
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.TestConnectionRequestArg.IpPort">
+            <summary>
+            客户端IP+端口
+            <para>不再是ip和端口,保存的是GUID字串,客户端的唯一标记</para>
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.TestConnectionResponseArg">
+            <summary>
+            连接测试回复
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TestConnectionResponseArg._ipPort">
+            <summary>
+            客户端IP+端口
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.TestConnectionResponseArg.IpPort">
+            <summary>
+            客户端IP+端口
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._headerByteLength">
+            <summary>
+            协议头长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._footerByteLength">
+            <summary>
+            协议尾长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._bodyByteLength">
+            <summary>
+            协议数据体长度
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._udpHqData">
+            <summary>
+            行情实体
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._udpHqDatas">
+            <summary>
+            行情实体集合
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._udpInitData">
+            <summary>
+            初化实体
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._udpInitDatas">
+            <summary>
+            初始实体集合
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._udpFutData">
+            <summary>
+            期货实体
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._entitySerializer">
+            <summary>
+            序列化帮助对象
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._messageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._packetSource">
+            <summary>
+            数据包来源
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._udpDataType">
+            <summary>
+            数据包中数据类型（单记录或记录集合）
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._sendDate">
+            <summary>
+            包发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.UdpProtocolBuilder._compart">
+            <summary>
+            协议数据体分隔符（保留）
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.BuildProtocolHeader">
+            <summary>
+            打包协议头
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.BuildProtocolBody">
+            <summary>
+            打包协议数据体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.BuildProtocolFooter">
+            <summary>
+            打包协议尾
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.BuildUdpHqDataBody">
+            <summary>
+            打包行情数据体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.BuildUdpHqDataListBody">
+            <summary>
+            打包行情集合数据体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.BuildUdpInitDataBody">
+            <summary>
+            打包初始数据体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.BuildUdpInitDataListBody">
+            <summary>
+            打包初始集合数据体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.BuildUdpFutDataBody">
+            <summary>
+            打包期货数据体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.UnBuildProtocolInitList(System.Byte[])">
+            <summary>
+            解包初始实体集合数据体
+            </summary>
+            <param name="bodys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.UnBuildProtocolMarketDiffList(System.Byte[])">
+            <summary>
+            解包初始实体集合数据体
+            </summary>
+            <param name="bodys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.UnBuildProtocolHeader(System.Byte[])">
+            <summary>
+            解包协议头
+            </summary>
+            <param name="headerDatas"></param>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.UnBuildProtocolBody(System.Byte[])">
+            <summary>
+            解包协议体
+            </summary>
+            <param name="bodyDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.UnBuildProtocolFooter(System.Byte[])">
+            <summary>
+            解包协议尾
+            </summary>
+            <param name="footerDatas"></param>
+        </member>
+        <member name="M:GTAMarketransfers.UdpProtocolBuilder.UnBuildProtocol">
+            <summary>
+            解包协议入口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:GTAMarketransfers.UdpProtocolBuilder.bodyBuildHandler">
+            <summary>
+            包体构造事件
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpProtocolBuilder.MessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpProtocolBuilder.PacketSource">
+            <summary>
+            数据包来源
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpProtocolBuilder.DataType">
+            <summary>
+            数据包中数据类型（单记录或记录集合）
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpProtocolBuilder.SendDate">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpProtocolBuilder.HeaderByteLength">
+            <summary>
+            协议头长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpProtocolBuilder.BodyByteLength">
+            <summary>
+            协议体长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpProtocolBuilder.FooterByteLength">
+            <summary>
+            协议尾长度
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.UdpProtocolBuilder.CompartChar">
+            <summary>
+            协议数据体分隔符（保留）
+            </summary>
+        </member>
+        <member name="T:GTAMarketransfers.IMarketEntitySerializer">
+            <summary>
+            Realtime数据实体
+            序列化接口
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeMarketInitEntity(RealTime.Server.SModelData.HqData.InitData)">
+            <summary>
+            序列化初始化实体
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeMarketDiffEntity(RealTime.Server.SModelData.HqData.UdpHqData)">
+            <summary>
+            序列化差异实体
+            </summary>
+            <param name="sData"></param>
+            <param name="sa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeCPlussMarketDiffEntity(RealTime.Server.SModelData.HqData.UdpHqData)">
+            <summary>
+            序列化C++格式差异实体
+            </summary>
+            <param name="sData"></param>
+            <param name="sa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeQhEntity(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            序列化期货实体
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeExQhEntity(RealTime.Server.SModelData.HqData.UdpFutData)">
+            <summary>
+            序列化扩展的期货实体
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeDLMerUdpQhEntity(RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            序列化大连期货实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeMarketInitEntity(System.Byte[])">
+            <summary>
+            反序列化初始化实体
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeMarketDiffEntity(System.Byte[])">
+            <summary>
+            反序列化行情差异实体
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeCPlussMarketDiffEntity(System.Byte[],RealTime.Common.CommonClass.UdpPacketSource)">
+            <summary>
+            反序列化C++格式行情差异实体
+            </summary>
+            <param name="dataBuffer"></param>
+            <param name="udpPacketSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeQhEntity(System.Byte[])">
+            <summary>
+            反序列化期货实体
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeExQhEntity(System.Byte[])">
+            <summary>
+            反序列化扩展的期货实体
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeDLMerUdpQhEntity(System.Byte[])">
+            <summary>
+            反序列化大连商品期货流
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns ></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeZZMerUdpQhEntity(System.Byte[])">
+            <summary>
+            反序列化郑州商品期货流
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeZZMerUdpQhEntity(RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            序列化大连商品期货数据
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeSHMerUdpQhEntity(System.Byte[])">
+            <summary>
+            反序列化上海商品期货流
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeSHMerUdpQhEntity(RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            序列化上海商品期货数据
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeMerFutEntity(System.Byte[])">
+            <summary>
+            反序列化商品期货实体
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeMerFutEntity(RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            序列化商品期货实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeHKUDPEntity(System.Byte[])">
+            <summary>
+            解析港股UDP数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeHKStockEntity(System.Byte[])">
+            <summary>
+            反序列化港股行情数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeHKStockEntity(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            序列化港股行情数据
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeHKStaticUDPEntity(System.Byte[])">
+            <summary>
+            解析港股盘前UDP数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeHKStockStatusEntity(System.Byte[])">
+            <summary>
+            解析港股交易状态数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeHKStockStatusEntity(RealTime.Server.SModelData.HqData.StockStatus)">
+            <summary>
+            解析港股交易状态数据
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeHKPreMarketPriceTableUDPEntity(System.Byte[])">
+            <summary>
+            解析港股价位变动UDP数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeHKPreMarketPriceEntity(System.Byte[])">
+            <summary>
+            解析港股价位变动数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.DeserializeHKStaticEntity(System.Byte[])">
+            <summary>
+            解析港股盘前静态数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeHKMinPriceFluEntity(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.PreMarketPriceTable})">
+            <summary>
+            序列化港股盘前价位变动数据
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeHKMinPriceFluEntity(RealTime.Server.SModelData.HqData.PreMarketPriceTable)">
+            <summary>
+            序列化港股盘前价位变动数据
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketEntitySerializer.SerializeHKStaticEntity(RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            序列化港股盘前静态数据
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GTAMarketransfers.IMarketTransferProtocol">
+            <summary>
+            Realtime 传输协议打包对象
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.PackUdpMarketDiffEntity(RealTime.Server.SModelData.HqData.UdpHqData,GTAMarketSocket.MarketType)">
+            <summary>
+            为差异行情数据实体，打包Udp广播协议
+            </summary>
+            <param name="sData"></param>
+            <param name="sa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.PackUdpMarketEndingProtocol(GTAMarketSocket.MarketType)">
+            <summary>
+            打包批数据更新结束协议
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.PackUdpMarketDiffEntitys(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.UdpHqData},GTAMarketSocket.MarketType)">
+            <summary>
+            为差异行情数据实体集合，打包Udp广播协议
+            </summary>
+            <param name="sDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.PackUdpMarketInitEntity(RealTime.Server.SModelData.HqData.InitData,GTAMarketSocket.MarketType)">
+            <summary>
+            为初始化数据实体集，打包Udp广播协议
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.PackCPlussUdpMarketDiffEntity(RealTime.Server.SModelData.HqData.UdpHqData,GTAMarketSocket.MarketType)">
+            <summary>
+            为初始化数据实体集，打包C++格式Udp广播协议
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.PackUdpMarketInitEntitys(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.InitData},GTAMarketSocket.MarketType)">
+            <summary>
+            为初始化数据实体集合，打包Udp广播协议
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.PackUdpQhDiffEntity(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            为期货数据体，打包Udp广播协议
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.PackUdpExtQhDiffEntity(RealTime.Server.SModelData.HqData.UdpFutData)">
+            <summary>
+            为扩展期货数据体，打包Udp广播协议
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.PackUdpDLQhDiffEntity(RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            为大连商品期货数据体，打包Udp广播协议
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.PackUdpZZQhDiffEntity(RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            为大连商品期货数据体，打包Udp广播协议
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.PackUdpSHQhDiffEntity(RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            为上海商品期货数据体，打包Udp广播协议
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.UnPackUdpEntity(System.Byte[])">
+            <summary>
+            解包Udp广播协议
+            返回结果数组对象
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.UnPackCPlussUdpEntity(System.Byte[])">
+            <summary>
+            解包C++格式的Udp广播协议
+            返回结果数组对象
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:GTAMarketransfers.IMarketTransferProtocol.UnPackDLMerUdpEntity(System.Byte[])”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:GTAMarketransfers.IMarketTransferProtocol.UnPackZZMerUdpEntity(System.Byte[])”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:GTAMarketransfers.IMarketTransferProtocol.UnPackSHMerUdpEntity(System.Byte[])”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:GTAMarketransfers.IMarketTransferProtocol.UnPackHKStockUdpEntity(System.Byte[])”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:GTAMarketransfers.IMarketTransferProtocol.UnPackFOREXUdpEntity(System.Byte[])”忽略有格式错误的 XML 注释 -->
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildGetCompleteDataRequest(System.String)">
+            <summary>
+            打包完整行情数据请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildCompelteDataResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            打包完整行情数据回复
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildNeedGetAllCodeCommandResponse(System.DateTime)">
+            <summary>
+            打包客户端需要获取所有代码命令(回复)
+            </summary>
+            <param name="lastCodeUpdateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildQhResponse(System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            打包期货订阅回复
+            </summary>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscibeQhResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FutData})">
+            <summary>
+            打包期货列表订阅回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildMerQhResponse(System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            打包商品期货订阅回复
+            </summary>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscibeMerQhResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.MerFutData})">
+            <summary>
+            打包期货列表订阅回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscibeMerQhResponse(System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            打包商品期货订阅回复
+            </summary>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscibeHKStockResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HKStock})">
+            <summary>
+            打包港股列表订阅回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscibeHKStockResponse(System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            打包港股订阅回复
+            </summary>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscibeHKStockStatusResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.StockStatus})">
+            <summary>
+            打包港股列表订阅回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscibeHKStockStatusResponse(System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.StockStatus)">
+            <summary>
+            打包港股交易状态订阅回复
+            </summary>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscribeHKPreMarketResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.PreMarketPriceTable})">
+            <summary>
+            打包港股价位变动列表订阅回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscribeHKPreMarketResponse(RealTime.Server.SModelData.HqData.PreMarketPriceTable)">
+            <summary>
+            打包港股价位变动列表订阅回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscribeHKStaticResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HKStaticData})">
+            <summary>
+            打包港股盘前静态数据列表订阅回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscribeHKStaticResponse(System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            打包港股盘前静态订阅回复
+            </summary>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildLoginRequest(System.String,System.String,System.DateTime)">
+            <summary>
+            打包登陆请求
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="lastCodeUpdateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildLoginResponse(System.Boolean,System.String,System.Collections.ArrayList,System.DateTime)">
+            <summary>
+            打包登陆回复
+            </summary>
+            <param name="authenResult"></param>
+            <param name="authenMessage"></param>
+            <param name="codeList"></param>
+            <param name="lastCodeUpdateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildLoginResponse(RealTime.Server.SModelData.Users.UserData,System.DateTime)">
+            <summary>
+            返回登录验证信息
+            </summary>
+            <param name="ud"></param>
+            <param name="responseCodeListLastUpdateTime"></param>
+            <param name="Level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscibeRequest(System.String,RealTime.Common.CommonClass.GTASocketType)">
+            <summary>
+            打包订阅请求
+            </summary>
+            <param name="strSubscibeCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildDeleteSubscibeRequest(System.String)">
+            <summary>
+            删除订阅的代码请求
+            </summary>
+            <param name="strSubscibeCondition">,号隔开的股票代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildGetAllCodeRequest(System.DateTime)">
+            <summary>
+            打包获取所有代码请求
+            </summary>
+            <param name="codeUpdateLastTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildTestConnectionRequest(System.String)">
+            <summary>
+            打包测试连接请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildFOREXBatchUdpEntityList(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity})">
+            <summary>
+            打包外汇的初始数据实体
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildFOREXBatchUdpEntity(RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity)">
+            <summary>
+            打包外汇的初始数据实体
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildFOREXClosingPirceUdpEntityList(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity})">
+            <summary>
+            打包外汇的收盘数据实体
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildFOREXClosingPirceUdpEntity(RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity)">
+            <summary>
+            打包外汇的收盘数据实体
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildFOREXContractEntityList(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FOREXContractEntity})">
+            <summary>
+            打包外汇的交易数据实体
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildFOREXContractEntity(RealTime.Server.SModelData.HqData.FOREXContractEntity)">
+            <summary>
+            打包外汇的交易数据实体
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscribeResponse(RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            打包现货订阅回复
+            </summary>
+            <param name="sendData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscribeResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            打包现货列表订阅回复
+            </summary>
+            <param name="sendDataList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscribeResponse(System.TimeSpan,System.TimeSpan,System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            打包现货订阅回复
+            </summary>
+            <param name="mergeSpan"></param>
+            <param name="marketAnalysisSpan"></param>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="sendData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildSubscribeResponse(System.TimeSpan,System.TimeSpan,System.DateTime,System.DateTime,System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            打包现货订阅回复
+            </summary>
+            <param name="mergeSpan"></param>
+            <param name="marketAnalysisSpan"></param>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="sendDataList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildGetAllCodeResponse(System.DateTime,System.Collections.ArrayList,System.DateTime)">
+            <summary>
+            打包获取所有代码回复
+            </summary>
+            <param name="requestTime"></param>
+            <param name="codelist"></param>
+            <param name="lastUpdateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildTestConnectionResponse(System.DateTime)">
+            <summary>
+            打包连接测试回复
+            </summary>
+            <param name="requestTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.BuildTestConnectionResponse(System.DateTime,System.String)">
+            <summary>
+            打包连接测试回复
+            加上服务端验证客户端IP返回
+            </summary>
+            <param name="requestTime"></param>
+            <param name="ipPort"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:GTAMarketransfers.IMarketTransferProtocol.UnPackTcpRequest(System.Byte[])”忽略有格式错误的 XML 注释 -->
+        <member name="M:GTAMarketransfers.IMarketTransferProtocol.UnPackTcpResponse(System.Byte[],System.Int32[])">
+            <summary>
+            解包回复
+            </summary>
+            <param name="sData"></param>
+            <returns>bodylengths 0--包体长，1-包头长</returns>
+        </member>
+        <member name="T:GTAMarketransfers.EntitySerializer">
+            <summary>
+            实体序列化器
+            为了保证序列化工作的效率采用硬编码
+            (本版本不考虑64位操作系统被使用的情况)
+            实体编码标准请参考 //行情服务UDP通信协议设计文档.doc
+            //TCP打包期货顺序
+            //1.代码2.昨收价3.昨结算价4.今开盘价5.申买价6.申买量7.申卖价8.申卖量9.成交价（瞬量）10.持仓量（昨持仓量）>
+            //11.最高价12.最低价13.今收价14.今结算价15.均价（历史最高价、历史最低价）16.涨停价17.跌停价 （1.现手2.涨跌3.涨跌率4.所属市场）18.成交总金额19.总量（档差）20.成交日期21.成交时间（含微秒）>
+            //UDP打包期货顺序
+            //1.代码2.昨收价3.昨结算价4.今开盘价5.申买价 6.申买量7.申卖价8.申卖量9.成交价（瞬量）10.持仓量（昨持仓量）>
+            //11.最高价12.最低价13.今收价14.今结算价15.均价（历史最高价、历史最低价）16.涨停价17.跌停价18.成交总金额19.总量（档差）20.成交日期21.成交时间（含微秒）>
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.EntitySerializer.shCUUnit">
+            <summary>
+            铜(CU)
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.EntitySerializer.shALUnit">
+            <summary>
+            铝(AL)
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.EntitySerializer.shZNUnit">
+            <summary>
+            锌(ZN)
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.EntitySerializer.shAUUnit">
+            <summary>
+            黄金(AU)
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.EntitySerializer.shRBUnit">
+            <summary>
+            螺纹钢(RB)
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.EntitySerializer.shWRUnit">
+            <summary>
+            线材(WR)
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.EntitySerializer.shFUUnit">
+            <summary>
+            燃料油(FU)
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.EntitySerializer.shRUUnit">
+             <summary>
+            天然橡胶(RU)
+             </summary>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeMarketDiffEntity(RealTime.Server.SModelData.HqData.UdpHqData)">
+            <summary>
+            打包UDP包证券市场
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeMarketDiffEntityFromHqData(System.Byte[])">
+            <summary>
+            反序列化udp包证券市场
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeCPlussMarketDiffEntity(RealTime.Server.SModelData.HqData.UdpHqData)">
+            <summary>
+            打包UDP证券行情数据体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeCPlussMarketDiffEntity(System.Byte[],RealTime.Common.CommonClass.UdpPacketSource)">
+            <summary>
+            反序列化c++的udp包(国内现货)
+            </summary>
+            <param name="dataBuffer"></param>
+            <param name="udpPacketSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeMarketDiffEntity(RealTime.Server.SModelData.HqData.HqData)">
+            <summary>
+            序列化国内现货
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeMarketDiffEntity(System.Byte[])">
+            <summary>
+            反序列化国内现货
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeQhEntity(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            序列化股指期货 (打包股指期货TCP)
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeQhEntity(System.Byte[])">
+            <summary>
+            反序列化股指期货（解包股指期货TCP） 
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeExQhEntity(RealTime.Server.SModelData.HqData.UdpFutData)">
+            <summary>
+            序列化股指期货（打包股指期货udp）
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeExQhEntity(System.Byte[])">
+            <summary>
+            反序列化股指期货(UDP包转换为实体类)
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeMarketInitEntity(RealTime.Server.SModelData.HqData.InitData)">
+            <summary>
+            序列化增加股本属性的证券实体对象
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeMarketInitEntity(System.Byte[])">
+            <summary>
+            反序列化增加股本属性的证券实体对象
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeObject(System.Byte[])">
+            <summary>
+            反序列化对象
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeObject(System.Object)">
+            <summary>
+            序列化对象
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.CopyByteArrayFromSourceByteArray(System.Array,System.Int32,System.Int32)">
+            <summary>
+            复制字节数组
+            </summary>
+            <param name="sourceArray"></param>
+            <param name="startIndex"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.CopyByteArrayFromSourceByteArray(System.Array,System.Int32@,System.Int32)">
+            <summary>
+            复制字节数组
+            </summary>
+            <param name="sourceArray"></param>
+            <param name="startIndex"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeCodeDataEntity(RealTime.Server.SModelData.HqData.CodeData)">
+            <summary>
+            序列化代码列表
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeHqExDataEntity(System.Byte[])">
+            <summary>
+            (执行分发服务器模式时会执行此方法)
+            反序列化国内现货(扩展) 将主服务器的 byte[] 转为实体对象
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeHqExDataEntity(RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            序列化国内现货(扩展)
+            <para>主服务器模式时 把 实例转换为byte[]数组通过tcp往下发</para>
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeCodeDataEntity(System.Byte[])">
+            <summary>
+            反序列化代码列表
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeDLMerUdpQhEntity(System.Byte[])">
+            <summary>
+            分解大连商品期货行情数据(分解大连期货UDP行情源)
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeDLMerUdpQhEntity(RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            打包大连商品期货行情数据(打包大连期货UDP行情源)
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeZZMerUdpQhEntity(System.Byte[])">
+            <summary>
+            分解郑州商品期货行情(UDP)数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeZZMerUdpQhEntity(RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            打包郑州商品期货行情数据(打包郑州期货UDP行情源)
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeSHMerUdpQhEntity(System.Byte[])">
+            <summary>
+            分解上海商品期货行情UDP数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeSHMerUdpQhEntity(RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            打包上海商品期货行情数据(打包上海期货UDP行情源)
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeMerFutEntity(System.Byte[])">
+            <summary>
+            反序列化商品期货行情数据  TCP
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeMerFutEntity(RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            序列化商品期货行情数据 （打包股指期货TCP）
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeHKUDPEntity(System.Byte[])">
+            <summary>
+            解析港股盘中UDP数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeHKStaticUDPEntity(System.Byte[])">
+            <summary>
+            解析港股盘前UDP数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeHKPreMarketPriceTableUDPEntity(System.Byte[])">
+            <summary>
+            解析港股价位变动UDP数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeHKStockStatusEntity(System.Byte[])">
+            <summary>
+            解析港股交易状态数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeHKStaticEntity(System.Byte[])">
+            <summary>
+            解析港股盘前静态数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeHKPreMarketPriceTableEntity(System.Byte[])">
+            <summary>
+            解析港股盘前价位表数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeHKPreMarketPriceEntity(System.Byte[])">
+            <summary>
+            解析港股盘前价位表数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.DeserializeHKStockEntity(System.Byte[])">
+            <summary>
+            反序列化港股盘中行情数据
+            </summary>
+            <param name="dataBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeHKStockEntity(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            序列化港股盘中行情数据
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeHKStockStatusEntity(RealTime.Server.SModelData.HqData.StockStatus)">
+            <summary>
+            序列化港股交易状态数据
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeHKStaticEntity(RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            序列化港股盘前静态数据
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeHKMinPriceFluEntity(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.PreMarketPriceTable})">
+            <summary>
+            序列化港股盘前价位变动数据
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.EntitySerializer.SerializeHKMinPriceFluEntity(RealTime.Server.SModelData.HqData.PreMarketPriceTable)">
+            <summary>
+            序列化港股盘前价位变动数据
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GTAMarketransfers.TransferProtocol">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildGetCompleteDataRequest(System.String)">
+            <summary>
+            打包完整行情数据请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildCompelteDataResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            打包完整行情数据回复
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildNeedGetAllCodeCommandResponse(System.DateTime)">
+            <summary>
+            打包客户端需要获取所有代码回复(命令)
+            </summary>
+            <param name="lastCodeUpdateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildQhResponse(System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            打包股指期货订阅回复
+            </summary>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscibeQhResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FutData})">
+            <summary>
+            打包股指期货列表订阅代码回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildMerQhResponse(System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            打包商品期货订阅回复
+            </summary>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscibeMerQhResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.MerFutData})">
+            <summary>
+            打包商品期货列表订阅代码回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscibeMerQhResponse(System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            打包商品期货订阅回复
+            </summary>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscibeHKStockResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HKStock})">
+            <summary>
+            打包港股列表订阅代码回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscibeHKStockResponse(System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            打包港股订阅回复
+            </summary>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscibeHKStockStatusResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.StockStatus})">
+            <summary>
+            打包港股列表订阅回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscibeHKStockStatusResponse(System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.StockStatus)">
+            <summary>
+            打包港股交易状态订阅回复
+            </summary>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscribeHKPreMarketResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.PreMarketPriceTable})">
+            <summary>
+            打包港股盘最小价位变动列表订阅回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscribeHKPreMarketResponse(RealTime.Server.SModelData.HqData.PreMarketPriceTable)">
+            <summary>
+            打包港股盘最小价位变动列表订阅回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscribeHKStaticResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HKStaticData})">
+            <summary>
+            打包港股盘前静态数据列表订阅回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscribeHKStaticResponse(System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            打包港股盘前静态数据订阅回复
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscribeResponse(RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            打包订阅代码回复
+            </summary>
+            <param name="sendData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscribeResponse(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            打包现货订阅代码列表回复
+            </summary>
+            <param name="sendDataList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscribeResponse(System.TimeSpan,System.TimeSpan,System.DateTime,System.DateTime,RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            打包订阅代码回复
+            </summary>
+            <param name="mergeSpan"></param>
+            <param name="marketAnalysisSpan"></param>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="sendData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscribeResponse(System.TimeSpan,System.TimeSpan,System.DateTime,System.DateTime,System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            打包订阅代码列表回复
+            </summary>
+            <param name="mergeSpan"></param>
+            <param name="marketAnalysisSpan"></param>
+            <param name="socketSendTime"></param>
+            <param name="pureSocketSendTime"></param>
+            <param name="sendDataList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildSubscibeRequest(System.String,RealTime.Common.CommonClass.GTASocketType)">
+            <summary>
+            打包订阅代码请求
+            </summary>
+            <param name="strSubscibeCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildLoginResponse(System.Boolean,System.String,System.Collections.ArrayList,System.DateTime)">
+            <summary>
+            打包登陆回复
+            </summary>
+            <param name="authenResult"></param>
+            <param name="authenMessage"></param>
+            <param name="codeList"></param>
+            <param name="lastCodeUpdateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildLoginResponse(RealTime.Server.SModelData.Users.UserData,System.DateTime)">
+            <summary>
+            返回登录验证信息
+            </summary>
+            <param name="ud"></param>
+            <param name="responseCodeListLastUpdateTime"></param>
+            <param name="Level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildLoginRequest(System.String,System.String,System.DateTime)">
+            <summary>
+            打包登陆请求
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="lastCodeUpdateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildTestConnectionRequest(System.String)">
+            <summary>
+            连接测试请求
+            </summary>
+            <param name="IPAndPort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildTestConnectionResponse(System.DateTime,System.String)">
+            <summary>
+            连接测试响应
+            </summary>
+            <param name="requestTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.UnPackTcpRequest(System.Byte[])">
+            <summary>
+            解请求类型的协议包
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="F:GTAMarketransfers.TransferProtocol.bodyLength">
+            <summary>
+            包体长
+            </summary>
+        </member>
+        <member name="F:GTAMarketransfers.TransferProtocol.headLength">
+            <summary>
+            包头长度
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.UnPackTcpResponse(System.Byte[],System.Int32[])">
+            <summary>
+            解回复类型的协议包
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.GetRequestBuilder(System.Byte[])">
+            <summary>
+             请求协议打包器决策点
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.GetResponseBuilder(System.Byte[],System.Int32[])">
+            <summary>
+            回复协议打包器决策点
+            </summary>
+            <param name="sData"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:GTAMarketransfers.TransferProtocol.UnPackDLMerUdpEntity(System.Byte[])”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:GTAMarketransfers.TransferProtocol.UnPackZZMerUdpEntity(System.Byte[])”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:GTAMarketransfers.TransferProtocol.UnPackSHMerUdpEntity(System.Byte[])”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:GTAMarketransfers.TransferProtocol.UnPackHKStockUdpEntity(System.Byte[])”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:GTAMarketransfers.TransferProtocol.UnPackFOREXUdpEntity(System.Byte[])”忽略有格式错误的 XML 注释 -->
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildFOREXContractEntityList(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FOREXContractEntity})">
+            <summary>
+            打包包汇的交易数据实体
+            <para>打包外汇交易实体列表用于tcp下发</para>
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildFOREXContractEntity(RealTime.Server.SModelData.HqData.FOREXContractEntity)">
+            <summary>
+            打包包汇的交易数据实体
+            <para>打包外汇交易实体列表用于tcp下发</para>
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TransferProtocol.BuildDeleteSubscibeRequest(System.String)">
+            <summary>
+            删除订阅的代码请求
+            </summary>
+            <param name="strSubscibeCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GTAMarketransfers.TcpLoginRequestProtocolBuilder">
+            <summary>
+            类名：打包解包登录类
+            修改：段进雄
+            修改日期：20100114
+            修改内容：
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpLoginRequestProtocolBuilder.BuildProtocolHeader">
+            <summary>
+            打包--验证信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpLoginRequestProtocolBuilder.UnBuildProtocolHeader(System.Byte[])">
+            <summary>
+            解包--验证信息
+            </summary>
+            <param name="headerDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GTAMarketransfers.TcpLoginResponseProtocolBuilder">
+            <summary>
+            修改：段进雄
+            日期：20100115
+            修改内容：
+            
+            </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TcpLoginResponseProtocolBuilder.BuildProtocolHeader">
+            <summary>
+            打包
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpLoginResponseProtocolBuilder.UnBuildCodeList(System.Byte[])">
+            <summary>
+            解包
+            </summary>
+            <param name="bodyData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpLoginResponseProtocolBuilder.UnBuildProtocolHeader(System.Byte[])">
+            <summary>
+            解包--用户登录验证返回信息
+            </summary>
+            <param name="headerDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketransfers.TcpLoginResponseProtocolBuilder.#ctor(RealTime.Server.SModelData.Users.UserData,System.DateTime)">
+            <summary>
+            返回信息中带权限和级数，直到返回到最登录一级
+            为了与先前版本兼容，对打包结构只作追加处理
+            </summary>
+            <param name="ud"></param>
+            <param name="responseCodeListLastUpdateTime"></param>
+            <param name="Level"></param>
+        </member>
+        <member name="P:GTAMarketransfers.TcpLoginResponseProtocolBuilder.Power">
+            <summary>
+            返回用户拥有的品种订阅权限
+            </summary>
+        </member>
+        <member name="P:GTAMarketransfers.TcpLoginResponseProtocolBuilder.Ud">
+            <summary>
+            返回用户验证后的信息
+             </summary>
+        </member>
+        <member name="M:GTAMarketransfers.TypesHelper.CopyByteArrayFromSourceByteArray(System.Array,System.Int32@,System.Int32)">
+            <summary>
+            复制字节数组
+            </summary>
+            <param name="sourceArray"></param>
+            <param name="startIndex"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

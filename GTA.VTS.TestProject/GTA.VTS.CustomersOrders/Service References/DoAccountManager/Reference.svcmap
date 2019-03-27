@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5001d43d-8f78-445c-a09f-2e56490d2494" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:9188/DoAccountAndCapitalManagementService/MEX" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="8ca3cb73-8925-412d-916e-9b991ed19603" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoAccountAndCapitalManagementService/MEX" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f2662699-00ff-41f0-97fa-387b950a05b5" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoAccountAndCapitalManagementService/MEX" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="5c30403d-fd0b-4d90-9143-203837c23949" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoAccountAndCapitalManagementService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.AccountManagementAndFindEntity.xsd" MetadataType="Schema" ID="31f592e6-50cf-457c-be7d-e87a735d49de" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoAccountAndCapitalManagementService/MEX" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="58462f05-74bd-4ac9-8255-5efbe8cca4ac" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoAccountAndCapitalManagementService/MEX" />
+    <MetadataFile FileName="ManagementCenter.Model.xsd" MetadataType="Schema" ID="592da1ee-84d0-4383-81c2-2f55fa2e6c9e" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoAccountAndCapitalManagementService/MEX" />
+    <MetadataFile FileName="GTA.VTS.Common.CommonObject.xsd" MetadataType="Schema" ID="8d49c836-2f19-44d0-a6bb-0961e3ffbf63" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoAccountAndCapitalManagementService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.Model.QH.xsd" MetadataType="Schema" ID="38a9ed01-71fc-43a4-a122-21b10bdf8532" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoAccountAndCapitalManagementService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.Contants.xsd" MetadataType="Schema" ID="7d9825ce-2efd-49cb-8114-b6118b6f8c8d" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoAccountAndCapitalManagementService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.BLL.DelegateValidate.xsd" MetadataType="Schema" ID="e424a9bb-332b-4539-91f6-88d95d84bebc" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoAccountAndCapitalManagementService/MEX" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

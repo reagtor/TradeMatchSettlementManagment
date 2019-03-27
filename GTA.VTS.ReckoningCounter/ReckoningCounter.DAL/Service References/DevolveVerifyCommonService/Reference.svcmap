@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="af4c899b-529b-4d14-b768-10f7143e9330" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:9388/WcfCommonalityProvider/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="fc9a861e-dd6d-4a32-98e0-1662b589244b" SourceId="1" SourceUrl="net.tcp://localhost:9388/WcfCommonalityProvider/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="b11b7280-37c6-4a04-b1b2-d5501bf1ff49" SourceId="1" SourceUrl="net.tcp://localhost:9388/WcfCommonalityProvider/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="9679f66e-483b-491f-abd1-3fc254964d2e" SourceId="1" SourceUrl="net.tcp://localhost:9388/WcfCommonalityProvider/mex" />
+    <MetadataFile FileName="ManagementCenter.Model1.xsd" MetadataType="Schema" ID="b55f8cef-37c7-42f4-9ad9-ba6bd2259187" SourceId="1" SourceUrl="net.tcp://localhost:9388/WcfCommonalityProvider/mex" />
+    <MetadataFile FileName="ManagementCenter.Model.CommonTable1.xsd" MetadataType="Schema" ID="ca11c41a-af43-4750-98f0-bb457c264f21" SourceId="1" SourceUrl="net.tcp://localhost:9388/WcfCommonalityProvider/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

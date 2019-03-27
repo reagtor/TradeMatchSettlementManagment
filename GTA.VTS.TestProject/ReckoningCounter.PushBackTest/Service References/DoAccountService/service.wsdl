@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AccountAndCapitalManagementService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IAccountAndCapitalManagement_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QH" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.BLL.DelegateValidate" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAccountAndCapitalManagement_SingleTraderOpenAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:SingleTraderOpenAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_SingleTraderOpenAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SingleTraderOpenAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_VolumeTraderOpenAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:VolumeTraderOpenAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_VolumeTraderOpenAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VolumeTraderOpenAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_DeleteSingleTraderAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSingleTraderAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_DeleteSingleTraderAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSingleTraderAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_DeleteVolumeTraderAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVolumeTraderAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_DeleteVolumeTraderAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVolumeTraderAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_FreezeAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:FreezeAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_FreezeAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FreezeAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_ThawAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThawAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_ThawAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThawAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_FindAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_FindAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_FindTradePrivileges_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTradePrivileges" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_FindTradePrivileges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTradePrivilegesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_UpdateUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_UpdateUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_AddCapital_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCapital" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_AddCapital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCapitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_TwoAccountsFreeTransferFunds_InputMessage">
+    <wsdl:part name="parameters" element="tns:TwoAccountsFreeTransferFunds" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_TwoAccountsFreeTransferFunds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TwoAccountsFreeTransferFundsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_CheckChannel_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckChannel" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_CheckChannel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckChannelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_IsReckoningDone_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsReckoningDone" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_IsReckoningDone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsReckoningDoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_IsReckoning_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsReckoning" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_IsReckoning_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsReckoningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_FaultRecoveryReckoning_InputMessage">
+    <wsdl:part name="parameters" element="tns:FaultRecoveryReckoning" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_FaultRecoveryReckoning_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FaultRecoveryReckoningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetSpotMaxOrderAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotMaxOrderAmount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetSpotMaxOrderAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotMaxOrderAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetFutureMaxOrderAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFutureMaxOrderAmount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetFutureMaxOrderAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFutureMaxOrderAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetHighLowRangeValueByCommodityCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHighLowRangeValueByCommodityCode" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetHighLowRangeValueByCommodityCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHighLowRangeValueByCommodityCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetHKMaxOrderAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKMaxOrderAmount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetHKMaxOrderAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKMaxOrderAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetHKHighLowRangeValueByCommodityCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKHighLowRangeValueByCommodityCode" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetHKHighLowRangeValueByCommodityCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKHighLowRangeValueByCommodityCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_AdminFindTraderCapitalAccountInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdminFindTraderCapitalAccountInfo" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_AdminFindTraderCapitalAccountInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdminFindTraderCapitalAccountInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetMarketDataInfoByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketDataInfoByCode" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetMarketDataInfoByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketDataInfoByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetAllCM_CommodityByBreedClassTypeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCM_CommodityByBreedClassTypeID" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetAllCM_CommodityByBreedClassTypeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCM_CommodityByBreedClassTypeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_AdminPersonalizationCapital_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdminPersonalizationCapital" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_AdminPersonalizationCapital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdminPersonalizationCapitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_AdminClearTrialData_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdminClearTrialData" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_AdminClearTrialData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdminClearTrialDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetAllReckoningHoldCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReckoningHoldCode" />
+  </wsdl:message>
+  <wsdl:message name="IAccountAndCapitalManagement_GetAllReckoningHoldCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReckoningHoldCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAccountAndCapitalManagement">
+    <wsdl:operation name="SingleTraderOpenAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/SingleTraderOpenAccount" message="tns:IAccountAndCapitalManagement_SingleTraderOpenAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/SingleTraderOpenAccountResponse" message="tns:IAccountAndCapitalManagement_SingleTraderOpenAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VolumeTraderOpenAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/VolumeTraderOpenAccount" message="tns:IAccountAndCapitalManagement_VolumeTraderOpenAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/VolumeTraderOpenAccountResponse" message="tns:IAccountAndCapitalManagement_VolumeTraderOpenAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSingleTraderAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/DeleteSingleTraderAccount" message="tns:IAccountAndCapitalManagement_DeleteSingleTraderAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/DeleteSingleTraderAccountResponse" message="tns:IAccountAndCapitalManagement_DeleteSingleTraderAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVolumeTraderAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/DeleteVolumeTraderAccount" message="tns:IAccountAndCapitalManagement_DeleteVolumeTraderAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/DeleteVolumeTraderAccountResponse" message="tns:IAccountAndCapitalManagement_DeleteVolumeTraderAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FreezeAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/FreezeAccount" message="tns:IAccountAndCapitalManagement_FreezeAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/FreezeAccountResponse" message="tns:IAccountAndCapitalManagement_FreezeAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThawAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/ThawAccount" message="tns:IAccountAndCapitalManagement_ThawAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/ThawAccountResponse" message="tns:IAccountAndCapitalManagement_ThawAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/FindAccount" message="tns:IAccountAndCapitalManagement_FindAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/FindAccountResponse" message="tns:IAccountAndCapitalManagement_FindAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTradePrivileges">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/FindTradePrivileges" message="tns:IAccountAndCapitalManagement_FindTradePrivileges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/FindTradePrivilegesResponse" message="tns:IAccountAndCapitalManagement_FindTradePrivileges_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/UpdateUserPassword" message="tns:IAccountAndCapitalManagement_UpdateUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/UpdateUserPasswordResponse" message="tns:IAccountAndCapitalManagement_UpdateUserPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCapital">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/AddCapital" message="tns:IAccountAndCapitalManagement_AddCapital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/AddCapitalResponse" message="tns:IAccountAndCapitalManagement_AddCapital_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TwoAccountsFreeTransferFunds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/TwoAccountsFreeTransferFunds" message="tns:IAccountAndCapitalManagement_TwoAccountsFreeTransferFunds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/TwoAccountsFreeTransferFundsResponse" message="tns:IAccountAndCapitalManagement_TwoAccountsFreeTransferFunds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckChannel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/CheckChannel" message="tns:IAccountAndCapitalManagement_CheckChannel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/CheckChannelResponse" message="tns:IAccountAndCapitalManagement_CheckChannel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsReckoningDone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/IsReckoningDone" message="tns:IAccountAndCapitalManagement_IsReckoningDone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/IsReckoningDoneResponse" message="tns:IAccountAndCapitalManagement_IsReckoningDone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsReckoning">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/IsReckoning" message="tns:IAccountAndCapitalManagement_IsReckoning_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/IsReckoningResponse" message="tns:IAccountAndCapitalManagement_IsReckoning_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FaultRecoveryReckoning">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/FaultRecoveryReckoning" message="tns:IAccountAndCapitalManagement_FaultRecoveryReckoning_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/FaultRecoveryReckoningResponse" message="tns:IAccountAndCapitalManagement_FaultRecoveryReckoning_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotMaxOrderAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetSpotMaxOrderAmount" message="tns:IAccountAndCapitalManagement_GetSpotMaxOrderAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetSpotMaxOrderAmountResponse" message="tns:IAccountAndCapitalManagement_GetSpotMaxOrderAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFutureMaxOrderAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetFutureMaxOrderAmount" message="tns:IAccountAndCapitalManagement_GetFutureMaxOrderAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetFutureMaxOrderAmountResponse" message="tns:IAccountAndCapitalManagement_GetFutureMaxOrderAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHighLowRangeValueByCommodityCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetHighLowRangeValueByCommodityCode" message="tns:IAccountAndCapitalManagement_GetHighLowRangeValueByCommodityCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetHighLowRangeValueByCommodityCodeResponse" message="tns:IAccountAndCapitalManagement_GetHighLowRangeValueByCommodityCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHKMaxOrderAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetHKMaxOrderAmount" message="tns:IAccountAndCapitalManagement_GetHKMaxOrderAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetHKMaxOrderAmountResponse" message="tns:IAccountAndCapitalManagement_GetHKMaxOrderAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHKHighLowRangeValueByCommodityCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetHKHighLowRangeValueByCommodityCode" message="tns:IAccountAndCapitalManagement_GetHKHighLowRangeValueByCommodityCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetHKHighLowRangeValueByCommodityCodeResponse" message="tns:IAccountAndCapitalManagement_GetHKHighLowRangeValueByCommodityCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminFindTraderCapitalAccountInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/AdminFindTraderCapitalAccountInfo" message="tns:IAccountAndCapitalManagement_AdminFindTraderCapitalAccountInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/AdminFindTraderCapitalAccountInfoResponse" message="tns:IAccountAndCapitalManagement_AdminFindTraderCapitalAccountInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketDataInfoByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetMarketDataInfoByCode" message="tns:IAccountAndCapitalManagement_GetMarketDataInfoByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetMarketDataInfoByCodeResponse" message="tns:IAccountAndCapitalManagement_GetMarketDataInfoByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCM_CommodityByBreedClassTypeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetAllCM_CommodityByBreedClassTypeID" message="tns:IAccountAndCapitalManagement_GetAllCM_CommodityByBreedClassTypeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetAllCM_CommodityByBreedClassTypeIDResponse" message="tns:IAccountAndCapitalManagement_GetAllCM_CommodityByBreedClassTypeID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminPersonalizationCapital">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/AdminPersonalizationCapital" message="tns:IAccountAndCapitalManagement_AdminPersonalizationCapital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/AdminPersonalizationCapitalResponse" message="tns:IAccountAndCapitalManagement_AdminPersonalizationCapital_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminClearTrialData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/AdminClearTrialData" message="tns:IAccountAndCapitalManagement_AdminClearTrialData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/AdminClearTrialDataResponse" message="tns:IAccountAndCapitalManagement_AdminClearTrialData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReckoningHoldCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetAllReckoningHoldCode" message="tns:IAccountAndCapitalManagement_GetAllReckoningHoldCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountAndCapitalManagement/GetAllReckoningHoldCodeResponse" message="tns:IAccountAndCapitalManagement_GetAllReckoningHoldCode_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IAccountAndCapitalManagement" type="tns:IAccountAndCapitalManagement">
+    <wsp:PolicyReference URI="#NetTcpBinding_IAccountAndCapitalManagement_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="SingleTraderOpenAccount">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/SingleTraderOpenAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VolumeTraderOpenAccount">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/VolumeTraderOpenAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSingleTraderAccount">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/DeleteSingleTraderAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVolumeTraderAccount">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/DeleteVolumeTraderAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FreezeAccount">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/FreezeAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThawAccount">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/ThawAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAccount">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/FindAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTradePrivileges">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/FindTradePrivileges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserPassword">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/UpdateUserPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCapital">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/AddCapital" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TwoAccountsFreeTransferFunds">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/TwoAccountsFreeTransferFunds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckChannel">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/CheckChannel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsReckoningDone">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/IsReckoningDone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsReckoning">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/IsReckoning" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FaultRecoveryReckoning">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/FaultRecoveryReckoning" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotMaxOrderAmount">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/GetSpotMaxOrderAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFutureMaxOrderAmount">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/GetFutureMaxOrderAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHighLowRangeValueByCommodityCode">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/GetHighLowRangeValueByCommodityCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHKMaxOrderAmount">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/GetHKMaxOrderAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHKHighLowRangeValueByCommodityCode">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/GetHKHighLowRangeValueByCommodityCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminFindTraderCapitalAccountInfo">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/AdminFindTraderCapitalAccountInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketDataInfoByCode">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/GetMarketDataInfoByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCM_CommodityByBreedClassTypeID">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/GetAllCM_CommodityByBreedClassTypeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminPersonalizationCapital">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/AdminPersonalizationCapital" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminClearTrialData">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/AdminClearTrialData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReckoningHoldCode">
+      <soap12:operation soapAction="http://tempuri.org/IAccountAndCapitalManagement/GetAllReckoningHoldCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccountAndCapitalManagementService">
+    <wsdl:port name="NetTcpBinding_IAccountAndCapitalManagement" binding="tns:NetTcpBinding_IAccountAndCapitalManagement">
+      <soap12:address location="net.tcp://localhost:9183/DoAccountAndCapitalManagementService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:9183/DoAccountAndCapitalManagementService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

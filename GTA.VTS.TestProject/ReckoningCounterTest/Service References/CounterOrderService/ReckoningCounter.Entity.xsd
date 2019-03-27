@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/CommonObject" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" />
+  <xs:complexType name="StockOrderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="BuySell" type="q1:Types.TransactionDirection" />
+      <xs:element minOccurs="0" name="ChannelID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderAmount" type="xs:float" />
+      <xs:element minOccurs="0" name="OrderPrice" type="xs:double" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="OrderUnitType" type="q2:Types.UnitType" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" minOccurs="0" name="OrderWay" type="q3:Types.OrderPriceType" />
+      <xs:element minOccurs="0" name="PortfoliosId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TraderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TraderPassword" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockOrderRequest" nillable="true" type="tns:StockOrderRequest" />
+  <xs:complexType name="OrderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrderDatetime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderResponse" nillable="true" type="tns:OrderResponse" />
+  <xs:complexType name="MercantileFuturesOrderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="BuySell" type="q4:Types.TransactionDirection" />
+      <xs:element minOccurs="0" name="ChannelID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" minOccurs="0" name="OpenOffsetFlag" type="q5:Types.FutureOpenCloseType" />
+      <xs:element minOccurs="0" name="OrderAmount" type="xs:float" />
+      <xs:element minOccurs="0" name="OrderPrice" type="xs:double" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="OrderUnitType" type="q6:Types.UnitType" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" minOccurs="0" name="OrderWay" type="q7:Types.OrderPriceType" />
+      <xs:element minOccurs="0" name="PortfoliosId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TraderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TraderPassword" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MercantileFuturesOrderRequest" nillable="true" type="tns:MercantileFuturesOrderRequest" />
+  <xs:complexType name="StockIndexFuturesOrderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="BuySell" type="q8:Types.TransactionDirection" />
+      <xs:element minOccurs="0" name="ChannelID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" minOccurs="0" name="OpenCloseType" type="q9:Types.FutureOpenCloseType" />
+      <xs:element minOccurs="0" name="OrderAmount" type="xs:float" />
+      <xs:element minOccurs="0" name="OrderPrice" type="xs:double" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="OrderUnitType" type="q10:Types.UnitType" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" minOccurs="0" name="OrderWay" type="q11:Types.OrderPriceType" />
+      <xs:element minOccurs="0" name="PortfoliosId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TraderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TraderPassword" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockIndexFuturesOrderRequest" nillable="true" type="tns:StockIndexFuturesOrderRequest" />
+  <xs:complexType name="StockDealOrderPushBack">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DealAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="DealDatetime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DealId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DealPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OrderId" nillable="true" type="xs:string" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" minOccurs="0" name="OrderState" type="q12:Types.OrderStateType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockDealOrderPushBack" nillable="true" type="tns:StockDealOrderPushBack" />
+  <xs:complexType name="FutureDealOrderPushBack">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DealAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="DealDatetime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DealId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DealPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OrderId" nillable="true" type="xs:string" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" minOccurs="0" name="OrderState" type="q13:Types.OrderStateType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FutureDealOrderPushBack" nillable="true" type="tns:FutureDealOrderPushBack" />
+</xs:schema>

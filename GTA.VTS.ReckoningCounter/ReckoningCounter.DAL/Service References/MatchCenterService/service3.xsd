@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MatchCenter.Entity.HK" />
+  <xs:element name="DoStockOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="dataOrder" nillable="true" type="q1:StockOrderEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoStockOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="DoStockOrderResult" nillable="true" type="q2:ResultDataEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoFutureOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="dataOrder" nillable="true" type="q3:FutureOrderEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoFutureOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="DoFutureOrderResult" nillable="true" type="q4:ResultDataEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoCommoditiesOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="dataOrder" nillable="true" type="q5:CommoditiesOrderEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoCommoditiesOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="DoCommoditiesOrderResult" nillable="true" type="q6:ResultDataEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoHKEntrustOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MatchCenter.Entity.HK" minOccurs="0" name="dataOrder" nillable="true" type="q7:HKOrderEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoHKEntrustOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="DoHKEntrustOrderResult" nillable="true" type="q8:ResultDataEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelStockOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="dataOrder" nillable="true" type="q9:CancelEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelStockOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="CancelStockOrderResult" nillable="true" type="q10:CancelResultEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelFutureOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="dataOrder" nillable="true" type="q11:CancelEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelFutureOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="CancelFutureOrderResult" nillable="true" type="q12:CancelResultEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelCommoditiesOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="dataOrder" nillable="true" type="q13:CancelEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelCommoditiesOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="CancelCommoditiesOrderResult" nillable="true" type="q14:CancelResultEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelHKOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="dataOrder" nillable="true" type="q15:CancelEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelHKOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="CancelHKOrderResult" nillable="true" type="q16:CancelResultEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyHKStockOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="dataOrder" nillable="true" type="q17:HKModifyEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyHKStockOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" minOccurs="0" name="ModifyHKStockOrderResult" nillable="true" type="q18:HKModifyResultEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckChannel">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckChannelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckChannelResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

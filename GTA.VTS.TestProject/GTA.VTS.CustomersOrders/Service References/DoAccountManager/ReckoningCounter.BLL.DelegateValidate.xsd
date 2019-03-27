@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ReckoningCounter.BLL.DelegateValidate" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.BLL.DelegateValidate" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" />
+  <xs:complexType name="HighLowRangeValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HighRangeValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HongKongRangeValue" nillable="true" type="tns:HKRangeValue" />
+      <xs:element minOccurs="0" name="LowRangeValue" type="xs:decimal" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" minOccurs="0" name="RangeType" type="q1:Types.HighLowRangeType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HighLowRangeValue" nillable="true" type="tns:HighLowRangeValue" />
+  <xs:complexType name="HKRangeValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuyHighRangeValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BuyLowRangeValue" type="xs:decimal" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" minOccurs="0" name="HKValidPriceType" type="q2:Types.HKValidPriceType" />
+      <xs:element minOccurs="0" name="SellHighRangeValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SellLowRangeValue" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HKRangeValue" nillable="true" type="tns:HKRangeValue" />
+</xs:schema>

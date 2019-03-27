@@ -1,0 +1,3754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="contextMenuStrip2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="contextMenuStrip2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="contextMenuStrip2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="contextMenuStrip2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dagXH.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dagXH.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dagXH.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dagXH.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageGrid.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageGrid.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPageGrid.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageGrid.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStrip1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStrip1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="contextMenuStrip1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="contextMenuStrip1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listBox1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="listBox1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="listBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageList.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageList.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPageList.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageList.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabControl1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabControl1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageXH.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageXH.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPageXH.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageXH.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStrip6.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStrip6.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="contextMenuStrip6.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="contextMenuStrip6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dagHK.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dagHK.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dagHK.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dagHK.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStrip7.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStrip7.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="contextMenuStrip7.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="contextMenuStrip7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listBox5.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listBox5.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="listBox5.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="listBox5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage17.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage17.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage17.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage17.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl7.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl7.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabControl7.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabControl7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox8.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox8.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox8.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labHKHLType.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labHKHLType.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="labHKHLType.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labHKHLType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbHKPriceType.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbHKPriceType.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cbHKPriceType.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbHKPriceType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label51.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label51.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label51.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label51.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listBox4.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listBox4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="listBox4.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="listBox4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKLow.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKLow.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKLow.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHKLow.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label35.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label35.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label35.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label35.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKHigh.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKHigh.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKHigh.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label36.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label36.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label36.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label36.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKMax.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKMax.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKMax.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label37.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label37.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label37.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label37.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbHKUnit.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbHKUnit.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cbHKUnit.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbHKUnit.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKTodayOutIn.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKTodayOutIn.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKTodayOutIn.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHKTodayOutIn.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label38.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label38.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label38.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label38.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKHasDone.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKHasDone.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKHasDone.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHKHasDone.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label39.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label39.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label39.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label39.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label40.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label40.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label40.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label40.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbHKBuySell.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbHKBuySell.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cbHKBuySell.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbHKBuySell.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label41.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label41.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label41.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label41.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKBalance.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKBalance.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKBalance.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHKBalance.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label42.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label42.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label42.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label42.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKFreeze.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKFreeze.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKFreeze.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHKFreeze.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label43.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label43.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label43.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label43.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKAvailable.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKAvailable.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKAvailable.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHKAvailable.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label44.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label44.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label44.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label44.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKBatch.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKBatch.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKBatch.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHKBatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label45.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label45.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label45.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label45.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHKCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label46.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label46.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label46.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label46.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKTraderID.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKTraderID.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKTraderID.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHKTraderID.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label47.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label47.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label47.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label47.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnHKSendOrder.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnHKSendOrder.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnHKSendOrder.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnHKSendOrder.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKPrice.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKPrice.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKPrice.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label48.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label48.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label48.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label48.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKAmount.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKAmount.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKAmount.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHKAmount.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label49.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label49.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label49.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label49.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKCode.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKCode.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKCode.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHKCode.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label50.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label50.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label50.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label50.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox7.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox7.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox7.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageHK.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageHK.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPageHK.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageHK.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStrip3.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStrip3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="contextMenuStrip3.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="contextMenuStrip3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridViewGZQH.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridViewGZQH.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dataGridViewGZQH.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridViewGZQH.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage11.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage11.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage11.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage11.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStrip5.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStrip5.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="contextMenuStrip5.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="contextMenuStrip5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listBox2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listBox2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="listBox2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="listBox2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage12.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage12.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage12.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage12.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl5.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl5.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabControl5.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabControl5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox5.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox5.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox5.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbGZCode.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbGZCode.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cbGZCode.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbGZCode.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZLow.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZLow.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtGZLow.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtGZLow.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label33.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label33.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label33.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label33.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZHigh.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZHigh.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtGZHigh.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label34.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label34.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label34.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label34.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZMax.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZMax.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtGZMax.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label30.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label30.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label30.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label30.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbGZOpenClose.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbGZOpenClose.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cbGZOpenClose.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbGZOpenClose.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label27.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label27.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label27.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label27.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbGZUnit.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbGZUnit.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cbGZUnit.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbGZUnit.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZTodayOutIn.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZTodayOutIn.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtGZTodayOutIn.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtGZTodayOutIn.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label14.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label14.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZMargin.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZMargin.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtGZMargin.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtGZMargin.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label15.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label15.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label16.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label16.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbGZBuySell.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbGZBuySell.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cbGZBuySell.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbGZBuySell.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label17.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label17.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZBalance.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZBalance.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtGZBalance.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtGZBalance.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label18.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label18.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label18.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label18.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZFreezeCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZFreezeCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtGZFreezeCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtGZFreezeCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label19.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label19.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label19.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label19.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZAvailableCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZAvailableCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtGZAvailableCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtGZAvailableCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label20.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label20.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label20.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label20.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZBatch.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZBatch.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtGZBatch.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtGZBatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label21.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label21.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label21.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label21.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtGZCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtGZCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label22.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label22.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label22.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label22.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZTraderID.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZTraderID.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtGZTraderID.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtGZTraderID.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label23.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label23.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label23.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label23.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnGZSendOrder.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnGZSendOrder.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnGZSendOrder.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnGZSendOrder.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbGZMarket.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbGZMarket.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cbGZMarket.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbGZMarket.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZPrice.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZPrice.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtGZPrice.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label24.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label24.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label24.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label24.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZAmount.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtGZAmount.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtGZAmount.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtGZAmount.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label25.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label25.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label25.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label25.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label26.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label26.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label26.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label26.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox4.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox4.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage3.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage3.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="daXHHold.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="daXHHold.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="daXHHold.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="daXHHold.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryXHHold.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryXHHold.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryXHHold.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryXHHold.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage8.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage8.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage8.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label52.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label52.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label52.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label52.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtQueryXHNumber.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtQueryXHNumber.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtQueryXHNumber.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtQueryXHNumber.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="daXHTodayEntrust.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="daXHTodayEntrust.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="daXHTodayEntrust.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="daXHTodayEntrust.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryXHTodayEntrust.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryXHTodayEntrust.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryXHTodayEntrust.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryXHTodayEntrust.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage9.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage9.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage9.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label55.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label55.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label55.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label55.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtQueryXHTradeNo.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtQueryXHTradeNo.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtQueryXHTradeNo.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtQueryXHTradeNo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="daXHTodayTrade.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="daXHTodayTrade.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="daXHTodayTrade.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="daXHTodayTrade.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryXHTodayTrade.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryXHTodayTrade.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryXHTodayTrade.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryXHTodayTrade.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage10.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage10.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage10.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label73.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label73.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label73.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label73.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtXHMarketValue.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtXHMarketValue.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtXHMarketValue.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtXHMarketValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgXHMarketValue.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgXHMarketValue.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgXHMarketValue.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgXHMarketValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnXHMarketValue.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnXHMarketValue.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnXHMarketValue.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnXHMarketValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage26.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage26.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage26.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage26.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbXHCurenyType.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbXHCurenyType.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cmbXHCurenyType.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cmbXHCurenyType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvXHTotalCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvXHTotalCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgvXHTotalCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgvXHTotalCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnXHTotalCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnXHTotalCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnXHTotalCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnXHTotalCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage27.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage27.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage27.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage27.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl4.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabControl4.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabControl4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgXHCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgXHCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgXHCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgXHCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryXHCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryXHCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryXHCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryXHCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox3.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox3.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage5.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage5.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage5.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgHKHold.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgHKHold.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgHKHold.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgHKHold.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryHKHold.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryHKHold.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryHKHold.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryHKHold.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage18.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage18.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage18.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage18.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label58.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label58.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label58.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label58.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label56.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label56.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label56.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label56.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtQueryHKEnNO.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtQueryHKEnNO.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtQueryHKEnNO.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtQueryHKEnNO.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgHKTodayEntrust.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgHKTodayEntrust.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgHKTodayEntrust.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgHKTodayEntrust.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryHKTodayEntrust.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryHKTodayEntrust.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryHKTodayEntrust.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryHKTodayEntrust.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage19.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage19.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage19.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage19.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label53.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label53.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label53.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label53.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label57.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label57.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label57.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label57.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtQueryHKTradeNO.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtQueryHKTradeNO.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtQueryHKTradeNO.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtQueryHKTradeNO.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgHKTodayTrade.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgHKTodayTrade.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgHKTodayTrade.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgHKTodayTrade.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryHKTodayTrade.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryHKTodayTrade.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryHKTodayTrade.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryHKTodayTrade.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage20.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage20.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage20.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage20.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpDateHKEnd.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpDateHKEnd.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dtpDateHKEnd.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dtpDateHKEnd.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpDateHKStart.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpDateHKStart.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dtpDateHKStart.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dtpDateHKStart.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label62.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label62.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label62.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label62.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label61.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label61.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label61.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label61.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkHKDateTime.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkHKDateTime.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="chkHKDateTime.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chkHKDateTime.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label54.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label54.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label54.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label54.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKHistroyEnNo.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKHistroyEnNo.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKHistroyEnNo.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHKHistroyEnNo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvHK_historyEntrust.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvHK_historyEntrust.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgvHK_historyEntrust.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgvHK_historyEntrust.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryHK_HistoryEntrust.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryHK_HistoryEntrust.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryHK_HistoryEntrust.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryHK_HistoryEntrust.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage21.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage21.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage21.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage21.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpDateHKHistEnd.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpDateHKHistEnd.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dtpDateHKHistEnd.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dtpDateHKHistEnd.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpDateHKHisStart.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpDateHKHisStart.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dtpDateHKHisStart.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dtpDateHKHisStart.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label63.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label63.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label63.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label63.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label64.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label64.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label64.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label64.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkQueryHKHisTrade.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkQueryHKHisTrade.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="chkQueryHKHisTrade.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chkQueryHKHisTrade.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label59.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label59.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label59.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label59.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label60.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label60.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label60.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label60.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKHistroyTradeNo.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHKHistroyTradeNo.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHKHistroyTradeNo.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHKHistroyTradeNo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvHK_HistoryTrade.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvHK_HistoryTrade.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgvHK_HistoryTrade.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgvHK_HistoryTrade.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQHKHistoryTrade.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQHKHistoryTrade.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQHKHistoryTrade.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQHKHistoryTrade.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage22.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage22.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage22.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage22.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbQueryType.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbQueryType.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cmbQueryType.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cmbQueryType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpModifyEnd.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpModifyEnd.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dtpModifyEnd.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dtpModifyEnd.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpModifyStart.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpModifyStart.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dtpModifyStart.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dtpModifyStart.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label67.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label67.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label67.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label67.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label68.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label68.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label68.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label68.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkModifyTime.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkModifyTime.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="chkModifyTime.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chkModifyTime.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label65.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label65.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label65.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label65.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label66.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label66.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label66.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label66.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtModifyEntrustNumber.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtModifyEntrustNumber.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtModifyEntrustNumber.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtModifyEntrustNumber.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvModifyList.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvModifyList.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgvModifyList.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgvModifyList.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnModifyQuery.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnModifyQuery.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnModifyQuery.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnModifyQuery.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage23.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage23.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage23.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage23.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label74.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label74.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label74.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label74.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMarketValuCode.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMarketValuCode.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtMarketValuCode.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtMarketValuCode.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvMarketValue.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvMarketValue.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgvMarketValue.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgvMarketValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryMarketValue.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryMarketValue.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryMarketValue.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryMarketValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage24.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage24.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage24.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage24.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbCurrencyType.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbCurrencyType.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cmbCurrencyType.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cmbCurrencyType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvTotalCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvTotalCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgvTotalCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgvTotalCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTotalCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTotalCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnTotalCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnTotalCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage25.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage25.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage25.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage25.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl8.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl8.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabControl8.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabControl8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgHKCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgHKCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgHKCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgHKCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryHKCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryHKCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryHKCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryHKCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox9.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox9.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox9.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage7.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage7.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage7.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView7.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView7.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dataGridView7.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridView7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryGZHold.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryGZHold.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryGZHold.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryGZHold.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage13.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage13.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage13.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage13.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView8.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView8.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dataGridView8.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridView8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryGZTodayEntrust.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryGZTodayEntrust.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryGZTodayEntrust.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryGZTodayEntrust.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage14.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage14.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage14.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage14.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView9.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView9.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dataGridView9.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridView9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryGZTodayTrade.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryGZTodayTrade.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryGZTodayTrade.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryGZTodayTrade.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage15.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage15.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage15.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage15.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label76.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label76.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label76.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label76.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtQHMarketValue.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtQHMarketValue.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtQHMarketValue.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtQHMarketValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgQHMarketValue.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgQHMarketValue.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgQHMarketValue.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgQHMarketValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryMarketValu.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryMarketValu.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryMarketValu.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryMarketValu.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage28.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage28.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage28.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage28.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbQHCureny.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbQHCureny.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cmbQHCureny.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cmbQHCureny.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvQHTotalCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvQHTotalCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgvQHTotalCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgvQHTotalCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQHQueryTotalCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQHQueryTotalCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQHQueryTotalCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQHQueryTotalCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage29.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage29.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage29.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage29.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label77.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label77.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label77.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label77.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPwd.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPwd.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtPwd.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtPwd.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbQHFlowCury.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbQHFlowCury.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cmbQHFlowCury.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cmbQHFlowCury.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvQHFlowDetail.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvQHFlowDetail.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgvQHFlowDetail.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgvQHFlowDetail.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryQHFlow.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryQHFlow.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryQHFlow.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryQHFlow.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage30.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage30.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage30.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage30.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="daQHHistoryTrade.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="daQHHistoryTrade.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="daQHHistoryTrade.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="daQHHistoryTrade.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button6.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button6.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button6.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage32.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage32.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage32.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage32.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl6.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl6.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabControl6.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabControl6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgQHCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgQHCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dgQHCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgQHCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryGZCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnQueryGZCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnQueryGZCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQueryGZCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox6.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox6.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox6.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage6.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage6.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage6.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl3.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabControl3.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabControl3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage4.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage4.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBox1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="checkBox1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label28.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label28.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label28.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label28.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labChannel.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labChannel.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="labChannel.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labChannel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtEnturstNo.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtEnturstNo.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtEnturstNo.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtEnturstNo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtChannelID.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtChannelID.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtChannelID.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtChannelID.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRegisterChannle.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRegisterChannle.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnRegisterChannle.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnRegisterChannle.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStrip4.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStrip4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="contextMenuStrip4.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="contextMenuStrip4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listBox3.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listBox3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="listBox3.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="listBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDisConnect.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDisConnect.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnDisConnect.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDisConnect.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConnect.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConnect.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnConnect.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnConnect.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage16.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage16.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPage16.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage16.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label82.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label82.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label82.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label82.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox4.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="textBox4.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="textBox4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label78.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label78.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label78.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label78.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBox3.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBox3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="comboBox3.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="comboBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label81.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label81.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label81.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label81.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label79.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label79.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label79.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label79.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button4.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button4.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBox2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBox2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="comboBox2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="comboBox2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button3.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button3.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label80.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label80.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label80.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label80.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox3.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="textBox3.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="textBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox10.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox10.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox10.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageAdminTest.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageAdminTest.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabPageAdminTest.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageAdminTest.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tabControl2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabControl2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="statusStrip1s.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="statusStrip1s.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="statusStrip1s.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="statusStrip1s.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACysN4RCcYa
+        E8kfGMofGMocFc0bE84VDdUNBNoJANoJANUIAM8IAMKqqNkAAAAAAAASCdwjG+I4MttCPNhBO9k/ONs8
+        Nd80LeYrI+4eFfYOBP8KAPYJAOQIAMEAAAAAAAAbE+U/ONtTTtdeWdVcV9VZVNjZ2PMAAABBOuo1LfEl
+        HfoTCv8KAPUIAM0AAAAAAAAqIuJVUNZnY9Rva9NsZ9RoZNYAAAAAAAAAAABBOu4yKvYbEv8KAP0JANUA
+        AAAAAAA/ONtlYdN1cdJ5ddJ2ctNuatVoY9gAAAAAAAAAAAAzK/MlHPkRB/0KAdwAAAAAAABPStdzb9J9
+        etJ/e9J5ddNybtRoY9ddWNwAAAAAAAAAAAAsJPMiGvITC9sAAAAAAABhXNR/e9IAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAtJeobE9cAAAAAAABqZtOHhNQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAA1LuMiGtMAAAAAAAB5ddKRjtiOi9aGg9N7d9FuatJhXNRSTNcAAAAAAAAAAAA2L+I8Nd0nINEA
+        AAAAAAB/e9KbmNuWlNqLiNWAfNF0cNFlYNMAAAAAAAAAAAA6M94+ON1AOdopI9AAAAAAAACMidaqqOGf
+        nd2RjteHhNN8edEAAAAAAAAAAABMRthHQdpGQNlDPNgqI88AAAAAAACal9u+veixruOem9yVktiNitXo
+        6PcAAAB1cdJwbNJkYNRYU9VFP9gkHc0AAAAAAACnpN/Qz+++vOippuCfnd2XldqTkNiQjdeKh9WDgNN4
+        dNJkYNRDPNgdFssAAAAAAADl5famo9+VktmIhdWAfdJ5ddJybtJzb9JsaNNhXNRaVdVIQtkpId+4tuEA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAgAEAAIAB
+        AACAgQAAgcEAAIDhAACAcQAAn/kAAJ/5AACAcQAAgOEAAIHBAACAgQAAgAEAAIABAAD//wAA
+</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbCodes.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbCodes.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbCodes.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbCodes.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtXHLow.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtXHLow.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtXHLow.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtXHLow.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label31.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label31.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label31.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label31.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtXHHigh.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtXHHigh.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtXHHigh.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label32.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label32.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label32.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label32.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtXhMax.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtXhMax.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtXhMax.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label29.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label29.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label29.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label29.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbXHUnit.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbXHUnit.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cbXHUnit.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbXHUnit.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTodayOutIn.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTodayOutIn.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtTodayOutIn.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTodayOutIn.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label13.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label13.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtXHHasDone.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtXHHasDone.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtXHHasDone.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtXHHasDone.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label12.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label12.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label11.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label11.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBuySell.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBuySell.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="comboBuySell.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="comboBuySell.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label10.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBalance.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBalance.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtBalance.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtBalance.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label7.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFreezeCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFreezeCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtFreezeCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtFreezeCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label8.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAvailableCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAvailableCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtAvailableCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtAvailableCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label9.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBatch.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBatch.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtBatch.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtBatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label4.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCapital.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCapital.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtCapital.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtCapital.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label5.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTradeID.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTradeID.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtTradeID.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTradeID.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label6.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDoOrder.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDoOrder.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnDoOrder.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDoOrder.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbMarketOrder.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbMarketOrder.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cbMarketOrder.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbMarketOrder.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPrice.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPrice.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtPrice.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label3.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label3.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAmount.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAmount.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtAmount.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtAmount.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCode.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCode.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtCode.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtCode.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBox1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="comboBox1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="comboBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dateTimePicker1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dateTimePicker1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dateTimePicker1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dateTimePicker1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dateTimePicker2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dateTimePicker2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dateTimePicker2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dateTimePicker2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label69.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label69.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label69.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label69.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label70.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label70.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label70.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label70.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBox2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBox2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="checkBox2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBox2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label71.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label71.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label71.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label71.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label72.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label72.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label72.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label72.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="textBox1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="textBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView11.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView11.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dataGridView11.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridView11.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label75.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label75.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label75.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label75.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="textBox2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="textBox2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView12.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView12.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dataGridView12.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridView12.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

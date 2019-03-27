@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e073155a-15af-4d20-8878-3d18d25099e7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:8689/DoQueryService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="7541cb5c-156c-49da-8ab2-63094e223116" SourceId="1" SourceUrl="net.tcp://localhost:8689/DoQueryService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="a55e7387-f942-49f1-a014-ef8fd049be56" SourceId="1" SourceUrl="net.tcp://localhost:8689/DoQueryService/mex" />
+    <MetadataFile FileName="ReckoningCounter.Entity.xsd" MetadataType="Schema" ID="2a03423b-e2f9-43fd-813c-25f51d0d8236" SourceId="1" SourceUrl="net.tcp://localhost:8689/DoQueryService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="47ebf6e0-415e-4cb4-ac3a-4749889446b1" SourceId="1" SourceUrl="net.tcp://localhost:8689/DoQueryService/mex" />
+    <MetadataFile FileName="CommonObject.xsd" MetadataType="Schema" ID="bf63c481-1b75-43a0-b66c-16f49641b420" SourceId="1" SourceUrl="net.tcp://localhost:8689/DoQueryService/mex" />
+    <MetadataFile FileName="ReckoningCounter.Entity.AccountManagementAndFindEntity.xsd" MetadataType="Schema" ID="b2f4e277-6373-4ab6-ac9d-8fb8f7204b1a" SourceId="1" SourceUrl="net.tcp://localhost:8689/DoQueryService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

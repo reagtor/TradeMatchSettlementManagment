@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{425FB749-8622-4940-874C-34ADB954FF22}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GTA.VTS.CustomersOrders</RootNamespace>
+    <AssemblyName>GTA.VTS.CustomersOrders</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>Resources\App.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>9FDF76ED9C0E25B6CDC0B75557C435843B82DD7A</ManifestCertificateThumbprint>
+    <ManifestKeyFile>GTA.VTS.CustomersOrders_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>\\192.168.189.42\测试工具发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>\\192.168.189.42\测试工具发布\</UpdateUrl>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="SmartThreadPool, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\SmartThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppForm\frmAdditionalCaption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmAdditionalCaption.Designer.cs">
+      <DependentUpon>frmAdditionalCaption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmConfiguration.Designer.cs">
+      <DependentUpon>frmConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmFreeTransferAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmFreeTransferAccounts.Designer.cs">
+      <DependentUpon>frmFreeTransferAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmCFQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmCFQuery.Designer.cs">
+      <DependentUpon>frmCFQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmConnection.Designer.cs">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmFlowQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmFlowQuery.Designer.cs">
+      <DependentUpon>frmFlowQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmHKQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmHKQuery.Designer.cs">
+      <DependentUpon>frmHKQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmReinitCaptial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmReinitCaptial.Designer.cs">
+      <DependentUpon>frmReinitCaptial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmSIQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmSIQuery.Designer.cs">
+      <DependentUpon>frmSIQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmStatisticalAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmStatisticalAnalysis.Designer.cs">
+      <DependentUpon>frmStatisticalAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmXHQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmXHQuery.Designer.cs">
+      <DependentUpon>frmXHQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\MdiFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\mdiMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\mdiMainForm.Designer.cs">
+      <DependentUpon>mdiMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmCFOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmCFOrder.Designer.cs">
+      <DependentUpon>frmCFOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmHKOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmHKOrder.Designer.cs">
+      <DependentUpon>frmHKOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmSIOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmSIOrder.Designer.cs">
+      <DependentUpon>frmSIOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\frmXHOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\frmXHOrder.Designer.cs">
+      <DependentUpon>frmXHOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\MdiMainForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\MdiMainForm2.Designer.cs">
+      <DependentUpon>MdiMainForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm\ModifyOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm\ModifyOrderForm.Designer.cs">
+      <DependentUpon>ModifyOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\AnalysisEntry.cs" />
+    <Compile Include="BLL\AutoCanceEntry.cs" />
+    <Compile Include="BLL\CodeManager.cs" />
+    <Compile Include="BLL\Encrypt.cs" />
+    <Compile Include="BLL\GZQHMessageLogic.cs" />
+    <Compile Include="BLL\HKMessageLogic.cs" />
+    <Compile Include="BLL\IMessageView.cs" />
+    <Compile Include="BLL\Message.cs" />
+    <Compile Include="BLL\OrderCallBack.cs" />
+    <Compile Include="BLL\OrderSQLHelper.cs" />
+    <Compile Include="BLL\ProductionAccount.cs" />
+    <Compile Include="BLL\ResourceOperate.cs" />
+    <Compile Include="BLL\SortableBindingList.cs" />
+    <Compile Include="BLL\SPQHMessageLogic.cs" />
+    <Compile Include="BLL\Utils.cs" />
+    <Compile Include="BLL\WCFServices.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\XHMessageLogic.cs" />
+    <Compile Include="Controls\PageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PageControl.Designer.cs">
+      <DependentUpon>PageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\UserTabControl.Designer.cs">
+      <DependentUpon>UserTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppForm\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\ModifyOrderForm.resx">
+      <DependentUpon>ModifyOrderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="BLL\ServerConfig.cs" />
+    <Compile Include="Resources\Resource_EN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource_EN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Resource_ZH_CN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource_ZH_CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DoAccountManager\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DoCommonQuery\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DoDealRptService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DoOrderService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HKCommonQuery\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TransactionManageService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DoAccountManager\" />
+    <WCFMetadataStorage Include="Service References\DoCommonQuery\" />
+    <WCFMetadataStorage Include="Service References\DoDealRptService\" />
+    <WCFMetadataStorage Include="Service References\DoOrderService\" />
+    <WCFMetadataStorage Include="Service References\HKCommonQuery\" />
+    <WCFMetadataStorage Include="Service References\TransactionManageService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoDealRptService\Arrays.xsd" />
+    <None Include="Service References\DoDealRptService\service.wsdl" />
+    <None Include="Service References\DoDealRptService\service.xsd" />
+    <None Include="Service References\DoDealRptService\service1.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoDealRptService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoDealRptService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoDealRptService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoCommonQuery\service.wsdl" />
+    <None Include="Service References\DoCommonQuery\service.xsd" />
+    <None Include="Service References\DoCommonQuery\service1.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoCommonQuery\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoCommonQuery\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoCommonQuery\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TransactionManageService\Arrays.xsd" />
+    <None Include="Service References\TransactionManageService\service.wsdl" />
+    <None Include="Service References\TransactionManageService\service.xsd" />
+    <None Include="Service References\TransactionManageService\service1.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\PageControl.resx">
+      <DependentUpon>PageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resource_EN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource_EN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resource_ZH_CN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource_ZH_CN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransactionManageService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransactionManageService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GTA.VTS.CustomersOrders_TemporaryKey.pfx" />
+    <EmbeddedResource Include="Resources\App.ico" />
+    <Content Include="Resources\HKOrderTemplate.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Update.ico" />
+    <Content Include="Resources\XHOrderTemplate.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GZQHOrderTemplate.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SPQHOrderTemplate.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\HKCommonQuery\GTA.VTS.CustomersOrders.HKCommonQuery.HKCapitalEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKCommonQuery\GTA.VTS.CustomersOrders.HKCommonQuery.HKHoldFindResultyEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKCommonQuery\GTA.VTS.CustomersOrders.HKCommonQuery.HK_AcccountHoldFreezeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKCommonQuery\GTA.VTS.CustomersOrders.HKCommonQuery.HK_AccountHoldInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKCommonQuery\GTA.VTS.CustomersOrders.HKCommonQuery.HK_CapitalAccountFreezeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKCommonQuery\GTA.VTS.CustomersOrders.HKCommonQuery.HK_CapitalAccountInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKCommonQuery\GTA.VTS.CustomersOrders.HKCommonQuery.HK_HistoryEntrustInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKCommonQuery\GTA.VTS.CustomersOrders.HKCommonQuery.HK_HistoryModifyOrderRequestInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKCommonQuery\GTA.VTS.CustomersOrders.HKCommonQuery.HK_HistoryTradeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKCommonQuery\GTA.VTS.CustomersOrders.HKCommonQuery.HK_TodayEntrustInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKCommonQuery\GTA.VTS.CustomersOrders.HKCommonQuery.HK_TodayTradeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKCommonQuery\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HKCommonQuery\configuration.svcinfo" />
+    <None Include="Service References\HKCommonQuery\configuration91.svcinfo" />
+    <None Include="Service References\DoCommonQuery\ReckoningCounter.Entity.AccountManagementAndFindEntity.xsd" />
+    <None Include="Service References\DoCommonQuery\ReckoningCounter.Entity.Model.QueryFilter.xsd" />
+    <None Include="Service References\DoCommonQuery\ReckoningCounter.Entity.Model.xsd" />
+    <None Include="Service References\DoCommonQuery\ReckoningCounter.Entity.xsd" />
+    <None Include="Service References\DoCommonQuery\ReckoningCounter.Model.xsd" />
+    <None Include="Service References\DoDealRptService\ReckoningCounter.Entity.Model.HK.xsd" />
+    <None Include="Service References\DoDealRptService\ReckoningCounter.Entity.Model.QH.xsd" />
+    <None Include="Service References\DoDealRptService\ReckoningCounter.Entity.Model.XH.xsd" />
+    <None Include="Service References\DoDealRptService\ReckoningCounter.Entity.xsd" />
+    <None Include="Service References\DoDealRptService\ReckoningCounter.Model.xsd" />
+    <None Include="Service References\DoOrderService\GTA.VTS.CustomersOrders.DoOrderService.OrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoOrderService\GTA.VTS.CustomersOrders.DoOrderService.TypesOrderStateType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoOrderService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DoOrderService\configuration.svcinfo" />
+    <None Include="Service References\DoOrderService\configuration91.svcinfo" />
+    <None Include="Service References\DoAccountManager\GTA.VTS.CustomersOrders.DoAccountManager.AccountFindResultEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoAccountManager\GTA.VTS.CustomersOrders.DoAccountManager.CM_BreedClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoAccountManager\GTA.VTS.CustomersOrders.DoAccountManager.HighLowRangeValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoAccountManager\GTA.VTS.CustomersOrders.DoAccountManager.MarketDataLevel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoAccountManager\GTA.VTS.CustomersOrders.DoAccountManager.QH_TodaySettlementPriceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoAccountManager\GTA.VTS.CustomersOrders.DoAccountManager.TradersAccountCapitalInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoAccountManager\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DoAccountManager\configuration.svcinfo" />
+    <None Include="Service References\DoAccountManager\configuration91.svcinfo" />
+    <None Include="Service References\DoAccountManager\Arrays.xsd" />
+    <None Include="Service References\DoAccountManager\GTA.VTS.Common.CommonObject.xsd" />
+    <None Include="Service References\DoAccountManager\ManagementCenter.Model.xsd" />
+    <None Include="Service References\DoAccountManager\ReckoningCounter.BLL.DelegateValidate.xsd" />
+    <None Include="Service References\DoAccountManager\ReckoningCounter.Entity.AccountManagementAndFindEntity.xsd" />
+    <None Include="Service References\DoAccountManager\ReckoningCounter.Entity.Contants.xsd" />
+    <None Include="Service References\DoAccountManager\ReckoningCounter.Entity.Model.QH.xsd" />
+    <None Include="Service References\DoAccountManager\service.wsdl" />
+    <None Include="Service References\DoAccountManager\service.xsd" />
+    <None Include="Service References\DoAccountManager\service1.xsd" />
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.AssetSummaryEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.FuturesCapitalEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.FuturesHoldFindResultEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.QH_CapitalAccountFreezeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.QH_CapitalAccountTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.QH_HistoryEntrustTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.QH_HistoryTradeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.QH_HoldAccountFreezeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.QH_HoldAccountTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.QH_TodayEntrustTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.QH_TodayTradeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.QH_TradeCapitalFlowDetailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.SpotCapitalEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.SpotHoldFindResultEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.UA_BankAccountTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.UA_CapitalFlowTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.XH_AcccountHoldFreezeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.XH_AccountHoldTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.XH_CapitalAccountFreezeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.XH_CapitalAccountTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.XH_HistoryEntrustTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.XH_HistoryTradeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.XH_TodayEntrustTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.CustomersOrders.DoCommonQuery.XH_TodayTradeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoCommonQuery\GTA.VTS.Common.CommonObject.xsd" />
+    <None Include="Service References\DoOrderService\GTA.VTS.Common.CommonObject.xsd" />
+    <None Include="Service References\DoOrderService\ReckoningCounter.Entity.Contants.xsd" />
+    <None Include="Service References\DoOrderService\ReckoningCounter.Entity.xsd" />
+    <None Include="Service References\DoOrderService\service.wsdl" />
+    <None Include="Service References\DoOrderService\service.xsd" />
+    <None Include="Service References\DoOrderService\service1.xsd" />
+    <None Include="Service References\HKCommonQuery\GTA.VTS.Common.CommonObject.xsd" />
+    <None Include="Service References\HKCommonQuery\ReckoningCounter.Entity.AccountManagementAndFindEntity.HK.xsd" />
+    <None Include="Service References\HKCommonQuery\ReckoningCounter.Entity.Model.HK.xsd" />
+    <None Include="Service References\HKCommonQuery\ReckoningCounter.Entity.Model.QueryFilter.xsd" />
+    <None Include="Service References\HKCommonQuery\ReckoningCounter.Entity.Model.xsd" />
+    <None Include="Service References\HKCommonQuery\service.wsdl" />
+    <None Include="Service References\HKCommonQuery\service.xsd" />
+    <None Include="Service References\HKCommonQuery\service1.xsd" />
+    <None Include="Service References\TransactionManageService\GTA.VTS.CustomersOrders.TransactionManageService.AccountEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionManageService\GTA.VTS.CustomersOrders.TransactionManageService.CT_Counter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionManageService\GTA.VTS.CustomersOrders.TransactionManageService.TradersAccountCapitalInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionManageService\GTA.VTS.CustomersOrders.TransactionManageService.UM_UserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionManageService\ManagementCenter.Model.CommonClass.xsd" />
+    <None Include="Service References\TransactionManageService\ManagementCenter.Model.UserManage.xsd" />
+    <None Include="Service References\TransactionManageService\ManagementCenter.Model.xsd" />
+    <None Include="Service References\TransactionManageService\ReckoningCounter.Entity.AccountManagementAndFindEntity.xsd" />
+    <None Include="Service References\TransactionManageService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PressButton.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AppForm\frmAdditionalCaption.resx">
+      <DependentUpon>frmAdditionalCaption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmConfiguration.resx">
+      <DependentUpon>frmConfiguration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmFreeTransferAccounts.resx">
+      <DependentUpon>frmFreeTransferAccounts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmCFQuery.resx">
+      <DependentUpon>frmCFQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmConnection.resx">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmFlowQuery.resx">
+      <DependentUpon>frmFlowQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmHKQuery.resx">
+      <DependentUpon>frmHKQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmReinitCaptial.resx">
+      <DependentUpon>frmReinitCaptial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmSIQuery.resx">
+      <DependentUpon>frmSIQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmStatisticalAnalysis.resx">
+      <DependentUpon>frmStatisticalAnalysis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmXHQuery.resx">
+      <DependentUpon>frmXHQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\mdiMainForm.resx">
+      <DependentUpon>mdiMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmCFOrder.resx">
+      <DependentUpon>frmCFOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmHKOrder.resx">
+      <DependentUpon>frmHKOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmSIOrder.resx">
+      <DependentUpon>frmSIOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\frmXHOrder.resx">
+      <DependentUpon>frmXHOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForm\MdiMainForm2.resx">
+      <DependentUpon>MdiMainForm2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UserTabControl.resx">
+      <DependentUpon>UserTabControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\back_img.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GTA.VTS.Common\GTA.VTS.Common.CommonObject\GTA.VTS.Common.CommonObject.csproj">
+      <Project>{17E3419C-E66D-42B0-84F8-B0A15636D44C}</Project>
+      <Name>GTA.VTS.Common.CommonObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GTA.VTS.Common\GTA.VTS.Common.CommonUtility\GTA.VTS.Common.CommonUtility.csproj">
+      <Project>{1203CAC4-E92D-4948-BD36-F45B065C37AC}</Project>
+      <Name>GTA.VTS.Common.CommonUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

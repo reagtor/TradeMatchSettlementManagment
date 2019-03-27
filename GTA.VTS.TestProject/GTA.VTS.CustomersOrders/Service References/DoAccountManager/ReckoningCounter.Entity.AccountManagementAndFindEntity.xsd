@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfAccountEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccountEntity" nillable="true" type="tns:AccountEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccountEntity" nillable="true" type="tns:ArrayOfAccountEntity" />
+  <xs:complexType name="AccountEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Account" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccountAAttribution" type="xs:int" />
+      <xs:element minOccurs="0" name="AccountType" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrencyHK" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyRMB" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyUS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RoleNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="TraderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TraderPassWord" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccountEntity" nillable="true" type="tns:AccountEntity" />
+  <xs:complexType name="ArrayOfFindAccountEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FindAccountEntity" nillable="true" type="tns:FindAccountEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFindAccountEntity" nillable="true" type="tns:ArrayOfFindAccountEntity" />
+  <xs:complexType name="FindAccountEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountAttributionType" type="xs:int" />
+      <xs:element minOccurs="0" name="AccountType" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserPassword" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindAccountEntity" nillable="true" type="tns:FindAccountEntity" />
+  <xs:complexType name="ArrayOfAccountFindResultEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccountFindResultEntity" nillable="true" type="tns:AccountFindResultEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccountFindResultEntity" nillable="true" type="tns:ArrayOfAccountFindResultEntity" />
+  <xs:complexType name="AccountFindResultEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccountName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccountState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TraderID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccountFindResultEntity" nillable="true" type="tns:AccountFindResultEntity" />
+  <xs:complexType name="AddCapitalEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddHKAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AddRMBAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AddUSAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BankCapitalAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TraderID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddCapitalEntity" nillable="true" type="tns:AddCapitalEntity" />
+  <xs:complexType name="FreeTransferEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FromCapitalAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromCapitalAccountType" type="xs:int" />
+      <xs:element minOccurs="0" name="ToCapitalAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToCapitalAccountType" type="xs:int" />
+      <xs:element minOccurs="0" name="TraderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransferAmount" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FreeTransferEntity" nillable="true" type="tns:FreeTransferEntity" />
+  <xs:complexType name="ArrayOfTradersAccountCapitalInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradersAccountCapitalInfo" nillable="true" type="tns:TradersAccountCapitalInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradersAccountCapitalInfo" nillable="true" type="tns:ArrayOfTradersAccountCapitalInfo" />
+  <xs:complexType name="TradersAccountCapitalInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccountType" type="xs:int" />
+      <xs:element minOccurs="0" name="AvailableCapital" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyType" type="xs:int" />
+      <xs:element minOccurs="0" name="FreezeCapital" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InitCapital" type="xs:double" />
+      <xs:element minOccurs="0" name="TraderID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradersAccountCapitalInfo" nillable="true" type="tns:TradersAccountCapitalInfo" />
+  <xs:complexType name="MarketDataLevel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuyFirstPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BuyFirstVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BuyFivePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BuyFiveVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BuyFourthPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BuyFourthVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BuySecondPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BuySecondVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BuyThirdPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BuyThirdVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LastVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LowerPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MarketRefreshTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SellFirstPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SellFirstVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SellFivePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SellFiveVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SellFourthPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SellFourthVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SellSecondPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SellSecondVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SellThirdPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SellThirdVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="YesterPrice" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MarketDataLevel" nillable="true" type="tns:MarketDataLevel" />
+  <xs:complexType name="CapitalPersonalization">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HKAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PersonalType" type="xs:int" />
+      <xs:element minOccurs="0" name="RMBAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SetCurrencyType" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="TradeID" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="USAmount" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CapitalPersonalization" nillable="true" type="tns:CapitalPersonalization" />
+</xs:schema>

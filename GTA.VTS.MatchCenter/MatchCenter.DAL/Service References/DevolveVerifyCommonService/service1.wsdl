@@ -1,0 +1,948 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CommonParaService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ICommonPara_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model.CommonTable" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICommonPara_GetAllBourseType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBourseType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllBourseType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBourseTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetBourseTypeByBourseTypeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBourseTypeByBourseTypeID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetBourseTypeByBourseTypeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBourseTypeByBourseTypeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllBreedClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBreedClass" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllBreedClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBreedClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllBreedClassType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBreedClassType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllBreedClassType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBreedClassTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllCommodity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCommodity" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllCommodity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCommodityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetCommodityByCommodityCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommodityByCommodityCode" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetCommodityByCommodityCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommodityByCommodityCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetCommodityByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommodityByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetCommodityByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommodityByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetBreedClassByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBreedClassByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetBreedClassByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBreedClassByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetBreedClassByBourseTypeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBreedClassByBourseTypeID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetBreedClassByBourseTypeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBreedClassByBourseTypeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllCommodityFuse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCommodityFuse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllCommodityFuse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCommodityFuseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetCommodityFuseByCommodityCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommodityFuseByCommodityCode" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetCommodityFuseByCommodityCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommodityFuseByCommodityCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllFuseTimesection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFuseTimesection" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllFuseTimesection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFuseTimesectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetFuseTimesectionByCommodityCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFuseTimesectionByCommodityCode" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetFuseTimesectionByCommodityCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFuseTimesectionByCommodityCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllCurrencyType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCurrencyType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllCurrencyType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCurrencyTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllStockMelonCash_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStockMelonCash" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllStockMelonCash_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStockMelonCashResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllStockMelonStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStockMelonStock" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllStockMelonStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStockMelonStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllTradeTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTradeTime" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllTradeTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTradeTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetTradeTimeByBourseTypeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradeTimeByBourseTypeID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetTradeTimeByBourseTypeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradeTimeByBourseTypeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllTradeWay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTradeWay" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllTradeWay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTradeWayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllUnitConversion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUnitConversion" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllUnitConversion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUnitConversionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetUnitConversionByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitConversionByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetUnitConversionByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitConversionByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllUnits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUnits" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllUnits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUnitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllValueType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllValueType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllValueType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllValueTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllCounter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCounter" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllCounter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCounterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllMatchCenter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMatchCenter" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllMatchCenter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMatchCenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetMatchCenterByIpAndPort_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatchCenterByIpAndPort" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetMatchCenterByIpAndPort_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatchCenterByIpAndPortResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllMatchMachine_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMatchMachine" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllMatchMachine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMatchMachineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllMatchMachineByMatchCenter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMatchMachineByMatchCenter" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllMatchMachineByMatchCenter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMatchMachineByMatchCenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetMatchMachine_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatchMachine" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetMatchMachine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatchMachineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllTradeCommodityAssign_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTradeCommodityAssign" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllTradeCommodityAssign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTradeCommodityAssignResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetCommodityAssignByMachineID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommodityAssignByMachineID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetCommodityAssignByMachineID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommodityAssignByMachineIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetTradeCommodityAssign_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradeCommodityAssign" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetTradeCommodityAssign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradeCommodityAssignResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetMatchMachinebyCommodity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatchMachinebyCommodity" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetMatchMachinebyCommodity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatchMachinebyCommodityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetALLAccountType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetALLAccountType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetALLAccountType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetALLAccountTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetNotTradeDateByBourseTypeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotTradeDateByBourseTypeID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetNotTradeDateByBourseTypeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotTradeDateByBourseTypeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_JudgeIsTradeDateByBourseTypeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:JudgeIsTradeDateByBourseTypeID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_JudgeIsTradeDateByBourseTypeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JudgeIsTradeDateByBourseTypeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllNotTradeDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNotTradeDate" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllNotTradeDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNotTradeDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetNewCommodity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCommodity" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetNewCommodity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCommodityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetZFCommodity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZFCommodity" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetZFCommodity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZFCommodityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetCommodityListArray_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommodityListArray" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetCommodityListArray_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommodityListArrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetCurrencyByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetCurrencyByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetListCurrencyBreedClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListCurrencyBreedClass" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetListCurrencyBreedClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListCurrencyBreedClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetListProfessionArray_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListProfessionArray" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetListProfessionArray_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListProfessionArrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetStockMelonCashByDateRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockMelonCashByDateRange" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetStockMelonCashByDateRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockMelonCashByDateRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetStockMelonStockByDateRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockMelonStockByDateRange" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetStockMelonStockByDateRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockMelonStockByDateRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_TransactionRightTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionRightTable" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_TransactionRightTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionRightTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllClosePriceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllClosePriceInfo" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllClosePriceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllClosePriceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllClosePriceInfoByBreedClassTypeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllClosePriceInfoByBreedClassTypeID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonPara_GetAllClosePriceInfoByBreedClassTypeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllClosePriceInfoByBreedClassTypeIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICommonPara">
+    <wsdl:operation name="GetAllBourseType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllBourseType" message="tns:ICommonPara_GetAllBourseType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllBourseTypeResponse" message="tns:ICommonPara_GetAllBourseType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBourseTypeByBourseTypeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetBourseTypeByBourseTypeID" message="tns:ICommonPara_GetBourseTypeByBourseTypeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetBourseTypeByBourseTypeIDResponse" message="tns:ICommonPara_GetBourseTypeByBourseTypeID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBreedClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllBreedClass" message="tns:ICommonPara_GetAllBreedClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllBreedClassResponse" message="tns:ICommonPara_GetAllBreedClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBreedClassType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllBreedClassType" message="tns:ICommonPara_GetAllBreedClassType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllBreedClassTypeResponse" message="tns:ICommonPara_GetAllBreedClassType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCommodity">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllCommodity" message="tns:ICommonPara_GetAllCommodity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllCommodityResponse" message="tns:ICommonPara_GetAllCommodity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityByCommodityCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetCommodityByCommodityCode" message="tns:ICommonPara_GetCommodityByCommodityCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetCommodityByCommodityCodeResponse" message="tns:ICommonPara_GetCommodityByCommodityCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetCommodityByBreedClassID" message="tns:ICommonPara_GetCommodityByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetCommodityByBreedClassIDResponse" message="tns:ICommonPara_GetCommodityByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBreedClassByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetBreedClassByBreedClassID" message="tns:ICommonPara_GetBreedClassByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetBreedClassByBreedClassIDResponse" message="tns:ICommonPara_GetBreedClassByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBreedClassByBourseTypeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetBreedClassByBourseTypeID" message="tns:ICommonPara_GetBreedClassByBourseTypeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetBreedClassByBourseTypeIDResponse" message="tns:ICommonPara_GetBreedClassByBourseTypeID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCommodityFuse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllCommodityFuse" message="tns:ICommonPara_GetAllCommodityFuse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllCommodityFuseResponse" message="tns:ICommonPara_GetAllCommodityFuse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityFuseByCommodityCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetCommodityFuseByCommodityCode" message="tns:ICommonPara_GetCommodityFuseByCommodityCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetCommodityFuseByCommodityCodeResponse" message="tns:ICommonPara_GetCommodityFuseByCommodityCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFuseTimesection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllFuseTimesection" message="tns:ICommonPara_GetAllFuseTimesection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllFuseTimesectionResponse" message="tns:ICommonPara_GetAllFuseTimesection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFuseTimesectionByCommodityCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetFuseTimesectionByCommodityCode" message="tns:ICommonPara_GetFuseTimesectionByCommodityCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetFuseTimesectionByCommodityCodeResponse" message="tns:ICommonPara_GetFuseTimesectionByCommodityCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCurrencyType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllCurrencyType" message="tns:ICommonPara_GetAllCurrencyType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllCurrencyTypeResponse" message="tns:ICommonPara_GetAllCurrencyType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStockMelonCash">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllStockMelonCash" message="tns:ICommonPara_GetAllStockMelonCash_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllStockMelonCashResponse" message="tns:ICommonPara_GetAllStockMelonCash_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStockMelonStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllStockMelonStock" message="tns:ICommonPara_GetAllStockMelonStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllStockMelonStockResponse" message="tns:ICommonPara_GetAllStockMelonStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTradeTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllTradeTime" message="tns:ICommonPara_GetAllTradeTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllTradeTimeResponse" message="tns:ICommonPara_GetAllTradeTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeTimeByBourseTypeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetTradeTimeByBourseTypeID" message="tns:ICommonPara_GetTradeTimeByBourseTypeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetTradeTimeByBourseTypeIDResponse" message="tns:ICommonPara_GetTradeTimeByBourseTypeID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTradeWay">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllTradeWay" message="tns:ICommonPara_GetAllTradeWay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllTradeWayResponse" message="tns:ICommonPara_GetAllTradeWay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUnitConversion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllUnitConversion" message="tns:ICommonPara_GetAllUnitConversion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllUnitConversionResponse" message="tns:ICommonPara_GetAllUnitConversion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitConversionByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetUnitConversionByBreedClassID" message="tns:ICommonPara_GetUnitConversionByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetUnitConversionByBreedClassIDResponse" message="tns:ICommonPara_GetUnitConversionByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUnits">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllUnits" message="tns:ICommonPara_GetAllUnits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllUnitsResponse" message="tns:ICommonPara_GetAllUnits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllValueType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllValueType" message="tns:ICommonPara_GetAllValueType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllValueTypeResponse" message="tns:ICommonPara_GetAllValueType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCounter">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllCounter" message="tns:ICommonPara_GetAllCounter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllCounterResponse" message="tns:ICommonPara_GetAllCounter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMatchCenter">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllMatchCenter" message="tns:ICommonPara_GetAllMatchCenter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllMatchCenterResponse" message="tns:ICommonPara_GetAllMatchCenter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCenterByIpAndPort">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetMatchCenterByIpAndPort" message="tns:ICommonPara_GetMatchCenterByIpAndPort_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetMatchCenterByIpAndPortResponse" message="tns:ICommonPara_GetMatchCenterByIpAndPort_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMatchMachine">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllMatchMachine" message="tns:ICommonPara_GetAllMatchMachine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllMatchMachineResponse" message="tns:ICommonPara_GetAllMatchMachine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMatchMachineByMatchCenter">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllMatchMachineByMatchCenter" message="tns:ICommonPara_GetAllMatchMachineByMatchCenter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllMatchMachineByMatchCenterResponse" message="tns:ICommonPara_GetAllMatchMachineByMatchCenter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchMachine">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetMatchMachine" message="tns:ICommonPara_GetMatchMachine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetMatchMachineResponse" message="tns:ICommonPara_GetMatchMachine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTradeCommodityAssign">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllTradeCommodityAssign" message="tns:ICommonPara_GetAllTradeCommodityAssign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllTradeCommodityAssignResponse" message="tns:ICommonPara_GetAllTradeCommodityAssign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityAssignByMachineID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetCommodityAssignByMachineID" message="tns:ICommonPara_GetCommodityAssignByMachineID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetCommodityAssignByMachineIDResponse" message="tns:ICommonPara_GetCommodityAssignByMachineID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeCommodityAssign">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetTradeCommodityAssign" message="tns:ICommonPara_GetTradeCommodityAssign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetTradeCommodityAssignResponse" message="tns:ICommonPara_GetTradeCommodityAssign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchMachinebyCommodity">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetMatchMachinebyCommodity" message="tns:ICommonPara_GetMatchMachinebyCommodity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetMatchMachinebyCommodityResponse" message="tns:ICommonPara_GetMatchMachinebyCommodity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetALLAccountType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetALLAccountType" message="tns:ICommonPara_GetALLAccountType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetALLAccountTypeResponse" message="tns:ICommonPara_GetALLAccountType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotTradeDateByBourseTypeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetNotTradeDateByBourseTypeID" message="tns:ICommonPara_GetNotTradeDateByBourseTypeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetNotTradeDateByBourseTypeIDResponse" message="tns:ICommonPara_GetNotTradeDateByBourseTypeID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JudgeIsTradeDateByBourseTypeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/JudgeIsTradeDateByBourseTypeID" message="tns:ICommonPara_JudgeIsTradeDateByBourseTypeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/JudgeIsTradeDateByBourseTypeIDResponse" message="tns:ICommonPara_JudgeIsTradeDateByBourseTypeID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNotTradeDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllNotTradeDate" message="tns:ICommonPara_GetAllNotTradeDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllNotTradeDateResponse" message="tns:ICommonPara_GetAllNotTradeDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewCommodity">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetNewCommodity" message="tns:ICommonPara_GetNewCommodity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetNewCommodityResponse" message="tns:ICommonPara_GetNewCommodity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZFCommodity">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetZFCommodity" message="tns:ICommonPara_GetZFCommodity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetZFCommodityResponse" message="tns:ICommonPara_GetZFCommodity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityListArray">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetCommodityListArray" message="tns:ICommonPara_GetCommodityListArray_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetCommodityListArrayResponse" message="tns:ICommonPara_GetCommodityListArray_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetCurrencyByBreedClassID" message="tns:ICommonPara_GetCurrencyByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetCurrencyByBreedClassIDResponse" message="tns:ICommonPara_GetCurrencyByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListCurrencyBreedClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetListCurrencyBreedClass" message="tns:ICommonPara_GetListCurrencyBreedClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetListCurrencyBreedClassResponse" message="tns:ICommonPara_GetListCurrencyBreedClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListProfessionArray">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetListProfessionArray" message="tns:ICommonPara_GetListProfessionArray_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetListProfessionArrayResponse" message="tns:ICommonPara_GetListProfessionArray_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockMelonCashByDateRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetStockMelonCashByDateRange" message="tns:ICommonPara_GetStockMelonCashByDateRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetStockMelonCashByDateRangeResponse" message="tns:ICommonPara_GetStockMelonCashByDateRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockMelonStockByDateRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetStockMelonStockByDateRange" message="tns:ICommonPara_GetStockMelonStockByDateRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetStockMelonStockByDateRangeResponse" message="tns:ICommonPara_GetStockMelonStockByDateRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransactionRightTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/TransactionRightTable" message="tns:ICommonPara_TransactionRightTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/TransactionRightTableResponse" message="tns:ICommonPara_TransactionRightTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllClosePriceInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllClosePriceInfo" message="tns:ICommonPara_GetAllClosePriceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllClosePriceInfoResponse" message="tns:ICommonPara_GetAllClosePriceInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllClosePriceInfoByBreedClassTypeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonPara/GetAllClosePriceInfoByBreedClassTypeID" message="tns:ICommonPara_GetAllClosePriceInfoByBreedClassTypeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonPara/GetAllClosePriceInfoByBreedClassTypeIDResponse" message="tns:ICommonPara_GetAllClosePriceInfoByBreedClassTypeID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ICommonPara" type="tns:ICommonPara">
+    <wsp:PolicyReference URI="#NetTcpBinding_ICommonPara_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetAllBourseType">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllBourseType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBourseTypeByBourseTypeID">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetBourseTypeByBourseTypeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBreedClass">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllBreedClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBreedClassType">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllBreedClassType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCommodity">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllCommodity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityByCommodityCode">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetCommodityByCommodityCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetCommodityByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBreedClassByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetBreedClassByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBreedClassByBourseTypeID">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetBreedClassByBourseTypeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCommodityFuse">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllCommodityFuse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityFuseByCommodityCode">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetCommodityFuseByCommodityCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFuseTimesection">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllFuseTimesection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFuseTimesectionByCommodityCode">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetFuseTimesectionByCommodityCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCurrencyType">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllCurrencyType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStockMelonCash">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllStockMelonCash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStockMelonStock">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllStockMelonStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTradeTime">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllTradeTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeTimeByBourseTypeID">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetTradeTimeByBourseTypeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTradeWay">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllTradeWay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUnitConversion">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllUnitConversion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitConversionByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetUnitConversionByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUnits">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllUnits" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllValueType">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllValueType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCounter">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllCounter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMatchCenter">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllMatchCenter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCenterByIpAndPort">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetMatchCenterByIpAndPort" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMatchMachine">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllMatchMachine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMatchMachineByMatchCenter">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllMatchMachineByMatchCenter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchMachine">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetMatchMachine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTradeCommodityAssign">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllTradeCommodityAssign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityAssignByMachineID">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetCommodityAssignByMachineID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeCommodityAssign">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetTradeCommodityAssign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchMachinebyCommodity">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetMatchMachinebyCommodity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetALLAccountType">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetALLAccountType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotTradeDateByBourseTypeID">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetNotTradeDateByBourseTypeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JudgeIsTradeDateByBourseTypeID">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/JudgeIsTradeDateByBourseTypeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNotTradeDate">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllNotTradeDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewCommodity">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetNewCommodity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZFCommodity">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetZFCommodity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityListArray">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetCommodityListArray" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetCurrencyByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListCurrencyBreedClass">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetListCurrencyBreedClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListProfessionArray">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetListProfessionArray" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockMelonCashByDateRange">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetStockMelonCashByDateRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockMelonStockByDateRange">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetStockMelonStockByDateRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransactionRightTable">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/TransactionRightTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllClosePriceInfo">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllClosePriceInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllClosePriceInfoByBreedClassTypeID">
+      <soap12:operation soapAction="http://tempuri.org/ICommonPara/GetAllClosePriceInfoByBreedClassTypeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommonParaService">
+    <wsdl:port name="NetTcpBinding_ICommonPara" binding="tns:NetTcpBinding_ICommonPara">
+      <soap12:address location="net.tcp://localhost:9381/WcfCommonalityProvider" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:9381/WcfCommonalityProvider</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

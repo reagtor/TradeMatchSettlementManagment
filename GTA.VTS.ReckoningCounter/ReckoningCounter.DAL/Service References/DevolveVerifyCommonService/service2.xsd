@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model.CommonTable" />
+  <xs:element name="GetAllNotTradeDate">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllNotTradeDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllNotTradeDateResult" nillable="true" type="q1:ArrayOfCM_NotTradeDate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCommodity">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCommodityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetNewCommodityResult" nillable="true" type="q2:ArrayOfCM_Commodity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZFCommodity">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZFCommodityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetZFCommodityResult" nillable="true" type="q3:ArrayOfZFInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommodityListArray">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommodityListArrayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ManagementCenter.Model.CommonTable" minOccurs="0" name="GetCommodityListArrayResult" nillable="true" type="q4:ArrayOfOnstageCommodity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrencyByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BreedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrencyByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetCurrencyByBreedClassIDResult" nillable="true" type="q5:CM_CurrencyBreedClassType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListCurrencyBreedClass">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListCurrencyBreedClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetListCurrencyBreedClassResult" nillable="true" type="q6:ArrayOfCM_CurrencyBreedClassType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListProfessionArray">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListProfessionArrayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetListProfessionArrayResult" nillable="true" type="q7:ArrayOfProfession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStockMelonCashByDateRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStockMelonCashByDateRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetStockMelonCashByDateRangeResult" nillable="true" type="q8:ArrayOfCM_StockMelonCash" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStockMelonStockByDateRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStockMelonStockByDateRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetStockMelonStockByDateRangeResult" nillable="true" type="q9:ArrayOfCM_StockMelonStock" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransactionRightTable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransactionRightTableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="TransactionRightTableResult" nillable="true" type="q10:ArrayOfUM_DealerTradeBreedClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllClosePriceInfo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllClosePriceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllClosePriceInfoResult" nillable="true" type="q11:ArrayOfClosePriceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllClosePriceInfoByBreedClassTypeID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BreedClassTypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllClosePriceInfoByBreedClassTypeIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllClosePriceInfoByBreedClassTypeIDResult" nillable="true" type="q12:ArrayOfClosePriceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBourseType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBourseTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllBourseTypeResult" nillable="true" type="q13:ArrayOfCM_BourseType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBourseTypeByBourseTypeID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bourseTypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBourseTypeByBourseTypeIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetBourseTypeByBourseTypeIDResult" nillable="true" type="q14:CM_BourseType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBreedClass">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBreedClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllBreedClassResult" nillable="true" type="q15:ArrayOfCM_BreedClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBreedClassType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBreedClassTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllBreedClassTypeResult" nillable="true" type="q16:ArrayOfCM_BreedClassType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCommodity">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCommodityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllCommodityResult" nillable="true" type="q17:ArrayOfCM_Commodity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommodityByCommodityCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="commodityCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommodityByCommodityCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetCommodityByCommodityCodeResult" nillable="true" type="q18:CM_Commodity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommodityByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommodityByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetCommodityByBreedClassIDResult" nillable="true" type="q19:ArrayOfCM_Commodity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBreedClassByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBreedClassByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetBreedClassByBreedClassIDResult" nillable="true" type="q20:CM_BreedClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBreedClassByBourseTypeID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bourseTypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBreedClassByBourseTypeIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetBreedClassByBourseTypeIDResult" nillable="true" type="q21:ArrayOfCM_BreedClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCommodityFuse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCommodityFuseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllCommodityFuseResult" nillable="true" type="q22:ArrayOfCM_CommodityFuse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommodityFuseByCommodityCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="commodityCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommodityFuseByCommodityCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetCommodityFuseByCommodityCodeResult" nillable="true" type="q23:CM_CommodityFuse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFuseTimesection">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFuseTimesectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllFuseTimesectionResult" nillable="true" type="q24:ArrayOfCM_FuseTimesection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuseTimesectionByCommodityCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="commodityCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuseTimesectionByCommodityCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetFuseTimesectionByCommodityCodeResult" nillable="true" type="q25:ArrayOfCM_FuseTimesection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCurrencyType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCurrencyTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllCurrencyTypeResult" nillable="true" type="q26:ArrayOfCM_CurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllStockMelonCash">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllStockMelonCashResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllStockMelonCashResult" nillable="true" type="q27:ArrayOfCM_StockMelonCash" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllStockMelonStock">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllStockMelonStockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllStockMelonStockResult" nillable="true" type="q28:ArrayOfCM_StockMelonStock" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTradeTime">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTradeTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllTradeTimeResult" nillable="true" type="q29:ArrayOfCM_TradeTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTradeTimeByBourseTypeID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bourseTypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTradeTimeByBourseTypeIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetTradeTimeByBourseTypeIDResult" nillable="true" type="q30:ArrayOfCM_TradeTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTradeWay">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTradeWayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllTradeWayResult" nillable="true" type="q31:ArrayOfCM_TradeWay" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUnitConversion">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUnitConversionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllUnitConversionResult" nillable="true" type="q32:ArrayOfCM_UnitConversion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnitConversionByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnitConversionByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetUnitConversionByBreedClassIDResult" nillable="true" type="q33:ArrayOfCM_UnitConversion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUnits">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUnitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllUnitsResult" nillable="true" type="q34:ArrayOfCM_Units" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllValueType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllValueTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllValueTypeResult" nillable="true" type="q35:ArrayOfCM_ValueType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCounter">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCounterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllCounterResult" nillable="true" type="q36:ArrayOfCT_Counter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMatchCenter">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMatchCenterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllMatchCenterResult" nillable="true" type="q37:ArrayOfRC_MatchCenter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchCenterByIpAndPort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="port" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchCenterByIpAndPortResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetMatchCenterByIpAndPortResult" nillable="true" type="q38:RC_MatchCenter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMatchMachine">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMatchMachineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllMatchMachineResult" nillable="true" type="q39:ArrayOfRC_MatchMachine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMatchMachineByMatchCenter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MatchCenterID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMatchMachineByMatchCenterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllMatchMachineByMatchCenterResult" nillable="true" type="q40:ArrayOfRC_MatchMachine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchMachine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MatchMachineID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchMachineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetMatchMachineResult" nillable="true" type="q41:RC_MatchMachine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTradeCommodityAssign">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTradeCommodityAssignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllTradeCommodityAssignResult" nillable="true" type="q42:ArrayOfRC_TradeCommodityAssign" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommodityAssignByMachineID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MatchMachineID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommodityAssignByMachineIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetCommodityAssignByMachineIDResult" nillable="true" type="q43:ArrayOfRC_TradeCommodityAssign" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTradeCommodityAssign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CommodityCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTradeCommodityAssignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetTradeCommodityAssignResult" nillable="true" type="q44:RC_TradeCommodityAssign" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchMachinebyCommodity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CommodityCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchMachinebyCommodityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetMatchMachinebyCommodityResult" nillable="true" type="q45:RC_MatchMachine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetALLAccountType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetALLAccountTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetALLAccountTypeResult" nillable="true" type="q46:ArrayOfUM_AccountType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotTradeDateByBourseTypeID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bourseTypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotTradeDateByBourseTypeIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetNotTradeDateByBourseTypeIDResult" nillable="true" type="q47:ArrayOfCM_NotTradeDate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JudgeIsTradeDateByBourseTypeID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bourseTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="dt" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JudgeIsTradeDateByBourseTypeIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JudgeIsTradeDateByBourseTypeIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

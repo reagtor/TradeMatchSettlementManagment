@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HKTraderFindService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IHKTraderFind_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity.HK" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.HK" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IHKTraderFind_HKCapitalFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:HKCapitalFind" />
+  </wsdl:message>
+  <wsdl:message name="IHKTraderFind_HKCapitalFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HKCapitalFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTraderFind_HKHoldFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:HKHoldFind" />
+  </wsdl:message>
+  <wsdl:message name="IHKTraderFind_HKHoldFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HKHoldFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTraderFind_HKTodayEntrustFindByHKCapitalAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:HKTodayEntrustFindByHKCapitalAccount" />
+  </wsdl:message>
+  <wsdl:message name="IHKTraderFind_HKTodayEntrustFindByHKCapitalAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HKTodayEntrustFindByHKCapitalAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTraderFind_HKHistoryEntrustFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:HKHistoryEntrustFind" />
+  </wsdl:message>
+  <wsdl:message name="IHKTraderFind_HKHistoryEntrustFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HKHistoryEntrustFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTraderFind_HKHistoryTradeFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:HKHistoryTradeFind" />
+  </wsdl:message>
+  <wsdl:message name="IHKTraderFind_HKHistoryTradeFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HKHistoryTradeFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTraderFind_HKTodayTradeFindByCapitalAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:HKTodayTradeFindByCapitalAccount" />
+  </wsdl:message>
+  <wsdl:message name="IHKTraderFind_HKTodayTradeFindByCapitalAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HKTodayTradeFindByCapitalAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTraderFind_HKCapitalAccountTransferFlowFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:HKCapitalAccountTransferFlowFind" />
+  </wsdl:message>
+  <wsdl:message name="IHKTraderFind_HKCapitalAccountTransferFlowFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HKCapitalAccountTransferFlowFindResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IHKTraderFind">
+    <wsdl:operation name="HKCapitalFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTraderFind/HKCapitalFind" message="tns:IHKTraderFind_HKCapitalFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTraderFind/HKCapitalFindResponse" message="tns:IHKTraderFind_HKCapitalFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HKHoldFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTraderFind/HKHoldFind" message="tns:IHKTraderFind_HKHoldFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTraderFind/HKHoldFindResponse" message="tns:IHKTraderFind_HKHoldFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HKTodayEntrustFindByHKCapitalAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTraderFind/HKTodayEntrustFindByHKCapitalAccount" message="tns:IHKTraderFind_HKTodayEntrustFindByHKCapitalAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTraderFind/HKTodayEntrustFindByHKCapitalAccountResponse" message="tns:IHKTraderFind_HKTodayEntrustFindByHKCapitalAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HKHistoryEntrustFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTraderFind/HKHistoryEntrustFind" message="tns:IHKTraderFind_HKHistoryEntrustFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTraderFind/HKHistoryEntrustFindResponse" message="tns:IHKTraderFind_HKHistoryEntrustFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HKHistoryTradeFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTraderFind/HKHistoryTradeFind" message="tns:IHKTraderFind_HKHistoryTradeFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTraderFind/HKHistoryTradeFindResponse" message="tns:IHKTraderFind_HKHistoryTradeFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HKTodayTradeFindByCapitalAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTraderFind/HKTodayTradeFindByCapitalAccount" message="tns:IHKTraderFind_HKTodayTradeFindByCapitalAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTraderFind/HKTodayTradeFindByCapitalAccountResponse" message="tns:IHKTraderFind_HKTodayTradeFindByCapitalAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HKCapitalAccountTransferFlowFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTraderFind/HKCapitalAccountTransferFlowFind" message="tns:IHKTraderFind_HKCapitalAccountTransferFlowFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTraderFind/HKCapitalAccountTransferFlowFindResponse" message="tns:IHKTraderFind_HKCapitalAccountTransferFlowFind_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IHKTraderFind" type="tns:IHKTraderFind">
+    <wsp:PolicyReference URI="#NetTcpBinding_IHKTraderFind_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="HKCapitalFind">
+      <soap12:operation soapAction="http://tempuri.org/IHKTraderFind/HKCapitalFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HKHoldFind">
+      <soap12:operation soapAction="http://tempuri.org/IHKTraderFind/HKHoldFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HKTodayEntrustFindByHKCapitalAccount">
+      <soap12:operation soapAction="http://tempuri.org/IHKTraderFind/HKTodayEntrustFindByHKCapitalAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HKHistoryEntrustFind">
+      <soap12:operation soapAction="http://tempuri.org/IHKTraderFind/HKHistoryEntrustFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HKHistoryTradeFind">
+      <soap12:operation soapAction="http://tempuri.org/IHKTraderFind/HKHistoryTradeFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HKTodayTradeFindByCapitalAccount">
+      <soap12:operation soapAction="http://tempuri.org/IHKTraderFind/HKTodayTradeFindByCapitalAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HKCapitalAccountTransferFlowFind">
+      <soap12:operation soapAction="http://tempuri.org/IHKTraderFind/HKCapitalAccountTransferFlowFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HKTraderFindService">
+    <wsdl:port name="NetTcpBinding_IHKTraderFind" binding="tns:NetTcpBinding_IHKTraderFind">
+      <soap12:address location="net.tcp://localhost:9183/DoHKQueryService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:9183/DoHKQueryService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

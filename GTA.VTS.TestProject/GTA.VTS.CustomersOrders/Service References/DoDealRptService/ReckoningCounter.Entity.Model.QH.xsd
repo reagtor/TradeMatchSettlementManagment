@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QH" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QH" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfFuturePushDealEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FuturePushDealEntity" nillable="true" type="tns:FuturePushDealEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFuturePushDealEntity" nillable="true" type="tns:ArrayOfFuturePushDealEntity" />
+  <xs:complexType name="FuturePushDealEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Margin" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MarketProfitLoss" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="TradeNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TradePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeProceduresFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TradeTypeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuturePushDealEntity" nillable="true" type="tns:FuturePushDealEntity" />
+  <xs:complexType name="FuturePushOrderEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuySellTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="CancelAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="CancelLogo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CapitalAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CloseFloatProfitLoss" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CloseMarketProfitLoss" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ContractCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="EntrustAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="EntrustNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntrustPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EntrustTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OpenCloseTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="TradeAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="TradeAveragePrice" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuturePushOrderEntity" nillable="true" type="tns:FuturePushOrderEntity" />
+</xs:schema>

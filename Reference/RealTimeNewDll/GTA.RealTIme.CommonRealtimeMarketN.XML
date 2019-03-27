@@ -1,0 +1,612 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTA.RealTIme.CommonRealtimeMarketN</name>
+    </assembly>
+    <members>
+        <member name="T:CommonRealtimeMarket.GTASocketSingletonForRealTime">
+            
+            服务器GTASocket类工厂
+            返回应用中惟一的GTASocket实例
+            
+        </member>
+        <member name="F:CommonRealtimeMarket.GTASocketSingletonForRealTime.LastHeartBeatTime">
+            <summary>
+            保存客户端发送的心跳请求服务器响应时,客户端接收到时的时间
+            </summary>
+        </member>
+        <member name="F:CommonRealtimeMarket.GTASocketSingletonForRealTime.OnSocketServiceStatusChanged">
+            <summary>
+            连接状态改变事件
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.GTASocketSingletonForRealTime.StartLogin(System.String,System.String,CommonRealtimeMarket.SocketServiceStatusHandler)">
+            <summary>
+            登陆验证
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="_handler"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.GTASocketSingletonForRealTime.OnConnected(System.Object,System.EventArgs)">
+            <summary>
+            连接成功事件并登录验证
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.GTASocketSingletonForRealTime.AddAcceptDataHandler(GTAMarketSocket.AcceptDataHandler)">
+            <summary>
+            接收事件：提供给客户使用回调行情接口
+            接收实时行情更新调用此方法
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.GTASocketSingletonForRealTime.OnDisConnected(System.Object,System.EventArgs)">
+            <summary>
+            连接断开时间
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.GTASocketSingletonForRealTime.ClientSocketException(System.Exception,RealTime.Common.CommonClass.GTASocketClientExceptionType)">
+            <summary>
+            连接异常事件
+            </summary>
+            <param name="e"></param>
+            <param name="exceptionType"></param>
+        </member>
+        <member name="F:CommonRealtimeMarket.GTASocketSingletonForRealTime.ud">
+            <summary>
+            返回品种权限
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.GTASocketSingletonForRealTime.ServerAuthenticationCallback(GTAMarketSocket.AcceptDataEventArg)">
+            <summary>
+            验证结果回调--验证通过开始数据订阅
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.GTASocketSingletonForRealTime.BeginAResetCycle">
+            <summary>
+            异步重新开始一个重连周期
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.GTASocketSingletonForRealTime.AsyncBeginAResetCycle(System.Object,System.EventArgs)">
+            <summary>
+            重新开始一个重连周期
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.GTASocketSingletonForRealTime.Reset">
+            <summary>
+            Socket 服务异常时可按业务逻辑可选的的调用该方法重启服务
+            ( STServer/STClientServer/STClient 类型应用调用 )
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.GTASocketSingletonForRealTime.StopSocketService">
+            <summary>
+            停止Socket与服务器连接
+            客户端此时停止接收订阅数据
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.GTASocketSingletonForRealTime.StartSocketService">
+            <summary>
+            开启Socket与服务器连接
+            重走登陆流程
+            </summary>
+        </member>
+        <member name="F:CommonRealtimeMarket.GTASocketSingletonForRealTime.RequestSuccess">
+            <summary>
+            是否登陆成功后已请求订阅了(包括全量)
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.GTASocketSingletonForRealTime._checkTimer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:CommonRealtimeMarket.GTASocketSingletonForRealTime._marketingAmStartTime">
+            <summary>
+            上午开市时间
+            </summary>
+        </member>
+        <member name="F:CommonRealtimeMarket.GTASocketSingletonForRealTime._marketingAmEndTime">
+            <summary>
+            上午休市时间
+            </summary>
+        </member>
+        <member name="F:CommonRealtimeMarket.GTASocketSingletonForRealTime._marketingPmStartTime">
+            <summary>
+            下午开市时间 
+            </summary>
+        </member>
+        <member name="F:CommonRealtimeMarket.GTASocketSingletonForRealTime._marketingPmEndTime">
+            <summary>
+            下午休市时间
+            </summary>
+        </member>
+        <member name="F:CommonRealtimeMarket.GTASocketSingletonForRealTime._checkRefreshTimeInterval">
+            <summary>
+            检查并判断作为断开连接的最后更新时间与现在时间的间隔（毫秒）
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.GTASocketSingletonForRealTime.Release">
+            <summary>
+            释放资源，以便重新登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:CommonRealtimeMarket.GTASocketSingletonForRealTime.OnSocketConnectedNotify">
+            <summary>
+            客户端连接成功,并且验证通过后的事件通知
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.GTASocketSingletonForRealTime.SocketService">
+            <summary>
+            socket对象
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.GTASocketSingletonForRealTime._SocketReConnectInterval">
+            <summary>
+            重连间隔时间
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.GTASocketSingletonForRealTime.CheckTimer">
+            <summary>
+            心跳包定时器
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.GTASocketSingletonForRealTime.IsMarkingTime">
+            <summary>
+            判断当前是否在开市时间
+            </summary>
+        </member>
+        <member name="T:CommonRealtimeMarket.factory.RealtimeMarketServiceFactory">
+            <summary>
+            接口实例工厂
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.factory.RealtimeMarketServiceFactory.Release">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:CommonRealtimeMarket.RealtimeMarketSerivce">
+            <summary>
+            瑞尔格特即时行情服务类
+            1.提供LEVEL1上、深交所行情及中金所快照缓存
+            2.支持行情订阅服务
+            </summary>
+        </member>
+        <member name="F:CommonRealtimeMarket.RealtimeMarketSerivce._socketService">
+            <summary>
+            Socket 连接适配器
+            </summary>
+        </member>
+        <member name="F:CommonRealtimeMarket.RealtimeMarketSerivce._stockDataService">
+            <summary>
+            实时行情服务接口
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.#ctor">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.InitializeService">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GTASocketSingleton_OnSocketConnectedNotify(System.Object,System.EventArgs)">
+            <summary>
+            连接成功通知事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce._socketService_OnSocketDisconnectedNotify(System.Object,System.EventArgs)">
+            <summary>
+            处理断开通知的事件 by 黄利华 2010-5-5
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.Login(System.String,System.String,CommonRealtimeMarket.SocketServiceStatusHandler)">
+            <summary>
+            登陆验证
+            </summary>
+            <param name="uName"></param>
+            <param name="uPwd"></param>
+            <param name="handle"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.SocketStatusHandle(CommonRealtimeMarket.SocketServiceStatusHandler)">
+            <summary>
+            socket状态发生变化时调用
+            </summary>
+            <param name="handler">服务状态改变时发生</param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.StopSocketService">
+            <summary>
+            //中断连接
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.StopSocketService(System.Boolean)">
+            <summary>
+            断开连接
+            </summary>
+            <param name="ReConnect">如果为true会重新连接</param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.StartSocketService">
+            <summary>
+            开始连接
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.Reset">
+            <summary>
+            重新连接
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.BeginAResetCycle">
+            <summary>
+            异步重新开始一个重连周期
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.StockDataService_QhDataUpdateEvent(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            中金所行情更新事件
+            </summary>
+            <param name="futData"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.StockDataService_MerQhDataUpdateEvent(RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            触发商品期货行情更新事件
+            </summary>
+            <param name="merFutData"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.StockDataService_ShHqUpdateEvent(RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            上交所行情更新事件
+            </summary>
+            <param name="hqData"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.StockDataService_SzHqUpdateEvent(RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            深交所行情更新事件
+            </summary>
+            <param name="hqData"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.StockDataService_HKStockUpdateEvent(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            港股行情更新事件
+            </summary>
+            <param name="hkStock"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.StockDataService_HKStockStatusUpdateEvent(RealTime.Server.SModelData.HqData.StockStatus)">
+            <summary>
+            港股交易所状态更新事件
+            </summary>
+            <param name="stockStatus"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.StockDataService_HKPreMarketStaticDataUpdateEvent(RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            港股盘前静态数据更新事件
+            </summary>
+            <param name="hkStaticData"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetHKStockDataList(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取单个港股快照
+            </summary>
+            <param name="strCode">查获取的港股代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetHKStockDataList">
+            <summary>
+            获取港股快照
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetHKStockData(System.String)">
+            <summary>
+            获取单个港股快照
+            </summary>
+            <param name="strCode">查获取的港股代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetHKStockStatusDataList(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取指定港股代码列表的交易状态
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetHKStockStatusDataList">
+            <summary>
+            获取全部港股代码的交易状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetHKStockStatusData(System.String)">
+            <summary>
+            获取指定单个港股代码的交易状态
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetHKPreMarketDataList(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取指定港股代码列表的盘前数据
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetHKPreMarketDataList">
+            <summary>
+            获取全部港股代码的盘前数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetHKPreMarketData(System.String)">
+            <summary>
+            获取指定单个港股代码的盘前数据
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetHKPrePriceDataList">
+            <summary>
+            获取全部盘前价格变动数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetHKPrePriceDataList(System.String)">
+            <summary>
+            获取指定单个盘前价格变动数据
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.Release">
+            <summary>
+            释放配置资源，需要重新初始化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetFOREXContractDataList">
+            <summary>
+            获取外汇交易数据集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetFOREXBatchDataList">
+            <summary>
+            获取外汇初始数据集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RealtimeMarketSerivce.GetFOREXClosingPirceDataList">
+            <summary>
+            获取外汇收盘数据集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:CommonRealtimeMarket.RealtimeMarketSerivce.SubscibeConditions">
+            <summary>
+            当用户使用订阅模式的时候,本地也要维护一份已经订阅的代码
+            <para>断开重新连接时需要重新请求</para>
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.RealtimeMarketSerivce.ServerIPandPort">
+            <summary>
+            连接服务器的ip和端口
+            <para>格式:127.0.0.1:8050</para>
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.RealtimeMarketSerivce.SocketStatus">
+            <summary>
+            通讯组件状态
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.RealtimeMarketSerivce.StockRealtimeMarketChangeEvent">
+            <summary>
+            现货更新事件
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.RealtimeMarketSerivce.FutRealtimeMarketChangeEvent">
+             <summary>
+            股指期货更新事件
+             </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.RealtimeMarketSerivce.MercantileFutRealtimeMarketChangeEvent">
+            <summary>
+            商品期货更新事件
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.RealtimeMarketSerivce.SocketService">
+            <summary>
+            获取Socket 连接适配器,最终获取类型为GTASocket或GTAStockWcf
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.RealtimeMarketSerivce.OnSocketDisconnectedNotify">
+            <summary>
+            客户端断开连接的事件 by 黄利华 2010-05-05
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.RealtimeMarketSerivce.OnSocketConnectedNotify">
+            <summary>
+            客户端连接成功,并且验证通过后的事件通知
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.RealtimeMarketSerivce.OnFOREXDataRefresh">
+            <summary>
+            外汇数据刷新事件
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.RealtimeMarketSerivce.HKStockRealtimeMarketChangeEvent">
+            <summary>
+            港股代码行情变化事件
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.RealtimeMarketSerivce.HKStockStatusChangeEvent">
+            <summary>
+            港股交易状态信息推送事件
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.RealtimeMarketSerivce.HKPreMarketStaticChangeEvent">
+            <summary>
+            港股盘前静态数据推送事件
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.RealtimeMarketSerivce.GetVersion">
+            <summary>
+            得到程序集的版本号
+            </summary>
+        </member>
+        <member name="T:CommonRealtimeMarketN.Resource.ExceptionInfo">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarketN.Resource.ExceptionInfo.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarketN.Resource.ExceptionInfo.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarketN.Resource.ExceptionInfo.ShRealtimeTrigerEventException">
+            <summary>
+              查找类似 上交所现货行情更新事件触发异常 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarketN.Resource.ExceptionInfo.SzRealtimeTrigerEventException">
+            <summary>
+              查找类似 深交所现货行情更新事件触发异常 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarketN.Resource.ExceptionInfo.ZjRealtimeTrigerEventException">
+            <summary>
+              查找类似 中金所现货行情更新事件触发异常 的本地化字符串。
+            </summary>
+        </member>
+        <member name="T:CommonRealtimeMarket.RestartHelper">
+             <summary>
+             模块编号：
+             作用：服务器重新启动定时器类。
+             作者：段进雄
+             编写日期：2009-02-14
+             修改：段进雄 
+             修改日期: 2009-07-24
+            </summary> 
+        </member>
+        <member name="F:CommonRealtimeMarket.RestartHelper.m_lockTimeout">
+            <summary>
+            锁超时
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.RestartHelper.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CommonRealtimeMarket.RestartHelper"/> class.
+            </summary>
+        </member>
+        <member name="F:CommonRealtimeMarket.RestartHelper.instance">
+            <summary>
+            唯一实例
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.RestartHelper.GetInstance">
+            <summary>
+            调用实时行情数据提供类的唯一实例,返回唯一实例
+            </summary>
+            <value>返回:唯一实例.</value>
+        </member>
+        <member name="F:CommonRealtimeMarket.RestartHelper.m_IsNewDay">
+            <summary>
+            是否是新的一个交易日开始
+            </summary>
+        </member>
+        <member name="F:CommonRealtimeMarket.RestartHelper.m_Interval">
+            <summary>
+            定时器工作时间间隔（单位：毫秒），300000毫秒,300秒，即5分钟
+            </summary>
+        </member>
+        <member name="F:CommonRealtimeMarket.RestartHelper.m_Timer">
+            <summary>
+            工作定时器
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.RestartHelper.StartTimer(System.Action{System.DateTime})">
+            <summary>
+            启动工作线程服务
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.RestartHelper.IsTodayHasRestart(System.DateTime)">
+            <summary>
+            是否已经重新启动了
+            </summary>
+            <param name="lastRestartDateTime">最后重新启动日期,即上一次重新启动的时间.</param>
+            <returns>
+            如果当前已经重新启动过服务器了，返回<c>true</c>否则,返回<c>false</c>.
+            </returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RestartHelper.IsTimeToRestart(System.DateTime)">
+            <summary>
+            是否已经到时间重新启动服务器
+            </summary>
+            <param name="restartDateTime">系统设置重新启动的时间.</param>
+            <returns>
+            如果当前已经到重新启动服务器的时间，返回<c>true</c>否则,返回<c>false</c>.
+            </returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.RestartHelper.Timer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            定时器定时触发执行的事件.
+            </summary>
+            <param name="sender">事件源.</param>
+            <param name="e">The <see cref="T:System.Timers.ElapsedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RestartHelper.ManageTheTimer(System.DateTime)">
+            <summary>
+            管理定时器.
+            </summary>
+            <param name="dtAwakeTime">定时器引发 Elapsed 事件的时间.</param>
+        </member>
+        <member name="M:CommonRealtimeMarket.RestartHelper.StopTimer">
+            <summary>
+            停止计时器。停止轮询移除空闲工作线程
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.RestartHelper.LastRestartDateTime">
+            <summary>
+            最后重新启动日期.
+            </summary>
+            <value>The last restart time.</value>
+        </member>
+        <member name="P:CommonRealtimeMarket.RestartHelper.IsServerRestart">
+            <summary>
+            是否启动重新启动服务：true/false
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.RestartHelper.ServerRestartTime">
+            <summary>
+            服务器重新启动时间.
+            </summary>
+            <value>The last restart time.</value>
+        </member>
+        <member name="E:CommonRealtimeMarket.RestartHelper.m_OnRestartEvent">
+            <summary>
+            每天重新启动触发事件
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTA.RealTIme.GTAStockBusinessFactory</name>
+    </assembly>
+    <members>
+        <member name="T:GTAStockBusinessFactory.CheckNewCodeTime">
+            <summary>
+            商品期货实体类
+            作用：指定时间检测新代码
+            作者：段进雄
+            日期：2009-7-6
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.CheckNewCodeTime.#cctor">
+            <summary>
+            把时间从配置里读取出来，以后不必再到配置里访问
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.CheckNewCodeTime.IsInCheckNewCodeTime(GTAStockBusinessFactory.MarketSource)">
+            <summary>
+            检查相应交易所代码是否处于新代码处理时间
+            </summary>
+            <param name="market">交易所</param>
+            <returns></returns>
+        </member>
+        <member name="T:GTAStockBusinessFactory.StockDataService">
+            <summary>
+            行情数据快照类
+            功能：提供数据快照功能，保存，提取，更新行情数据。
+            作者：段进雄
+            修改：段进雄
+            日期：2009-7-17
+            修改日期：20091228
+            修改内容：开启所有行情数据,
+            修改日期：2010-3-25
+            修改者：段进雄
+            修改内容：重加读写锁,当是分发服务器模式时取消之前按代码订阅的规则，改为订阅品种，提高性能
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService.getHKStaticDate">
+            <summary>
+            获取盘前静态数据的最新日期
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService.socketType">
+            <summary>
+            程序启动的模式
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService.ifSTserverModel">
+            <summary>
+            是否主服务器模式
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService._qhHashList">
+            <summary>
+            期货列表
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService._merQhHashList">
+            <summary>
+            商品期货列表
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService.ifIsMainBoard">
+            <summary>
+            查询盘前静态记录标志
+            每启动一次程序，保存只读一次
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService._qhCodeString">
+            <summary>
+            期货代码列表
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService.EnableHKQh">
+            <summary>
+            是接收港股行情
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetCodeArray">
+            <summary>
+            获取所有的代码对应拼音实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetMarketDataListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            筛选代码，返回代码中的行情数组
+            根据条件订阅
+            </summary>
+            <param name="strConditions">代码串</param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetQhDataListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅股指期货代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetMerQhDataListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅商品期货代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetCompleteMarketDataList(System.String,System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FutData}@)">
+            <summary>
+            二级分发服务器使用
+            </summary>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetCompleteMarketDataList(System.String)">
+            <summary>
+            /// 获取全量现货的行情
+            二级分发服务器使用
+            </summary>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetCompleteQhDataList(System.String)">
+            <summary>
+            获取全量股指期货的行情
+            二级分发服务器使用
+            </summary>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetCompleteMerQhDataList(System.String)">
+            <summary>
+            /// 获取全量商品期货的行情
+            二级分发服务器使用
+            </summary>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService._differenceMarketDataIsEndingEvent">
+            <summary>
+            批更新结束事件
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService.handlerList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.AddClientFirstGetCodeObjectHandler(GTAMarketSocket.ClientFirstGetCodeObjectHandler,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="handler"></param>
+            <param name="objectKey"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.DeleteClientFirstGetCodeObjectHandler(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="objectKey"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.FireClientFirstGetCodeObjectEvent(System.String,GTAMarketSocket.IHqEntity,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="objectKey"></param>
+            <param name="entity"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.FireClientFirstGetCodeObjectEvent(GTAMarketSocket.IHqEntity,System.Boolean)">
+            <summary>
+            给所有客户端添加订阅代码事件
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.DataUpdateEvent(GTAMarketSocket.IHqEntity)">
+            <summary>
+             更新实体后，触发将实体存入发送列表的方法
+             在GTASocket中StockDataService_DataChangeEvent
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService._FOREXContractEntityCopyList">
+            <summary>
+            外汇交易数据列表
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService._FOREXBatchUdpEntityCopyList">
+            <summary>
+            外汇初始数据列表
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService._FOREXClosingPirceUdpEntityCopyList">
+            <summary>
+            外汇收盘数据列表
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessFOREXContractEntity(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FOREXContractEntity})">
+            <summary>
+            合并更新快照
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.IsQhCode(System.String)">
+            <summary>
+            判断代码是否为期货
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessQhDataUpdating(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            处理期货更新事件
+            <para>更新数据缓存，合并，并且推荐到前台刷新的事件中</para>
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.MergeQhEntity(RealTime.Server.SModelData.HqData.FutData,RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            期货合并逻辑(注意参数顺序)
+            </summary>
+            <param name="oldData">源内存列表中的期货实体</param>
+            <param name="newData">当前更新的期货实体</param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.MergeDiffMarketDataList(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            二级分发国内现货：更新数据，存入缓存
+            </summary>
+            <param name="marketData"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.MergeInitCompleteData(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            更新全量行情
+            分发服务器
+            </summary>
+            <param name="marketData"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessDiffBatchDataIsEnding(GTAMarketSocket.HqEndingEventArgs)">
+            <summary>
+            差异批结束处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessMergeSzDiffData(GTAMarketSocket.HqEventArg)">
+            <summary>
+            深圳差异合并,主服务器模式
+            主服务器
+            </summary>
+            <param name="exa"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessMergeShDiffData(GTAMarketSocket.HqEventArg)">
+            <summary>
+            上海差异合并
+            主服务器
+            </summary>
+            <param name="exa"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.UpdateOneData(RealTime.Server.SModelData.HqData.UdpHqData,RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            差异合并业务
+            (经常调试测试,主服务器模式时会执行此方法)
+            (合并发送服务器/合并分发服务器)使用
+            </summary>
+            <param name="_change"></param>
+            <param name="_record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.SaveCodePyDataToXml">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.PerClientSendDataTrigger(GTAMarketSocket.MarketType,System.DateTime,System.TimeSpan)">
+            <summary>
+            每客户端更新事件的触发
+            </summary>
+            <param name="endingMarket"></param>
+            <param name="udpPacketStart"></param>
+            <param name="mergeSpendtime"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.UpdateOneData(RealTime.Server.SModelData.HqData.HqExData,RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            差异合并业务
+            (合并分发服务器)使用
+            </summary>
+            <param name="newData"></param>
+            <param name="oldData"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ChangeCodeChangeStatus(System.Boolean,GTAMarketSocket.MarketType)">
+            <summary>
+            改变代码状态标记
+            </summary>
+            <param name="changed"></param>
+            <param name="marketType"></param>
+            
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.UpdateMarketCapchgInfo">
+            <summary>
+            更新行情快照中股本信息
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.BuildInitHqExData(RealTime.Server.SModelData.HqData.UdpHqData,System.Collections.Hashtable)">
+            <summary>
+            创建初始的HqExData
+            <para>国内现货</para>
+            </summary>
+            <param name="hqData"></param>
+            <param name="capchgHash"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.InitCacheDataBeforeSave(System.Collections.Hashtable)">
+            <summary>
+            在保存之前初始化缓存数据
+            </summary>
+            <param name="hashCache"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ConvertIndex(System.String)">
+            <summary>
+            转换沪市指数代码
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.SerializeQhHashTable(System.Collections.Hashtable,System.String)">
+            <summary>
+            保存股指期货到持久化文件
+            </summary>
+            <param name="hashCache"></param>
+            <param name="xmlfileName"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.SerializeMerQhHashTable(System.Collections.Hashtable,System.String)">
+            <summary>
+            保存商品期货到持久化文件
+            </summary>
+            <param name="hashCache"></param>
+            <param name="xmlfileName"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.DeSerializeQhHashTable(System.String,System.Collections.Hashtable)">
+            <summary>
+            从持久化数据文件里加载期货行情
+            </summary>
+            <param name="xmlfileName"></param>
+            <param name="cachedata"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.DeSerializeMerQhHashTable(System.String,System.Collections.Hashtable)">
+            <summary>
+            从持久化数据文件里加载商品期货行情
+            </summary>
+            <param name="xmlfileName"></param>
+            <param name="cachedata"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetInitQhBeforeSave(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            持久化期货之前的初始化
+            </summary>
+            <param name="fd">缓存中的期货实体</param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.BuildInitSnap">
+            <summary>
+            建立快照
+            在实例化本类时或需要时,执行创建数据快照过程
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ClearSnap">
+            <summary>
+            清除快照
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.InitSnapFromXML(System.Xml.XmlDocument)">
+            <summary>
+            根据代码文件建立快照
+            </summary>
+            <param name="xmlDoc"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessMerQhDataUpdating(RealTime.Server.SModelData.HqData.MerFutData,System.Boolean)">
+            <summary>
+            处理商品期货更新事件
+            </summary>
+            <param name="data"></param>
+            <param name="ifUDPServer">是否是udp包合并</param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.MergeMerFutData(RealTime.Server.SModelData.HqData.MerFutData,RealTime.Server.SModelData.HqData.MerFutData,System.Boolean)">
+            <summary>
+             更新商品期货快照
+             <para></para>
+            </summary>
+            <param name="oldData">old是指在内存中的缓存</param>
+            <param name="newData">new是接收到的最新的</param>
+            <param name="ifUDPServer">并且都引用类型注意</param>
+            <returns></returns>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService._HKHashList">
+            <summary>
+            港股快照
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetCompleteHKStockList(System.String)">
+            <summary>
+            获取完整的港股行情数据
+            为每一个代码订阅更新事件
+            </summary>
+            <param name="objectKey">连接号</param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetHKStockListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetCompleteHKStockStatusList(System.String)">
+            <summary>
+            获取完整的港股交易状态行情数据
+            为每一个代码订阅更新事件
+            </summary>
+            <param name="objectKey">连接号</param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetHKStockStatusListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股交易状态代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetCompleteHKStaticListByConditions(System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股盘前静态数据代码，全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetHKStaticListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股盘前静态数据代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetCompleteHKPreMarketPriceListByConditions(System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股盘前价位变动代码，非全量订阅。
+            </summary>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetHKPreMarketPriceListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股盘前价位变动代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessMergeHKStockDiffData(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            港股数据更新合并处理(Server)
+            主服务器接收解析出来的Udp数据进行更新合并
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessHKStockUpdate(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            处理港股更新事件(STServer调用)
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.MergeBuyAndSell(RealTime.Server.SModelData.HqData.HKStock,RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            合并买卖盘
+            </summary>
+            <param name="newData"></param>
+            <param name="oldData"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.MergeDiffHKData(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            港股数据更新合并处理（ClientServer）
+            分发服务器接收解析出来的Udp数据进行更新合并
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessHKStockUpdating(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            处理港股更新事件（STClientServer调用）
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessHKStockStatusDiffData(RealTime.Server.SModelData.HqData.StockStatus)">
+            <summary>
+            处理港股盘中交易状态信息
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.MergHKStockStatusEntity(RealTime.Server.SModelData.HqData.StockStatus,RealTime.Server.SModelData.HqData.StockStatus)">
+            <summary>
+            更新港股状态对象
+            </summary>
+            <param name="oldData"></param>
+            <param name="newData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessHKStaticDiffData(RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            处理港股盘前静态数据
+            </summary>
+            <param name="hKStaticData"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessHKPreMarketPriceTableDiffData(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.PreMarketPriceTable})">
+            <summary>
+            处理港股盘前价位数据表
+            </summary>
+            <param name="pMPT"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.MergHKPreMarketStaticEntity(RealTime.Server.SModelData.HqData.HKStaticData,RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            更新将盘前静态数据对象
+            </summary>
+            <param name="oldData"></param>
+            <param name="newData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.HasTableStaticData(RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            将盘前静态数据放入快照
+            </summary>
+            <param name="hKStaticData"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.MergKPreMarketPriceEntity(RealTime.Server.SModelData.HqData.PreMarketPriceTable,RealTime.Server.SModelData.HqData.PreMarketPriceTable)">
+            <summary>
+            更新将盘前静态数据对象
+            </summary>
+            <param name="oldData"></param>
+            <param name="newData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.HasTableMinPriceFlu(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.PreMarketPriceTable})">
+            <summary>
+            将最小价位变动表放入快照
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.HasTableAllMinPriceFlu(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.PreMarketPriceTable})">
+            <summary>
+            将最小价位变动表放入快照
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.IsMainBoard(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            判断港股商品是否是主板
+            同时还在此生成静态快照----
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.IniHKData">
+            <summary>
+            初始化港股盘前数据
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.IsMainBoard(RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            判断港股静态数据是不是主板商品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.SendHKPreMarketRequest">
+            <summary>
+            发送港股盘前数据请求
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataService.ifFirstRun">
+            <summary>
+            第一次起动主程序时(如8点后启动),定时器第一次运行不作静态数据请求
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.InitHKMarket">
+            <summary>
+            港股行情初始化
+            每天早上8:00初始化
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.InitHKStock(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            把传入的港股行情初始化
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.GetMarketDataListByConditionsFirstTime(System.String,System.String,System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FutData}@)">
+            <summary>
+            客户端第一次订阅数据时使用
+            CLIENT DDE
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <param name="futList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessFOREXBatchUdpEntity(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity})">
+            <summary>
+            合并初始数据
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataService.ProcessFOREXClosingPirceUdpEntity(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity})">
+            <summary>
+            合并收盘数据
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataService.ShMarketDataList">
+            <summary>
+            上海代码表（快照）
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataService.SzMarketDataList">
+            <summary>
+            深圳行情数据列表（快照）
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataService.QhHashList">
+            <summary>
+            期货列表（快照）
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataService.MerQhHashList">
+            <summary>
+            商品期货列表（快照）
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataService.DataSource">
+            <summary>
+            下单 WebService 提供
+            </summary>
+        </member>
+        <member name="E:GTAStockBusinessFactory.StockDataService.DataChangeEvent">
+            <summary>
+            实体更新事件
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataService.FOREXBatchUdpEntityCopyList">
+            <summary>
+            外汇初始数据列表（快照）
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataService.FOREXClosingPirceUdpEntityCopyList">
+            <summary>
+            外汇收盘数据列表（快照）
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataService.FOREXContractEntityCopyList">
+            <summary>
+            外汇列表（快照）
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataService.QhCodeString">
+            <summary>
+            期货代码字符串
+            </summary>
+        </member>
+        <member name="E:GTAStockBusinessFactory.StockDataService.SzHqUpdateEvent">
+            <summary>
+            深圳行情更新事件
+            </summary>
+        </member>
+        <member name="E:GTAStockBusinessFactory.StockDataService.ShHqUpdateEvent">
+            <summary>
+            上海行情更新事件
+            </summary>
+        </member>
+        <member name="E:GTAStockBusinessFactory.StockDataService.QhDataUpdateEvent">
+             <summary>
+             股指期货行情更新事件
+            <para>刷新事件，把数据通过事件方式推送到前台接口方法中</para>
+             </summary>
+        </member>
+        <member name="E:GTAStockBusinessFactory.StockDataService.MerQhDataUpdateEvent">
+            <summary>
+            商品期货行情更新事件
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataService.HKStockList">
+            <summary>
+            港股快照列表
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataService.HKStockStatusList">
+            <summary>
+            港股交易状态快照列表
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataService.HKStockPreMarketHashList">
+            <summary>
+            港股盘前快照列表
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataService.HKMinPriceFluHashList">
+            <summary>
+            港股盘前价位变动快照列表
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.CodePyManager.ChangeCodePyName(System.String,System.String)">
+            <summary>
+            change  the py name of stock 
+            </summary>
+            <param name="stockno"></param>
+            <param name="nName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.CodePyManager.GetPyStringByStockNo(System.String,System.String,System.String)">
+            <summary>
+            作用：获取新的拼音，并检测是否新代码处理时间，触发新代码事件
+            </summary>
+            <param name="stockno"></param>
+            <param name="stockname"></param>
+            <param name="marketType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GTAStockBusinessFactory.StockDataServiceNew">
+            <summary> 
+             模块编号： 
+             作用：行情数据服务控制类 
+             区别于原先的StockDataService类，主要是使用字典代替Hashtable
+             作者：段进雄
+             编写日期：2008-12-24
+            </summary> 
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataServiceNew._qhCodeString">
+            <summary>
+            期货代码列表
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.GetCodeArray">
+            <summary>
+            获取所有的代码对应拼音实体列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.GetMarketDataListByConditionsFirstTime(System.String,System.String,System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FutData}@)">
+            <summary>
+            客户端第一次订阅数据时使用
+            CLIENT DDE
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <param name="futList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.GetCompleteMarketDataList(System.String,System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FutData}@)">
+            <summary>
+            二级分发服务器使用
+            </summary>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataServiceNew._differenceMarketDataIsEndingEvent">
+            <summary>
+            批更新结束事件
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.StockDataServiceNew.handlerList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.AddClientFirstGetCodeObjectHandler(GTAMarketSocket.ClientFirstGetCodeObjectHandler,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="handler"></param>
+            <param name="objectKey"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.DeleteClientFirstGetCodeObjectHandler(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="objectKey"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.FireClientFirstGetCodeObjectEvent(System.String,GTAMarketSocket.IHqEntity,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="objectKey"></param>
+            <param name="entity"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.IsQhCode(System.String)">
+            <summary>
+            判断代码是否为期货
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.ProcessQhDataUpdating(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            处理期货更新事件
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.MergeQhEntity(RealTime.Server.SModelData.HqData.FutData,RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            期货合并逻辑
+            </summary>
+            <param name="sData">源内存列表中的期货实体</param>
+            <param name="dData">当前更新的期货实体</param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.MergeDiffQhData(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            二级分发处理合并期货
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.ProcessDiffBatchDataIsEnding(GTAMarketSocket.HqEndingEventArgs)">
+            <summary>
+            差异批结束处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.ProcessMergeSzDiffData(GTAMarketSocket.HqEventArg)">
+            <summary>
+            深圳差异合并
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.ProcessMergeShDiffData(GTAMarketSocket.HqEventArg)">
+            <summary>
+            上海差异合并
+            </summary>
+            <param name="exa"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.ProcessMergeQhDiffData(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            期货差异处理
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.SaveCodePyDataToXml">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.PerClientSendDataTrigger(GTAMarketSocket.MarketType,System.DateTime,System.TimeSpan)">
+            <summary>
+            每客户端更新事件的触发
+            </summary>
+            <param name="endingMarket"></param>
+            <param name="udpPacketStart"></param>
+            <param name="mergeSpendtime"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.UpdateOneData(RealTime.Server.SModelData.HqData.HqExData,RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            差异合并业务
+            (合并分发服务器)使用
+            </summary>
+            <param name="newData">新行情数据对象.</param>
+            <param name="oldData">旧行情数据对象.</param>
+            <returns>更新后的行情数据对象</returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.UpdateOneData(RealTime.Server.SModelData.HqData.UdpHqData,RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            差异合并业务
+            (合并发送服务器/合并分发服务器)使用
+            </summary>
+            <param name="_change">udp数据类</param>
+            <param name="_record">行情实体类</param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.UpdateMarketCapchgInfo">
+            <summary>
+            更新行情快照中股本信息
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.BuildInitHqExData(RealTime.Server.SModelData.HqData.UdpHqData,System.Collections.Hashtable)">
+            <summary>
+            创建初始的HqExData
+            </summary>
+            <param name="hqData">Udp行情数据</param>
+            <param name="capchgHash"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.InitCacheDataBeforeSave(System.Collections.Generic.Dictionary{System.String,RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            在保存之前初始化缓存数据
+            </summary>
+            <param name="hashCache"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.SerializeHqExDataHashTable(System.Collections.Generic.Dictionary{System.String,RealTime.Server.SModelData.HqData.HqExData},System.String)">
+            <summary>
+            持久化HqExdata Cache
+            与SaveCodePyDataToXml同时进行
+            </summary>
+            <param name="hashCache">The hash cache.</param>
+            <param name="xmlfileName">Name of the xmlfile.</param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.ConvertIndex(System.String)">
+            <summary>
+            转换沪市指数代码
+            </summary>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.SerializeQhHashTable(System.Collections.Hashtable,System.String)">
+            <summary>
+            保存股指期货到持久化文件
+            </summary>
+            <param name="hashCache"></param>
+            <param name="xmlfileName"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.SerializeMerQhHashTable(System.Collections.Hashtable,System.String)">
+            <summary>
+            保存商品期货到持久化文件
+            </summary>
+            <param name="hashCache"></param>
+            <param name="xmlfileName"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.DeSerializeQhHashTable(System.String,System.Collections.Hashtable)">
+            <summary>
+            Load
+            </summary>
+            <param name="xmlfileName"></param>
+            <param name="cachedata"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.DeSerializeMerQhHashTable(System.String,System.Collections.Hashtable)">
+            <summary>
+            从持久化数据文件里加载商品期货行情
+            </summary>
+            <param name="xmlfileName"></param>
+            <param name="cachedata"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.GetInitQhBeforeSave(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            持久化期货之前的初始化
+            </summary>
+            <param name="fd">缓存中的期货实体</param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.GetCompleteHKStockLists(System.String)">
+            <summary>
+            分包获取完整的港股行情数据
+            为每一个代码订阅更新事件
+            </summary>
+            <param name="objectKey">连接号</param>
+            <returns> 返回一二维List</returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.GetCompleteHKStaticListByConditions(System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股盘前静态数据代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.GetHKStaticListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股盘前静态数据代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.GetCompleteHKPreMarketPriceListByConditions(System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股盘前价位变动代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.GetHKPreMarketPriceListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股盘前价位变动代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.ProcessMergeHKStockDiffData(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            港股数据更新合并处理(Server)
+            主服务器接收解析出来的Udp数据进行更新合并
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockDataServiceNew.MergeDiffHKData(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            港股数据更新合并处理（ClientServer）
+            分发服务器接收解析出来的Udp数据进行更新合并
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="E:GTAStockBusinessFactory.StockDataServiceNew.RecorderHqDataEvent">
+            <summary>
+            高频数据记录事件
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataServiceNew.ShMarketDataList">
+            <summary>
+            上海行情数据列表（快照）
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataServiceNew.SzMarketDataList">
+            <summary>
+            深圳行情数据列表（快照）
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataServiceNew.QhHashList">
+            <summary>
+            期货列表（快照）
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataServiceNew.MerQhHashList">
+            <summary>
+            商品期货列表（快照）
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataServiceNew.QhList">
+            <summary>
+            期货列表
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataServiceNew.DataSource">
+            <summary>
+            下单 WebService 提供
+            </summary>
+        </member>
+        <member name="E:GTAStockBusinessFactory.StockDataServiceNew.QhUpdateEvent">
+            <summary>
+            行情更新事件
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataServiceNew.QhCodeString">
+            <summary>
+            期货代码字符串
+            </summary>
+        </member>
+        <member name="E:GTAStockBusinessFactory.StockDataServiceNew.SzHqUpdateEvent">
+            <summary>
+            当深圳行情发生更新时触发的事件
+            </summary>
+        </member>
+        <member name="E:GTAStockBusinessFactory.StockDataServiceNew.ShHqUpdateEvent">
+            <summary>
+            当上海行情发生更新时触发的事件
+            </summary>
+        </member>
+        <member name="E:GTAStockBusinessFactory.StockDataServiceNew.QhDataUpdateEvent">
+            <summary>
+            当期货行情发生更新时触发的事件
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataServiceNew.HKStockList">
+            <summary>
+            港股快照列表
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataServiceNew.HKStockStatusList">
+            <summary>
+            港股交易状态快照列表
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataServiceNew.HKStockPreMarketHashList">
+            <summary>
+            港股盘前快照列表
+            </summary>
+        </member>
+        <member name="P:GTAStockBusinessFactory.StockDataServiceNew.HKMinPriceFluHashList">
+            <summary>
+            港股盘前价位变动快照列表
+            </summary>
+        </member>
+        <member name="T:GTAStockBusinessFactory.MarketSource">
+            <summary>
+            交易所类型
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.MarketSource.SHStockMarket">
+            <summary>
+            上海证券交易所
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.MarketSource.SZStockMarket">
+            <summary>
+            深圳证券交易所
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.MarketSource.SHStockPointFutMarket">
+            <summary>
+            中金所
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.MarketSource.DLMerFutMarket">
+            <summary>
+            大连商品期货交易所
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.MarketSource.ZZMerFutMarket">
+            <summary>
+            郑州商品期货交易所
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.MarketSource.SHMerFutMarket">
+            <summary>
+            上海商品期货交易所
+            </summary>
+        </member>
+        <member name="F:GTAStockBusinessFactory.MarketSource.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="T:GTAStockBusinessFactory.AsyncMergeData">
+            <summary>
+            异步合并数据事件句柄
+            </summary>
+            <param name="diffDataList"></param>
+        </member>
+        <member name="M:GTAStockBusinessFactory.StockSocketServerFactory.GetDataServiceV2(System.String,System.String)">
+            <summary>
+            Gets the data service.
+            </summary>
+            <param name="xmlPath">The XML path.</param>
+            <param name="xmlFileName">Name of the XML file.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

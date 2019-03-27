@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MatchCenter.BLL.Common.AppConfig" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAgAQAAAAAAKIAAAAAQAAAAAAAgAAAAAAEAAAEAAAQ=</HashCode>
+      <FileName>Common\AppConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.Common.ShowMessage" Collapsed="true">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAEAAAACAAAAAAAAAAAAAIAEAAAIAAAAAAAQA=</HashCode>
+      <FileName>Common\ShowMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.Common.GenerateInfo" Collapsed="true">
+    <Position X="19.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>7gEAAAAAAAAAAAAAAAAIAAAAAAD+GQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\ShowMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.Common.Utils" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAEAEAAAAAAAAAAAABAAAAACAAABAAAEAA=</HashCode>
+      <FileName>Common\Utils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.Singleton&lt;T&gt;">
+    <Position X="4.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.InitMatchCenter" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAACAAAAAAgAAAAAAAAAAQABAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>InitMatchCenter\InitMatchCenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.MatchCenterManager" Collapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAECFAAAAAAAAAIAAAAAgAAABEAAAABRhAQAQAAAAA=</HashCode>
+      <FileName>InitMatchCenter\MatchCenterManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.FutureMatcher" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAlQAACAAAkAEQEAwAAAARACIECICAQQEAQRAABAAAA=</HashCode>
+      <FileName>Match\FutureMatcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.CancelAsyncResult" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAIAAAAAAgAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Match\MatchDevice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.MatchDevice" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACYQAEmAAAQBAAAMAAgCAAACAAUAAAQBAwQQgGJAAEA=</HashCode>
+      <FileName>Match\MatchDevice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.StockMatcher" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAgGAAAAAEIEAgAAAARACIECIAAQQEAQRAABAAAA=</HashCode>
+      <FileName>Match\StockMatcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.CostPriceCalculate" Collapsed="true">
+    <Position X="9.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAICAAAAARAAAAAAAAAAEgAQAAAAAAAAAA=</HashCode>
+      <FileName>MatchRules\CostPriceCalculate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.RulesDefaultValue" Collapsed="true">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAGAAAAQAABAAAAAABAEAEAAAAA=</HashCode>
+      <FileName>MatchRules\RulesDefaultValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.TradeTimeManager" Collapsed="true">
+    <Position X="7.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABEAAAIABAAAAAAAAAEAAAAAAAAAgAAA=</HashCode>
+      <FileName>MatchRules\TradeTimeManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.ManagementCenter.CommonDataCacheProxy" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAgcCTAaQICAB0AAWAAALQAEABAgAEgEgMGQYhAUAQA=</HashCode>
+      <FileName>ManagementCenter\CommonDataCacheProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.ManagementCenter.CommonDataManagerOperate" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAQAAgAAEAAAEAAAQAAAAAIAKAAAAAAAABAAAAAAgA=</HashCode>
+      <FileName>ManagementCenter\CommonDataManagerOperate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.ManagementCenter.GetAllCommonDataFromManagerCenter" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEYAAAsIABAAgAAiCAAAABIEACAABAAAgAACAABA=</HashCode>
+      <FileName>ManagementCenter\GetAllCommonDataFromManagerCenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.ManagementCenter.ManagementCenterDataAgent" Collapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAEAAAAAAAAAAAAAAAAAQAAAEEAAAAAAAAAAAAA=</HashCode>
+      <FileName>ManagementCenter\ManagementCenterDataAgent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.match.CanceFailBack" Collapsed="true">
+    <Position X="1.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAEAAEA=</HashCode>
+      <FileName>Match\CanceFailBack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.match.CanceFailFutureBack" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAQACAAAAA=</HashCode>
+      <FileName>Match\CanceFailFutureBack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.match.CanceFailStockBack" Collapsed="true">
+    <Position X="2.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQgAAAAAA=</HashCode>
+      <FileName>Match\CanceFailStockBack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.MatchData.EntrustOrderData&lt;T&gt;" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAECAABEAAIAAAACAAAAAAAABAAAA=</HashCode>
+      <FileName>MatchData\EntrustOrderData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.MatchData.MatchCodeDictionary" Collapsed="true">
+    <Position X="19.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MatchData\MatchCodeDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.MatchRules.EntrustOrderDataSort&lt;T&gt;" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MatchRules\EntrustOrderDataSort.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.MatchRules.FuseManager" Collapsed="true">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAIAEAABABAAABAAAAAAEAAAAAAAAAAAAg=</HashCode>
+      <FileName>MatchRules\FuseManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.PushBack.DobackService" Collapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAoQAAAAAAAAACgAAAACQQAEAAAIAAUAgAAAACA=</HashCode>
+      <FileName>PushBack\DobackService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.PushBack.TradePushBackImpl" Collapsed="true">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAADGAAAAABAAAIAAAAAAQQAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>PushBack\TradePushBackImpl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.RealTime.RealTimeDataCache" Collapsed="true">
+    <Position X="15.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKAAAAAAAAAAAAAACAAAAAAAAAAEAAAAABAAABAAAA=</HashCode>
+      <FileName>RealTime\RealTimeDataCache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.RealTime.RealtimeMarketService" Collapsed="true">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABBACQEAAAEAAAAgBAAAJABAAQAAIAAAAAYAAQAAAAA=</HashCode>
+      <FileName>RealTime\RealtimeMarketService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatchCenter.BLL.Service.DoOrderService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiIAEAACAAAgAAIAAAAAAAAgAAAAAAABgACAAAAAAA=</HashCode>
+      <FileName>Service\DoOrderService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MatchCenter.BLL.Service.OrderDealRpt" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAACAAAIAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service\OrderDealRpt.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="MatchCenter.BLL.interfaces.IDoOrder" Collapsed="true">
+    <Position X="12.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAEAAAAAAAAAIAAAAAAAAgAAAAAAABgACAAAAAAA=</HashCode>
+      <FileName>wcfservice_out\interface\IDoOrder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MatchCenter.BLL.interfaces.IDoOrderCallback" Collapsed="true">
+    <Position X="14" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAEAAIQAAAAAAAAAAAAAAAFAAAAAQAIAAAQ=</HashCode>
+      <FileName>wcfservice_out\interface\IDoOrderCallback.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MatchCenter.BLL.interfaces.IOrderDealRpt" Collapsed="true">
+    <Position X="15.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAIAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>wcfservice_out\interface\IOrderDealRpt.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="MatchCenter.BLL.MatchStockDelegate" Collapsed="true">
+    <Position X="19.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>MatchRules\DelegateMethodManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="MatchCenter.BLL.MatchSockMarkDelegate" Collapsed="true">
+    <Position X="17.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MatchRules\DelegateMethodManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="MatchCenter.BLL.CacelStockOrderDelegate" Collapsed="true">
+    <Position X="12.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MatchRules\DelegateMethodManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="MatchCenter.BLL.MatchFutureOrderDelegate" Collapsed="true">
+    <Position X="12.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MatchRules\DelegateMethodManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="MatchCenter.BLL.MatchSockFutureMarkDelegate" Collapsed="true">
+    <Position X="15.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MatchRules\DelegateMethodManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="MatchCenter.BLL.MatchStockFutureDelegate" Collapsed="true">
+    <Position X="12.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>MatchRules\DelegateMethodManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="MatchCenter.BLL.MatchResultDelegate" Collapsed="true">
+    <Position X="14" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MatchRules\DelegateMethodManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="MatchCenter.BLL.CancelOrderDelegate" Collapsed="true">
+    <Position X="14" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MatchRules\DelegateMethodManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="MatchCenter.BLL.DoBackStockDealDeletate" Collapsed="true">
+    <Position X="19.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MatchRules\DelegateMethodManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="MatchCenter.BLL.DoBackFutureDealDeletate" Collapsed="true">
+    <Position X="17.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MatchRules\DelegateMethodManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="MatchCenter.BLL.DoBackCommoditiesDealDeletate" Collapsed="true">
+    <Position X="15.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MatchRules\DelegateMethodManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

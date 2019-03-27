@@ -1,0 +1,2209 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTA.RealTIme.SModelData</name>
+    </assembly>
+    <members>
+        <member name="T:RealTime.Server.SModelData.HqPacketDataType">
+            <summary>
+            差异数据类型
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqPacketDataType.HPDTSz">
+            <summary>
+            深圳
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqPacketDataType.HPDTSh">
+            <summary>
+            上海
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqPacketDataType.HPDTAll">
+            <summary>
+            所有差异
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SModelData.HqData.CapchgData.#ctor">
+            <summary> 构造函数
+            构造函数
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.CapchgData.Shares">
+            <summary>股本
+            股本
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.CapchgData.Class">
+            <summary>类别
+            类别
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.CodeData">
+            <summary>
+            股代码实体类
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.CodeData.Stockno">
+            <summary>
+            股票代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.CodeData.Name">
+            <summary>
+            股票名称
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.CodeData.PY">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.CodeData.MarketType">
+            <summary>
+            市场类型
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.ClientFirstGetCodeObjectHandler">
+            <summary>
+            处理客户端第一次取股票代码的代理
+            </summary>
+            <param name="codeObj"></param>
+            <param name="isSent"></param>
+        </member>
+        <member name="T:GTAMarketSocket.HqDataUpdateHandler">
+            <summary>
+            行情实体更新委托，包括现货，期货和港股等等大类
+            </summary>
+            <param name="codeObj"></param>
+        </member>
+        <member name="T:GTAMarketSocket.HqDataUpdateProcess">
+            <summary>
+            国内证券市场对象更新处理
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:GTAMarketSocket.QhUpdateProcess">
+            <summary>
+            股指期货发送数据的处理
+            <para>向下级发送数据</para>
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:GTAMarketSocket.EntityBizStatus">
+            <summary>
+            行情实体的(修改)状态
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.EntityBizStatus.EBSIsOriginal">
+            <summary>
+            初始的状态，被订阅但从未被更新
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.EntityBizStatus.EBSIsModifing">
+            <summary>
+            正在被修改
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.EntityBizStatus.EBSIsModified">
+            <summary>
+            修改完成
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.MarketType">
+            <summary>
+            股票市场类型
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.MarketType.MTSz">
+            <summary>
+            深圳股票市场
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.MarketType.MTSh">
+            <summary>
+            上海股票市场
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.MarketType.MTShFut">
+            <summary>
+            上海中金所
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.MarketType.MTSHMerFut">
+            <summary>
+            上海商品期货市场
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.MarketType.MTZZ">
+            <summary>
+            郑州商品期货市场
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.MarketType.MTDL">
+            <summary>
+            大连商品期货市场
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.MarketType.MTUnknown">
+            <summary>
+            未知市场，暂定为通知客户端更新代码列表
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.MarketType.MTHK">
+            <summary>
+            港股市场
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity">
+            <summary>
+            上级数据源传过来的UDP结构实体
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.FeedingData">
+            <summary>
+            供时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.ReservedForFuture">
+            <summary>
+            保留字段
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.SymbolCode">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.LocalName">
+            <summary>
+            本地名称
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.EnglishName">
+            <summary>
+            英文名称
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.CategoryCode">
+            <summary>
+            类别代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.BaseCurrency">
+            <summary>
+            基础货币
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.RelativeCurrency">
+            <summary>
+            相对货币
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.BaseCurrencyUnit">
+            <summary>
+            基础货币单位
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.RelativeCurrencyUnit">
+            <summary>
+            相对货币单位
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.ContributorCode">
+            <summary>
+            出资代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.TermType">
+            <summary>
+            到期类型
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.PrevClosePrice">
+            <summary>
+            昨收价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.Denominator">
+            <summary>
+            分母
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.LastTradingDate">
+            <summary>
+            最后交易时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.MaturityDate">
+            <summary>
+            到期日
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity.BatchDate">
+            <summary>
+            批处理时间
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity">
+            <summary>
+            上级数据源传过来的UDP结构实体
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity.ExchangeID">
+            <summary>
+            外汇id
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity.SymbolCode">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity.TermType">
+            <summary>
+            到期类型
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity.KoreaTradingDate">
+            <summary>
+            韩国日期
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity.OpenPrice">
+            <summary>
+            开盘价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity.HighPrice">
+            <summary>
+            最高价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity.LowPrice">
+            <summary>
+            最低价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity.ClosePrice">
+            <summary>
+            收盘价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity.ChangePrice">
+            <summary>
+            涨跌
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity.ChangeRate">
+            <summary>
+            涨跌率
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity.AskPrice1">
+            <summary>
+            最终买入报价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity.BidPrice1">
+            <summary>
+            最终卖出报价
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity">
+            <summary>
+            上级数据源传过来的UDP结构实体
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.ExchangeID">
+            <summary>
+            固定 0051
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.FeedingDataType">
+            <summary>
+            固定 4 
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.FeedingDataCategory">
+             <summary>
+             数据类型
+            <para>0 - FOREX_Batch</para>
+            <para>1 - FOREX_Contract</para>
+            <para>3 - FOREX_ClosingPirce</para>
+             </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.SymbolCode">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.TermType">
+            <summary>
+            期限类型
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.KoreaTradingDate">
+            <summary>
+            交易日期韩国)
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.KoreaTradingTime">
+            <summary>
+            交易时间(韩国)
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.TradingDate">
+            <summary>
+            交易日期
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.TradingTime">
+            <summary>
+            交易时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.OpenPrice">
+            <summary>
+            开盘价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.HighPrice">
+            <summary>
+            最高价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.LowPrice">
+            <summary>
+            最低价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.ChangePrice">
+            <summary>
+            涨跌
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.ChangeRate">
+            <summary>
+            涨跌率
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.BidPrice1">
+            <summary>
+            卖出价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.BidTime">
+            <summary>
+            卖出时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.AskPrice1">
+            <summary>
+            买入价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractUdpEntity.AskTime">
+            <summary>
+            买入时间
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.FOREXContractEntity">
+            <summary>
+            外汇交易数据实体
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.SymbolCode">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.TermType">
+            <summary>
+            期限类型
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.LocalPCDate">
+            <summary>
+            交易日期(本机) 20100630
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.LocalPCTime">
+            <summary>
+            交易时间(本机) 064830123
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.KoreaTradingDate">
+            <summary>
+            交易日期(韩国) KoreaTradingDate:20100630
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.KoreaTradingTime">
+            <summary>
+            交易时间(韩国) KoreaTradingTime:144830
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.TradingDate">
+            <summary>
+            GMT交易日期 TradingDate:20100630
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.TradingTime">
+            <summary>
+            GMT交易时间 TradingTime:064830
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.PrevClosePrice">
+            <summary>
+            昨收盘价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.OpenPrice">
+            <summary>
+            开盘价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.HighPrice">
+            <summary>
+            最高价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.LowPrice">
+            <summary>
+            最低价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.ClosePrice">
+            <summary>
+            现价 1.0531
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.ChangePrice">
+            <summary>
+            涨跌 +0.0026
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.ChangeRate">
+            <summary>
+            涨跌率 +0.24
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.BidPrice1">
+            <summary>
+            买价 1.0529
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FOREXContractEntity.AskPrice1">
+            <summary>
+            卖价 1.0533
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.FutData">
+            <summary>
+            一些原有字段已移到基类
+            股指期货实体对象
+            修改人:段进雄
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SModelData.HqData.FutData.#ctor">
+            <summary>构造函数
+            构造函数
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.FutData.m_Stockno">
+            <summary>
+            期货代码
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.FutData.m_Yclose">
+            <summary>
+            昨收 
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.FutData.m_Open">
+            <summary>
+            开盘
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.FutData.m_AvgPrice">
+            <summary>
+            均价　
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.FutData.m_PriceGap">
+            <summary>
+            檔差 PRICEGAP!'2330'
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.FutData.m_PreSettlementPrice">
+            <summary>
+             昨结算 PreSettlementPrice
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.FutData.m_PreOpenInterest">
+            <summary>
+            昨持仓量 PreOpenInterest
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.FutData.m_OpenInterest">
+            <summary>
+             持仓量 OpenInterest
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.FutData.m_SettlementPrice">
+            <summary>
+            今结算 SettlementPrice
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.FutData.m_TradingDay">
+            <summary>
+            交易日 TradingDay
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.Stockno">
+            <summary>
+            期货代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.Time">
+            <summary>
+            成交时间(格式：HH:mm:ss.fff)
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.Chg">
+            <summary>
+            涨跌
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.ChgPct">
+            <summary>
+            涨跌幅
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.Volume">
+            <summary>
+            当日总量
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.Amount">
+            <summary>
+            成交总金额
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.Lasttrade">
+            <summary>
+            最新价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.OpenPosition">
+            <summary>
+            开仓
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.ClosePosition">
+            <summary>
+            平仓
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.LastVolume">
+            <summary>
+            瞬量
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.Yclose">
+            <summary>昨收价格
+            昨收价格
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.ClosePrice">
+            <summary>收盘价
+            收盘价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.Open">
+            <summary>开盘价格
+            开盘价格
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.UpperLimitPrice">
+            <summary>
+            涨停价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.LowerLimitPrice">
+            <summary>
+            跌停价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.HighestPrice">
+            <summary>
+            当日最高
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.LowestPrice">
+            <summary>
+            当日最低
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.AvgPrice">
+            <summary>
+            均价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.PriceGap">
+            <summary>
+            档差
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.PreOpenInterest">
+            <summary>
+            昨持仓量
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.OpenInterest">
+            <summary>
+            持仓量 OpenInterest
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.SettlementPrice">
+            <summary>
+            今结算 SettlementPrice
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.Date">
+            <summary>
+            交易日 Date
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.FutData.PreSettlementPrice">
+            <summary>
+             昨结算 PreSettlementPrice
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.HKStaticData">
+            <summary>
+             盘前静态信息
+            作者：段进雄
+            日期：2009-10-23
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.StockNo">
+            <summary>
+            港股代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.StrName">
+            <summary>
+            港股名称
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.EnName">
+            <summary>
+            港股简称
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.PreClosePrice">
+            <summary>
+            昨收盘价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.PreClosePriceType">
+             <summary>
+             收盘类型
+             值如下：
+            ‘C’-Previous Closing applicable
+            ‘X’-Previous closing not applicable
+             </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.LotSize">
+            <summary>
+            每手股数
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.ShortsellFlag">
+            <summary>
+            卖空标志
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.SuspensionFlag">
+            <summary>
+            停牌标志
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.IntraDayShortsellingFlag">
+            <summary>
+            隔天卖空标志
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.ListingStatus">
+            <summary>
+            上市状态
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.MarketCode">
+            <summary>
+            市场代码
+            值如下:
+            1:"ETS"
+            2:"GEM"
+            3:"MAIN"
+            4:"NASD"
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.SpreadTableCode">
+            <summary>
+            价位表代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.InstrumentType">
+            <summary>
+            证券类型
+            值如下：
+            1:EQTY
+            2:WRNT
+            3:BOND
+            4:TRST
+            5:BWRT
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.CurrencyUnit">
+            <summary>
+            货币单位
+            </summary>
+        </member>
+        <!-- 对于成员“P:RealTime.Server.SModelData.HqData.HKStaticData.CurrencyCode”忽略有格式错误的 XML 注释 -->
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.MinPriceFluList">
+            <summary>
+            价格变动表
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.Time">
+            <summary>
+            获取静态数据的时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStaticData.BelongInMarket">
+            <summary>
+            所属市场
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.HKStock">
+            <summary>
+            港股实体类
+            作者：段进雄
+            日期：2009-9-9
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.StockNo">
+            <summary>
+            港股代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.StrName">
+            <summary>
+            股票名称
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Date">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Time">
+            <summary>
+            交易时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.High">
+            <summary>
+            最高价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Low">
+            <summary>
+            最低价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Chg">
+            <summary>
+            涨跌
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.ChgPct">
+            <summary>
+            涨跌率
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Lasttrade">
+            <summary>
+            成交价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.AveragePrice">
+            <summary>
+            均价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.PTrans">
+            <summary>
+            现手
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.OpenPrice">
+            <summary>
+            开盘价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.ClosePrice">
+            <summary>
+            收盘价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.PreClosePrice">
+            <summary>
+            昨日收盘价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Amount">
+            <summary>
+            成交总金额
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Volume">
+            <summary>
+            当日总量
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Buyprice1">
+            <summary>
+            买价1
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Buyprice2">
+            <summary>
+            买价2
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Buyprice3">
+            <summary>
+            买价3
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Buyprice4">
+            <summary>
+            买价4
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Buyprice5">
+            <summary>
+            买价5
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Buyvol1">
+            <summary>
+            买量1
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Buyvol2">
+            <summary>
+            买量2
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Buyvol3">
+            <summary>
+            买量3
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Buyvol4">
+            <summary>
+            买量4
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Buyvol5">
+            <summary>
+            买量5
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Sellprice1">
+            <summary>
+            卖价1
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Sellprice2">
+            <summary>
+            卖价2
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Sellprice3">
+            <summary>
+            卖价3
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Sellprice4">
+            <summary>
+            卖价4
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Sellprice5">
+            <summary>
+            卖价5
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Sellvol1">
+            <summary>
+            卖量1
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Sellvol2">
+            <summary>
+            卖量2
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Sellvol3">
+            <summary>
+            卖量3
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Sellvol4">
+            <summary>
+            卖量4
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.Sellvol5">
+            <summary>
+            卖量5
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.NominalPrice">
+            <summary>
+            按盘价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.NominalPriceType">
+             <summary>
+             按盘价价格类型
+             值如下：
+            ‘N’- Nominal price
+            ‘C’- Today’s closing
+            ‘Y’-Display“DAY CLOSE N/A”
+            ‘X’-	Display “Nominal N/A”
+             </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.IndicativeEquilibriumPrice">
+            <summary>
+            参考平衡价格
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.IndicativeEquilibriumVolume">
+            <summary>
+            参考平衡成交量
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.PublicTradeType">
+             <summary>
+             交易类型
+             值如下:
+             ‘X’ - Manual/Special lot Direct 人工/直接特殊交易
+            ‘D’- Odd Lot 零股(直接或间接)   Direct/Non-Direct   
+             ‘*’- Rejected 撤单
+            ‘M’- Manual/Special lot  Non-direct   
+             ‘ ’- Automatch  Non-direct
+            ‘Y’- Automatch Direct
+            ‘P’- Pre-opening   Direct/Non-direct
+            ‘U’- Auction Matching 集合竞价  Direct/Non-Direct
+             </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.OrderSize">
+             <summary>
+             买卖方向
+             值如下：
+            ‘A’：卖
+            ‘B’：买
+            ‘N’：如果是指数时使用
+             </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.VolumeSum">
+            <summary>
+            累积成交量(交易类型为自动对盘非两边客交易(即PublicTradeType为' '值)的累积成交量)
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.AmountSum">
+            <summary>
+            累积成交额(交易类型为自动对盘非两边客交易(即PublicTradeType为' '值)的累积成交量)
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HKStock.BelongInMarket">
+            <summary>
+            所属市场
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.HqData">
+            <summary>
+            证券市场实体
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SModelData.HqData.HqData.#ctor">
+            <summary>构造函数
+            构造函数
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.HqData.m_Open">
+            <summary>开盘价格
+            开盘价格
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Stockno">
+            <summary>
+            股票代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Time">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Lasttrade">
+            <summary>
+            成交价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Volume">
+            <summary>
+            当日总量
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Amount">
+            <summary>
+            成交总金额
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.pTrans">
+            <summary>
+            成交笔数
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Open">
+            <summary>
+            开盘价 
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Buyprice1">
+            <summary>
+            买价一
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Buyprice2">
+            <summary>
+            买价二
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Buyprice3">
+            <summary>
+            买价三
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Buyprice4">
+            <summary>
+            买价四
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Buyprice5">
+            <summary>
+            买价五
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Buyvol1">
+            <summary>
+            买量一
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Buyvol2">
+            <summary>
+            买量二
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Buyvol3">
+            <summary>
+            买量三
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Buyvol4">
+            <summary>
+            买量四
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Buyvol5">
+            <summary>
+            买量五
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Sellprice1">
+            <summary>
+            卖价一
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Sellprice2">
+            <summary>
+            卖价二
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Sellprice3">
+            <summary>
+            卖价三
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Sellprice4">
+            <summary>
+            卖价四
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Sellprice5">
+            <summary>
+            卖价五
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Sellvol1">
+            <summary>
+            卖量一
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Sellvol2">
+            <summary>
+            卖量二
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Sellvol3">
+            <summary>
+            卖量三
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Sellvol4">
+            <summary>
+            卖量四
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.Sellvol5">
+            <summary>
+            卖量五
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqData.PE">
+            <summary>
+            市盈率
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.HqExData">
+            <summary>
+            国内证券市场对象
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.HqData">
+            <summary>
+            变动行情数据类
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.EnName">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.Chg">
+            <summary>
+            涨跌
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.LastVolume">
+            <summary>
+            瞬量
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.YClose">
+            <summary>
+            昨收
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.AvgPrice">
+            <summary>
+            均价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.High">
+            <summary>
+            当日最高
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.Low">
+            <summary>
+            当日最低
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.Trans">
+            <summary>
+            当日成交总笔数
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.ChgPct">
+            <summary>
+            涨跌幅
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.UpB">
+            <summary>
+            涨停价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.LowB">
+            <summary>
+            跌停价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.PriceGap">
+            <summary>
+            檔差
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.Shares">
+            <summary>
+            发行股本
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.Class">
+            <summary>
+            类别
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.Openint">
+            <summary>
+            未平仓
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.MaxRecVol">
+            <summary>
+            最大量
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.ForBuyVol">
+            <summary>
+            总委买张数
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.ForSellVol">
+            <summary>
+            总委卖张数
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.HqExData.ETFNetValue">
+            <summary>
+            ETF净值
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.ITSHqData.m_Open">
+            <summary>开盘价格
+            开盘价格
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.EnName">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Chg">
+            <summary>
+            涨跌
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.LastVolume">
+            <summary>
+            成交价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.YClose">
+            <summary>
+            昨收
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.AvgPrice">
+            <summary>
+            均价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.High">
+            <summary>
+            当日最高
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Low">
+            <summary>
+            当日最低
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Trans">
+            <summary>
+            成交笔数
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.ChgPct">
+            <summary>
+            涨跌幅
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.UpB">
+            <summary>
+            涨停价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.LowB">
+            <summary>
+            跌停价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.PriceGap">
+            <summary>
+            檔差
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Shares">
+            <summary>
+            发行股本
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Class">
+            <summary>
+            类别
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Openint">
+            <summary>
+            未平仓
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.MaxRecVol">
+            <summary>
+            最大量
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.ForBuyVol">
+            <summary>
+            总委买张数
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.ForSellVol">
+            <summary>
+            总委卖张数
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.ETFNetValue">
+            <summary>
+            ETF净值
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Stockno">
+            <summary>
+            股票代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Time">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Lasttrade">
+            <summary>
+            成交价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Volume">
+            <summary>
+            当日总量
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Amount">
+            <summary>
+            成交总金额
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.pTrans">
+            <summary>
+            成交笔数
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Open">
+            <summary>
+            开盘价 
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Buyprice1">
+            <summary>
+            买价一
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Buyprice2">
+            <summary>
+            买价二
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Buyprice3">
+            <summary>
+            买价三
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Buyprice4">
+            <summary>
+            买价四
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Buyprice5">
+            <summary>
+            买价五
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Buyvol1">
+            <summary>
+            买量一
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Buyvol2">
+            <summary>
+            买量二
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Buyvol3">
+            <summary>
+            买量三
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Buyvol4">
+            <summary>
+            买量四
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Buyvol5">
+            <summary>
+            买量五
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Sellprice1">
+            <summary>
+            卖价一
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Sellprice2">
+            <summary>
+            卖价二
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Sellprice3">
+            <summary>
+            卖价三
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Sellprice4">
+            <summary>
+            卖价四
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Sellprice5">
+            <summary>
+            卖价五
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Sellvol1">
+            <summary>
+            卖量一
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Sellvol2">
+            <summary>
+            卖量二
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Sellvol3">
+            <summary>
+            卖量三
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Sellvol4">
+            <summary>
+            卖量四
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.Sellvol5">
+            <summary>
+            卖量五
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.ITSHqData.PE">
+            <summary>
+            市盈率
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SModelData.HqDiffPacket.#ctor(RealTime.Server.SModelData.HqPacketDataType,System.Collections.ArrayList)">
+            <summary>
+            构造差异包
+            </summary>
+            <param name="packetType"></param>
+            <param name="diffMarketData"></param>
+        </member>
+        <member name="M:RealTime.Server.SModelData.HqDiffPacket.#ctor(RealTime.Server.SModelData.HqPacketDataType,System.Collections.ArrayList,System.DateTime,System.DateTime)">
+            <summary>
+            构造差异包
+            </summary>
+            <param name="packetType"></param>
+            <param name="diffMarketData"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+        </member>
+        <member name="M:RealTime.Server.SModelData.HqDiffPacket.#ctor(RealTime.Server.SModelData.HqPacketDataType,System.Collections.ArrayList,System.Collections.ArrayList)">
+            <summary>
+            全部数据更新时使用
+            </summary>
+            <param name="packetType"></param>
+            <param name="szDiffMarketData"></param>
+            <param name="shDiffMarketData"></param>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqDiffPacket.HqPacketDataType">
+            <summary>
+            差异类型
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqDiffPacket.DiffMarketData">
+            <summary>
+            差异数据（深圳或上海更新时使用）
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqDiffPacket.SzDiffMarketData">
+            <summary>
+             深圳差异数据（全部数据更新时使用）
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqDiffPacket.ShDiffMarketData">
+            <summary>
+             上海差异数据（全部数据更新时使用）
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqDiffPacket.StartTime">
+            <summary>
+            行情分解开始时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqDiffPacket.EndTime">
+            <summary>
+            行情分解结束时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqDiffPacket.SpendTime">
+            <summary>
+            行情分解花费时间
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.InitData">
+            <summary>
+            增加股本属性的证券实体对象
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SModelData.HqData.InitData.#ctor">
+            <summary>构造函数
+            构造函数
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.InitData.m_HqData">
+            <summary>行情实体
+            行情实体
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.InitData.m_CapchgData">
+            <summary>股本实体
+            股本实体
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.InitData.m_Name">
+            <summary>股票名称
+            股票名称
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.InitData.m_Yclose">
+            <summary>昨收价格
+            昨收价格
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.InitData.HqData">
+            <summary>行情实体
+            行情实体
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.InitData.CapchgData">
+            <summary>股本实体
+            股本实体
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.InitData.Name">
+            <summary>股票名称
+            股票名称
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.InitData.Yclose">
+            <summary>昨收价格
+            昨收价格
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.InitData.High">
+            <summary>
+            最高价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.InitData.Low">
+            <summary>
+            最低价
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.MerFutData">
+            <summary>
+            商品期货实体类
+            作者：段进雄
+            日期：2009-7-6
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.MerFutData._averagePrice">
+            <summary>
+            均价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.AveragePrice">
+            <summary>
+            均价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.ContractID">
+            <summary>
+            合约代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.StrName">
+            <summary>
+            合约名称
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Date">
+            <summary>
+            成交日期
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Time">
+            <summary>
+            成交时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Lasttrade">
+            <summary>
+            成交价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Volume">
+            <summary>
+            当日总量
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Amount">
+            <summary>
+            成交总金额
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.PTrans">
+            <summary>
+            成交笔数-现手
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.OpenPosition">
+            <summary>
+            开仓
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.ClosePosition">
+            <summary>
+            平仓
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.OpenPrice">
+            <summary>
+            开盘价格
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.ClosePrice">
+            <summary>
+            收盘价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.PreClosePrice">
+            <summary>
+            昨收
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.ClearPrice">
+            <summary>
+            结算价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.PreClearPrice">
+            <summary>
+            昨结算价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.OpenInterest">
+            <summary>
+            持仓量
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.PreOpenInterest">
+            <summary>
+            昨持仓量
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.LowPrice">
+            <summary>
+            最低价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.HighPrice">
+            <summary>
+            最高价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.UpperLimit">
+            <summary>
+            涨停价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.LowerLimit">
+            <summary>
+            跌停价
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Chg">
+            <summary>
+            涨跌
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.ChgPct">
+            <summary>
+            涨跌率
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Buyprice1">
+            <summary>
+            买价1
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Buyprice2">
+            <summary>
+            买价2
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Buyprice3">
+            <summary>
+            买价3
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Buyprice4">
+            <summary>
+            买价4
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Buyprice5">
+            <summary>
+            买价5
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Buyvol1">
+            <summary>
+            买量1
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Buyvol2">
+            <summary>
+            买量2
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Buyvol3">
+            <summary>
+            买量3
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Buyvol4">
+            <summary>
+            买量4
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Buyvol5">
+            <summary>
+            买量5
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Sellprice1">
+            <summary>
+            卖价1
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Sellprice2">
+            <summary>
+            卖价2
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Sellprice3">
+            <summary>
+            卖价3
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Sellprice4">
+            <summary>
+            卖价4
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Sellprice5">
+            <summary>
+            卖价5
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Sellvol1">
+            <summary>
+            卖量1
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Sellvol2">
+            <summary>
+            卖量2
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Sellvol3">
+            <summary>
+            卖量3
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Sellvol4">
+            <summary>
+            卖量4
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.Sellvol5">
+            <summary>
+            卖量5
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.MerFutData.BelongInMarket">
+            <summary>
+            所属市场
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.PreMarketPriceTable">
+            <summary>
+            盘前价格变动表
+            作者：段进雄
+            日期：2009-10-22
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.PreMarketPriceTable.SpreadTableCode">
+            <summary>
+            价位表代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.PreMarketPriceTable.PriceFrom">
+            <summary>
+            最小价格
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.PreMarketPriceTable.NumberofItems">
+            <summary>
+            PriceTo及SpreadVaue的个数
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.PreMarketPriceTable.PriceTo">
+            <summary>
+            当前价差的最高价格
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.PreMarketPriceTable.SpreadValue">
+            <summary>
+            最小变动值
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.PreMarketPriceTable.Time">
+            <summary>
+            获取价位变动表的时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.PreMarketPriceTable.BelongInMarket">
+            <summary>
+            所属市场
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.UdpFutData">
+            <summary>
+            一些原有字段已移到基类,修改人:段进雄
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.HqData.UdpFutData.m_UpdateTime">
+            <summary>
+            最后修改时间 UpdateTime
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.UdpFutData.UpdateTime">
+            <summary>
+            最后修改时间 UpdateTime
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.UdpHqData">
+            <summary>
+            证券市场实体
+            增加部分扩展属性（股票名称，昨收，当日最高，最低......)
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.UdpHqData.Name">
+            <summary>
+            股票名称
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.UdpHqData.Yclose">
+            <summary>
+            昨收
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.UdpHqData.High">
+            <summary>
+            当日最高
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.UdpHqData.Low">
+            <summary>
+            当日最低
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.UdpHqData.TradDate">
+             <summary>
+            成交日期
+             </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.UdpHqData.TradDateLength">
+             <summary>
+            成交日期长度
+             </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.UdpHqData.TradTime">
+             <summary>
+            成交时间
+             </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.UdpHqData.TradTimeLength">
+             <summary>
+            成交时间长度
+             </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.HqData.StockStatus">
+            <summary>
+            港股盘中证券状态
+            作者：段进雄
+            日期：2009-10-23
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.StockStatus.StockNo">
+            <summary>
+            港股代码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.StockStatus.TradingStatus">
+            <summary>
+            交易状态
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.StockStatus.TradingStatusStartTime">
+            <summary>
+            交易状态开始时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.HqData.StockStatus.TradingStatusEndTime">
+            <summary>
+            交易状态停止时间
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SModelData.SystemSet.SSystemSetData.#ctor">
+            <summary>构造函数
+            构造函数
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.SystemSet.SSystemSetData.m_Interval">
+            <summary>刷新时间间隔
+            刷新时间间隔
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.SystemSet.SSystemSetData.m_MarketOpenTime">
+            <summary>开市时间
+            开市时间
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.SystemSet.SSystemSetData.m_MarketCloseTime">
+            <summary>闭市时间
+            闭市时间
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.SystemSet.SSystemSetData.m_LogSavePath">
+            <summary>日志保存路径
+            日志保存路径
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.SystemSet.SSystemSetData.Interval">
+            <summary>刷新时间间隔
+            刷新时间间隔
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.SystemSet.SSystemSetData.MarketOpenTime">
+            <summary>开市时间
+            开市时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.SystemSet.SSystemSetData.MarketCloseTime">
+            <summary>闭市时间
+            闭市时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.SystemSet.SSystemSetData.LogSavePath">
+            <summary>日志保存路径
+            日志保存路径
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.Users.StockMarket">
+             <summary>
+            类名：市场品种对象类
+            作者：段进雄
+            日期：20100113
+            内容：市场品种对象
+             </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.StockMarket.MarketID">
+            <summary>
+            市场ID
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.StockMarket.MarKetName">
+            <summary>
+            行情市场名称
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.StockMarket.MarketCode">
+            <summary>
+            代码标记
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.StockMarket.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.StockMarket.DefaultFlag">
+            <summary>
+            默认权限
+            1-有,0-无
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.StockMarket.CreatTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SModelData.Users.UserData">
+            <summary>
+            修改：段进雄
+            日期:20100113
+            修改内容：增加属性
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SModelData.Users.UserData._userType">
+            <summary>
+            用户类型 
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.MarketPower">
+            <summary>
+            拥有权限，采用"1,2,3,4..."等格式
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.DepartmentName">
+            <summary>
+            机构名称
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.DepartmentID">
+            <summary>
+            所属机构
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.UserType">
+            <summary>
+            用户类型 
+            1超级管理员,2 普通管理员 3普通用户
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.BeginTime">
+            <summary>
+            服务开始时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.EndTime">
+            <summary>
+            服务结束时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.ID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.Deleted">
+            <summary>
+            逻辑删除标记
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.Name">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.Ip">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.IsLogOK">
+            <summary>
+            是否登录或登出成功
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SModelData.Users.UserData.Message">
+            <summary>
+            异常消息
+            </summary>
+        </member>
+    </members>
+</doc>

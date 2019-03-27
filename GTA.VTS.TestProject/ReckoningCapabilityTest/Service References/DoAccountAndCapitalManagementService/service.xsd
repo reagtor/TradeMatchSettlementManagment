@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QH" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.BLL.DelegateValidate" />
+  <xs:element name="SingleTraderOpenAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="accounts" nillable="true" type="q1:ArrayOfAccountEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SingleTraderOpenAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SingleTraderOpenAccountResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VolumeTraderOpenAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="accounts" nillable="true" type="q2:ArrayOfAccountEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VolumeTraderOpenAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VolumeTraderOpenAccountResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSingleTraderAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSingleTraderAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSingleTraderAccountResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteVolumeTraderAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userIDs" nillable="true" type="q3:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteVolumeTraderAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteVolumeTraderAccountResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FreezeAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="accounts" nillable="true" type="q4:ArrayOfFindAccountEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FreezeAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FreezeAccountResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThawAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="accounts" nillable="true" type="q5:ArrayOfFindAccountEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThawAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ThawAccountResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="traderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="FindAccountResult" nillable="true" type="q6:ArrayOfAccountFindResultEntity" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTradePrivileges">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="traderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTradePrivilegesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="FindTradePrivilegesResult" nillable="true" type="q7:ArrayOfCM_BreedClass" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="oldPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUserPasswordResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCapital">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="addCapital" nillable="true" type="q8:AddCapitalEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCapitalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddCapitalResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TwoAccountsFreeTransferFunds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="freeTransfer" nillable="true" type="q9:FreeTransferEntity" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" minOccurs="0" name="currencyType" type="q10:Types.CurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TwoAccountsFreeTransferFundsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TwoAccountsFreeTransferFundsResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckChannel">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckChannelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckChannelResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsReckoningDone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doneDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsReckoningDoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsReckoningDoneResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsReckoning">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsReckoningResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsReckoningResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FaultRecoveryReckoning">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QH" minOccurs="0" name="list" nillable="true" type="q11:ArrayOfQH_TodaySettlementPriceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FaultRecoveryReckoningResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FaultRecoveryReckoningResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotMaxOrderAmount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TraderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderPrice" type="xs:float" />
+        <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" minOccurs="0" name="orderPriceType" type="q12:Types.OrderPriceType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotMaxOrderAmountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSpotMaxOrderAmountResult" type="xs:long" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFutureMaxOrderAmount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TraderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderPrice" type="xs:float" />
+        <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" minOccurs="0" name="orderPriceType" type="q13:Types.OrderPriceType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFutureMaxOrderAmountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFutureMaxOrderAmountResult" type="xs:long" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHighLowRangeValueByCommodityCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderPrice" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHighLowRangeValueByCommodityCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ReckoningCounter.BLL.DelegateValidate" minOccurs="0" name="GetHighLowRangeValueByCommodityCodeResult" nillable="true" type="q14:HighLowRangeValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKMaxOrderAmount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TraderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderPrice" type="xs:float" />
+        <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" minOccurs="0" name="orderPriceType" type="q15:Types.HKPriceType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKMaxOrderAmountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHKMaxOrderAmountResult" type="xs:long" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKHighLowRangeValueByCommodityCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderPrice" type="xs:decimal" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" minOccurs="0" name="priceType" type="q16:Types.HKPriceType" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" minOccurs="0" name="tranType" type="q17:Types.TransactionDirection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKHighLowRangeValueByCommodityCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ReckoningCounter.BLL.DelegateValidate" minOccurs="0" name="GetHKHighLowRangeValueByCommodityCodeResult" nillable="true" type="q18:HighLowRangeValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdminFindTraderCapitalAccountInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adminId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="adminPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="traderId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdminFindTraderCapitalAccountInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="AdminFindTraderCapitalAccountInfoResult" nillable="true" type="q19:ArrayOfTradersAccountCapitalInfo" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMarketDataInfoByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="breedClassType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMarketDataInfoByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="GetMarketDataInfoByCodeResult" nillable="true" type="q20:MarketDataLevel" />
+        <xs:element minOccurs="0" name="errMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCM_CommodityByBreedClassTypeID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="classTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="isRemoveExpired" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCM_CommodityByBreedClassTypeIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetAllCM_CommodityByBreedClassTypeIDResult" nillable="true" type="q21:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdminPersonalizationCapital">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="model" nillable="true" type="q22:CapitalPersonalization" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdminPersonalizationCapitalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdminPersonalizationCapitalResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdminClearTrialData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="model" nillable="true" type="q23:CapitalPersonalization" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdminClearTrialDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdminClearTrialDataResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllReckoningHoldCode">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllReckoningHoldCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QH" minOccurs="0" name="GetAllReckoningHoldCodeResult" nillable="true" type="q24:ArrayOfQH_TodaySettlementPriceInfo" />
+        <xs:element minOccurs="0" name="errMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

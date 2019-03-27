@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ReckoningCounter.BLL.OrderAccepter">
+    <Position X="4.25" Y="11.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAQAAIAAIIAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DelegateAcceptOffer\OrderAccepter\OrderAccepter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.CounterOrderService">
+    <Position X="3.25" Y="4.75" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>ACQEAEABIAAAYAAIAAgIAAAg0AABAAAEQBEEIAAAAAA=</HashCode>
+      <FileName>DelegateAcceptOffer\OrderAccepter\wcfservice_out\WcfOrderService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_orderAccepterInstance" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_stockDealCallbackQueueList" />
+      <Field Name="_mercantileDealFutureCallbackQueueList" />
+      <Field Name="_stockDealIndexFuturesFutureCallbackQueueList" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CommonUtility.QueueBufferBase&lt;QueueItem&gt;">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ReckoningCounter.BLL.DelegateValidate.ValidateCenter">
+    <Position X="8.25" Y="11.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AEAIAAAAAACAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>DelegateValidate\ValidateCenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.delegateoffer.OrderOfferCenter">
+    <Position X="8" Y="13.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QEAEAAABIAQYIAAAABCJAAABgAAAARAAVAgAAEACgAE=</HashCode>
+      <FileName>DelegateAcceptOffer\OrderOffer\OrderOfferCenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ReckoningCounter.BLL.IDoOrder">
+    <Position X="8.75" Y="1.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAQAAIAAAIAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DelegateAcceptOffer\OrderAccepter\wcfservice_out\IDoOrder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReckoningCounter.BLL.IDoOrderCallback">
+    <Position X="8.75" Y="4" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAQAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>DelegateAcceptOffer\OrderAccepter\wcfservice_out\IDoOrderCallback.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReckoningCounter.BLL.DelegateAcceptOffer.OrderAccepter.wcfservice_out.IOrderDealRpt">
+    <Position X="9" Y="5.75" Width="3.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DelegateAcceptOffer\OrderAccepter\wcfservice_out\IOrderDealRpt.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="SimSun" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" />
+  <xs:complexType name="PagingInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentPage" type="xs:int" />
+      <xs:element minOccurs="0" name="IsCount" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PageLength" type="xs:int" />
+      <xs:element minOccurs="0" name="Sort" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagingInfo" nillable="true" type="tns:PagingInfo" />
+  <xs:complexType name="QueryUA_CapitalFlowFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CapitalAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CapitalFlowType" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="CurrencyType" type="q1:QueryType.QueryCurrencyType" />
+      <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FlowLogo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromCapitalAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ToCapitalAccount" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryUA_CapitalFlowFilter" nillable="true" type="tns:QueryUA_CapitalFlowFilter" />
+</xs:schema>

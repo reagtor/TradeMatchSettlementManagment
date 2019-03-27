@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="1.开户与销户(均包括单个与批量）&#xD;&#xA;2.账户冻结与解冻&#xD;&#xA;3.查询账户&#xD;&#xA;4.修改用户密码&#xD;&#xA;">
+    <Position X="6.541" Y="3.844" Height="0.708" Width="2.293" />
+  </Comment>
+  <Comment CommentText="1.管理员给交易员追加资金&#xD;&#xA;2.交易员所属的几个资金账户之间的自由转帐&#xD;&#xA;">
+    <Position X="6.052" Y="6.239" Height="0.396" Width="2.7" />
+  </Comment>
+  <Comment CommentText="1.现货当日委托查询&#xD;&#xA;2.现货历史委托查询&#xD;&#xA;3.现货当日成交查询&#xD;&#xA;4.现货历史成交查询&#xD;&#xA;5.期货当日委托查询&#xD;&#xA;6.期货历史委托查询&#xD;&#xA;7.期货当日成交查询&#xD;&#xA;8.期货历史成交查询">
+    <Position X="6.334" Y="15.116" Height="1.136" Width="1.47" />
+  </Comment>
+  <Comment CommentText="1.银行资金信息查询&#xD;&#xA;2.现货资金信息查询&#xD;&#xA;3.期货资金信息查询&#xD;&#xA;4.现货持仓信息查询&#xD;&#xA;5.期货持仓信息查询&#xD;&#xA;6.资产汇总查询&#xD;&#xA;">
+    <Position X="6.747" Y="12.025" Height="0.802" Width="1.346" />
+  </Comment>
+  <Comment CommentText="1.各资金账户转账流水查询&#xD;&#xA;2.现货资金账户交易费用流水查询&#xD;&#xA;3.期货资金账户交易费用流水查询&#xD;&#xA;">
+    <Position X="6.711" Y="9.639" Height="0.521" Width="2.075" />
+  </Comment>
+  <Comment CommentText=" 1.银行资金信息查询&#xD;&#xA; 2.现货资金信息查询&#xD;&#xA; 3.期货资金信息查询&#xD;&#xA; 4.现货持仓信息查询&#xD;&#xA; 5.期货持仓信息查询&#xD;&#xA; 6.资产汇总查询&#xD;&#xA; 7.各资金账户转账流水查询&#xD;&#xA; 8.期货当日委托查询  &#xD;&#xA; 9.期货历史委托查询&#xD;&#xA;10.现货当日委托查询&#xD;&#xA;11.现货历史委托查询&#xD;&#xA;12.现货当日成交查询&#xD;&#xA;13.现货历史成交查询&#xD;&#xA;14.期货当日成交查询&#xD;&#xA;15.期货历史成交查询&#xD;&#xA;15.现货资金账户交易费用流水查询&#xD;&#xA;16.期货资金账户交易费用流水查询&#xD;&#xA;&#xD;&#xA;">
+    <Position X="0.716" Y="12.37" Height="2.229" Width="2.221" />
+  </Comment>
+  <Comment CommentText="1.开户与销户(均包括单个与批量）&#xD;&#xA;2.账户冻结与解冻&#xD;&#xA;3.查询账户&#xD;&#xA;4.修改用户密码&#xD;&#xA;5.管理员给交易员追加资金&#xD;&#xA;6.交易员所属的几个资金账户之间的自由转帐&#xD;&#xA;7.试玩期后用户交易数据清空&#xD;&#xA;8.个性化资金设置">
+    <Position X="0.51" Y="5.083" Height="1.229" Width="2.293" />
+  </Comment>
+  <Comment CommentText=" 1.管理员查询交易员现货当日委托情况&#xD;&#xA; 2.管理员查询交易员现货历史委托情况&#xD;&#xA; 3.管理员查询交易员现货当日成交情况&#xD;&#xA; 4.管理员查询交易员现货历史成交情况&#xD;&#xA; 5.管理员查询交易员期货当日委托情况&#xD;&#xA; 6.管理员查询交易员期货历史委托情况&#xD;&#xA; 7.管理员查询交易员期货当日成交情况&#xD;&#xA; 8.管理员查询交易员期货当日成交情况&#xD;&#xA; 9.管理员查询交易员银行资金信息情况&#xD;&#xA;10.管理员查询交易员现货资金信息情况&#xD;&#xA;11.管理员查询交易员期货资金信息情况&#xD;&#xA;12.管理员查询交易员现货持仓信息情况&#xD;&#xA;13.管理员查询交易员期货持仓信息情况&#xD;&#xA;14.管理员查询交易员资产汇总情况&#xD;&#xA;15.管理员查询交易员各资金账户转账流水情况&#xD;&#xA;16.管理员查询交易员现货资金账户交易费用流水情况&#xD;&#xA;17.管理员查询交易员期货资金账户交易费用流水情况&#xD;&#xA;">
+    <Position X="0.604" Y="21.639" Height="2.302" Width="3.242" />
+  </Comment>
+  <Comment CommentText=" 1.管理员查询交易员现货当日委托情况&#xD;&#xA; 2.管理员查询交易员现货历史委托情况&#xD;&#xA; 3.管理员查询交易员现货当日成交情况&#xD;&#xA; 4.管理员查询交易员现货历史成交情况&#xD;&#xA; 5.管理员查询交易员期货当日委托情况&#xD;&#xA; 6.管理员查询交易员期货历史委托情况&#xD;&#xA; 7.管理员查询交易员期货当日成交情况&#xD;&#xA; 8.管理员查询交易员期货当日成交情况&#xD;&#xA; 9.管理员查询交易员银行资金信息情况&#xD;&#xA;10.管理员查询交易员现货资金信息情况&#xD;&#xA;11.管理员查询交易员期货资金信息情况&#xD;&#xA;12.管理员查询交易员现货持仓信息情况&#xD;&#xA;13.管理员查询交易员期货持仓信息情况&#xD;&#xA;14.管理员查询交易员资产汇总情况&#xD;&#xA;15.管理员查询交易员各资金账户转账流水情况&#xD;&#xA;16.管理员查询交易员现货资金账户交易费用流水情况&#xD;&#xA;17.管理员查询交易员期货资金账户交易费用流水情况&#xD;&#xA;">
+    <Position X="6.677" Y="21.628" Height="2.302" Width="3.242" />
+  </Comment>
+  <Class Name="ReckoningCounter.BLL.AccountManagementAndFind.AccountManagementAndFindBLL.CapitalAndHoldFindBLL">
+    <Position X="6.5" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>KIgFTAAAJgAAABECEUEANDAABBABAYAAgAACAgCUChI=</HashCode>
+      <FileName>AccountManagementAndFind\AccountManagementAndFindBLL\CapitalAndHoldFind.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.AccountManagementAndFind.AccountManagementAndFindBLL.AccountManagementBLL">
+    <Position X="6.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAAAAQQQAAKAAAAQAAQBEAAAAGABhAAAAAAACAAAAAA=</HashCode>
+      <FileName>AccountManagementAndFind\AccountManagementAndFindBLL\AccountManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.AccountManagementAndFind.AccountManagementAndFindBLL.EntrustAndTradeFindBLL">
+    <Position X="6.25" Y="13" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IECAAAIEAAABUAAQAAAiEAiAAAAAAgABACAABAIiABA=</HashCode>
+      <FileName>AccountManagementAndFind\AccountManagementAndFindBLL\EntrustAndTradeFind.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.AccountManagementAndFind.AccountManagementAndFindBLL.CapitalAccountFlowFindBLL">
+    <Position X="6.25" Y="8" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>AccountManagementAndFind\AccountManagementAndFindBLL\CapitalAccountFlowFind.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.AccountManagementAndFind.AccountManagementAndFindBLL.CapitalManagementBLL">
+    <Position X="6.5" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAgEAAAAAAABAAAAAAAAAEAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>AccountManagementAndFind\AccountManagementAndFindBLL\CapitalManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.AdministratorFindTraderBLL">
+    <Position X="6.75" Y="18" Width="3" />
+    <TypeIdentifier>
+      <HashCode>GAAAQCAAAAAQAIQAAKBAAAAJAAACACAAAgAQAAAAAgA=</HashCode>
+      <FileName>AccountManagementAndFind\AccountManagementAndFindBLL\AdministratorFindTraderBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.AccountManagementAndFind.AccountManagementAndFindService.AdministratorFindService">
+    <Position X="3.25" Y="18" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAQCAAAAAQAIQAAKBAAAApBAACAAAAAgAAAAgAAgA=</HashCode>
+      <FileName>AccountManagementAndFind\InterfaceBLL\AccountManagementAndFindService\AdministratorFindService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AdministratorFindTraderBLL" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReckoningCounter.DAL.AccountManagementAndFindDAL.AccountManagementDAL">
+    <Position X="9.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ReckoningCounter.DAL.AccountManagementAndFindDAL.CapitalAndHoldFindDAL">
+    <Position X="10.25" Y="10.25" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ReckoningCounter.DAL.AccountManagementAndFindDAL.EntrustAndTradeFindDAL">
+    <Position X="10.25" Y="13" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ReckoningCounter.DAL.AccountManagementAndFindDAL.CapitalManagementDAL">
+    <Position X="9.25" Y="3.75" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ReckoningCounter.DAL.AccountManagementAndFindDAL.CapitalAccountFlowFindDAL">
+    <Position X="10" Y="8" Width="3" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ReckoningCounter.DAL.AccountManagementAndFindDAL.AdministratorFindTraderDAL">
+    <Position X="10.5" Y="18" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ReckoningCounter.BLL.AccountManagementAndFind.InterfaceBLL.AccountManagementAndFindService.AccountAndCapitalManagementService">
+    <Position X="3.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAgKgQQACACAAAAYAAQAAEAAAOAFBAAAEBAAAAAUAAQ=</HashCode>
+      <FileName>AccountManagementAndFind\InterfaceBLL\AccountManagementAndFindService\AccountAndCapitalManagementService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ReckoningCounter.BLL.InterfaceBLL.IAdministratorFind">
+    <Position X="0.5" Y="18" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAQCAAAAAQAIQAAKBAAAApAAACAAAAAgAAAAgAAgA=</HashCode>
+      <FileName>AccountManagementAndFind\InterfaceBLL\IAdministratorFind.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReckoningCounter.BLL.AccountManagementAndFind.InterfaceBLL.ITraderFind">
+    <Position X="0.5" Y="8.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AEgBAgJgIIAGQQAAIIAABDCAYQABCgBCAAAACAIAAgA=</HashCode>
+      <FileName>AccountManagementAndFind\InterfaceBLL\ITraderFind.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReckoningCounter.BLL.AccountManagementAndFind.InterfaceBLL.IAccountAndCapitalManagement">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgKgQQAAACAAAAYAAQAAEAAAOAFBAAAEBAAAAAQAAQ=</HashCode>
+      <FileName>AccountManagementAndFind\InterfaceBLL\IAccountAndCapitalManagement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

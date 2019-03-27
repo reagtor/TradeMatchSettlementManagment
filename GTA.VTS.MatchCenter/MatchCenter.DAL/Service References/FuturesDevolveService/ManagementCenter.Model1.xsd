@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfQH_AgreementDeliveryMonth">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_AgreementDeliveryMonth" nillable="true" type="tns:QH_AgreementDeliveryMonth" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_AgreementDeliveryMonth" nillable="true" type="tns:ArrayOfQH_AgreementDeliveryMonth" />
+  <xs:complexType name="QH_AgreementDeliveryMonth">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgreementDeliveryMonthID" type="xs:int" />
+      <xs:element minOccurs="0" name="BreedClassID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MonthID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_AgreementDeliveryMonth" nillable="true" type="tns:QH_AgreementDeliveryMonth" />
+  <xs:complexType name="ArrayOfQH_CFPositionMonth">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_CFPositionMonth" nillable="true" type="tns:QH_CFPositionMonth" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_CFPositionMonth" nillable="true" type="tns:ArrayOfQH_CFPositionMonth" />
+  <xs:complexType name="QH_CFPositionMonth">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeliveryMonthName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryMonthTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_CFPositionMonth" nillable="true" type="tns:QH_CFPositionMonth" />
+  <xs:complexType name="ArrayOfQH_ConsignInstructionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_ConsignInstructionType" nillable="true" type="tns:QH_ConsignInstructionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_ConsignInstructionType" nillable="true" type="tns:ArrayOfQH_ConsignInstructionType" />
+  <xs:complexType name="QH_ConsignInstructionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsignInstructionTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_ConsignInstructionType" nillable="true" type="tns:QH_ConsignInstructionType" />
+  <xs:complexType name="ArrayOfQH_ConsignQuantum">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_ConsignQuantum" nillable="true" type="tns:QH_ConsignQuantum" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_ConsignQuantum" nillable="true" type="tns:ArrayOfQH_ConsignQuantum" />
+  <xs:complexType name="QH_ConsignQuantum">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsignQuantumID" type="xs:int" />
+      <xs:element minOccurs="0" name="MinConsignQuantum" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_ConsignQuantum" nillable="true" type="tns:QH_ConsignQuantum" />
+  <xs:complexType name="ArrayOfQH_FutureCosts">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_FutureCosts" nillable="true" type="tns:QH_FutureCosts" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_FutureCosts" nillable="true" type="tns:ArrayOfQH_FutureCosts" />
+  <xs:complexType name="QH_FutureCosts">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassID" type="xs:int" />
+      <xs:element minOccurs="0" name="CostType" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrencyTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TradeUnitCharge" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TurnoverRateOfServiceCharge" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_FutureCosts" nillable="true" type="tns:QH_FutureCosts" />
+  <xs:complexType name="ArrayOfQH_FuturesTradeRules">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_FuturesTradeRules" nillable="true" type="tns:QH_FuturesTradeRules" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_FuturesTradeRules" nillable="true" type="tns:ArrayOfQH_FuturesTradeRules" />
+  <xs:complexType name="QH_FuturesTradeRules">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgreementDeliveryInstitution" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BreedClassID" type="xs:int" />
+      <xs:element minOccurs="0" name="ConsignQuantumID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FundDeliveryInstitution" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FutruesCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HighLowStopScopeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HighLowStopScopeValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IfContainCNewYear" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSlew" type="xs:int" />
+      <xs:element minOccurs="0" name="LastTradingDayID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LeastChangePrice" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MarketUnitID" type="xs:int" />
+      <xs:element minOccurs="0" name="NewBreedFuturesPactHighLowStopValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NewMonthFuturesPactHighLowStopValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PriceUnit" type="xs:int" />
+      <xs:element minOccurs="0" name="UnitMultiple" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UnitsID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_FuturesTradeRules" nillable="true" type="tns:QH_FuturesTradeRules" />
+  <xs:complexType name="ArrayOfQH_HighLowStopScopeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_HighLowStopScopeType" nillable="true" type="tns:QH_HighLowStopScopeType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_HighLowStopScopeType" nillable="true" type="tns:ArrayOfQH_HighLowStopScopeType" />
+  <xs:complexType name="QH_HighLowStopScopeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HighLowStopScopeID" type="xs:int" />
+      <xs:element minOccurs="0" name="HighLowStopScopeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_HighLowStopScopeType" nillable="true" type="tns:QH_HighLowStopScopeType" />
+  <xs:complexType name="ArrayOfQH_LastTradingDay">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_LastTradingDay" nillable="true" type="tns:QH_LastTradingDay" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_LastTradingDay" nillable="true" type="tns:ArrayOfQH_LastTradingDay" />
+  <xs:complexType name="QH_LastTradingDay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LastTradingDayID" type="xs:int" />
+      <xs:element minOccurs="0" name="LastTradingDayTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Sequence" type="xs:int" />
+      <xs:element minOccurs="0" name="Week" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="WhatDay" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="WhatWeek" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_LastTradingDay" nillable="true" type="tns:QH_LastTradingDay" />
+  <xs:complexType name="ArrayOfQH_LastTradingDayType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_LastTradingDayType" nillable="true" type="tns:QH_LastTradingDayType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_LastTradingDayType" nillable="true" type="tns:ArrayOfQH_LastTradingDayType" />
+  <xs:complexType name="QH_LastTradingDayType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LastTradingDayTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_LastTradingDayType" nillable="true" type="tns:QH_LastTradingDayType" />
+  <xs:complexType name="ArrayOfQH_Month">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_Month" nillable="true" type="tns:QH_Month" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_Month" nillable="true" type="tns:ArrayOfQH_Month" />
+  <xs:complexType name="QH_Month">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MonthID" type="xs:int" />
+      <xs:element minOccurs="0" name="MonthName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_Month" nillable="true" type="tns:QH_Month" />
+  <xs:complexType name="ArrayOfQH_SIFBail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_SIFBail" nillable="true" type="tns:QH_SIFBail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_SIFBail" nillable="true" type="tns:ArrayOfQH_SIFBail" />
+  <xs:complexType name="QH_SIFBail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BailScale" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BreedClassID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_SIFBail" nillable="true" type="tns:QH_SIFBail" />
+  <xs:complexType name="ArrayOfQH_SIFPosition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_SIFPosition" nillable="true" type="tns:QH_SIFPosition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_SIFPosition" nillable="true" type="tns:ArrayOfQH_SIFPosition" />
+  <xs:complexType name="QH_SIFPosition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassID" type="xs:int" />
+      <xs:element minOccurs="0" name="UnilateralPositions" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_SIFPosition" nillable="true" type="tns:QH_SIFPosition" />
+  <xs:complexType name="ArrayOfQH_SingleRequestQuantity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_SingleRequestQuantity" nillable="true" type="tns:QH_SingleRequestQuantity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_SingleRequestQuantity" nillable="true" type="tns:ArrayOfQH_SingleRequestQuantity" />
+  <xs:complexType name="QH_SingleRequestQuantity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsignInstructionTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ConsignQuantumID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxConsignQuanturm" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SingleRequestQuantityID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_SingleRequestQuantity" nillable="true" type="tns:QH_SingleRequestQuantity" />
+  <xs:complexType name="ArrayOfQH_CFBailScaleValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_CFBailScaleValue" nillable="true" type="tns:QH_CFBailScaleValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_CFBailScaleValue" nillable="true" type="tns:ArrayOfQH_CFBailScaleValue" />
+  <xs:complexType name="QH_CFBailScaleValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BailScale" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BreedClassID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CFBailScaleValueID" type="xs:int" />
+      <xs:element minOccurs="0" name="DeliveryMonthTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Ends" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LowerLimitIfEquation" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PositionBailTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Start" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UpperLimitIfEquation" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_CFBailScaleValue" nillable="true" type="tns:QH_CFBailScaleValue" />
+  <xs:complexType name="ArrayOfQH_PositionBailType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_PositionBailType" nillable="true" type="tns:QH_PositionBailType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_PositionBailType" nillable="true" type="tns:ArrayOfQH_PositionBailType" />
+  <xs:complexType name="QH_PositionBailType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PositionBailTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="PositionBailTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_PositionBailType" nillable="true" type="tns:QH_PositionBailType" />
+  <xs:complexType name="ArrayOfQH_PositionLimitValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_PositionLimitValue" nillable="true" type="tns:QH_PositionLimitValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_PositionLimitValue" nillable="true" type="tns:ArrayOfQH_PositionLimitValue" />
+  <xs:complexType name="QH_PositionLimitValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DeliveryMonthTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Ends" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LowerLimitIfEquation" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PositionBailTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PositionLimitValueID" type="xs:int" />
+      <xs:element minOccurs="0" name="PositionValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PositionValueTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Start" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UpperLimitIfEquation" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_PositionLimitValue" nillable="true" type="tns:QH_PositionLimitValue" />
+  <xs:complexType name="ArrayOfQH_PositionValueType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_PositionValueType" nillable="true" type="tns:QH_PositionValueType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_PositionValueType" nillable="true" type="tns:ArrayOfQH_PositionValueType" />
+  <xs:complexType name="QH_PositionValueType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PositionValueName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PositionValueTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_PositionValueType" nillable="true" type="tns:QH_PositionValueType" />
+</xs:schema>

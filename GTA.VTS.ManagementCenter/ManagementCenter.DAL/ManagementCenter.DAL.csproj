@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6001521E-365E-4C8E-8E7B-F52BE531E7F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ManagementCenter.DAL</RootNamespace>
+    <AssemblyName>ManagementCenter.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ManagementCenter.DAL.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Maticsoft.DBUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Maticsoft.DBUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Practices\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Practices\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonTable\ClosePriceInfoDAL.cs" />
+    <Compile Include="CommonTable\CM_BourseTypeDAL.cs" />
+    <Compile Include="CommonTable\CM_BreedClassDAL.cs" />
+    <Compile Include="CommonTable\CM_BreedClassTypeDAL.cs" />
+    <Compile Include="CommonTable\CM_CommodityDAL.cs" />
+    <Compile Include="CommonTable\CM_CommodityFuseDAL.cs" />
+    <Compile Include="CommonTable\CM_CurrencyExchangeDAL.cs" />
+    <Compile Include="CommonTable\CM_CurrencyTypeDAL.cs" />
+    <Compile Include="CommonTable\CM_ExchangeRatioDAL.cs" />
+    <Compile Include="CommonTable\CM_FieldRangeDAL.cs" />
+    <Compile Include="CommonTable\CM_FuseTimesectionDAL.cs" />
+    <Compile Include="CommonTable\CM_MarketParticipationDAL.cs" />
+    <Compile Include="CommonTable\CM_NotTradeDateDAL.cs" />
+    <Compile Include="CommonTable\CM_StockMelonCashDAL.cs" />
+    <Compile Include="CommonTable\CM_StockMelonStockDAL.cs" />
+    <Compile Include="CommonTable\CM_TradeTimeDAL.cs" />
+    <Compile Include="CommonTable\CM_TradeWayDAL.cs" />
+    <Compile Include="CommonTable\CM_UnitConversionDAL.cs" />
+    <Compile Include="CommonTable\CM_UnitsDAL.cs" />
+    <Compile Include="CommonTable\CM_ValueTypeDAL.cs" />
+    <Compile Include="CommonTable\CommodityCodeUpdateDAL.cs" />
+    <Compile Include="CommonTable\ProfessionDAL.cs" />
+    <Compile Include="CommonTable\StockInfoDAL.cs" />
+    <Compile Include="CommonTable\ZFInfoDAL.cs" />
+    <Compile Include="Counter\CT_CounterDAL.cs" />
+    <Compile Include="HK\HKCommodityCodeUpdateDAL.cs" />
+    <Compile Include="HK\HKProfessionInfoDAL.cs" />
+    <Compile Include="HK\HKStockInfoDAL.cs" />
+    <Compile Include="HK\HK_CommodityDAL.cs" />
+    <Compile Include="HK\HK_MinPriceFieldRangeDAL.cs" />
+    <Compile Include="HK\HK_SpotCostsDAL.cs" />
+    <Compile Include="HK\HK_SpotTradeRulesDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QH\QH_AgreementDeliveryMonthDAL.cs" />
+    <Compile Include="QH\QH_CFBailScaleValueDAL.cs" />
+    <Compile Include="QH\QH_CFPositionMonthDAL.cs" />
+    <Compile Include="QH\QH_ConsignInstructionTypeDAL.cs" />
+    <Compile Include="QH\QH_ConsignQuantumDAL.cs" />
+    <Compile Include="QH\QH_FutureCostsDAL.cs" />
+    <Compile Include="QH\QH_FuturesTradeRulesDAL.cs" />
+    <Compile Include="QH\QH_HighLowStopScopeTypeDAL.cs" />
+    <Compile Include="QH\QH_LastTradingDayDAL.cs" />
+    <Compile Include="QH\QH_LastTradingDayTypeDAL.cs" />
+    <Compile Include="QH\QH_MonthDAL.cs" />
+    <Compile Include="QH\QH_PositionBailTypeDAL.cs" />
+    <Compile Include="QH\QH_PositionLimitValueDAL.cs" />
+    <Compile Include="QH\QH_PositionValueTypeDAL.cs" />
+    <Compile Include="QH\QH_SIFBailDAL.cs" />
+    <Compile Include="QH\QH_SIFPositionDAL.cs" />
+    <Compile Include="QH\QH_SingleRequestQuantityDAL.cs" />
+    <Compile Include="Reconciling\RC_MatchCenterDAL.cs" />
+    <Compile Include="Reconciling\RC_MatchMachineDAL.cs" />
+    <Compile Include="Reconciling\RC_TradeCommodityAssignDAL.cs" />
+    <Compile Include="Service References\AccountManageService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DoOrderService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserManage\UM_AccountTypeDAL.cs" />
+    <Compile Include="UserManage\UM_DealerAccountDAL.cs" />
+    <Compile Include="UserManage\UM_DealerTradeBreedClassDAL.cs" />
+    <Compile Include="UserManage\UM_FreezeReasonDAL.cs" />
+    <Compile Include="UserManage\UM_FunctionsDAL.cs" />
+    <Compile Include="UserManage\UM_FundAddInfoDAL.cs" />
+    <Compile Include="UserManage\UM_ManagerBeloneToGroupDAL.cs" />
+    <Compile Include="UserManage\UM_ManagerGroupDAL.cs" />
+    <Compile Include="UserManage\UM_ManagerGroupFunctionsDAL.cs" />
+    <Compile Include="UserManage\UM_OriginationFundDAL.cs" />
+    <Compile Include="UserManage\UM_QuestionTypeDAL.cs" />
+    <Compile Include="UserManage\UM_RoleInfoDAL.cs" />
+    <Compile Include="UserManage\UM_ThawReasonDAL.cs" />
+    <Compile Include="UserManage\UM_UserInfoDAL.cs" />
+    <Compile Include="XH\XH_MaxLeaveQuantityRangeValueDAL.cs" />
+    <Compile Include="XH\XH_MinChangePriceValueDAL.cs" />
+    <Compile Include="XH\XH_MinVolumeOfBusinessDAL.cs" />
+    <Compile Include="XH\XH_RightHightLowPricesDAL.cs" />
+    <Compile Include="XH\XH_SpotCostsDAL.cs" />
+    <Compile Include="XH\XH_SpotHighLowValueDAL.cs" />
+    <Compile Include="XH\XH_SpotHighLowControlTypeDAL.cs" />
+    <Compile Include="XH\XH_SpotPositionDAL.cs" />
+    <Compile Include="XH\XH_SpotRangeCostDAL.cs" />
+    <Compile Include="XH\XH_SpotTradeRulesDAL.cs" />
+    <Compile Include="XH\XH_ValidDeclareTypeDAL.cs" />
+    <Compile Include="XH\XH_ValidDeclareValueDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AccountManageService\" />
+    <WCFMetadataStorage Include="Service References\DoOrderService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoOrderService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoOrderService\configuration.svcinfo">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoOrderService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AccountManageService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AccountManageService\ManagementCenter.DAL.AccountManageService.AccountFindResultEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AccountManageService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\ManagementCenter.Model.CM_BreedClass.datasource" />
+    <None Include="Properties\DataSources\ManagementCenter.Model.CM_BreedClass1.datasource" />
+    <None Include="Service References\AccountManageService\Arrays1.xsd" />
+    <None Include="Service References\AccountManageService\configuration91.svcinfo" />
+    <None Include="Service References\AccountManageService\GTA.VTS.Common.CommonObject2.xsd" />
+    <None Include="Service References\AccountManageService\ManagementCenter.DAL.AccountManageService.AccountFindResultEntity1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AccountManageService\ManagementCenter.DAL.AccountManageService.HighLowRangeValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AccountManageService\ManagementCenter.Model.xsd" />
+    <None Include="Service References\AccountManageService\ReckoningCounter.BLL.DelegateValidate.xsd" />
+    <None Include="Service References\AccountManageService\ReckoningCounter.Entity.AccountManagementAndFindEntity1.xsd" />
+    <None Include="Service References\AccountManageService\ReckoningCounter.Entity.Contants.xsd" />
+    <None Include="Service References\AccountManageService\ReckoningCounter.Entity.Model.QH.xsd" />
+    <None Include="Service References\AccountManageService\service1.wsdl" />
+    <None Include="Service References\AccountManageService\service2.xsd" />
+    <None Include="Service References\AccountManageService\service21.xsd" />
+    <None Include="Service References\DoOrderService\GTA.VTS.Common.CommonObject2.xsd" />
+    <None Include="Service References\DoOrderService\ManagementCenter.DAL.DoOrderService.CancelResultEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoOrderService\ManagementCenter.DAL.DoOrderService.HKModifyResultEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoOrderService\ManagementCenter.DAL.DoOrderService.ResultDataEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoOrderService\MatchCenter.Entity.HK.xsd" />
+    <None Include="Service References\DoOrderService\MatchCenter.Entity.xsd" />
+    <None Include="Service References\DoOrderService\service1.wsdl" />
+    <None Include="Service References\DoOrderService\service2.xsd" />
+    <None Include="Service References\DoOrderService\service4.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ManagementCenter.Entity\ManagementCenter.Entity.csproj">
+      <Project>{AEBA574D-04D6-46EB-A0E8-F6497143CD58}</Project>
+      <Name>ManagementCenter.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WCFService_In\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

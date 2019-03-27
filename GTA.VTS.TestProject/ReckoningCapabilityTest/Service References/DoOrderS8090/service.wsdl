@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="DoOrderService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IDoOrder_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Contants" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDoOrder_DoStockOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoStockOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_DoStockOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoStockOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelStockOrder2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelStockOrder2" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelStockOrder2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelStockOrder2Response" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelStockOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelStockOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelStockOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelStockOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_DoStockIndexFuturesOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoStockIndexFuturesOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_DoStockIndexFuturesOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoStockIndexFuturesOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelStockIndexFuturesOrder2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelStockIndexFuturesOrder2" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelStockIndexFuturesOrder2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelStockIndexFuturesOrder2Response" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelStockIndexFuturesOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelStockIndexFuturesOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelStockIndexFuturesOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelStockIndexFuturesOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_DoMercantileFuturesOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoMercantileFuturesOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_DoMercantileFuturesOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoMercantileFuturesOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelMercantileFuturesOrder2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelMercantileFuturesOrder2" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelMercantileFuturesOrder2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelMercantileFuturesOrder2Response" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelMercantileFuturesOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelMercantileFuturesOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelMercantileFuturesOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelMercantileFuturesOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_DoHKOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoHKOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_DoHKOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoHKOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_DoHKModifyOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoHKModifyOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_DoHKModifyOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoHKModifyOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelHKOrder2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelHKOrder2" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelHKOrder2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelHKOrder2Response" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelHKOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelHKOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDoOrder_CancelHKOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelHKOrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDoOrder">
+    <wsdl:operation name="DoStockOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoOrder/DoStockOrder" message="tns:IDoOrder_DoStockOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoOrder/DoStockOrderResponse" message="tns:IDoOrder_DoStockOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelStockOrder2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoOrder/CancelStockOrder2" message="tns:IDoOrder_CancelStockOrder2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoOrder/CancelStockOrder2Response" message="tns:IDoOrder_CancelStockOrder2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelStockOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoOrder/CancelStockOrder" message="tns:IDoOrder_CancelStockOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoOrder/CancelStockOrderResponse" message="tns:IDoOrder_CancelStockOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoStockIndexFuturesOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoOrder/DoStockIndexFuturesOrder" message="tns:IDoOrder_DoStockIndexFuturesOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoOrder/DoStockIndexFuturesOrderResponse" message="tns:IDoOrder_DoStockIndexFuturesOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelStockIndexFuturesOrder2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoOrder/CancelStockIndexFuturesOrder2" message="tns:IDoOrder_CancelStockIndexFuturesOrder2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoOrder/CancelStockIndexFuturesOrder2Response" message="tns:IDoOrder_CancelStockIndexFuturesOrder2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelStockIndexFuturesOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoOrder/CancelStockIndexFuturesOrder" message="tns:IDoOrder_CancelStockIndexFuturesOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoOrder/CancelStockIndexFuturesOrderResponse" message="tns:IDoOrder_CancelStockIndexFuturesOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoMercantileFuturesOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoOrder/DoMercantileFuturesOrder" message="tns:IDoOrder_DoMercantileFuturesOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoOrder/DoMercantileFuturesOrderResponse" message="tns:IDoOrder_DoMercantileFuturesOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelMercantileFuturesOrder2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoOrder/CancelMercantileFuturesOrder2" message="tns:IDoOrder_CancelMercantileFuturesOrder2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoOrder/CancelMercantileFuturesOrder2Response" message="tns:IDoOrder_CancelMercantileFuturesOrder2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelMercantileFuturesOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoOrder/CancelMercantileFuturesOrder" message="tns:IDoOrder_CancelMercantileFuturesOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoOrder/CancelMercantileFuturesOrderResponse" message="tns:IDoOrder_CancelMercantileFuturesOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoHKOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoOrder/DoHKOrder" message="tns:IDoOrder_DoHKOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoOrder/DoHKOrderResponse" message="tns:IDoOrder_DoHKOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoHKModifyOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoOrder/DoHKModifyOrder" message="tns:IDoOrder_DoHKModifyOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoOrder/DoHKModifyOrderResponse" message="tns:IDoOrder_DoHKModifyOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelHKOrder2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoOrder/CancelHKOrder2" message="tns:IDoOrder_CancelHKOrder2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoOrder/CancelHKOrder2Response" message="tns:IDoOrder_CancelHKOrder2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelHKOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDoOrder/CancelHKOrder" message="tns:IDoOrder_CancelHKOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDoOrder/CancelHKOrderResponse" message="tns:IDoOrder_CancelHKOrder_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IDoOrder" type="tns:IDoOrder">
+    <wsp:PolicyReference URI="#NetTcpBinding_IDoOrder_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="DoStockOrder">
+      <soap12:operation soapAction="http://tempuri.org/IDoOrder/DoStockOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelStockOrder2">
+      <soap12:operation soapAction="http://tempuri.org/IDoOrder/CancelStockOrder2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelStockOrder">
+      <soap12:operation soapAction="http://tempuri.org/IDoOrder/CancelStockOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoStockIndexFuturesOrder">
+      <soap12:operation soapAction="http://tempuri.org/IDoOrder/DoStockIndexFuturesOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelStockIndexFuturesOrder2">
+      <soap12:operation soapAction="http://tempuri.org/IDoOrder/CancelStockIndexFuturesOrder2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelStockIndexFuturesOrder">
+      <soap12:operation soapAction="http://tempuri.org/IDoOrder/CancelStockIndexFuturesOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoMercantileFuturesOrder">
+      <soap12:operation soapAction="http://tempuri.org/IDoOrder/DoMercantileFuturesOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelMercantileFuturesOrder2">
+      <soap12:operation soapAction="http://tempuri.org/IDoOrder/CancelMercantileFuturesOrder2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelMercantileFuturesOrder">
+      <soap12:operation soapAction="http://tempuri.org/IDoOrder/CancelMercantileFuturesOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoHKOrder">
+      <soap12:operation soapAction="http://tempuri.org/IDoOrder/DoHKOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoHKModifyOrder">
+      <soap12:operation soapAction="http://tempuri.org/IDoOrder/DoHKModifyOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelHKOrder2">
+      <soap12:operation soapAction="http://tempuri.org/IDoOrder/CancelHKOrder2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelHKOrder">
+      <soap12:operation soapAction="http://tempuri.org/IDoOrder/CancelHKOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DoOrderService">
+    <wsdl:port name="NetTcpBinding_IDoOrder" binding="tns:NetTcpBinding_IDoOrder">
+      <soap12:address location="net.tcp://localhost:9181/DoOrderService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:9181/DoOrderService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" />
+  <xs:complexType name="SpotCapitalEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssetAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="GTCapitalObj" nillable="true" type="q1:XH_CapitalAccountTableInfo" />
+      <xs:element minOccurs="0" name="MarketValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NotDoneProfitLossTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ProfitLossTotal" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpotCapitalEntity" nillable="true" type="tns:SpotCapitalEntity" />
+  <xs:complexType name="FuturesCapitalEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssetAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FloatProfitLossTotal" type="xs:decimal" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="GTCapitalObj" nillable="true" type="q2:QH_CapitalAccountTableInfo" />
+      <xs:element minOccurs="0" name="HKAvailableCapital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HKBalanceOfTheDay" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HKFreezeTotal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HKMarginTotal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HKTodayOutInCapital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketProfitLossTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MarketValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RMBAvailableCapital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RMBBalanceOfTheDay" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RMBFreezeTotal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RMBMarginTotal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RMBTodayOutInCapital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USAvailableCapital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USBalanceOfTheDay" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USFreezeTotal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USMarginTotal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USTodayOutInCapital" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuturesCapitalEntity" nillable="true" type="tns:FuturesCapitalEntity" />
+  <xs:complexType name="SpotHoldConditionFindEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BelongToMarket" type="xs:int" />
+      <xs:element minOccurs="0" name="CouldAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrencyType" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FreezeTotal" type="xs:int" />
+      <xs:element minOccurs="0" name="HoldAveragePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HoldTotal" type="xs:int" />
+      <xs:element minOccurs="0" name="SpotCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpotHoldAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VarietyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VarietyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VarietyType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpotHoldConditionFindEntity" nillable="true" type="tns:SpotHoldConditionFindEntity" />
+  <xs:complexType name="ArrayOfSpotHoldFindResultEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpotHoldFindResultEntity" nillable="true" type="tns:SpotHoldFindResultEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpotHoldFindResultEntity" nillable="true" type="tns:ArrayOfSpotHoldFindResultEntity" />
+  <xs:complexType name="SpotHoldFindResultEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BelongMarket" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErroNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErroReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FloatProfitLoss" type="xs:decimal" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="HoldFindResult" nillable="true" type="q3:XH_AccountHoldTableInfo" />
+      <xs:element minOccurs="0" name="HoldSumAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="MarketValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RealtimePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SpotName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TraderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VarietyCategories" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpotHoldFindResultEntity" nillable="true" type="tns:SpotHoldFindResultEntity" />
+  <xs:complexType name="FuturesHoldConditionFindEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BelongToMarket" type="xs:int" />
+      <xs:element minOccurs="0" name="BuySellDirectionId" type="xs:int" />
+      <xs:element minOccurs="0" name="ContractCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CouldAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrencyType" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FreezeTotal" type="xs:int" />
+      <xs:element minOccurs="0" name="FuturesHoldAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldAveragePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HoldTotal" type="xs:int" />
+      <xs:element minOccurs="0" name="VarietyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VarietyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VarietyType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuturesHoldConditionFindEntity" nillable="true" type="tns:FuturesHoldConditionFindEntity" />
+  <xs:complexType name="ArrayOfFuturesHoldFindResultEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FuturesHoldFindResultEntity" nillable="true" type="tns:FuturesHoldFindResultEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFuturesHoldFindResultEntity" nillable="true" type="tns:ArrayOfFuturesHoldFindResultEntity" />
+  <xs:complexType name="FuturesHoldFindResultEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AvailableTotalAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="BelongMarket" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BreakevenPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BuySellDirection" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContractName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CostPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErroNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErroReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FloatProfitLoss" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FreezeTotalAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="HoldAveragePrice" type="xs:decimal" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="HoldFindResult" nillable="true" type="q4:QH_HoldAccountTableInfo" />
+      <xs:element minOccurs="0" name="HoldSumAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="MarginAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MarketProfitLoss" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RealtimePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TodayAOpenAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="TodayOpenAveragePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TraderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitMultiple" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VarietyCategories" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YesterdayClearingPrice" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuturesHoldFindResultEntity" nillable="true" type="tns:FuturesHoldFindResultEntity" />
+  <xs:complexType name="ArrayOfAssetSummaryEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssetSummaryEntity" nillable="true" type="tns:AssetSummaryEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAssetSummaryEntity" nillable="true" type="tns:ArrayOfAssetSummaryEntity" />
+  <xs:complexType name="AssetSummaryEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HKAvailable" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HKFreeze" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RMBAvailable" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RMBFreeze" type="xs:decimal" />
+      <xs:element minOccurs="0" name="USAvailable" type="xs:decimal" />
+      <xs:element minOccurs="0" name="USFreeze" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AssetSummaryEntity" nillable="true" type="tns:AssetSummaryEntity" />
+  <xs:complexType name="FuturesEntrustConditionFindEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BelongToMarket" type="xs:int" />
+      <xs:element minOccurs="0" name="BuySellDirection" type="xs:int" />
+      <xs:element minOccurs="0" name="CanBeWithdrawnLogo" type="xs:int" />
+      <xs:element minOccurs="0" name="CapitalAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContractCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EntrustNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntrustState" type="xs:int" />
+      <xs:element minOccurs="0" name="OpenCloseDirection" type="xs:int" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VarietyType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuturesEntrustConditionFindEntity" nillable="true" type="tns:FuturesEntrustConditionFindEntity" />
+</xs:schema>

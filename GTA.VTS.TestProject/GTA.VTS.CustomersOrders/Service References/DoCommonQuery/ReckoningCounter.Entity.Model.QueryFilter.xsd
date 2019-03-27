@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="QueryType.QueryCurrencyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ALL" />
+      <xs:enumeration value="RMB" />
+      <xs:enumeration value="HK" />
+      <xs:enumeration value="US" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="QueryType.QueryCurrencyType" nillable="true" type="tns:QueryType.QueryCurrencyType" />
+  <xs:simpleType name="QueryType.QueryFreezeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ALL" />
+      <xs:enumeration value="DelegateFreeze" />
+      <xs:enumeration value="ReckoningFreeze" />
+      <xs:enumeration value="TodayHoldingCloseFreeze" />
+      <xs:enumeration value="HistoryHoldingCloseFreeze" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="QueryType.QueryFreezeType" nillable="true" type="tns:QueryType.QueryFreezeType" />
+</xs:schema>

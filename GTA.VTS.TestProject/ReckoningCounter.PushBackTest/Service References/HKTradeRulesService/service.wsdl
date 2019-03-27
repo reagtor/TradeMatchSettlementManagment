@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HKTradeRulesService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IHKTradeRules_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IHKTradeRules_GetAllMinVolumeOfBusiness_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMinVolumeOfBusiness" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetAllMinVolumeOfBusiness_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMinVolumeOfBusinessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetMinVolumeOfBusinessByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinVolumeOfBusinessByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetMinVolumeOfBusinessByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinVolumeOfBusinessByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetAllSpotPosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpotPosition" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetAllSpotPosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpotPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetSpotPositionByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotPositionByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetSpotPositionByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotPositionByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetAllHKCommodity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHKCommodity" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetAllHKCommodity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHKCommodityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetHKCommodityByHKCommodityCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKCommodityByHKCommodityCode" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetHKCommodityByHKCommodityCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKCommodityByHKCommodityCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetHKCommodityByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKCommodityByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetHKCommodityByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKCommodityByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetNewHKCommodity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewHKCommodity" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetNewHKCommodity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewHKCommodityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetAllHKSpotCosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHKSpotCosts" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetAllHKSpotCosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHKSpotCostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetHKSpotCostsByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKSpotCostsByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetHKSpotCostsByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKSpotCostsByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetAllHKSpotTradeRules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHKSpotTradeRules" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetAllHKSpotTradeRules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHKSpotTradeRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetHKSpotTradeRulesByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKSpotTradeRulesByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetHKSpotTradeRulesByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKSpotTradeRulesByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetAllHKMinPriceFieldRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHKMinPriceFieldRange" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetAllHKMinPriceFieldRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHKMinPriceFieldRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetHKCommodityListArray_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKCommodityListArray" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetHKCommodityListArray_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHKCommodityListArrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetListHKProfessionInfoArray_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListHKProfessionInfoArray" />
+  </wsdl:message>
+  <wsdl:message name="IHKTradeRules_GetListHKProfessionInfoArray_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListHKProfessionInfoArrayResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IHKTradeRules">
+    <wsdl:operation name="GetAllMinVolumeOfBusiness">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetAllMinVolumeOfBusiness" message="tns:IHKTradeRules_GetAllMinVolumeOfBusiness_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetAllMinVolumeOfBusinessResponse" message="tns:IHKTradeRules_GetAllMinVolumeOfBusiness_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMinVolumeOfBusinessByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetMinVolumeOfBusinessByBreedClassID" message="tns:IHKTradeRules_GetMinVolumeOfBusinessByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetMinVolumeOfBusinessByBreedClassIDResponse" message="tns:IHKTradeRules_GetMinVolumeOfBusinessByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpotPosition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetAllSpotPosition" message="tns:IHKTradeRules_GetAllSpotPosition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetAllSpotPositionResponse" message="tns:IHKTradeRules_GetAllSpotPosition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotPositionByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetSpotPositionByBreedClassID" message="tns:IHKTradeRules_GetSpotPositionByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetSpotPositionByBreedClassIDResponse" message="tns:IHKTradeRules_GetSpotPositionByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHKCommodity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetAllHKCommodity" message="tns:IHKTradeRules_GetAllHKCommodity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetAllHKCommodityResponse" message="tns:IHKTradeRules_GetAllHKCommodity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHKCommodityByHKCommodityCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetHKCommodityByHKCommodityCode" message="tns:IHKTradeRules_GetHKCommodityByHKCommodityCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetHKCommodityByHKCommodityCodeResponse" message="tns:IHKTradeRules_GetHKCommodityByHKCommodityCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHKCommodityByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetHKCommodityByBreedClassID" message="tns:IHKTradeRules_GetHKCommodityByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetHKCommodityByBreedClassIDResponse" message="tns:IHKTradeRules_GetHKCommodityByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewHKCommodity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetNewHKCommodity" message="tns:IHKTradeRules_GetNewHKCommodity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetNewHKCommodityResponse" message="tns:IHKTradeRules_GetNewHKCommodity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHKSpotCosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetAllHKSpotCosts" message="tns:IHKTradeRules_GetAllHKSpotCosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetAllHKSpotCostsResponse" message="tns:IHKTradeRules_GetAllHKSpotCosts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHKSpotCostsByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetHKSpotCostsByBreedClassID" message="tns:IHKTradeRules_GetHKSpotCostsByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetHKSpotCostsByBreedClassIDResponse" message="tns:IHKTradeRules_GetHKSpotCostsByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHKSpotTradeRules">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetAllHKSpotTradeRules" message="tns:IHKTradeRules_GetAllHKSpotTradeRules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetAllHKSpotTradeRulesResponse" message="tns:IHKTradeRules_GetAllHKSpotTradeRules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHKSpotTradeRulesByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetHKSpotTradeRulesByBreedClassID" message="tns:IHKTradeRules_GetHKSpotTradeRulesByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetHKSpotTradeRulesByBreedClassIDResponse" message="tns:IHKTradeRules_GetHKSpotTradeRulesByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHKMinPriceFieldRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetAllHKMinPriceFieldRange" message="tns:IHKTradeRules_GetAllHKMinPriceFieldRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetAllHKMinPriceFieldRangeResponse" message="tns:IHKTradeRules_GetAllHKMinPriceFieldRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHKCommodityListArray">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetHKCommodityListArray" message="tns:IHKTradeRules_GetHKCommodityListArray_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetHKCommodityListArrayResponse" message="tns:IHKTradeRules_GetHKCommodityListArray_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListHKProfessionInfoArray">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHKTradeRules/GetListHKProfessionInfoArray" message="tns:IHKTradeRules_GetListHKProfessionInfoArray_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHKTradeRules/GetListHKProfessionInfoArrayResponse" message="tns:IHKTradeRules_GetListHKProfessionInfoArray_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IHKTradeRules" type="tns:IHKTradeRules">
+    <wsp:PolicyReference URI="#NetTcpBinding_IHKTradeRules_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetAllMinVolumeOfBusiness">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetAllMinVolumeOfBusiness" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMinVolumeOfBusinessByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetMinVolumeOfBusinessByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpotPosition">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetAllSpotPosition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotPositionByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetSpotPositionByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHKCommodity">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetAllHKCommodity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHKCommodityByHKCommodityCode">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetHKCommodityByHKCommodityCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHKCommodityByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetHKCommodityByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewHKCommodity">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetNewHKCommodity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHKSpotCosts">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetAllHKSpotCosts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHKSpotCostsByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetHKSpotCostsByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHKSpotTradeRules">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetAllHKSpotTradeRules" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHKSpotTradeRulesByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetHKSpotTradeRulesByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHKMinPriceFieldRange">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetAllHKMinPriceFieldRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHKCommodityListArray">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetHKCommodityListArray" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListHKProfessionInfoArray">
+      <soap12:operation soapAction="http://tempuri.org/IHKTradeRules/GetListHKProfessionInfoArray" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HKTradeRulesService">
+    <wsdl:port name="NetTcpBinding_IHKTradeRules" binding="tns:NetTcpBinding_IHKTradeRules">
+      <soap12:address location="net.tcp://localhost:9381/WcfHKTradingRulesProvider" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:9381/WcfHKTradingRulesProvider</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.HK" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.HK" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="HK_CapitalAccountInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AvailableCapital" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BalanceOfTheDay" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CapitalAccountLogo" type="xs:int" />
+      <xs:element minOccurs="0" name="CapitalBalance" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FreezeCapitalTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HasDoneProfitLossTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TodayOutInCapital" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeCurrencyType" type="xs:int" />
+      <xs:element minOccurs="0" name="UserAccountDistributeLogo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HK_CapitalAccountInfo" nillable="true" type="tns:HK_CapitalAccountInfo" />
+  <xs:complexType name="HK_AccountHoldInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountHoldLogoID" type="xs:int" />
+      <xs:element minOccurs="0" name="AvailableAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BreakevenPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CostPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="FreezeAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HoldAveragePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UserAccountDistributeLogo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HK_AccountHoldInfo" nillable="true" type="tns:HK_AccountHoldInfo" />
+  <xs:complexType name="ArrayOfHK_AccountHoldInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HK_AccountHoldInfo" nillable="true" type="tns:HK_AccountHoldInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHK_AccountHoldInfo" nillable="true" type="tns:ArrayOfHK_AccountHoldInfo" />
+  <xs:complexType name="ArrayOfHK_AcccountHoldFreezeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HK_AcccountHoldFreezeInfo" nillable="true" type="tns:HK_AcccountHoldFreezeInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHK_AcccountHoldFreezeInfo" nillable="true" type="tns:ArrayOfHK_AcccountHoldFreezeInfo" />
+  <xs:complexType name="HK_AcccountHoldFreezeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountHoldLogo" type="xs:int" />
+      <xs:element minOccurs="0" name="EntrustNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreezeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FreezeTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="HoldFreezeLogoId" type="xs:int" />
+      <xs:element minOccurs="0" name="PrepareFreezeAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="ThawTime" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HK_AcccountHoldFreezeInfo" nillable="true" type="tns:HK_AcccountHoldFreezeInfo" />
+  <xs:complexType name="ArrayOfHK_CapitalAccountInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HK_CapitalAccountInfo" nillable="true" type="tns:HK_CapitalAccountInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHK_CapitalAccountInfo" nillable="true" type="tns:ArrayOfHK_CapitalAccountInfo" />
+  <xs:complexType name="ArrayOfHK_CapitalAccountFreezeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HK_CapitalAccountFreezeInfo" nillable="true" type="tns:HK_CapitalAccountFreezeInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHK_CapitalAccountFreezeInfo" nillable="true" type="tns:ArrayOfHK_CapitalAccountFreezeInfo" />
+  <xs:complexType name="HK_CapitalAccountFreezeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CapitalAccountLogo" type="xs:int" />
+      <xs:element minOccurs="0" name="CapitalFreezeLogoId" type="xs:int" />
+      <xs:element minOccurs="0" name="EntrustNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreezeCapitalAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FreezeCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FreezeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FreezeTypeLogo" type="xs:int" />
+      <xs:element minOccurs="0" name="OweCosting" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ThawTime" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HK_CapitalAccountFreezeInfo" nillable="true" type="tns:HK_CapitalAccountFreezeInfo" />
+  <xs:complexType name="ArrayOfHK_TodayEntrustInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HK_TodayEntrustInfo" nillable="true" type="tns:HK_TodayEntrustInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHK_TodayEntrustInfo" nillable="true" type="tns:ArrayOfHK_TodayEntrustInfo" />
+  <xs:complexType name="HK_TodayEntrustInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuySellTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="CallbackChannlID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CancelAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="CancelLogo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CapitalAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="EntrustAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="EntrustNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntrustPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EntrustTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HasDoneProfit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HoldAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsModifyOrder" type="xs:boolean" />
+      <xs:element minOccurs="0" name="McOrderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifyOrderNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfferTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderPriceType" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderStatusID" type="xs:int" />
+      <xs:element minOccurs="0" name="PortfolioLogo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TradeAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="TradeAveragePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeUnitID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HK_TodayEntrustInfo" nillable="true" type="tns:HK_TodayEntrustInfo" />
+  <xs:complexType name="ArrayOfHK_HistoryEntrustInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HK_HistoryEntrustInfo" nillable="true" type="tns:HK_HistoryEntrustInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHK_HistoryEntrustInfo" nillable="true" type="tns:ArrayOfHK_HistoryEntrustInfo" />
+  <xs:complexType name="HK_HistoryEntrustInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuySellTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="CancelAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="CapitalAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="EntrustMount" type="xs:int" />
+      <xs:element minOccurs="0" name="EntrustNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntrustPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EntrustTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HasDoneProfit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HoldAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsModifyOrder" type="xs:boolean" />
+      <xs:element minOccurs="0" name="McOrderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifyOrderNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfferTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderPriceType" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderStatusID" type="xs:int" />
+      <xs:element minOccurs="0" name="PortfolioLogo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TradeAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="TradeAveragePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeUnitID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HK_HistoryEntrustInfo" nillable="true" type="tns:HK_HistoryEntrustInfo" />
+  <xs:complexType name="ArrayOfHK_HistoryTradeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HK_HistoryTradeInfo" nillable="true" type="tns:HK_HistoryTradeInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHK_HistoryTradeInfo" nillable="true" type="tns:ArrayOfHK_HistoryTradeInfo" />
+  <xs:complexType name="HK_HistoryTradeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuySellTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="CapitalAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClearingFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Commission" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="EntrustNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntrustPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HoldAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MonitoringFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PortfolioLogo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StampTax" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="TradeNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TradePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeProceduresFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TradeTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="TradeUnitId" type="xs:int" />
+      <xs:element minOccurs="0" name="TradingSystemUseFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransferAccountFee" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HK_HistoryTradeInfo" nillable="true" type="tns:HK_HistoryTradeInfo" />
+  <xs:complexType name="ArrayOfHK_TodayTradeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HK_TodayTradeInfo" nillable="true" type="tns:HK_TodayTradeInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHK_TodayTradeInfo" nillable="true" type="tns:ArrayOfHK_TodayTradeInfo" />
+  <xs:complexType name="HK_TodayTradeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuySellTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="CapitalAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClearingFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Commission" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="EntrustNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntrustPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HoldAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MonitoringFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PortfolioLogo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StampTax" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="TradeCapitalAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TradePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeProceduresFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TradeTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="TradeUnitId" type="xs:int" />
+      <xs:element minOccurs="0" name="TradingSystemUseFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransferAccountFee" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HK_TodayTradeInfo" nillable="true" type="tns:HK_TodayTradeInfo" />
+  <xs:complexType name="ArrayOfHK_HistoryModifyOrderRequestInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HK_HistoryModifyOrderRequestInfo" nillable="true" type="tns:HK_HistoryModifyOrderRequestInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHK_HistoryModifyOrderRequestInfo" nillable="true" type="tns:ArrayOfHK_HistoryModifyOrderRequestInfo" />
+  <xs:complexType name="HK_HistoryModifyOrderRequestInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChannelID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntrustNubmer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FundAccountId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifyOrderDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderAmount" type="xs:float" />
+      <xs:element minOccurs="0" name="OrderPrice" type="xs:float" />
+      <xs:element minOccurs="0" name="TraderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TraderPassword" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HK_HistoryModifyOrderRequestInfo" nillable="true" type="tns:HK_HistoryModifyOrderRequestInfo" />
+</xs:schema>

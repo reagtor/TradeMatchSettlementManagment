@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEBA574D-04D6-46EB-A0E8-F6497143CD58}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ManagementCenter.Model</RootNamespace>
+    <AssemblyName>ManagementCenter.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ManagementCenter.Model.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Practices\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Practices\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonClass\AppGlobalVariable.cs" />
+    <Compile Include="CommonClass\Types.cs" />
+    <Compile Include="CommonClass\ButtonFunctionTypes.cs" />
+    <Compile Include="CommonClass\CommPager.cs" />
+    <Compile Include="CommonClass\ProductionAccount.cs" />
+    <Compile Include="CommonClass\UtilityClass.cs" />
+    <Compile Include="CommonTable\ClosePriceInfo.cs" />
+    <Compile Include="CommonTable\CM_BourseType.cs" />
+    <Compile Include="CommonTable\CM_BreedClass.cs" />
+    <Compile Include="CommonTable\CM_BreedClassType.cs" />
+    <Compile Include="CommonTable\CM_Commodity.cs" />
+    <Compile Include="CommonTable\CM_CommodityFuse.cs" />
+    <Compile Include="CommonTable\CM_CurrencyExchange.cs" />
+    <Compile Include="CommonTable\CM_CurrencyType.cs" />
+    <Compile Include="CommonTable\CM_ExchangeRatio.cs" />
+    <Compile Include="CommonTable\CM_FieldRange.cs" />
+    <Compile Include="CommonTable\CM_FuseTimesection.cs" />
+    <Compile Include="CommonTable\CM_MarketParticipation.cs" />
+    <Compile Include="CommonTable\CM_NotTradeDate.cs" />
+    <Compile Include="CommonTable\CM_StockMelonCash.cs" />
+    <Compile Include="CommonTable\CM_StockMelonStock.cs" />
+    <Compile Include="CommonTable\CM_TradeTime.cs" />
+    <Compile Include="CommonTable\CM_TradeWay.cs" />
+    <Compile Include="CommonTable\CM_UnitConversion.cs" />
+    <Compile Include="CommonTable\CM_Units.cs" />
+    <Compile Include="CommonTable\CM_ValueType.cs" />
+    <Compile Include="CommonTable\OnstageCommodity.cs" />
+    <Compile Include="CommonTable\Profession.cs" />
+    <Compile Include="CommonTable\StockInfo.cs" />
+    <Compile Include="CommonTable\ZFInfo.cs" />
+    <Compile Include="Counter\CT_Counter.cs" />
+    <Compile Include="HK\HKProfessionInfo.cs" />
+    <Compile Include="HK\HKStockInfo.cs" />
+    <Compile Include="HK\HK_Commodity.cs" />
+    <Compile Include="HK\HK_MinPriceFieldRange.cs" />
+    <Compile Include="HK\HK_SpotCosts.cs" />
+    <Compile Include="HK\HK_SpotTradeRules.cs" />
+    <Compile Include="HK\OnstageHK_Commodity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QH\QH_AgreementDeliveryMonth.cs" />
+    <Compile Include="QH\QH_CFBailScaleValue.cs" />
+    <Compile Include="QH\QH_CFPositionMonth.cs" />
+    <Compile Include="QH\QH_ConsignInstructionType.cs" />
+    <Compile Include="QH\QH_ConsignQuantum.cs" />
+    <Compile Include="QH\QH_FutureCosts.cs" />
+    <Compile Include="QH\QH_FuturesTradeRules.cs" />
+    <Compile Include="QH\QH_HighLowStopScopeType.cs" />
+    <Compile Include="QH\QH_LastTradingDay.cs" />
+    <Compile Include="QH\QH_LastTradingDayType.cs" />
+    <Compile Include="QH\QH_Month.cs" />
+    <Compile Include="QH\QH_PositionBailType.cs" />
+    <Compile Include="QH\QH_PositionLimitValue.cs" />
+    <Compile Include="QH\QH_PositionValueType.cs" />
+    <Compile Include="QH\QH_SIFBail.cs" />
+    <Compile Include="QH\QH_SIFPosition.cs" />
+    <Compile Include="QH\QH_SingleRequestQuantity.cs" />
+    <Compile Include="QH\QH_TodaySettlementPriceInfoEx.cs" />
+    <Compile Include="Reconciling\RC_MatchCenter.cs" />
+    <Compile Include="Reconciling\RC_MatchMachine.cs" />
+    <Compile Include="Reconciling\RC_TradeCommodityAssign.cs" />
+    <Compile Include="UserManage\PersonalizationCapital.cs" />
+    <Compile Include="UserManage\FundAddQueryEntity.cs" />
+    <Compile Include="UserManage\ManagerQueryEntity.cs" />
+    <Compile Include="UserManage\UM_AccountType.cs" />
+    <Compile Include="UserManage\UM_DealerAccount.cs" />
+    <Compile Include="UserManage\UM_DealerTradeBreedClass.cs" />
+    <Compile Include="UserManage\UM_FreezeReason.cs" />
+    <Compile Include="UserManage\UM_Functions.cs" />
+    <Compile Include="UserManage\UM_FundAddInfo.cs" />
+    <Compile Include="UserManage\UM_ManagerBeloneToGroup.cs" />
+    <Compile Include="UserManage\UM_ManagerGroup.cs" />
+    <Compile Include="UserManage\UM_ManagerGroupFunctions.cs" />
+    <Compile Include="UserManage\UM_OriginationFund.cs" />
+    <Compile Include="UserManage\UM_QuestionType.cs" />
+    <Compile Include="UserManage\UM_RoleInfo.cs" />
+    <Compile Include="UserManage\UM_ThawReason.cs" />
+    <Compile Include="UserManage\UM_UserInfo.cs" />
+    <Compile Include="XH\XHFieldRangeEntity.cs" />
+    <Compile Include="XH\XHSpotTradeRulesDetail.cs" />
+    <Compile Include="XH\XH_AboutSpotHighLowEntity.cs" />
+    <Compile Include="XH\XH_MaxLeaveQuantityRangeValue.cs" />
+    <Compile Include="XH\XH_MinChangePriceValue.cs" />
+    <Compile Include="XH\XH_MinVolumeOfBusiness.cs" />
+    <Compile Include="XH\XH_RightHightLowPrices.cs" />
+    <Compile Include="XH\XH_SpotCosts.cs" />
+    <Compile Include="XH\XH_SpotHighLowValue.cs" />
+    <Compile Include="XH\XH_SpotHighLowControlType.cs" />
+    <Compile Include="XH\XH_SpotPosition.cs" />
+    <Compile Include="XH\XH_SpotRangeCost.cs" />
+    <Compile Include="XH\XH_SpotTradeRules.cs" />
+    <Compile Include="XH\XH_ValidDeclareType.cs" />
+    <Compile Include="XH\XH_ValidDeclareValue.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

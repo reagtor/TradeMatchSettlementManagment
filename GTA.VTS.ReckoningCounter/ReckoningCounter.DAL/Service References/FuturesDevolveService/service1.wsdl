@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FuturesTradeRulesService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IFuturesTradeRules_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFuturesTradeRules_GetALLAgreementDeliveryMonth_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetALLAgreementDeliveryMonth" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetALLAgreementDeliveryMonth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetALLAgreementDeliveryMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAgreementDeliveryMonthByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgreementDeliveryMonthByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAgreementDeliveryMonthByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgreementDeliveryMonthByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllCFPositionMonth_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCFPositionMonth" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllCFPositionMonth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCFPositionMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllConsignInstructionType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllConsignInstructionType" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllConsignInstructionType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllConsignInstructionTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllConsignQuantum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllConsignQuantum" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllConsignQuantum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllConsignQuantumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetConsignQuantumByConsignQuantumID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsignQuantumByConsignQuantumID" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetConsignQuantumByConsignQuantumID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsignQuantumByConsignQuantumIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllFutureCosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFutureCosts" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllFutureCosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFutureCostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetFutureCostsByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFutureCostsByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetFutureCostsByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFutureCostsByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllFuturesTradeRules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFuturesTradeRules" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllFuturesTradeRules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFuturesTradeRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetFuturesTradeRulesByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFuturesTradeRulesByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetFuturesTradeRulesByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFuturesTradeRulesByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllHighLowStopScopeType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHighLowStopScopeType" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllHighLowStopScopeType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHighLowStopScopeTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllLastTradingDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLastTradingDay" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllLastTradingDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLastTradingDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetLastTradingDayByLastTradingDayID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastTradingDayByLastTradingDayID" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetLastTradingDayByLastTradingDayID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastTradingDayByLastTradingDayIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllLastTradingDayType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLastTradingDayType" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllLastTradingDayType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLastTradingDayTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllMonth_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMonth" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllMonth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllSIFBail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSIFBail" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllSIFBail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSIFBailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetSIFBailByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSIFBailByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetSIFBailByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSIFBailByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllSIFPosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSIFPosition" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllSIFPosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSIFPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetSIFPositionByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSIFPositionByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetSIFPositionByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSIFPositionByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllSingleRequestQuantity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSingleRequestQuantity" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllSingleRequestQuantity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSingleRequestQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetSingleRequestQuantityByConsignQuantumID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleRequestQuantityByConsignQuantumID" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetSingleRequestQuantityByConsignQuantumID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleRequestQuantityByConsignQuantumIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllCFBailScaleValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCFBailScaleValue" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllCFBailScaleValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCFBailScaleValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetCFBailScaleValueByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCFBailScaleValueByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetCFBailScaleValueByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCFBailScaleValueByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetCFBailScaleValueByCFBailScaleValueID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCFBailScaleValueByCFBailScaleValueID" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetCFBailScaleValueByCFBailScaleValueID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCFBailScaleValueByCFBailScaleValueIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllPositionBailType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPositionBailType" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllPositionBailType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPositionBailTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllQHPositionLimitValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQHPositionLimitValue" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllQHPositionLimitValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQHPositionLimitValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetPositionLimitValueByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPositionLimitValueByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetPositionLimitValueByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPositionLimitValueByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetPositionLimitValueByPositionLimitValueID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPositionLimitValueByPositionLimitValueID" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetPositionLimitValueByPositionLimitValueID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPositionLimitValueByPositionLimitValueIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllPositionValueType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPositionValueType" />
+  </wsdl:message>
+  <wsdl:message name="IFuturesTradeRules_GetAllPositionValueType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPositionValueTypeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFuturesTradeRules">
+    <wsdl:operation name="GetALLAgreementDeliveryMonth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetALLAgreementDeliveryMonth" message="tns:IFuturesTradeRules_GetALLAgreementDeliveryMonth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetALLAgreementDeliveryMonthResponse" message="tns:IFuturesTradeRules_GetALLAgreementDeliveryMonth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgreementDeliveryMonthByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAgreementDeliveryMonthByBreedClassID" message="tns:IFuturesTradeRules_GetAgreementDeliveryMonthByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAgreementDeliveryMonthByBreedClassIDResponse" message="tns:IFuturesTradeRules_GetAgreementDeliveryMonthByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCFPositionMonth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllCFPositionMonth" message="tns:IFuturesTradeRules_GetAllCFPositionMonth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllCFPositionMonthResponse" message="tns:IFuturesTradeRules_GetAllCFPositionMonth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllConsignInstructionType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllConsignInstructionType" message="tns:IFuturesTradeRules_GetAllConsignInstructionType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllConsignInstructionTypeResponse" message="tns:IFuturesTradeRules_GetAllConsignInstructionType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllConsignQuantum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllConsignQuantum" message="tns:IFuturesTradeRules_GetAllConsignQuantum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllConsignQuantumResponse" message="tns:IFuturesTradeRules_GetAllConsignQuantum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsignQuantumByConsignQuantumID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetConsignQuantumByConsignQuantumID" message="tns:IFuturesTradeRules_GetConsignQuantumByConsignQuantumID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetConsignQuantumByConsignQuantumIDResponse" message="tns:IFuturesTradeRules_GetConsignQuantumByConsignQuantumID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFutureCosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllFutureCosts" message="tns:IFuturesTradeRules_GetAllFutureCosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllFutureCostsResponse" message="tns:IFuturesTradeRules_GetAllFutureCosts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFutureCostsByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetFutureCostsByBreedClassID" message="tns:IFuturesTradeRules_GetFutureCostsByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetFutureCostsByBreedClassIDResponse" message="tns:IFuturesTradeRules_GetFutureCostsByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFuturesTradeRules">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllFuturesTradeRules" message="tns:IFuturesTradeRules_GetAllFuturesTradeRules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllFuturesTradeRulesResponse" message="tns:IFuturesTradeRules_GetAllFuturesTradeRules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFuturesTradeRulesByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetFuturesTradeRulesByBreedClassID" message="tns:IFuturesTradeRules_GetFuturesTradeRulesByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetFuturesTradeRulesByBreedClassIDResponse" message="tns:IFuturesTradeRules_GetFuturesTradeRulesByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHighLowStopScopeType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllHighLowStopScopeType" message="tns:IFuturesTradeRules_GetAllHighLowStopScopeType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllHighLowStopScopeTypeResponse" message="tns:IFuturesTradeRules_GetAllHighLowStopScopeType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLastTradingDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllLastTradingDay" message="tns:IFuturesTradeRules_GetAllLastTradingDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllLastTradingDayResponse" message="tns:IFuturesTradeRules_GetAllLastTradingDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTradingDayByLastTradingDayID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetLastTradingDayByLastTradingDayID" message="tns:IFuturesTradeRules_GetLastTradingDayByLastTradingDayID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetLastTradingDayByLastTradingDayIDResponse" message="tns:IFuturesTradeRules_GetLastTradingDayByLastTradingDayID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLastTradingDayType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllLastTradingDayType" message="tns:IFuturesTradeRules_GetAllLastTradingDayType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllLastTradingDayTypeResponse" message="tns:IFuturesTradeRules_GetAllLastTradingDayType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMonth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllMonth" message="tns:IFuturesTradeRules_GetAllMonth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllMonthResponse" message="tns:IFuturesTradeRules_GetAllMonth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSIFBail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllSIFBail" message="tns:IFuturesTradeRules_GetAllSIFBail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllSIFBailResponse" message="tns:IFuturesTradeRules_GetAllSIFBail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSIFBailByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetSIFBailByBreedClassID" message="tns:IFuturesTradeRules_GetSIFBailByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetSIFBailByBreedClassIDResponse" message="tns:IFuturesTradeRules_GetSIFBailByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSIFPosition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllSIFPosition" message="tns:IFuturesTradeRules_GetAllSIFPosition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllSIFPositionResponse" message="tns:IFuturesTradeRules_GetAllSIFPosition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSIFPositionByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetSIFPositionByBreedClassID" message="tns:IFuturesTradeRules_GetSIFPositionByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetSIFPositionByBreedClassIDResponse" message="tns:IFuturesTradeRules_GetSIFPositionByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSingleRequestQuantity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllSingleRequestQuantity" message="tns:IFuturesTradeRules_GetAllSingleRequestQuantity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllSingleRequestQuantityResponse" message="tns:IFuturesTradeRules_GetAllSingleRequestQuantity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleRequestQuantityByConsignQuantumID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetSingleRequestQuantityByConsignQuantumID" message="tns:IFuturesTradeRules_GetSingleRequestQuantityByConsignQuantumID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetSingleRequestQuantityByConsignQuantumIDResponse" message="tns:IFuturesTradeRules_GetSingleRequestQuantityByConsignQuantumID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCFBailScaleValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllCFBailScaleValue" message="tns:IFuturesTradeRules_GetAllCFBailScaleValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllCFBailScaleValueResponse" message="tns:IFuturesTradeRules_GetAllCFBailScaleValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCFBailScaleValueByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetCFBailScaleValueByBreedClassID" message="tns:IFuturesTradeRules_GetCFBailScaleValueByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetCFBailScaleValueByBreedClassIDResponse" message="tns:IFuturesTradeRules_GetCFBailScaleValueByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCFBailScaleValueByCFBailScaleValueID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetCFBailScaleValueByCFBailScaleValueID" message="tns:IFuturesTradeRules_GetCFBailScaleValueByCFBailScaleValueID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetCFBailScaleValueByCFBailScaleValueIDResponse" message="tns:IFuturesTradeRules_GetCFBailScaleValueByCFBailScaleValueID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPositionBailType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllPositionBailType" message="tns:IFuturesTradeRules_GetAllPositionBailType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllPositionBailTypeResponse" message="tns:IFuturesTradeRules_GetAllPositionBailType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQHPositionLimitValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllQHPositionLimitValue" message="tns:IFuturesTradeRules_GetAllQHPositionLimitValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllQHPositionLimitValueResponse" message="tns:IFuturesTradeRules_GetAllQHPositionLimitValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionLimitValueByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetPositionLimitValueByBreedClassID" message="tns:IFuturesTradeRules_GetPositionLimitValueByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetPositionLimitValueByBreedClassIDResponse" message="tns:IFuturesTradeRules_GetPositionLimitValueByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionLimitValueByPositionLimitValueID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetPositionLimitValueByPositionLimitValueID" message="tns:IFuturesTradeRules_GetPositionLimitValueByPositionLimitValueID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetPositionLimitValueByPositionLimitValueIDResponse" message="tns:IFuturesTradeRules_GetPositionLimitValueByPositionLimitValueID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPositionValueType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllPositionValueType" message="tns:IFuturesTradeRules_GetAllPositionValueType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFuturesTradeRules/GetAllPositionValueTypeResponse" message="tns:IFuturesTradeRules_GetAllPositionValueType_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IFuturesTradeRules" type="tns:IFuturesTradeRules">
+    <wsp:PolicyReference URI="#NetTcpBinding_IFuturesTradeRules_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetALLAgreementDeliveryMonth">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetALLAgreementDeliveryMonth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgreementDeliveryMonthByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAgreementDeliveryMonthByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCFPositionMonth">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllCFPositionMonth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllConsignInstructionType">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllConsignInstructionType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllConsignQuantum">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllConsignQuantum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsignQuantumByConsignQuantumID">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetConsignQuantumByConsignQuantumID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFutureCosts">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllFutureCosts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFutureCostsByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetFutureCostsByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFuturesTradeRules">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllFuturesTradeRules" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFuturesTradeRulesByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetFuturesTradeRulesByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHighLowStopScopeType">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllHighLowStopScopeType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLastTradingDay">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllLastTradingDay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTradingDayByLastTradingDayID">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetLastTradingDayByLastTradingDayID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLastTradingDayType">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllLastTradingDayType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMonth">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllMonth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSIFBail">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllSIFBail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSIFBailByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetSIFBailByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSIFPosition">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllSIFPosition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSIFPositionByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetSIFPositionByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSingleRequestQuantity">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllSingleRequestQuantity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleRequestQuantityByConsignQuantumID">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetSingleRequestQuantityByConsignQuantumID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCFBailScaleValue">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllCFBailScaleValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCFBailScaleValueByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetCFBailScaleValueByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCFBailScaleValueByCFBailScaleValueID">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetCFBailScaleValueByCFBailScaleValueID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPositionBailType">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllPositionBailType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQHPositionLimitValue">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllQHPositionLimitValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionLimitValueByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetPositionLimitValueByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionLimitValueByPositionLimitValueID">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetPositionLimitValueByPositionLimitValueID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPositionValueType">
+      <soap12:operation soapAction="http://tempuri.org/IFuturesTradeRules/GetAllPositionValueType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FuturesTradeRulesService">
+    <wsdl:port name="NetTcpBinding_IFuturesTradeRules" binding="tns:NetTcpBinding_IFuturesTradeRules">
+      <soap12:address location="net.tcp://localhost:9381/WcfFuturesProvider" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:9381/WcfFuturesProvider</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

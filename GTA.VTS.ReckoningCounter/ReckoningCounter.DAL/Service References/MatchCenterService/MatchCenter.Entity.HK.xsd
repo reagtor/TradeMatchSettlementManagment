@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MatchCenter.Entity.HK" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MatchCenter.Entity.HK" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/CommonObject" />
+  <xs:complexType name="HKOrderEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChannelNo" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="HKPriceType" type="q1:Types.HKPriceType" />
+      <xs:element minOccurs="0" name="HKSecuritiesCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OrderVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SholderCode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="TransactionDirection" type="q2:Types.TransactionDirection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HKOrderEntity" nillable="true" type="tns:HKOrderEntity" />
+</xs:schema>

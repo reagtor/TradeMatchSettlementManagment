@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DBBF4D9D-019A-4219-AF44-69811619F78C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReckoningCounter.PushBackTest</RootNamespace>
+    <AssemblyName>ReckoningCounter.PushBackTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>25</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GTA.RealTIme.CommonClass, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.CommonClass.dll</HintPath>
+    </Reference>
+    <Reference Include="GTA.RealTIme.CommonRealtimeMarketN, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.CommonRealtimeMarketN.dll</HintPath>
+    </Reference>
+    <Reference Include="GTA.RealTIme.GTAMarketransfers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.GTAMarketransfers.dll</HintPath>
+    </Reference>
+    <Reference Include="GTA.RealTIme.GTAMarketSocket, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.GTAMarketSocket.dll</HintPath>
+    </Reference>
+    <Reference Include="GTA.RealTIme.GTAStockBusinessFactory, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.GTAStockBusinessFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="GTA.RealTIme.RealtimeInterfaceN, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.RealtimeInterfaceN.dll</HintPath>
+    </Reference>
+    <Reference Include="GTA.RealTIme.SModelData, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.SModelData.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartThreadPool, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\SmartThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeManager.cs" />
+    <Compile Include="Controls\PageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PageControl.Designer.cs">
+      <DependentUpon>PageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HKMessageLogic.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GZQHMessageLogic.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs" />
+    <Compile Include="ModifyOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyOrderForm.Designer.cs">
+      <DependentUpon>ModifyOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\PageControl.resx">
+      <DependentUpon>PageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyOrderForm.resx">
+      <DependentUpon>ModifyOrderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DoOrderService\ReckoningCounter.Entity.Contants.xsd" />
+    <None Include="Service References\DoOrderService\ReckoningCounter.Entity.xsd" />
+    <None Include="Service References\DoOrderService\service.wsdl" />
+    <None Include="Service References\DoOrderService\service.xsd" />
+    <None Include="Service References\DoOrderService\service1.xsd" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RealTimeMarketUtil.cs" />
+    <Compile Include="ServerConfig.cs" />
+    <Compile Include="Service References\DoAccountService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DoDealRptService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DoOrderService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HKTraderFindService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HKTraderQuerySevice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HKTradeRulesService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TraderFindService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TraderQueryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="XHMessageLogic.cs" />
+    <Compile Include="WCFLogic.cs" />
+    <None Include="副本 Realtime.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DoAccountService\" />
+    <WCFMetadataStorage Include="Service References\DoDealRptService\" />
+    <WCFMetadataStorage Include="Service References\DoOrderService\" />
+    <WCFMetadataStorage Include="Service References\HKTraderFindService\" />
+    <WCFMetadataStorage Include="Service References\HKTraderQuerySevice\" />
+    <WCFMetadataStorage Include="Service References\HKTradeRulesService\" />
+    <WCFMetadataStorage Include="Service References\TraderFindService\" />
+    <WCFMetadataStorage Include="Service References\TraderQueryService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoOrderService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoOrderService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoOrderService\ReckoningCounter.PushBackTest.DoOrderService.OrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoOrderService\ReckoningCounter.PushBackTest.DoOrderService.TypesOrderStateType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoOrderService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TraderFindService\ReckoningCounter.Entity.AccountManagementAndFindEntity.xsd" />
+    <None Include="Service References\TraderFindService\ReckoningCounter.Entity.xsd" />
+    <None Include="Service References\TraderFindService\ReckoningCounter.Model.xsd" />
+    <None Include="Service References\TraderFindService\service.wsdl" />
+    <None Include="Service References\TraderFindService\service.xsd" />
+    <None Include="Service References\TraderFindService\service1.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TraderFindService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TraderFindService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\GZQHMessageLogic.datasource" />
+    <None Include="Properties\DataSources\WCFLogic.datasource" />
+    <None Include="Properties\DataSources\WCFLogic1.datasource" />
+    <None Include="Properties\DataSources\WCFLogic2.datasource" />
+    <None Include="Properties\DataSources\WCFLogic3.datasource" />
+    <None Include="Properties\DataSources\XHMessageLogic.datasource" />
+    <None Include="Realtime.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DoAccountService\Arrays.xsd" />
+    <None Include="Service References\DoAccountService\ManagementCenter.Model.xsd" />
+    <None Include="Service References\DoAccountService\ReckoningCounter.Entity.AccountManagementAndFindEntity.xsd" />
+    <None Include="Service References\DoAccountService\ReckoningCounter.Entity.Contants.xsd" />
+    <None Include="Service References\DoAccountService\service.wsdl" />
+    <None Include="Service References\DoAccountService\service.xsd" />
+    <None Include="Service References\DoAccountService\service1.xsd" />
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.AssetSummaryEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.FuturesCapitalEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.FuturesHoldFindResultEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.QH_HistoryEntrustTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.QH_HistoryTradeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.QH_TodayEntrustTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.QH_TodayTradeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.SpotCapitalEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.SpotHoldFindResultEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.UA_BankAccountTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.UA_CapitalFlowTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.XH_HistoryEntrustTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.XH_HistoryTradeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.XH_TodayEntrustTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\ReckoningCounter.PushBackTest.TraderFindService.XH_TodayTradeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderFindService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\back_img.gif" />
+    <None Include="Resources\PressButton.gif" />
+    <None Include="Service References\DoAccountService\GTA.VTS.Common.CommonObject.xsd" />
+    <None Include="Service References\DoAccountService\ReckoningCounter.Entity.Model.QH.xsd" />
+    <None Include="Service References\DoAccountService\ReckoningCounter.PushBackTest.DoAccountService.MarketDataLevel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoAccountService\ReckoningCounter.PushBackTest.DoAccountService.QH_TodaySettlementPriceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoOrderService\GTA.VTS.Common.CommonObject.xsd" />
+    <None Include="Service References\HKTraderFindService\GTA.VTS.Common.CommonObject.xsd" />
+    <None Include="Service References\HKTraderQuerySevice\GTA.VTS.Common.CommonObject.xsd" />
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.PushBackTest.HKTraderQuerySevice.HKCapitalEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.PushBackTest.HKTraderQuerySevice.HKHoldFindResultyEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.PushBackTest.HKTraderQuerySevice.HK_AcccountHoldFreezeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.PushBackTest.HKTraderQuerySevice.HK_AccountHoldInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.PushBackTest.HKTraderQuerySevice.HK_CapitalAccountFreezeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.PushBackTest.HKTraderQuerySevice.HK_CapitalAccountInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.PushBackTest.HKTraderQuerySevice.HK_HistoryEntrustInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.PushBackTest.HKTraderQuerySevice.HK_HistoryModifyOrderRequestInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.PushBackTest.HKTraderQuerySevice.HK_HistoryTradeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.PushBackTest.HKTraderQuerySevice.HK_TodayEntrustInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.PushBackTest.HKTraderQuerySevice.HK_TodayTradeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderQuerySevice\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HKTraderQuerySevice\configuration.svcinfo" />
+    <None Include="Service References\HKTraderQuerySevice\configuration91.svcinfo" />
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.Entity.AccountManagementAndFindEntity.HK.xsd" />
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.Entity.Model.HK.xsd" />
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.Entity.Model.QueryFilter.xsd" />
+    <None Include="Service References\HKTraderQuerySevice\ReckoningCounter.Entity.Model.xsd" />
+    <None Include="Service References\HKTraderQuerySevice\service.wsdl" />
+    <None Include="Service References\HKTraderQuerySevice\service.xsd" />
+    <None Include="Service References\HKTraderQuerySevice\service1.xsd" />
+    <None Include="Service References\TraderFindService\GTA.VTS.Common.CommonObject.xsd" />
+    <None Include="Service References\TraderQueryService\GTA.VTS.Common.CommonObject.xsd" />
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.AssetSummaryEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.FuturesCapitalEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.FuturesHoldFindResultEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.QH_CapitalAccountFreezeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.QH_CapitalAccountTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.QH_HistoryEntrustTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.QH_HistoryTradeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.QH_HoldAccountFreezeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.QH_HoldAccountTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.QH_TodayEntrustTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.QH_TodayTradeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.QH_TradeCapitalFlowDetailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.SpotCapitalEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.SpotHoldFindResultEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.UA_BankAccountTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.UA_CapitalFlowTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.XH_AcccountHoldFreezeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.XH_AccountHoldTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.XH_CapitalAccountFreezeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.XH_CapitalAccountTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.XH_HistoryEntrustTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.XH_HistoryTradeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.XH_TodayEntrustTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\ReckoningCounter.PushBackTest.TraderQueryService.XH_TodayTradeTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TraderQueryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TraderQueryService\configuration.svcinfo" />
+    <None Include="Service References\TraderQueryService\configuration91.svcinfo" />
+    <None Include="Service References\HKTradeRulesService\ReckoningCounter.PushBackTest.HKTradeRulesService.HKProfessionInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradeRulesService\ReckoningCounter.PushBackTest.HKTradeRulesService.HK_Commodity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradeRulesService\ReckoningCounter.PushBackTest.HKTradeRulesService.HK_MinPriceFieldRange.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradeRulesService\ReckoningCounter.PushBackTest.HKTradeRulesService.HK_SpotCosts.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradeRulesService\ReckoningCounter.PushBackTest.HKTradeRulesService.HK_SpotTradeRules.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradeRulesService\ReckoningCounter.PushBackTest.HKTradeRulesService.OnstageHK_Commodity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradeRulesService\ReckoningCounter.PushBackTest.HKTradeRulesService.XH_MinVolumeOfBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradeRulesService\ReckoningCounter.PushBackTest.HKTradeRulesService.XH_SpotPosition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradeRulesService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HKTradeRulesService\configuration.svcinfo" />
+    <None Include="Service References\HKTradeRulesService\configuration91.svcinfo" />
+    <None Include="Service References\DoAccountService\ReckoningCounter.PushBackTest.DoAccountService.TradersAccountCapitalInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderFindService\ReckoningCounter.PushBackTest.HKTraderFindService.HKCapitalEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderFindService\ReckoningCounter.PushBackTest.HKTraderFindService.HKHoldFindResultyEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderFindService\ReckoningCounter.PushBackTest.HKTraderFindService.HK_HistoryEntrustInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderFindService\ReckoningCounter.PushBackTest.HKTraderFindService.HK_HistoryTradeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderFindService\ReckoningCounter.PushBackTest.HKTraderFindService.HK_TodayEntrustInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderFindService\ReckoningCounter.PushBackTest.HKTraderFindService.HK_TodayTradeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderFindService\ReckoningCounter.PushBackTest.HKTraderFindService.UA_CapitalFlowTableInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTraderFindService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HKTraderFindService\configuration.svcinfo" />
+    <None Include="Service References\HKTraderFindService\configuration91.svcinfo" />
+    <None Include="Service References\DoAccountService\ReckoningCounter.BLL.DelegateValidate.xsd" />
+    <None Include="Service References\DoAccountService\ReckoningCounter.PushBackTest.DoAccountService.HighLowRangeValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoDealRptService\ReckoningCounter.Entity.Model.HK.xsd" />
+    <None Include="Service References\DoDealRptService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DoDealRptService\configuration.svcinfo" />
+    <None Include="Service References\DoDealRptService\configuration91.svcinfo" />
+    <None Include="Service References\DoAccountService\ReckoningCounter.PushBackTest.DoAccountService.AccountFindResultEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoAccountService\ReckoningCounter.PushBackTest.DoAccountService.CM_BreedClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoAccountService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DoAccountService\configuration.svcinfo" />
+    <None Include="Service References\DoAccountService\configuration91.svcinfo" />
+    <None Include="Service References\DoDealRptService\Arrays.xsd" />
+    <None Include="Service References\DoDealRptService\ReckoningCounter.Entity.Model.QH.xsd" />
+    <None Include="Service References\DoDealRptService\ReckoningCounter.Entity.Model.XH.xsd" />
+    <None Include="Service References\DoDealRptService\ReckoningCounter.Entity.xsd" />
+    <None Include="Service References\DoDealRptService\ReckoningCounter.Model.xsd" />
+    <None Include="Service References\DoDealRptService\service.wsdl" />
+    <None Include="Service References\DoDealRptService\service.xsd" />
+    <None Include="Service References\DoDealRptService\service1.xsd" />
+    <None Include="Service References\HKTraderFindService\ReckoningCounter.Entity.AccountManagementAndFindEntity.HK.xsd" />
+    <None Include="Service References\HKTraderFindService\ReckoningCounter.Entity.Model.HK.xsd" />
+    <None Include="Service References\HKTraderFindService\ReckoningCounter.Model.xsd" />
+    <None Include="Service References\HKTraderFindService\service.wsdl" />
+    <None Include="Service References\HKTraderFindService\service.xsd" />
+    <None Include="Service References\HKTraderFindService\service1.xsd" />
+    <None Include="Service References\HKTradeRulesService\ManagementCenter.Model.xsd" />
+    <None Include="Service References\HKTradeRulesService\service.wsdl" />
+    <None Include="Service References\HKTradeRulesService\service.xsd" />
+    <None Include="Service References\HKTradeRulesService\service1.xsd" />
+    <None Include="Service References\TraderQueryService\ReckoningCounter.Entity.AccountManagementAndFindEntity.xsd" />
+    <None Include="Service References\TraderQueryService\ReckoningCounter.Entity.Model.QueryFilter.xsd" />
+    <None Include="Service References\TraderQueryService\ReckoningCounter.Entity.Model.xsd" />
+    <None Include="Service References\TraderQueryService\ReckoningCounter.Entity.xsd" />
+    <None Include="Service References\TraderQueryService\ReckoningCounter.Model.xsd" />
+    <None Include="Service References\TraderQueryService\service.wsdl" />
+    <None Include="Service References\TraderQueryService\service.xsd" />
+    <None Include="Service References\TraderQueryService\service1.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GTA.VTS.Common\GTA.VTS.Common.CommonObject\GTA.VTS.Common.CommonObject.csproj">
+      <Project>{17E3419C-E66D-42B0-84F8-B0A15636D44C}</Project>
+      <Name>GTA.VTS.Common.CommonObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GTA.VTS.Common\GTA.VTS.Common.CommonUtility\GTA.VTS.Common.CommonUtility.csproj">
+      <Project>{1203CAC4-E92D-4948-BD36-F45B065C37AC}</Project>
+      <Name>GTA.VTS.Common.CommonUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

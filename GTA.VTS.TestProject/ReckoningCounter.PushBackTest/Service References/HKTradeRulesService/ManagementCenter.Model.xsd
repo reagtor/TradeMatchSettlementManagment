@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfXH_MinVolumeOfBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XH_MinVolumeOfBusiness" nillable="true" type="tns:XH_MinVolumeOfBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXH_MinVolumeOfBusiness" nillable="true" type="tns:ArrayOfXH_MinVolumeOfBusiness" />
+  <xs:complexType name="XH_MinVolumeOfBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MinVolumeOfBusinessID" type="xs:int" />
+      <xs:element minOccurs="0" name="TradeWayID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UnitID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="VolumeOfBusiness" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XH_MinVolumeOfBusiness" nillable="true" type="tns:XH_MinVolumeOfBusiness" />
+  <xs:complexType name="ArrayOfXH_SpotPosition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XH_SpotPosition" nillable="true" type="tns:XH_SpotPosition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXH_SpotPosition" nillable="true" type="tns:ArrayOfXH_SpotPosition" />
+  <xs:complexType name="XH_SpotPosition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassID" type="xs:int" />
+      <xs:element minOccurs="0" name="Rate" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XH_SpotPosition" nillable="true" type="tns:XH_SpotPosition" />
+  <xs:complexType name="ArrayOfHK_Commodity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HK_Commodity" nillable="true" type="tns:HK_Commodity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHK_Commodity" nillable="true" type="tns:ArrayOfHK_Commodity" />
+  <xs:complexType name="HK_Commodity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HKCommodityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HKCommodityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISSysDefaultCode" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSellNull" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MarketDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PerHandThighOrShare" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="StockPinYin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="turnovervolume" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HK_Commodity" nillable="true" type="tns:HK_Commodity" />
+  <xs:complexType name="ArrayOfHK_SpotCosts">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HK_SpotCosts" nillable="true" type="tns:HK_SpotCosts" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHK_SpotCosts" nillable="true" type="tns:ArrayOfHK_SpotCosts" />
+  <xs:complexType name="HK_SpotCosts">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassID" type="xs:int" />
+      <xs:element minOccurs="0" name="Commision" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CommisionStartingpoint" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MonitoringFee" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PoundageValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StampDuty" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StampDutyStartingpoint" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StampDutyTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SystemToll" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransferToll" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HK_SpotCosts" nillable="true" type="tns:HK_SpotCosts" />
+  <xs:complexType name="ArrayOfHK_SpotTradeRules">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HK_SpotTradeRules" nillable="true" type="tns:HK_SpotTradeRules" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHK_SpotTradeRules" nillable="true" type="tns:ArrayOfHK_SpotTradeRules" />
+  <xs:complexType name="HK_SpotTradeRules">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassID" type="xs:int" />
+      <xs:element minOccurs="0" name="FundDeliveryInstitution" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MarketUnitID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxLeaveQuantity" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PriceUnit" type="xs:int" />
+      <xs:element minOccurs="0" name="StockDeliveryInstitution" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HK_SpotTradeRules" nillable="true" type="tns:HK_SpotTradeRules" />
+  <xs:complexType name="ArrayOfHK_MinPriceFieldRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HK_MinPriceFieldRange" nillable="true" type="tns:HK_MinPriceFieldRange" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHK_MinPriceFieldRange" nillable="true" type="tns:ArrayOfHK_MinPriceFieldRange" />
+  <xs:complexType name="HK_MinPriceFieldRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldRangeID" type="xs:int" />
+      <xs:element minOccurs="0" name="LowerLimit" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpperLimit" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HK_MinPriceFieldRange" nillable="true" type="tns:HK_MinPriceFieldRange" />
+  <xs:complexType name="ArrayOfOnstageHK_Commodity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OnstageHK_Commodity" nillable="true" type="tns:OnstageHK_Commodity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOnstageHK_Commodity" nillable="true" type="tns:ArrayOfOnstageHK_Commodity" />
+  <xs:complexType name="OnstageHK_Commodity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:HK_Commodity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Nindcd" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OnstageHK_Commodity" nillable="true" type="tns:OnstageHK_Commodity" />
+  <xs:complexType name="ArrayOfHKProfessionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HKProfessionInfo" nillable="true" type="tns:HKProfessionInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHKProfessionInfo" nillable="true" type="tns:ArrayOfHKProfessionInfo" />
+  <xs:complexType name="HKProfessionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EnNindnme" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nindcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nindnme" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HKProfessionInfo" nillable="true" type="tns:HKProfessionInfo" />
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e561da39-fa71-474b-8df9-f47867c0211d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://192.168.5.12:9188/DoQueryService/MEX" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="40edd54d-6905-44ae-ad13-0651f5a16ea6" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9188/DoQueryService/MEX" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="4ce93c08-a6c7-4511-a14f-4bc32bb98ea9" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9188/DoQueryService/MEX" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="3b79d8e5-4e0a-4323-842a-37a354b80184" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9188/DoQueryService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Model1.xsd" MetadataType="Schema" ID="0e6edead-7253-468f-b61d-d87bb3e6b1a2" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9188/DoQueryService/MEX" />
+    <MetadataFile FileName="GTA.VTS.Common.CommonObject.xsd" MetadataType="Schema" ID="feffda9b-c58b-432e-a021-39a7a58ee680" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9188/DoQueryService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.AccountManagementAndFindEntity.xsd" MetadataType="Schema" ID="ef9c775e-8849-453d-bc7e-cc6725344c23" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9188/DoQueryService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.xsd" MetadataType="Schema" ID="285c4884-78a6-44ef-820c-6e8505052a86" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9188/DoQueryService/MEX" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

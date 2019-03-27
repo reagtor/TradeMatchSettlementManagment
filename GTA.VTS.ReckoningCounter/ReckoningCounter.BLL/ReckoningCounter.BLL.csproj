@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26943820-C764-4AFE-A592-7E17B911AF7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReckoningCounter.BLL</RootNamespace>
+    <AssemblyName>ReckoningCounter.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ReckoningCounter.BLL.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GTA.RealTIme.CommonClass">
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.CommonClass.dll</HintPath>
+    </Reference>
+    <Reference Include="GTA.RealTIme.CommonRealtimeMarketN, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.CommonRealtimeMarketN.dll</HintPath>
+    </Reference>
+    <Reference Include="GTA.RealTIme.RealtimeInterfaceN">
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.RealtimeInterfaceN.dll</HintPath>
+    </Reference>
+    <Reference Include="GTA.RealTIme.SModelData">
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.SModelData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Practices\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Practices\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=1.0.0.3, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartThreadPool, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\SmartThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountManagementAndFind\AccountManagementAndFindBLL\AccountManagement.cs" />
+    <Compile Include="AccountManagementAndFind\AccountManagementAndFindBLL\CapitalAndHoldFind.cs" />
+    <Compile Include="AccountManagementAndFind\AccountManagementAndFindBLL\CapitalManagement.cs" />
+    <Compile Include="AccountManagementAndFind\AccountManagementAndFindBLL\AdministratorFindTraderBLL.cs" />
+    <Compile Include="AccountManagementAndFind\AccountManagementAndFindBLL\CommonDataAgent.cs" />
+    <Compile Include="AccountManagementAndFind\AccountManagementAndFindBLL\HK\HKCapitalAndHoldQuery.cs" />
+    <Compile Include="AccountManagementAndFind\AccountManagementAndFindBLL\HK\HKEntrustAndTradeQuery.cs" />
+    <Compile Include="AccountManagementAndFind\InterfaceBLL\AccountManagementAndFindService\AccountAndCapitalManagementService.cs" />
+    <Compile Include="AccountManagementAndFind\InterfaceBLL\AccountManagementAndFindService\AdministratorFindService.cs" />
+    <Compile Include="AccountManagementAndFind\InterfaceBLL\AccountManagementAndFindService\HKTraderFindService.cs" />
+    <Compile Include="AccountManagementAndFind\InterfaceBLL\AccountManagementAndFindService\HKTraderQueryService.cs" />
+    <Compile Include="AccountManagementAndFind\InterfaceBLL\AccountManagementAndFindService\TraderFindService.cs" />
+    <Compile Include="AccountManagementAndFind\InterfaceBLL\AccountManagementAndFindService\TraderQueryService.cs" />
+    <Compile Include="AccountManagementAndFind\InterfaceBLL\IHKTraderFind.cs" />
+    <Compile Include="AccountManagementAndFind\InterfaceBLL\IHKTraderQuery.cs" />
+    <Compile Include="AccountManagementAndFind\InterfaceBLL\ITraderFind.cs" />
+    <Compile Include="AccountManagementAndFind\InterfaceBLL\ITraderQuery.cs" />
+    <Compile Include="Common\AccountManager.cs" />
+    <Compile Include="Common\HKCommonLogic.cs" />
+    <Compile Include="Common\CounterCache.cs" />
+    <Compile Include="Common\CrashManager.cs" />
+    <Compile Include="Common\ModifyOrderProcessor.cs" />
+    <Compile Include="Common\OrderCacheItem.cs" />
+    <Compile Include="Common\QHCommonLogic.cs" />
+    <Compile Include="Common\RealTimeMarketUtil.cs" />
+    <Compile Include="Common\RescueManager.cs" />
+    <Compile Include="Common\ServerConfig.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="Common\VTTrader.cs" />
+    <Compile Include="Common\XHCommonLogic.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderAccepter\FailureRecoveryPushBack.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderAccepter\Logic\AcceptLogic.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderAccepter\Logic\GZQHAcceptLogic.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderAccepter\Logic\HKAcceptLogic.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderAccepter\Logic\SPQHAcceptLogic.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderAccepter\Logic\XHAcceptLogic.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderAccepter\OrderAccepter.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderAccepter\OrderAcceptExceptionInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderAcceptExceptionInfo.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DelegateAcceptOffer\OrderAccepter\wcfservice_out\IOrderDealRpt.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderOffer\DealRptChannelState.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderOffer\DoCallbackProcess.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderOffer\OrderCache.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderOffer\OrderOfferCenter.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderAccepter\wcfservice_out\IDoOrder.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderAccepter\wcfservice_out\IDoOrderCallback.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderAccepter\wcfservice_out\WcfOrderService.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderOffer\OrderOfferDataLogic.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderOffer\OrderOfferExceptionInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderOfferExceptionInfo.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DelegateValidate\Cost\CostCalculator.cs" />
+    <Compile Include="DelegateValidate\Cost\HKCostResult.cs" />
+    <Compile Include="DelegateValidate\Cost\QHCostResult.cs" />
+    <Compile Include="DelegateValidate\Cost\XHCostResult.cs" />
+    <Compile Include="DelegateValidate\HighLowRange\HighLowRange.cs" />
+    <Compile Include="DelegateValidate\HighLowRange\HighLowRangeProcessor.cs" />
+    <Compile Include="DelegateValidate\Local\FutureDayChecker.cs" />
+    <Compile Include="DelegateValidate\Local\LocalCommonValidater.cs" />
+    <Compile Include="DelegateValidate\Local\LocalFutureCacelValidater.cs" />
+    <Compile Include="DelegateValidate\Local\LocalFutureCloseValidater.cs" />
+    <Compile Include="DelegateValidate\Local\LocalFutureOpenValidater.cs" />
+    <Compile Include="DelegateValidate\Local\LocalHKStockValidater.cs" />
+    <Compile Include="DelegateValidate\Local\LocalStockCacelValidater.cs" />
+    <Compile Include="DelegateValidate\Local\LocalStockValidater.cs" />
+    <Compile Include="DelegateValidate\ManagementCenter\FutureRuleContainer.cs" />
+    <Compile Include="DelegateValidate\ManagementCenter\FutureTradingRuleValidater.cs" />
+    <Compile Include="DelegateValidate\ManagementCenter\HKModifyOrderRuleContainer.cs" />
+    <Compile Include="DelegateValidate\ManagementCenter\HKStockRuleContainer.cs" />
+    <Compile Include="DelegateValidate\ManagementCenter\HKStockTradingRuleValidater.cs" />
+    <Compile Include="DelegateValidate\ManagementCenter\IMcValidater.cs" />
+    <Compile Include="DelegateValidate\ManagementCenter\ValidateCommand.cs" />
+    <Compile Include="DelegateValidate\ManagementCenter\RuleContainer.cs" />
+    <Compile Include="DelegateValidate\ManagementCenter\StockRuleContainer.cs" />
+    <Compile Include="DelegateValidate\ManagementCenter\McValidater.cs" />
+    <Compile Include="AccountManagementAndFind\AccountManagementAndFindBLL\EntrustAndTradeFind.cs" />
+    <Compile Include="AccountManagementAndFind\AccountManagementAndFindBLL\CapitalAccountFlowFind.cs" />
+    <Compile Include="DelegateValidate\ManagementCenter\TradingRuleValidater.cs" />
+    <Compile Include="DelegateValidate\ValidateCenter.cs" />
+    <Compile Include="AccountManagementAndFind\InterfaceBLL\IAccountAndCapitalManagement.cs" />
+    <Compile Include="AccountManagementAndFind\InterfaceBLL\IAdministratorFind.cs" />
+    <Compile Include="DelegateValidate\ManagementCenter\IMTradingRule.cs" />
+    <Compile Include="ManagementCenter\FutureBailScaleService.cs" />
+    <Compile Include="ManagementCenter\FuturePositionLimitService.cs" />
+    <Compile Include="ManagementCenter\FutureService.cs" />
+    <Compile Include="ManagementCenter\HKStockTradeRulesProxy.cs" />
+    <Compile Include="ManagementCenter\MCService.cs" />
+    <Compile Include="ManagementCenter\CommonParaProxy.cs" />
+    <Compile Include="ManagementCenter\SpotTradeRulesProxy.cs" />
+    <Compile Include="ManagementCenter\WCFCacheObject.cs" />
+    <Compile Include="MarketClose\HistoryDataService.cs" />
+    <Compile Include="MarketClose\MelonCutService.cs" />
+    <Compile Include="MarketClose\ReckoningService.cs" />
+    <Compile Include="Common\PerfMonitor.cs" />
+    <Compile Include="Reckoning\Instantaneous\CancelOrderRptItem.cs" />
+    <Compile Include="Reckoning\Instantaneous\OrderErrorItem.cs" />
+    <Compile Include="Reckoning\Instantaneous\ReckonCenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reckoning\Instantaneous\ReckonDataLogic.cs" />
+    <Compile Include="Reckoning\Instantaneous\Reckoning_InstantExceptionInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reckoning_InstantExceptionInfo.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reckoning\Instantaneous\RuntimeMessageEventArge.cs" />
+    <Compile Include="Reckoning\Logic\GZQH\GZQHDealSum.cs" />
+    <Compile Include="Reckoning\Logic\GZQH\GZQHReckonUnit.cs" />
+    <Compile Include="Reckoning\Logic\HK\HKDealSum.cs" />
+    <Compile Include="Reckoning\Logic\HK\HKReckonUnit.cs" />
+    <Compile Include="Reckoning\Logic\IReckonUnit.cs" />
+    <Compile Include="Reckoning\Logic\ReckonDealBackEx.cs" />
+    <Compile Include="Reckoning\Logic\ReckonUnitBase.cs" />
+    <Compile Include="Reckoning\Logic\ReckonUnitManagerFactory.cs" />
+    <Compile Include="Reckoning\Logic\ReckonUnitManager.cs" />
+    <Compile Include="Reckoning\Logic\SPQH\SPQHDealSum.cs" />
+    <Compile Include="Reckoning\Logic\SPQH\SPQHReckonUnit.cs" />
+    <Compile Include="Reckoning\Logic\XH\XHDealSum.cs" />
+    <Compile Include="Reckoning\Logic\XH\XHReckonUnit.cs" />
+    <Compile Include="ScheduleManagement\MarketProcessJob.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DelegateValidate\ManagementCenter\StockTradingRuleValidater.cs" />
+    <Compile Include="ManagementCenter\FuturesTradeRulesProxy.cs" />
+    <Compile Include="ScheduleManagement\ScheduleManager.cs" />
+    <Compile Include="DelegateAcceptOffer\OrderOffer\SeviceChannelManager.cs" />
+    <Compile Include="ScheduleManagement\StatusTableChecker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GTA.VTS.Common\GTA.VTS.Common.CommonObject\GTA.VTS.Common.CommonObject.csproj">
+      <Project>{17E3419C-E66D-42B0-84F8-B0A15636D44C}</Project>
+      <Name>GTA.VTS.Common.CommonObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GTA.VTS.Common\GTA.VTS.Common.CommonUtility\GTA.VTS.Common.CommonUtility.csproj">
+      <Project>{1203CAC4-E92D-4948-BD36-F45B065C37AC}</Project>
+      <Name>GTA.VTS.Common.CommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReckoningCounter.DAL\ReckoningCounter.DAL.csproj">
+      <Project>{587E84C1-95E7-4D12-A70A-CDA3EB1FE71D}</Project>
+      <Name>ReckoningCounter.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReckoningCounter.Entity\ReckoningCounter.Entity.csproj">
+      <Project>{77AC0573-1DE9-4B91-A811-F59FB358B325}</Project>
+      <Name>ReckoningCounter.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReckoningCounter.MemoryData\ReckoningCounter.MemoryData.csproj">
+      <Project>{DBEFFF28-69AD-48C3-84A2-E5F1A2E00D86}</Project>
+      <Name>ReckoningCounter.MemoryData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AccountManagementAndFind\AccountManagementAndFindBLL\柜台账户管理模块及查询模块.cd" />
+    <None Include="DelegateValidate\ManagementCenter\现货期货外部委托检验.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DelegateAcceptOffer\OrderAccepter\委托接收处理.cd" />
+    <None Include="DelegateAcceptOffer\OrderOffer\报盘处理.cd" />
+    <None Include="DelegateValidate\Local\现货期货内部委托校验.cd" />
+    <None Include="Reckoning\Instantaneous\即时清算.cd" />
+    <None Include="ScheduleManagement\任务调度-开市收市.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DelegateAcceptOffer\OrderAccepter\OrderAcceptExceptionInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrderAcceptExceptionInfo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelegateAcceptOffer\OrderOffer\OrderOfferExceptionInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrderOfferExceptionInfo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reckoning\Instantaneous\Reckoning_InstantExceptionInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Reckoning_InstantExceptionInfo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

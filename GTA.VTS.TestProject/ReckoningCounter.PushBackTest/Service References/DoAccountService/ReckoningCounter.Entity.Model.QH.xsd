@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QH" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QH" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfQH_TodaySettlementPriceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QH_TodaySettlementPriceInfo" nillable="true" type="tns:QH_TodaySettlementPriceInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQH_TodaySettlementPriceInfo" nillable="true" type="tns:ArrayOfQH_TodaySettlementPriceInfo" />
+  <xs:complexType name="QH_TodaySettlementPriceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CommodityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SettlementPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradingDate" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QH_TodaySettlementPriceInfo" nillable="true" type="tns:QH_TodaySettlementPriceInfo" />
+</xs:schema>

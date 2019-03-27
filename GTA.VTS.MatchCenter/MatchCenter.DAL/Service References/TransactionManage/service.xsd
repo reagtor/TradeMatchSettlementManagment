@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model.CommonClass" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" />
+  <xs:element name="BatchAddTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Number" type="xs:int" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ManagementCenter.Model.CommonClass" minOccurs="0" name="initFund" nillable="true" type="q1:InitFund" />
+        <xs:element minOccurs="0" name="MLoginName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ManagerPWd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchAddTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="BatchAddTransactionResult" nillable="true" type="q2:ArrayOfUM_UserInfo" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchAddTransactionList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="tUserInfo" nillable="true" type="q3:ArrayOfUM_UserInfo" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ManagementCenter.Model.CommonClass" minOccurs="0" name="initFund" nillable="true" type="q4:InitFund" />
+        <xs:element minOccurs="0" name="MLoginName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ManagerPWd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchAddTransactionListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="BatchAddTransactionListResult" nillable="true" type="q5:ArrayOfUM_UserInfo" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" type="xs:int" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MLoginName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ManagerPWd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateTransactionResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTransactionAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="userInfo" nillable="true" type="q6:UM_UserInfo" />
+        <xs:element minOccurs="0" name="MLoginName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ManagerPWd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTransactionAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateTransactionAllResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchDelectTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="userInfo" nillable="true" type="q7:ArrayOfUM_UserInfo" />
+        <xs:element minOccurs="0" name="MLoginName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ManagerPWd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchDelectTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BatchDelectTransactionResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransactionConfirm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" type="xs:int" />
+        <xs:element minOccurs="0" name="PassWord" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransactionConfirmResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="TransactionConfirmResult" nillable="true" type="q8:CT_Counter" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFund">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" type="xs:int" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ManagementCenter.Model.CommonClass" minOccurs="0" name="initFund" nillable="true" type="q9:InitFund" />
+        <xs:element minOccurs="0" name="MLoginName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ManagerPWd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFundResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddFundResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

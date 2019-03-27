@@ -1,0 +1,2798 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTA.RealTIme.GTAMarketSocket</name>
+    </assembly>
+    <members>
+        <member name="T:GTAMarketSocket.DifferenceMarketDataIsEnding">
+            <summary>　
+            差异行情数据更新事件句委托
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:GTAMarketSocket.HqRecorderHandler">
+            <summary>
+            客户端第一次取得订阅代码的数据对象
+            </summary>
+            <param name=""></param>
+        </member>
+        <member name="T:GTAMarketSocket.HqExDataUpdateHandler">
+            <summary>
+            
+            </summary>
+            <param name="hqData"></param>
+        </member>
+        <member name="T:GTAMarketSocket.QhDataUpdateHandler">
+            <summary>
+            股指期货事件委托
+            </summary>
+            <param name="futData"></param>
+        </member>
+        <member name="T:GTAMarketSocket.MerQhDataUpdateHandler">
+            <summary>
+            商品期货事件委托
+            </summary>
+            <param name="merFutData"></param>
+        </member>
+        <member name="T:GTAMarketSocket.HKDataUpdateHandler">
+            <summary>
+            港股事件委托
+            </summary>
+            <param name="hkStock"></param>
+        </member>
+        <member name="T:GTAMarketSocket.HKStockStatusDataUpdateHandler">
+            <summary>
+            港股状态事件委托
+            </summary>
+            <param name="stockStatus"></param>
+        </member>
+        <member name="T:GTAMarketSocket.HKStaticDataUdpdateHandler">
+            <summary>
+            港股盘前静态更新事件委托
+            </summary>
+            <param name="hkStock"></param>
+        </member>
+        <member name="T:GTAMarketSocket.HKPreMarketPriceDataUdpdateHandler">
+            <summary>
+            港股前最小价位更新事件委托
+            </summary>
+            <param name="hkStock"></param>
+        </member>
+        <member name="T:GTAMarketSocket.FOREXDataRefreshEventHandler">
+            <summary>
+            外汇行情刷新事件参数
+            <para>数据类型:</para>
+            <para>0 - FOREX_Batch</para>
+            <para>1 - FOREX_Contract</para>
+            <para>3 - FOREX_ClosingPirce</para>
+            </summary>
+            <param name="ContractData">交易数据</param>
+            <param name="BatchData">初始数据</param>
+            <param name="ClosingPirceData">收盘数据</param>
+            <param name="FEDataType">数据类型:0 - FOREX_Batch;1 - FOREX_Contract;3 - FOREX_ClosingPirce</param>
+        </member>
+        <member name="T:GTAMarketSocket.GTASocketConnectException">
+            <summary>
+            待用
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocketConnectException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocketConnectException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocketConnectException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocketConnectException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <!-- 对于成员“T:GTAMarketSocket.GTASocket”忽略有格式错误的 XML 注释 -->
+        <member name="F:GTAMarketSocket.GTASocket._socketStatus">
+            <summary>
+            socket状态
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._socketType">
+            <summary>
+            启动模式
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._socketClient">
+            <summary>
+            作客户端对象
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._useChangeLine">
+            <summary>
+            是否使用换线功能
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._IPportList">
+            <summary>
+            服务器IP端口组,连接在这些IP之间轮询
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._socketServer">
+            <summary>
+            作服务端对象
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._bizDataService">
+            <summary>
+            缓存对象
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket.ClientConnectedID">
+            <summary>
+            每个客户端维护一个唯一的标记作为服务器上验证的代号
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._proxyServerIp">
+            <summary>
+            代理IP
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._proxyServerPort">
+            <summary>
+            代理端口
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._serverIp">
+            <summary>
+            上级服务器IP
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._messageBufferSize">
+            <summary>
+            消息缓存大小
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._socketBufferSize">
+            <summary>
+            socket发送字段大小
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._connectViaProxy">
+            <summary>
+            是否使用代理
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket.FOnEventDelegate">
+            <summary>
+            把组件底层执行情况输出到UI上.便于查看
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.Event(System.String)">
+            <summary>
+            通过FOnEventDelegate这个委托实现输出信息到UI
+            </summary>
+            <param name="eventMessage"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.DebugInfoLog(System.String)">
+            <summary>
+            记录日志
+            </summary>
+            <param name="info">日志消息</param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.#ctor(GTAMarketSocket.OnEventDelegate,RealTime.Common.CommonClass.GTASocketType,GTAMarketSocket.IStockDataService,GTAMarketSocket.ISocketAuthentication,System.Int32)">
+            <summary>
+            可处理回调消息事件的(仅服务器)构造
+            仅服务器功能
+            1.定时接收行情数据变化通知,并发送依据对应订阅条件,把连接需要的行情数据进行传递
+            2.可接收客户端认证请求
+            3.可接收客户端订阅请求
+            ( STServer类型应用调用 )
+            </summary>
+            <param name="FEvent"></param>
+            <param name="sType"></param>
+            <param name="dataService"></param>
+            <param name="iServerPort"></param>
+            <param name="authenticator"></param>
+            <param name="localServerPort"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.#ctor(RealTime.Common.CommonClass.GTASocketType,GTAMarketSocket.IStockDataService,GTAMarketSocket.ISocketAuthentication,System.Int32)">
+            <summary>
+            仅服务器构造
+            1.定时接收行情数据变化通知,并发送依据对应订阅条件,把连接需要的行情数据进行传递
+            2.可接收客户端认证请求
+            3.可接收客户端订阅请求
+            ( STServer 类型应用调用 )
+            </summary>
+            <param name="sType"></param>
+            <param name="dataService"></param>
+            <param name="iServerPort"></param>
+            <param name="authenticator"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.#ctor(RealTime.Common.CommonClass.GTASocketType,System.Int32,System.String,GTAMarketSocket.IStockDataService)">
+            <summary>
+            仅客户端构造
+            客户端功能
+            1.向服务器发送订阅条件,订阅数据
+            2.接收服务器发送的订阅数据
+            ( STClient 类型应用调用 )
+            </summary>
+            <param name="sType"></param>
+            <param name="iServerPort"></param>
+            <param name="strServerIp"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.#ctor(GTAMarketSocket.OnEventDelegate,RealTime.Common.CommonClass.GTASocketType,GTAMarketSocket.IStockDataService,GTAMarketSocket.ISocketAuthentication,System.Int32,System.Int32,System.String)">
+            <summary>
+            没有用到******************8
+            可处理回调消息事件的(服务器客户端)构造
+            服务器功能
+            1.定时(本机客户端)接收行情数据变化通知,并发送依据对应订阅条件,把连接需要的行情数据进行传递
+            2.可接收客户端认证请求
+            3.可接收客户端订阅请求
+            客户端功能
+            a.向服务器发送订阅所有数据并存在本机(本机股票数据服务类缓存)
+            b.接收服务器发送数据的差异更新(本机股票数据服务类缓存)
+            c.触发定时器发送行情数据变化通知  ---- 服务器 功能1
+            ( STClientServer 类型应用调用 )
+            </summary>
+            <param name="FEvent"></param>
+            <param name="sType"></param>
+            <param name="dataService"></param>
+            <param name="iServerPort"></param>
+            <param name="authenticator"></param>
+            <param name="localServerPort"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.#ctor(RealTime.Common.CommonClass.GTASocketType,GTAMarketSocket.IStockDataService,GTAMarketSocket.ISocketAuthentication,System.Int32,System.Int32,System.String)">
+            <summary>
+            (服务器客户端)构造
+            服务器功能
+            1.定时(本机客户端)接收行情数据变化通知,并发送依据对应订阅条件,把连接需要的行情数据进行传递
+            2.可接收客户端认证请求
+            3.可接收客户端订阅请求
+            客户端功能
+            a.向服务器发送订阅所有数据并存在本机(本机股票数据服务类缓存)
+            b.接收服务器发送数据的差异更新(本机股票数据服务类缓存)
+            c.触发定时器发送行情数据变化通知  ---- 服务器 功能1
+            ( STClientServer 类型应用调用 )
+            </summary>
+            <param name="sType"></param>
+            <param name="dataService"></param>
+            <param name="iServerPort">上级服务器端口</param>
+            <param name="authenticator"></param>
+            <param name="localServerPort">下级接收端口</param>
+            <param name="strServerIp">上级服务器IP</param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ClientSubscibeCompleteData">
+            <summary>
+            客户端订阅全部数据
+            ( STClientServer 类型应用调用 )
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ClientSubscibeCompleteData(System.String)">
+            <summary>
+            客户端订阅全部数据
+            ( STClientServer 类型应用调用 )
+            不管是全量订阅模式,还是代码订阅模式,登陆以后,首先发送一次全量请求
+            取得服务器的缓存,此时把客户端的唯一GUID号放到条件中.传到服务器
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.InitComponmentsBeforeStartService">
+            <summary>
+            开启 GTA Socket 服务之前调用初始化内部组件
+            ( STServer/STClientServer/STClient 类型应用调用 )
+            </summary>
+        </member>
+        <!-- 对于成员“M:GTAMarketSocket.GTASocket._serviceClient_OnAcceptData(GTAMarketSocket.AcceptDataEventArg)”忽略有格式错误的 XML 注释 -->
+        <member name="F:GTAMarketSocket.GTASocket._szCodeObjectList">
+            <summary>
+            深圳行情发送列表
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._shCodeObjectList">
+            <summary>
+            上每行情发送列表
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._merQhCodeObjectList">
+            <summary>
+            商品期货发送列表
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocket._hKstockList">
+            <summary>
+            港股行情发送列表 
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessGetCodeEntity(GTAMarketSocket.IHqEntity,System.Boolean)">
+            <summary>
+            订阅更新事件
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.StockDataService_DataChangeEvent(GTAMarketSocket.IHqEntity)">
+            <summary>
+            复制更新后的行情实体到发送列表
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessFOREXBatchData(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity})">
+            <summary>
+            开始发送外汇的FOREX_Batch数据
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessFOREXContractData(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FOREXContractUdpEntity})">
+            <summary>
+            接收udp数据后.转换为tcp实体开始发送外汇的FOREX_Contract数据
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessFOREXClosingPirceData(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity})">
+            <summary>
+            开始发送外汇的FOREX_ClosingPirce数据
+            <para>当收到收盘数据时.同时也转换为客户端显示的交易实体,下发</para>
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessUpdate(RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            开始发送港股盘前静态数据
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessUpdate(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.PreMarketPriceTable})">
+            <summary>
+            开始发送港股盘前价位变动列表
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessUpdate(RealTime.Server.SModelData.HqData.PreMarketPriceTable)">
+            <summary>
+            开始发送港股盘前价位变动列表
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.Timer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            定时器定时触发执行的事件：商品期货.
+            </summary>
+            <param name="sender">事件源.</param>
+            <param name="e">The <see cref="T:System.Timers.ElapsedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.HKTimer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            定时发送港股的实时行情
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessDiffBatchDataIsEnding(GTAMarketSocket.HqEndingEventArgs)">
+            <summary>
+            国内现货行情批接收结束处理
+            <para>服务器端下发</para>
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessMergeSzDiffData(GTAMarketSocket.HqEventArg)">
+            <summary>
+            深圳差异合并,主服务器模式(Server)
+            </summary>
+            <param name="exa"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessMergeShDiffData(GTAMarketSocket.HqEventArg)">
+            <summary>
+            上海差异合并(Server)
+            在foreach中调用UpdateOneData返回最新实体快照 
+            再调用DataChangeEvent注册的对应事件StockDataService_DataChangeEvent把快照存入要发送列表
+            
+            </summary>
+            <param name="exa"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessMergeQhDiffData(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            股指期货差异处理(Server模式，可以在这里处理下发权限)
+            <para>合并，并且发送出去</para>
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessMergeMerQhDiffData(GTAMarketSocket.MerFutUpdateEventArg)">
+            <summary>
+            商品期货差异处理(Server)
+            Udp行情更新事件处理过程
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessMergeHKStockDiffData(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            港股数据更新合并处理(Server)
+            主服务器接收解析出来的Udp数据进行更新合并
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessHKStaticDiffData(RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            处理港股盘前静态数据
+            </summary>
+            <param name="hKStaticData"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ProcessHKPreMarketPriceTableDiffData(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.PreMarketPriceTable})">
+            <summary>
+            处理港股盘前价位数据表
+            </summary>
+            <param name="pMPT"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.CheckConnectionStatus(System.Boolean,System.Int32,System.Boolean,System.DateTime@)">
+            <summary>
+            检查连接状态
+            </summary>
+            <param name="inMarketingTime">当前是否在工作时间</param>
+            <param name="RequestSuccess">请求订阅后才发送心跳</param>
+            <param name="checkRefreshTimeInterval">检查并判断作为断开连接的最后更新时间与现在时间的间隔（毫秒）</param>
+            <param name="lastHeartBeatTime">最后心跳时间</param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.AddAcceptDataDelegate(GTAMarketSocket.AcceptDataHandler)">
+            <summary>
+            客户端添加Socket 接收数据事件委托
+            ( STClient类型应用调用 )
+            </summary>
+            <param name="fevent"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ClientAddOnSocketDisconnectedEvent(System.EventHandler)">
+            <summary>
+            包含客户端的应用,添加客户端SOCKET与服务器断开连接时处理事件
+            ( STClient / STClientServer 类型应用调用 )
+            </summary>
+            <param name="handler">事件处理句柄</param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ClientChangeSubscibeConditions(System.String)">
+            <summary>
+            客户端更改其订阅条件时调用
+            </summary>
+            <param name="SubscibeConditions"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ClientDeleteSubscibeConditions(System.String)">
+            <summary>
+            客户端删除其订阅条件时调用
+            </summary>
+            <param name="SubscibeConditions"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.ClientLogin(System.String,System.String,System.String,GTAMarketSocket.AcceptDataHandler,System.DateTime)">
+            <summary>
+            客户端登陆时调用
+            ( STClient / STClientServer 类型应用调用 )
+            </summary>
+            <param name="strUserName"></param>
+            <param name="Password"></param>
+            <param name="ip"></param>
+            <param name="handler"></param>
+            <param name="lastUpdateTime"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.GetAllCodeList(System.DateTime)">
+            <summary>
+            订阅所有代码
+            </summary>
+            <param name="lastUpdateTime"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.AddEventDelegate(GTAMarketSocket.OnEventDelegate)">
+            <summary>
+            服务器或客户端添回SOCKET事件消息委托(一般在调试时使用)
+            ( STServer/STClientServer/STClient 类型应用调用 )
+            </summary>
+            <param name="fevent"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.Stop">
+            <summary>
+            停止 GTA Socket 服务
+            ( STServer/STClientServer/STClient 类型应用调用 )
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.DisposeClient">
+            <summary>
+            完全释放连接资源
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.Start(GTAMarketSocket.OnEventDelegate,System.EventHandler,GTAMarketSocket.ClientSocketExceptionHandler,System.EventHandler)">
+            <summary>
+            开启 GTA Socket 服务
+            ( STServer/STClientServer/STClient 类型应用调用 )
+            </summary>
+            <param name="Fevent">消息事件处理句柄</param>
+            <param name="ClientOnDisConnectedHandler">客户端连接断开事件处理句柄</param>
+            <param name="socketExceptionHandler">客户端连接异常事件句柄</param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.Start(GTAMarketSocket.OnEventDelegate)">
+            <summary>
+            开启 GTA Socket 服务
+            ( STServer/STClientServer/STClient 类型应用调用 )
+            </summary>
+            <param name="Fevent">消息事件处理句柄</param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.Start(RealTime.Common.CommonClass.GTASocketType)">
+            <summary>
+            开启 GTA Socket 服务
+            ( STServer/STClientServer/STClient 类型应用调用 )
+            </summary>
+            <param name="socketType"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocket.Reset">
+            <summary>
+            Socket 服务异常时可按业务逻辑可选的的调用该方法重启服务
+            ( STServer/STClientServer/STClient 类型应用调用 )
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.TestCodes">
+            <summary>
+            到要测试的代码列表
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.UseChangeLine">
+            <summary>
+            是否使用换线功能
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.IPportList">
+            <summary>
+            服务器IP端口组,连接在这些IP之间轮询
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.ServiceServer">
+            <summary>
+            服务器端服务对象
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.ServerPort">
+            <summary>
+            客户端和分发服务器使用的连接服务器端口号
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.ReconnectAttempts">
+            <summary>
+            重连次数,如果为-1则为int.max
+            <para>同一个ip连接的次数</para>
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.ReconnectAttemptInterval">
+            <summary>
+            同一个ip重连间隔时间,从配置文件中获取
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.ServerIp">
+            <summary>
+            客户端和分发服务器使用的连接服务器端IP
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.ProxyServerIp">
+            <summary>
+            代理服务器IP
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.ProxyServerPort">
+            <summary>
+            代理服务器端口号
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.ViaProxyUsername">
+            <summary>
+            代理服务器验证帐号
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.ViaProxyPassword">
+            <summary>
+            代理服务器验证帐号密码
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.ConnectViaProxy">
+            <summary>
+            通过代理访问服务器
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.StockDataService">
+            <summary>
+            取得全局的StockDataService实例
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.SocketBackLog">
+            <summary>
+            The backLog limits the listen queue of the
+            OS socket to the defined number
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.SocketAcceptThreadCount">
+            <summary>
+            acceptThreads sets the calling number of the socket's BeginAccept
+            to increase the accept performance
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.MessageDelimiter">
+            <summary>
+            消息分隔
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.MessageBufferSize">
+            <summary>
+            消息缓冲区大小
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.SocketBufferSize">
+            <summary>
+            Socket缓冲区大小
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.SocketType">
+            <summary>
+            Socket 适配器类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.SocketStatus">
+            <summary>
+            Socket 适配器状态
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.SocketClientIsConnectServer">
+            <summary>
+            客户端Socket是否与Socket服务器建立了通讯连接
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.GTASocket.OnSocketDisconnectedNotify">
+            <summary>
+            客户端断开连接的通知事件 by 黄利华 2010-05-05
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.MerQhCodeObjectList">
+            <summary>
+            商品期货发送列表
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.ProcessFirstGetEntity">
+            <summary>
+            增加对象注册，放入发送缓存
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocket.ServerClientArraryObjectListCount">
+            <summary>
+            取服务器缓存连接元素对象的个数
+            ( STServer/STClientServer 类型应用调用 )
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.AcceptDataEventArg">
+            <summary>
+            接收行情数据事件类，继承事件基类EventArgs
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.AcceptDataEventArg._FOREXClosingPirceEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.AcceptDataEventArg._FOREXBatchUdpEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.AcceptDataEventArg._responseType">
+            <summary>
+            回复类型
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.AcceptDataEventArg._packBuildType">
+            <summary>
+            包体构造类型
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.AcceptDataEventArg._passAuthentication">
+            <summary>
+            验证回复
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.AcceptDataEventArg._fullMarketData">
+            <summary>
+            完整的行情数据
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.AcceptDataEventArg.#ctor(System.Byte[],System.Int32[],System.Boolean@)">
+            <summary>
+            构造器
+            作用：分解二进制数据构造接收对象
+            <param name="bDatas"></param>
+            <param name="bodyLength"></param>
+            <param name="ifClientHasLoaded">返回登录成功标志</param>
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.FOREXContractEntityList">
+            <summary>
+            外汇交易数据集合
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.FOREXContractEntity">
+            <summary>
+            外汇交易数据
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.FOREXClosingEntityList">
+            <summary>
+            外汇收盘数据集合
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.FOREXClosingEntity">
+            <summary>
+            外汇收盘数据
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.FOREXBatchUdpEntityList">
+            <summary>
+            外汇初始数据集合
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.FOREXBatchUdpEntity">
+            <summary>
+            外汇初始数据
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.ResponseType">
+            <summary>
+            回复类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.PackBuildType">
+            <summary>
+            包体构造类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.PassAuthentication">
+            <summary>
+            验证回复
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.AuthenticationMessage">
+            <summary>
+            验证消息
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.ByteDatas">
+            <summary>
+            订阅的行情数据
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.FullMarketData">
+            <summary>
+            完整的行情数据
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.FullCodeData">
+            <summary>
+            仅客户端向客户端服务器订阅的所有代码
+            在仅客户端身份认证后与身份认证信息一起发送给客户端
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.StockEntity">
+            <summary>
+            现货数据实体
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.QhEntity">
+            <summary>
+            股指期货数据实体
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.MerQhEntity">
+            <summary>
+            商品期货数据实体
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.HKStockEntity">
+            <summary>
+            港股数据实体
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.HKStockStatusEntity">
+            <summary>
+            港股交易状态实体
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.HKStaticDataEntity">
+            <summary>
+            港股盘前静态数据实体
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.PreMarketPriceTabEntity">
+            <summary>
+            港股价格变动表数据实体
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.IpAndPort">
+            <summary>
+            服务端返回的验证IP信息，如果不为空，且！=“0”说明服务端保存着连接，否则
+            说明服务端已经没有此连接，需要重走连接流程
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.StartTime">
+            <summary>
+            本次接收，发送开始时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.MarketAnalyzeTime">
+            <summary>
+             行情分解花费时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.SocketServerSendTime">
+            <summary>
+            服务器端Socket订阅包发送开始时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.MergeDiffDataSpendTime">
+            <summary>
+            合并数据花费的时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.PureSocketSendTime">
+            <summary>
+            纯Socket发送时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.CodeListLastUpdateTime">
+            <summary>
+            代码列表最后更新时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.CodeListArray">
+            <summary>
+            代码列表
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.FullCodeList">
+            <summary>
+            完整代码列表
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.MarketDataList">
+            <summary>
+            现货数据列表泛型集合
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.FutDataList">
+            <summary>
+            股指期货数据列表泛型集合
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.MerFutDataList">
+            <summary>
+            商品期货数据列表泛型集合
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.HKStockList">
+            <summary>
+            港股数据列表泛型集合
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.HKStockStatusList">
+            <summary>
+            港股交易状态数据列表泛型集合
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.HKPreMarketStaticList">
+            <summary>
+            港股盘前静态数据列表泛型集合
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.AcceptDataEventArg.HKPreMarketPriceTabList">
+            <summary>
+            港股价格变动表数据列表泛型集合
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.AcceptDataHandler">
+            <summary>
+            Socket 客户端接收--委托
+            每次接收到数据时被调用
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:GTAMarketSocket.OnEventDelegate">
+            <summary>
+            消息发送委托
+            当Socket客房端和服务器触发一系列Socket事件时被调用(可选)
+            </summary>
+            <param name="eventMessage"></param>
+        </member>
+        <member name="T:GTAMarketSocket.AsynProcessConnectHandler">
+            <summary>
+            异步处理Socket连接--委托
+            </summary>
+            <param name="connection"></param>
+            <param name="objService"></param>
+        </member>
+        <member name="T:GTAMarketSocket.AsynProcessConnectionRequestHandler">
+            <summary>
+            异步处理Socket连接请求--委托
+            </summary>
+            <param name="connection"></param>
+            <param name="buffer"></param>
+            <param name="objService"></param>
+        </member>
+        <member name="T:GTAMarketSocket.AsynProcessConnectionExceptionHandler">
+            <summary>
+            异步处理Socket连接异常--委托
+            </summary>
+            <param name="connection"></param>
+            <param name="objService"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:GTAMarketSocket.AnthenticationLogHandler">
+            <summary>
+            验证过程日志处理--委托
+            </summary>
+            <param name="strUsername"></param>
+            <param name="strIp"></param>
+            <param name="passedAuthenticate"></param>
+        </member>
+        <member name="T:GTAMarketSocket.ClientSocketExceptionHandler">
+            <summary>
+            客户端连接异常
+            </summary>
+            <param name="e">异常类型</param>
+            <param name="exceptionType">客户端Socket异常类型</param>
+        </member>
+        <member name="T:GTAMarketSocket.GetStockDataBySubscribedConditionsHandler">
+            <summary>
+            异步取订阅行情数据--委托
+            </summary>
+            <param name="stockService"></param>
+            <param name="subscribedConditions"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GTAMarketSocket.FinishedDoUpdateMarketInfoToClientHandler">
+             <summary>
+            异步取订阅行情数据委托结束事件回调句柄 -委托
+             </summary>
+             <param name="updateSuccessed"></param>
+             <param name="socketConnectionId"></param>
+        </member>
+        <member name="T:GTAMarketSocket.GTASocketInitException">
+            <summary>
+            GTASocket 适配器异常类
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocketInitException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strErrorMessageDetails"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocketInitException.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strErrorMessageDetails"></param>
+            <param name="strAdditionMessage"></param>
+        </member>
+        <member name="T:GTAMarketSocket.SocketAcceptProtocol">
+            <summary>
+            请求包装对象
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.SocketAcceptProtocol._requestType">
+            <summary>
+            请求类型
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.SocketAcceptProtocol._ip">
+            <summary>
+            客户端IP
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketAcceptProtocol.RequestType">
+            <summary>
+            请求类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketAcceptProtocol.CodeSubscibe">
+            <summary>
+            订阅条件
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketAcceptProtocol.Password">
+            <summary>
+            用户密码
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketAcceptProtocol.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketAcceptProtocol.StartTime">
+            <summary>
+            启动时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketAcceptProtocol.NeedGetCodeList">
+            <summary>
+            是否需要获取所有的代码
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketAcceptProtocol.CodeListLastUpdateTime">
+            <summary>
+             代码列表最后更新时间
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.SocketResponseProtocol">
+            <summary>
+            回复包装对象
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.SocketResponseProtocol._responseType">
+            <summary>
+            回复类型
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.SocketResponseProtocol._authenticationResult">
+            <summary>
+            验证结果
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.SocketResponseProtocol._marketData">
+            <summary>
+            客户端订阅的行情
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.SocketResponseProtocol._fullMarketData">
+            <summary>
+            服务器与客户端服务器通讯时,完整的行情
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.SocketResponseProtocol._fullCodeData">
+            <summary>
+            仅客户端向客户端服务器订阅的所有代码
+            在仅客户端身份认证后与身份认证信息一起发送给客户端
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.CodeListLastUpdateTime">
+            <summary>
+            代码列表最后更新时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.ResponseType">
+            <summary>
+            回复类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.AnthenticationResult">
+            <summary>
+            验证结果
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.AuthenErrorMessage">
+            <summary>
+            验证错误消息
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.MarketData">
+            <summary>
+            客户端订阅的行情
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.QhEntity">
+            <summary>
+            期货实体
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.MarketListData">
+            <summary>
+            行情列表
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.FullMarketData">
+            <summary>
+            服务器与客户端服务器通讯时,完整的行情
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.FullCodeData">
+            <summary>
+            仅客户端向客户端服务器订阅的所有代码
+            在仅客户端身份认证后与身份认证信息一起发送给客户端
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.RequestTime">
+            <summary>
+            本次回复的请求时间／开始时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.SendStartTime">
+            <summary>
+            Socket发送开始时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.MergeSpan">
+            <summary>
+            合并数据时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.MarketAnalyzeTime">
+            <summary>
+            行情分解时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.SocketResponseProtocol.PureSocketSendtime">
+            <summary>
+            纯的Socket发送时间
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.Resource.SocketMessage">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_AddEventDelegate_Method_Begin">
+            <summary>
+              查找类似 添加GTASOCKET事件消息委托开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_AddEventDelegate_Method_End">
+            <summary>
+              查找类似 添加GTASOCKET事件消息委托结束! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Client_AddAcceptDataDelegate_Method_Begin">
+            <summary>
+              查找类似 客户端添加Socket 接收数据事件委托开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Client_AddAcceptDataDelegate_Method_End">
+            <summary>
+              查找类似 客户端添加Socket 接收数据事件委托结束! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Client_ClientChangeSubscibeConditions_Method_Begin">
+            <summary>
+              查找类似 客户端订阅行情(条件:{0})处理开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Client_ClientChangeSubscibeConditions_Method_End">
+            <summary>
+              查找类似 客户端订阅行情(条件:{0})处理结束! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Client_ClientLogin_Method_Begin">
+            <summary>
+              查找类似 客户端身份认证处理开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Client_ClientLogin_Method_End">
+            <summary>
+              查找类似 客户端身份认证处理结束! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_ClientServer_OnAcceptData_InitFullMarketData_Begin">
+            <summary>
+              查找类似 ClientServer--接收完整的行情信息并且初始化GTAStockDataService开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_ClientServer_OnAcceptData_InitFullMarketData_End">
+            <summary>
+              查找类似 ClientServer--接收完整的行情信息并且初始化GTAStockDataService完毕! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_ClientServer_OnAcceptData_InitFullMarketData_Exception_Content">
+            <summary>
+              查找类似 GTAMarketSocket.GTSocket._serviceClient_OnAcceptData 在接收完整的行情信息时发生 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_ClientServer_OnAcceptData_ProceDiffMarketData_Begin">
+            <summary>
+              查找类似 ClientServer--差异数据与完整行情数据合并开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_ClientServer_OnAcceptData_ProceDiffMarketData_End">
+            <summary>
+              查找类似 ClientServer--差异数据与完整行情数据合并完毕! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_ClientServer_OnAcceptData_UpdateClient_Begin">
+            <summary>
+              查找类似 ClientServer--驱动更新已注册的客户端订阅开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_ClientServer_OnAcceptData_UpdateClient_End">
+            <summary>
+              查找类似 ClientServer--驱动更新已注册的客户端订阅完毕!  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_ClientServer_OnAcceptData_UpdateClient_Exception_Content">
+            <summary>
+              查找类似 GTAMarketSocket.GTSocket._serviceClient_OnAcceptData 在接收更新的差异行情信息时发生 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Exception_AUTHENTICATION">
+            <summary>
+              查找类似 用户验证服务对象不允许为空！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Exception_CLIENTSERVERSUBSCIBEALLDELAYTIME">
+            <summary>
+              查找类似 STCLIENTSERVER类型的服务器必须在配置文件中appSettings节配置ClientServerSubscibeAllDelayTime项，值为整数单位为毫秒！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Exception_DATASERVICE">
+            <summary>
+              查找类似 SOCKET数据服务对象不允许为空！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Reset_Method_Begin">
+            <summary>
+              查找类似 重启Socket服务开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Reset_Method_End">
+            <summary>
+              查找类似 重启Socket服务结束! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Server_ServerAsyncUpdateStockMarketData_End">
+            <summary>
+              查找类似 服务器异步定时发送差异行情数据到ClientServer结束... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Server_ServerAsyncUpdateStockMarketData_Start">
+            <summary>
+              查找类似 服务器异步定时发送差异行情数据到ClientServer开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Server_ServerBeginUpdateStockMarketData_Method_Begin">
+            <summary>
+              查找类似 服务器定时发送差异行情数据到ClientServer开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Server_ServerBeginUpdateStockMarketData_Method_End">
+            <summary>
+              查找类似 服务器定时发送差异行情数据到ClientServer结束! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Server_SetMarketCompleteData_Method_Begin">
+            <summary>
+              查找类似 服务器设置初始行情服务类完整的数据开始 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Server_SetMarketCompleteData_Method_End">
+            <summary>
+              查找类似 服务器设置初始行情服务类完整的数据结束 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Start_InitComponent_Begin">
+            <summary>
+              查找类似 初始化内部组件开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Start_InitComponent_End">
+            <summary>
+              查找类似 初始化内部组件结束! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Start_Method_Begin">
+            <summary>
+              查找类似 ---------------------- GTA Socket 服务 开始--------------------------------- 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Start_Method_End">
+            <summary>
+              查找类似 ------------------------- GTA Socket 服务 结束------------------------------ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Stop_Method_Begin">
+            <summary>
+              查找类似 停止 Socket 服务开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Adapter_Stop_Method_End">
+            <summary>
+              查找类似 停止 Socket 服务结束! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Client_AcceptDataEventArg_Constructor_Exception_Content">
+            <summary>
+              查找类似 客户端接收字节流，并构造AcceptDataEventArg对象时出错 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Client_OnDisconnected">
+            <summary>
+              查找类似 Socket客户端与服务器断开连接！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Client_OnException_Content">
+            <summary>
+              查找类似 GTAMarketSocket.GTAStockSocketClient.OnException 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Client_OnReceived_AcceptByteLength">
+            <summary>
+              查找类似 客户端接收到服务器发送的数据,接收到字节数组的长度--{0} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Client_OnReceived_Begin">
+            <summary>
+              查找类似 -------------------客户端事件接收,处理 开始------------------------- 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Client_OnReceived_End">
+            <summary>
+              查找类似 ----------------------客户端事件接收,处理 结束----------------------------- 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Client_OnReceived_ProcessLogic_Begin">
+            <summary>
+              查找类似 执行客户端事件接收,处理业务逻辑开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Client_OnReceived_ProcessLogic_End">
+            <summary>
+              查找类似 执行客户端事件接收,处理业务逻辑结束... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Client_OnReceived_ProcessLogic_Exception_Content">
+            <summary>
+              查找类似 GTAMarketSocket.GTAStockSocketClient.OnReceived 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Exception_Title">
+            <summary>
+              查找类似 base error message -- {0} ; additional error message -- {1};request start time {2} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Message_Time_Title">
+            <summary>
+              查找类似 事件时间:{0} ,事件内容:{1} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_DisConnected_End">
+            <summary>
+              查找类似 处理断开连接事件,从内存表中移除指定连接对象结束! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_DisConnected_Start">
+            <summary>
+              查找类似 处理断开连接事件,从内存表中移除指定连接对象开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_OnConnected_ConntionInfo">
+            <summary>
+              查找类似 连接对象ID:{0},IP地址:{1} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_OnException_End">
+            <summary>
+              查找类似 处理连接异常事件,从内存表中移除指定连接对象结束! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_OnException_Start">
+            <summary>
+              查找类似 处理连接异常事件,从内存表中移除指定连接对象开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_OnRequest_SRTLogin_Begin">
+            <summary>
+              查找类似 服务器端接收逻辑,处理客户端身份验证请求,开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_OnRequest_SRTLogin_End">
+            <summary>
+              查找类似 服务器端接收逻辑,处理客户端身份验证请求,结束! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_OnRequest_SRTLogin_Exception_Content">
+            <summary>
+              查找类似 GTAMarketSocket.GTAStockSocketServer.ProcessRequest 处理客户端身份验证请求/给客户端发送全部代码数据异常 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_OnRequest_SRTSubscibe_End">
+            <summary>
+              查找类似 服务器端接收逻辑,处理订阅请求(包括全部差异行情订阅和指定代码的差异行情订阅)结束! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_OnRequest_SRTSubscibe_Exception_Content">
+            <summary>
+              查找类似 GTAMarketSocket.GTAStockSocketServer.ProcessRequest 服务器端接收逻辑,处理订阅请求(包括全部差异行情订阅和指定代码的差异行情订阅) 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_OnRequest_SRTSubscibe_Start">
+            <summary>
+              查找类似 服务器端接收逻辑,处理订阅请求(包括全部差异行情订阅和指定代码的差异行情订阅)开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_OnRequest_SRTSubscibeComplete_End">
+            <summary>
+              查找类似 服务器端接收逻辑,处理完整行情数据请求结束! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_OnRequest_SRTSubscibeComplete_Exception_Content">
+            <summary>
+              查找类似 GTAMarketSocket.GTAStockSocketServer.ProcessRequest 服务器端接收逻辑,处理完整行情数据请求 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_OnRequest_SRTSubscibeComplete_Start">
+            <summary>
+              查找类似 服务器端接收逻辑,处理完整行情数据请求,开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Server_OnRequest_SRTTestConnection_Exception_Content">
+            <summary>
+              查找类似 服务器处理测试连接请求异常 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Sever_OnConnected_End">
+            <summary>
+              查找类似 服务器处理连接事件,接收结束！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Sever_OnConnected_Start">
+            <summary>
+              查找类似 服务器处理连接事件,接收开始... 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Sever_SendSubscribedData_Exception_Content">
+            <summary>
+              查找类似 GTASocketItem.DoUpdateMarketInfo 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.Resource.SocketMessage.Sever_SendSubscribedData_Exception_Title">
+            <summary>
+              查找类似 {0}　－－附加信息：{1} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.IStockMarketAccepter">
+            <summary>
+            行情接收端业务接口
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.IStockMarketAccepter.OnAcceptData">
+            <summary>
+            接收端接收到即时的订阅数据时触发的事件
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.IStockMarketAccepter.OnSocketDisconnected">
+            <summary>
+            接收端与服务器连接异常断开时触发的事件
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketClient.DisConnectTimer">
+            <summary>
+            根据配置项的时间确定发送断开事件通知的定时器
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketClient._DisConnectFlagTimes">
+            <summary>
+            定义为断开连接的时间标志(毫秒)
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketClient._beenConected">
+            <summary>
+            客户端是否曾连上服务器
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketClient._lastRefreshDataTime">
+            <summary>
+            上一次刷新数据的时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketClient._didRetry">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.ProcessreceivedData(System.Byte[])">
+            <summary>
+            处理收到的数据 by 黄利华 2010-07-20 分发入口
+            </summary>
+            <param name="receivedBuffer"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.DoAcceptDataEvent(System.Byte[])">
+            <summary>
+            接收原始数据
+            考虑粘包和分包的情况
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketClient.messageLength">
+            <summary>
+            缓存大小
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketClient.received">
+            <summary>
+            接收到的信息
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.DoDataEvent(System.Byte[])">
+            <summary>
+            当粘包时，拆包处理
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.AddAcceptDataEvent(GTAMarketSocket.AcceptDataHandler)">
+            <summary>
+            添加接收事件
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.AddOnSocketDisconnectedEvent(System.EventHandler)">
+            <summary>
+            包含客户端的应用,添加客户端SOCKET与服务器断开连接时处理事件
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.RemoveOnSocketDisconnectedEvent(System.EventHandler)">
+            <summary>
+            包含客户端的应用移除客户端SOCKET与服务器断开连接时处理事件
+            </summary>
+            <remarks>by 黄利华 2010-03-18</remarks>
+            <param name="handler"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.AddClientSocketException(GTAMarketSocket.ClientSocketExceptionHandler)">
+            <summary>
+            包含客户端的应用,添加客户端SOCKET与服务器连接异常时处理事件
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.AddClientSocketConnected(System.EventHandler)">
+            <summary>
+            客户端SOCKET与服务器连接上的时候的处理
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketClient._userName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketClient._passWord">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketClient._handler">
+            <summary>
+            接收委托
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.BeginAnthenticationLogin(System.String,System.String,GTAMarketSocket.AcceptDataHandler,System.DateTime)">
+            <summary>
+            发送身份认证的请求,仅客户端
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="handler"></param>
+            <param name="lastCodeUpdateTime"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.BeginAnthenticationLoginForClientServer(System.String,System.String,GTAMarketSocket.AcceptDataHandler,System.DateTime)">
+            <summary>
+            发送身份认证的请求
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="handler"></param>
+            <param name="lastCodeUpdateTime"></param>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketClient._ifClientHasLoaded">
+            <summary>
+            客户端登录成功标志
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.CheckConnectionStatus(System.Boolean,System.Int32,System.Boolean,System.DateTime@)">
+            <summary>
+            检查服务端连接状态
+            当客户端连接显示正常，但服务端实际已经不对此客户端发实时行情时启动此方法
+            </summary>
+            <param name="inMarketingTime">当前是否在工作时间</param>
+            <param name="RequestSuccess">请求订阅后</param>
+            <param name="checkRefreshTimeInterval">检查并判断作为断开连接的最后更新时间与现在时间的间隔（毫秒）</param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.BeginChangeSubscibeConditions(System.String,RealTime.Common.CommonClass.GTASocketType)">
+            <summary>
+            发送数据订阅的请求,引用这个方法的必须为客户端模式
+            <para>客户端模式才有订阅功能</para>
+            </summary>
+            <param name="strSubscibeConditions"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.BeginDeleteSubscibeConditions(System.String)">
+            <summary>
+            发送删除代码订阅的请求
+            </summary>
+            <param name="strSubscibeConditions"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.GetAllCodeList(System.DateTime)">
+            <summary>
+            发送获取所有代码的请求
+            </summary>
+            <param name="lastUpdateTime"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.BeginSubscibeCompelete">
+            <summary>
+            发送数据订阅的请求
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.BeginSubscibeCompelete(System.String)">
+            <summary>
+            发送数据订阅的请求
+            <para>带自定义参数的</para>
+            </summary>
+            <param name="customerContent">自定义参数</param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketClient.ReconnectConnectionTimerCallBack(System.Object)">
+            <summary>
+            断开事件通知的定时器回调事件
+            </summary>
+            <param name="stateInfo"></param>
+        </member>
+        <member name="E:GTAMarketSocket.GTAStockSocketClient.OnSocketDisconnectedNotify">
+            <summary>
+            客户端断开连接给外部的通知 by 黄利华
+            <para>单独定义事件,独立于重连接等其它逻辑之外</para>
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.GTAStockSocketClient.OnSocketDisconnected">
+            <summary>
+            断开连接的事件,带有重连功能
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.GTAStockSocketClient.OnAcceptData">
+            <summary>
+            接收到数据后，处理缓存再转发出去
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTAStockSocketClient.DisConnectFlagTimes">
+            <summary>
+            定义为断开连接的时间标志(毫秒)
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTAStockSocketClient.ReconnectAttempts">
+            <summary>
+            重连次数
+            <para>重新连接的ip次数</para>
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTAStockSocketClient.IfClientHasLoaded">
+            <summary>
+            客户端登录成功标志
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.GTAStockSocketServer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.IStockSocketServer">
+            <summary>
+            行情发送端业务接口
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.IStockSocketServer.BeginUpdateStockMarketData">
+            <summary>
+            依据行情订阅列表，给客户端发送即时订阅行情数据
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockSocketServer.StockDataService">
+            <summary>
+            获得行情数据服务接口
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockSocketServer.SocketItemCollection">
+            <summary>
+            行情客户端订阅元素列表
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketServer._stockDataService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketServer._socketItemCollection">
+            <summary>
+             行情客户端订阅元素接口的泛型实例
+             (行情客户端连接等相关信息的集合 by 黄利华 2010-04-6)
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketServer._anthenticator">
+            <summary>
+             Socket 可用身份验证接口的实例
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketServer._transfer">
+            <summary>
+            Realtime 传输协议打包接口的实例
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTAStockSocketServer.FOnEventDelegate">
+            <summary>
+            消息发送委托
+            当Socket客房端和服务器触发一系列Socket事件时被调用(可选)
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.Event(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="eventMessage"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.#ctor(GTAMarketSocket.IStockDataService,GTAMarketSocket.OnEventDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="dataService"></param>
+            <param name="FEvent"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.AddSocketItem(GTA.RealTime.SystemEx.NetEx.SocketsEx.ISocketConnection,RealTime.Common.CommonClass.GTASocketRequestType,System.String,System.Boolean[],RealTime.Common.CommonClass.GTASocketType)">
+            <summary>
+            首次登录后，保存登录相关信息
+            </summary>
+            <param name="objConnection"></param>
+            <param name="strConditions">如果是全量订阅时,里面保存的是自定义参数(心跳的客户端唯一标记)</param>
+            <param name="powerForConnect"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.ModifySocketItem(GTA.RealTime.SystemEx.NetEx.SocketsEx.ISocketConnection,RealTime.Common.CommonClass.GTASocketRequestType,System.String,RealTime.Common.CommonClass.GTASocketType)">
+            <summary>
+            修改连接信息时
+            </summary>
+            <param name="connection"></param>
+            <param name="requestType"></param>
+            <param name="strConditions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.DeleteSocketItem(GTA.RealTime.SystemEx.NetEx.SocketsEx.ISocketConnection)">
+            <summary>
+            删除客户端对象
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.ProcessAfterUpdateClientMarketInfo(System.Boolean,System.Int32)">
+            <summary>
+            从连接对象集合中，移动更新失败的连接
+            </summary>
+            <param name="updateSuccessed"></param>
+            <param name="socketConnectionId"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.BeginUpdateStockMarketData">
+            <summary>
+            发送数据
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.AsyncUpdateStockMarketData">
+            <summary>
+            异步发送数据
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.OnSent(GTA.RealTime.SystemEx.NetEx.SocketsEx.MessageEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.PorcessConnected(GTA.RealTime.SystemEx.NetEx.SocketsEx.ISocketConnection,GTAMarketSocket.GTAStockSocketServer)">
+            <summary>
+            处理连接事件
+            </summary>
+            <param name="objConnection"></param>
+            <param name="objService"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.PorcessConnectException(GTA.RealTime.SystemEx.NetEx.SocketsEx.ISocketConnection,GTAMarketSocket.GTAStockSocketServer,System.Exception)">
+            <summary>
+            处理连接异常事件
+            </summary>
+            <param name="connection"></param>
+            <param name="objService"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.PorcessDisConnected(GTA.RealTime.SystemEx.NetEx.SocketsEx.ISocketConnection,GTAMarketSocket.GTAStockSocketServer)">
+            <summary>
+            处理断开连接事件
+            </summary>
+            <param name="objConnection"></param>
+            <param name="objService"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.RePower(GTA.RealTime.SystemEx.NetEx.SocketsEx.ISocketConnection)">
+            <summary>
+            返回权限
+            考虑到为不影响先前版本的使用及过多的改动代码，使用此方法授权
+            </summary>
+            <param name="objConnection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.ProcessRequest(GTA.RealTime.SystemEx.NetEx.SocketsEx.ISocketConnection,System.Byte[],GTAMarketSocket.GTAStockSocketServer)">
+            <summary>
+            服务器端接收逻辑 发送订阅数据
+            </summary>
+            <param name="objConnection"></param>
+            <param name="buffer"></param>
+            <param name="objService"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.SendForCode(System.Boolean[],System.String,GTA.RealTime.SystemEx.NetEx.SocketsEx.ISocketConnection)">
+            <summary>
+            根据代码订阅
+            </summary>
+            <param name="powerBool"></param>
+            <param name="strCondition"></param>
+            <param name="objConnection"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.SendForAll(System.Boolean[],GTA.RealTime.SystemEx.NetEx.SocketsEx.ISocketConnection)">
+            <summary>
+            订阅所有权限代码
+            </summary>
+            <param name="powerBool"></param>
+            <param name="objConnection"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.ReSentList(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HKStaticData})">
+            <summary>
+            将盘前静态数据分多包发送
+            由于要与之前的使用版本兼容，无法在发送时大包改小包，及发送时压缩和接收时解压
+            </summary>
+            <param name="HKstatic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.SendForLogin(GTAMarketransfers.RequestArg,GTA.RealTime.SystemEx.NetEx.SocketsEx.ISocketConnection)">
+            <summary>
+            登录时返回
+            </summary>
+            <param name="ra"></param>
+            <param name="objConnection"></param>
+        </member>
+        <member name="M:GTAMarketSocket.GTAStockSocketServer.IsPassedAnthentication(System.String,System.String,System.String,System.String@,System.Int64,System.String)">
+            <summary>
+            用户登陆验证
+            遍历现有的连接所使用的姓名，如果存在现有姓名，返回false;
+            调用ISocketAuthentication里的验证方法，判断用户名密码是否错误，用户是否过期
+            </summary>
+            <param name="userName">用户姓名</param>
+            <param name="password">密码</param>
+            <param name="strIp">登陆IP</param>
+            <param name="strErrorMessage">错误信息，用来最终提示客户端</param>
+            <returns></returns>
+        </member>
+        <member name="P:GTAMarketSocket.GTAStockSocketServer.NamedConnectionList">
+            <summary>
+            保存连接用户的信息
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTAStockSocketServer.CachedConnectionCount">
+            <summary>
+            获得行情客户端订阅元素接口的泛型实例的个数
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTAStockSocketServer.SocketItemCollection">
+            <summary>
+            客户端连接对象集合
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.ISocketItem">
+            <summary>
+            行情客户端订阅元素接口
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.ISocketItem.Release">
+            <summary>
+            释放发送缓存
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.ISocketItem.ID">
+            <summary>
+            客户端口号
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.ISocketItem.CustomerContent">
+            <summary>
+            客户端口号
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.ISocketItem.IPandPort">
+            <summary>
+            ip和端口
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.ISocketItem.UserNamePassword">
+            <summary>
+            用户名密码
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.ISocketItem.ClientRequestType">
+            <summary>
+            客户端请求类型
+            <para>是全量订阅，还是部分订阅等</para>
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.ISocketItem.ClientUseServerType">
+            <summary>
+            连接客户使用的程序类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.ISocketItem.ConnectionSubscribeCodelist">
+            <summary>
+            每个连接订阅的代码列表
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.ISocketItem.StockDataService">
+            <summary>
+            得到行情数据服务接口
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.ISocketItem.Ud">
+            <summary>
+            登录用户的信息
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.ISocketItem.PowerForConnect">
+            <summary>
+            登录客户端对应拥有的权限
+            0-国内现货，1港股，2商品期货，3股指期货,4外汇
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.ISocketItem.AfterUpdateClientMarketInfo">
+            <summary>
+            异步取订阅行情数据委托结束事件回调句柄 -事件
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.ISocketItem.IsEndingEvent">
+            <summary>
+            获得差异行情数据更新事件--委托
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.ISocketItem.ProcessFirstGetEntity">
+            <summary>
+            得到客户端第一次得到现货行情实体委托
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.IStockDataService">
+            <summary>
+            行情数据服务接口
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ProcessFOREXContractEntity(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FOREXContractEntity})">
+            <summary>
+            外理外汇交易数据集合
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ProcessFOREXBatchUdpEntity(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FOREXBatchUdpEntity})">
+            <summary>
+            外理外汇初始批数据集合
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ProcessFOREXClosingPirceUdpEntity(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FOREXClosingPirceUdpEntity})">
+            <summary>
+            外理外汇收盘数据集合
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.UpdateOneData(RealTime.Server.SModelData.HqData.HqExData,RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            差异合并业务
+            (合并分发服务器)使用
+            </summary>
+            <param name="newData">新行情数据对象.</param>
+            <param name="oldData">旧行情数据对象.</param>
+            <returns>更新后的行情数据对象</returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.UpdateOneData(RealTime.Server.SModelData.HqData.UdpHqData,RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            差异合并业务
+            (合并发送服务器/合并分发服务器)使用
+            </summary>
+            <param name="_change">udp数据类</param>
+            <param name="_record">行情实体类</param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.BuildInitHqExData(RealTime.Server.SModelData.HqData.UdpHqData,System.Collections.Hashtable)">
+            <summary>
+            创建初始的HqExData
+            </summary>
+            <param name="hqData">Udp行情数据</param>
+            <param name="capchgHash"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetCodeArray">
+            <summary>
+            读取所有代码列表（代码拼音对应）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetCompleteMarketDataList(System.String,System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FutData}@)">
+            <summary>
+            读取完整的行情数据(分发服务器连接主分发服务器时使用)
+            为每一个代码订阅更新事件
+            </summary>
+            <param name="objectKey">连接号</param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetCompleteMarketDataList(System.String)">
+            <summary>
+            获取完整的现货行情数据
+            为每一个代码订阅更新事件
+            </summary>
+            <param name="objectKey">连接号</param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetCompleteQhDataList(System.String)">
+            <summary>
+            获取完整的期货行情数据
+            为每一个代码订阅更新事件
+            </summary>
+            <param name="objectKey">连接号</param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetCompleteMerQhDataList(System.String)">
+            <summary>
+            获取完整的商品期货行情数据
+            为每一个代码订阅更新事件
+            </summary>
+            <param name="objectKey">连接号</param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetCompleteHKStockList(System.String)">
+            <summary>
+            获取完整的港股行情数据
+            为每一个代码订阅更新事件
+            </summary>
+            <param name="objectKey">连接号</param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetCompleteHKStockStatusList(System.String)">
+            <summary>
+            获取完整的港股交易状态行情数据
+            为每一个代码订阅更新事件
+            </summary>
+            <param name="objectKey">连接号</param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetCompleteHKStaticListByConditions(System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股盘前静态数据代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetCompleteHKPreMarketPriceListByConditions(System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股盘前价位变动代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetMarketDataListByConditionsFirstTime(System.String,System.String,System.Collections.Generic.List{RealTime.Server.SModelData.HqData.FutData}@)">
+            <summary>
+            客户端第一次订阅，并获取所有的订阅代码的行情数据
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <param name="futList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetMarketDataListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅，并获取所有的订阅代码的行情数据
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetQhDataListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅股指期货代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetMerQhDataListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅商品期货代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetHKStockListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetHKStockStatusListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股交易状态代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetHKStaticListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股盘前静态数据代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.GetHKPreMarketPriceListByConditionsFirstTime(System.String,System.String)">
+            <summary>
+            客户端第一次订阅数据时使用
+            根据条件订阅港股盘前价位变动代码，非全量订阅。
+            </summary>
+            <param name="strConditions"></param>
+            <param name="objectKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.AddClientFirstGetCodeObjectHandler(GTAMarketSocket.ClientFirstGetCodeObjectHandler,System.String)">
+            <summary>
+            客户端订阅每代码处理事件，实现行情实体更新订阅
+            客户端每次发送订阅请求时，为每个新增的订阅代码添加作的事件处理句柄
+            </summary>
+            <param name="handler"></param>
+            <param name="objectKey"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.DeleteClientFirstGetCodeObjectHandler(System.String)">
+            <summary>
+            去除客户端订阅每代码处理事件
+            </summary>
+            <param name="objectKey"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.IsQhCode(System.String)">
+            <summary>
+            判断是否为期货代码
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ProcessQhDataUpdating(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            处理期货代码更新
+            <para>更新数据缓存，合并，并且推荐到前台刷新的事件中,如果是服务器模式，则下发到下一级，如果是分发模式，下发工作在其它地方完成</para>
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ProcessDiffBatchDataIsEnding(GTAMarketSocket.HqEndingEventArgs)">
+            <summary>
+            差异包批结束处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ProcessMergeSzDiffData(GTAMarketSocket.HqEventArg)">
+            <summary>
+            深圳差异包合作处理
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ProcessMergeShDiffData(GTAMarketSocket.HqEventArg)">
+            <summary>
+            上海差异包合并处理
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ProcessMerQhDataUpdating(RealTime.Server.SModelData.HqData.MerFutData,System.Boolean)">
+            <summary>
+            商品期货数据处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ProcessMergeHKStockDiffData(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            港股数据处理
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ProcessHKStockStatusDiffData(RealTime.Server.SModelData.HqData.StockStatus)">
+            <summary>
+            处理港股盘中交易状态信息
+            </summary>
+            <param name="stockStatus"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ProcessHKStaticDiffData(RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            处理港股盘前静态数据
+            </summary>
+            <param name="hKStaticData"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ProcessHKPreMarketPriceTableDiffData(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.PreMarketPriceTable})">
+            <summary>
+            处理港股盘前价位数据表
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.MergeDiffMarketDataList(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            合并差异行情数据
+            </summary>
+            <param name="marketData"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.MergeDiffMarketData(RealTime.Server.SModelData.HqData.HqExData)">
+            <summary>
+            合并差异行情数据
+            </summary>
+            <param name="marketData"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.MergeDiffHKData(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            合并差异港股数据
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.UpdatePyCodeCache(System.Collections.ArrayList)">
+            <summary>
+            更新拼音代码缓存
+            </summary>
+            <param name="codeDataList"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.MergeInitCompleteData(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            合并初始化完整数据
+            </summary>
+            <param name="marketData"></param>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ReadCodePyDataFromXml">
+            <summary>
+            读代码拼音逻辑
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.SaveCodePyDataToXml">
+            <summary>
+            写代码拼音逻辑
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.SaveDataToXML">
+            <summary>
+            保存股指期货数据和商品期货数据到xml数据文件
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.IStockDataService.ClearSnap">
+            <summary>
+            清空缓存
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.FOREXBatchUdpEntityCopyList">
+            <summary>
+            外汇初始数据集合的快照
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.FOREXClosingPirceUdpEntityCopyList">
+            <summary>
+            外汇收盘数据集合的快照
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.FOREXContractEntityCopyList">
+            <summary>
+            外汇交易数据集合的快照
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.IStockDataService.DataChangeEvent">
+            <summary>
+              实体更新事件
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.DataSource">
+            <summary>
+            缓存数据中完整的数据源
+            Webservice使用
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.ShMarketDataList">
+            <summary>
+            上海行情快照
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.SzMarketDataList">
+            <summary>
+            深圳行情快照
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.QhHashList">
+            <summary>
+            期货快照
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.MerQhHashList">
+            <summary>
+            商品期货列表（快照）
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.HKStockList">
+            <summary>
+            港股行情快照
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.HKStockStatusList">
+            <summary>
+            港股交易状态快照列表
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.HKStockPreMarketHashList">
+            <summary>
+            港股盘前快照列表
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.HKMinPriceFluHashList">
+            <summary>
+            港股盘前价位变动快照列表
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.QhList">
+            <summary>
+            期货泛型列表集合
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.CodeListLastUpdateTime">
+            <summary>
+            代码最后更新时间属性
+            （新代码添加逻辑）
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.IStockDataService.DifferenceMarketDataIsEndingEvent">
+            <summary>
+            合并数据更新结束事件
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.QhCodeString">
+            <summary>
+            期货代码列表
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.IStockDataService.CapchgHash">
+            <summary>
+            股本逻辑
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.IStockDataService.SzHqUpdateEvent">
+            <summary>
+            深圳现货实时发送事件
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.IStockDataService.ShHqUpdateEvent">
+            <summary>
+            上海现货实时发送事件
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.IStockDataService.QhDataUpdateEvent">
+            <summary>
+            股指期货实时发送事件
+            <para>不是实时发送，是刷新数据事件推送</para>
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.IStockDataService.MerQhDataUpdateEvent">
+            <summary>
+            商品期货实时发送事件
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.IStockDataService.HKDataUpdateEvent">
+            <summary>
+            香港现货实时发送事件
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.IStockDataService.HKStaticDataUdpdateEvent">
+            <summary>
+            盘前静态数据实时发送事件
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.ISocketAuthentication">
+            <summary>
+            Socket 可用身份验证接口
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.ISocketAuthentication.CheckUser(RealTime.Server.SModelData.Users.UserData,System.String)">
+            <summary>
+            验证用户的新方法
+            </summary>
+            <param name="ud"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.ISocketAuthentication.IsPassedAnthentication(System.String,System.String,System.String)">
+            <summary>
+            是否通过身份验证
+            </summary>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <param name="strIp">客户端ip</param>
+            <returns></returns>
+        </member>
+        <member name="M:GTAMarketSocket.ISocketAuthentication.IsPassedAnthentication(System.String,System.String,System.String,System.String@)">
+            <summary>
+            是否通过认证
+            </summary>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <param name="strIp"></param>
+            <param name="strErrorMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="E:GTAMarketSocket.ISocketAuthentication.AnthenticationLogEvent">
+            <summary>
+            验证过程日志处理--事件
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.DiffBatchDataIsEnding">
+            <summary>
+            差异数据批更新结束-委托
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:GTAMarketSocket.HqEndingEventArgs">
+            <summary>
+            行情结束事件
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.HqEndingEventArgs._packetsendTime">
+            <summary>
+            行情数据包发送时间
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.HqEndingEventArgs._endingMarket">
+            <summary>
+            行情结束类型
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.HqEndingEventArgs.#ctor(System.DateTime,GTAMarketSocket.MarketType)">
+            <summary>
+            行情结束构造--发送时间、行情结束类型
+            </summary>
+            <param name="packetsendTime"></param>
+            <param name="endingMarket"></param>
+        </member>
+        <member name="P:GTAMarketSocket.HqEndingEventArgs.PacketSendTime">
+            <summary>
+            行情数据包发送时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.HqEndingEventArgs.EndingMarket">
+            <summary>
+            行情结束类型
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.HqEventArg">
+            <summary>
+            行情事件
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.HqEventArg.#ctor(System.DateTime,RealTime.Server.SModelData.HqData.UdpHqData)">
+            <summary>
+            构造行情事件--行情数据包发送时间、UDP行情数据实体
+            </summary>
+            <param name="packetsendTime"></param>
+            <param name="hqEntity"></param>
+        </member>
+        <member name="P:GTAMarketSocket.HqEventArg.PacketSendTime">
+            <summary>
+            行情数据包发送时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.HqEventArg.UdpHqEntity">
+            <summary>
+            UDP行情数据实体
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.MerFutUpdateEventArg">
+            <summary>
+            商品期货行情更新事件参数
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.MerFutUpdateEventArg.#ctor(System.DateTime,RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            构造商品期货行情事件--商品期货行情数据包发送时间、商品期货行情数据实体
+            </summary>
+            <param name="packetsendTime"></param>
+            <param name="data"></param>
+        </member>
+        <member name="P:GTAMarketSocket.MerFutUpdateEventArg.PacketSendTime">
+            <summary>
+            商品期货行情数据包发送时间
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.MerFutUpdateEventArg.Data">
+            <summary>
+            商品期货行情数据实体
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.GTASocketItem">
+            <summary>
+            作者：未知
+            修 改 者：段进雄
+            修改日期：2010-03-29
+            修改内容：将本对象作为连接客户端的对象；
+            将主服务器模式和分发服务器模式的发送逻辑分开；
+            本对象不再作发送逻辑处理，服务器发送方法在对象GTASocket中(股指期货除外)
+            此次修改是对性能的一次提升
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocketItem._transfer">
+            <summary>
+            传输协议打包对象
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocketItem._szCodeObjectList">
+            <summary>
+            深圳行情发送列表
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocketItem._shCodeObjectList">
+            <summary>
+            上每行情发送列表
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocketItem._merQhCodeObjectList">
+            <summary>
+            商品期货发送列表
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocketItem._hKstockList">
+            <summary>
+            港股行情发送列表 
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocketItem._powerForConnect">
+            <summary>
+            登录客户端对应拥有的权限
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocketItem._cloneEntityHandler">
+            <summary>
+            现货行情更新对象
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.GTASocketItem._isEndingEvent">
+            <summary>
+            差异数据合并事件委托
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocketItem.ClearHqEntitySubscribEvent">
+            <summary>
+            注销行情更新委托
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.GTASocketItem.Release">
+            <summary>
+            释放发送缓存
+            </summary>
+        </member>
+        <member name="E:GTAMarketSocket.GTASocketItem.AfterUpdateClientMarketInfo">
+            <summary>
+            异步订阅结束事件
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocketItem.CloneEntityHandler">
+            <summary>
+            现货行情更新对象
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocketItem.PowerForConnect">
+            <summary>
+            登录客户端对应拥有的权限
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocketItem.Transfer">
+            <summary>
+            传输协议打包对象
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocketItem.SubscridQhCode">
+            <summary>
+            我是没看到哪里用到了。。真想删了
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocketItem.ID">
+            <summary>
+            客户端口号
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocketItem.Conditions">
+            <summary>
+            客户端订阅条件
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocketItem.SocketConnection">
+            <summary>
+            客户端连接Socket对象
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocketItem.StockDataService">
+            <summary>
+            缓存对象
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocketItem.IsEndingEvent">
+            <summary>
+            差异数据合并事件委托
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocketItem.ClientUseServerType">
+            <summary>
+            连接客户使用的程序类型
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocketItem.ConnectionSubscribeCodelist">
+            <summary>
+            每个连接订阅的代码列表
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocketItem.CustomerContent">
+            <summary>
+            参数中自定义内容
+            <para>本次添加主要加入GUID唯一标记</para>
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.GTASocketItem.ClientRequestType">
+            <summary>
+            客户端请求类型
+            <para>是全量订阅，还是部分订阅等</para>
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.SocketService.StaticInfo.StaticUsers">
+            <summary>
+            保存已经登录本服务器的用户信息
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.SocketService.StaticInfo.loginSocketItems">
+            <summary>
+            保存连接
+            </summary>
+        </member>
+        <member name="T:GTAMarketSocket.TextHelper.ReadWriteText">
+            <summary>
+            功能：读写Text文件
+            作者：段进雄
+            日期：2015-07-31
+            </summary>
+        </member>
+        <member name="F:GTAMarketSocket.TextHelper.ReadWriteText.TestCodes">
+            <summary>
+            到要测试的代码列表
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.TextHelper.ReadWriteText.PrintReceivedTime(RealTime.Server.SModelData.HqData.HKStock,System.Boolean,System.Boolean)">
+            <summary>
+            打印港股发送的时间
+            </summary>
+            <param name="HqData">港股</param>
+            <param name="isTcp">是否tcp（true：记录tcp测试，false：记录udp测试）</param>
+            <param name="IsServer">如果为true为发送，否则为接收</param>
+        </member>
+        <member name="M:GTAMarketSocket.TextHelper.ReadWriteText.PrintReceivedTime(RealTime.Server.SModelData.HqData.HqExData,System.Boolean,System.Boolean)">
+            <summary>
+            打印现货发送的时间
+            </summary>
+            <param name="HqData">现货</param>
+            <param name="isTcp">是否tcp（true：记录tcp测试，false：记录udp测试）</param>
+            <param name="IsServer">如果为true为发送，否则为接收</param>
+        </member>
+        <member name="M:GTAMarketSocket.TextHelper.ReadWriteText.PrintReceivedTime(RealTime.Server.SModelData.HqData.UdpHqData,System.Boolean,System.Boolean)">
+            <summary>
+            打印现货发送的时间
+            </summary>
+            <param name="HqData">现货</param>
+            <param name="isTcp">是否tcp（true：记录tcp测试，false：记录udp测试）</param>
+            <param name="IsServer">如果为true为发送，否则为接收</param>
+        </member>
+        <member name="M:GTAMarketSocket.TextHelper.ReadWriteText.PrintReceivedTime(RealTime.Server.SModelData.HqData.MerFutData,System.Boolean,System.Boolean)">
+            <summary>
+            打印商品期货发送的时间
+            </summary>
+            <param name="HqData">商品期货</param>
+            <param name="isTcp">是否tcp（true：记录tcp测试，false：记录udp测试）</param>
+            <param name="IsServer">如果为true为发送，否则为接收</param>
+        </member>
+        <member name="M:GTAMarketSocket.TextHelper.ReadWriteText.PrintReceivedTime(RealTime.Server.SModelData.HqData.FutData,System.Boolean,System.Boolean)">
+             /// <summary>
+            打印股指期货发送的时间        
+            </summary>
+            <param name="HqData">股指期货</param>
+            <param name="isTcp">是否tcp（true：记录tcp测试，false：记录udp测试）</param>
+            <param name="IsServer">如果为true为发送，否则为接收</param>
+        </member>
+        <member name="M:GTAMarketSocket.TextHelper.ReadWriteText.RecodeReceivedData(RealTime.Server.SModelData.HqData.FutData)">
+            <summary>
+            记录当日股指期货数据
+            </summary>
+            <param name="HqData">股指期货</param>
+        </member>
+        <member name="M:GTAMarketSocket.TextHelper.ReadWriteText.RecodeReceivedData(RealTime.Server.SModelData.HqData.MerFutData)">
+            <summary>
+            记录当日商品期货数据
+            </summary>
+            <param name="HqData">商品期货</param>
+        </member>
+        <member name="M:GTAMarketSocket.TextHelper.ReadWriteText.RecodeReceivedData(RealTime.Server.SModelData.HqData.HqData)">
+            <summary>
+            记录当日股票数据
+            </summary>
+            <param name="HqData">股票</param>
+        </member>
+        <member name="M:GTAMarketSocket.TextHelper.ReadWriteText.RecodeReceivedData(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            记录当日股票数据
+            </summary>
+            <param name="list">股票列表</param>
+        </member>
+        <member name="M:GTAMarketSocket.TextHelper.ReadWriteText.RecodeReceivedData(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqData})">
+            <summary>
+            记录当日股票数据
+            </summary>
+            <param name="list">股票列表</param>
+        </member>
+        <member name="T:GTAMarketSocket.WebSocket.WebSocket">
+            <summary>
+            功能：用于websocket通讯的服务端功能
+            作者：段进雄
+            日期：2015-8-17
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.WebSocket.WebSocket.OpenHtml5WebsocketServer">
+            <summary>
+            开启供html5访问的websocket服务
+            </summary>
+        </member>
+        <member name="M:GTAMarketSocket.WebSocket.WebSocket.appServer_NewMessageReceived(ReagtorWebSocket.WebSocketSession,System.String)">
+            <summary>
+            HTML5 websocket服务器接收到新消息事件
+            </summary>
+            <param name="session">websocket回话</param>
+            <param name="message">接收到的消息</param>
+        </member>
+        <member name="M:GTAMarketSocket.WebSocket.WebSocket.appServer_NewSessionConnected(ReagtorWebSocket.WebSocketSession)">
+            <summary>
+            HTML5 websocket服务器接收到新的回话连接事件
+            </summary>
+            <param name="session">回话</param>
+        </member>
+        <member name="M:GTAMarketSocket.WebSocket.WebSocket.appServer_SessionClosed(ReagtorWebSocket.WebSocketSession,ReagtorSocket.SocketBase.CloseReason)">
+            <summary>
+             HTML5 websocket服务器接收到断开连接事件
+            </summary>
+            <param name="session">回话</param>
+            <param name="value">关闭的原因</param>
+        </member>
+        <member name="P:GTAMarketSocket.WebSocket.WebSocket.QueRequest">
+            <summary>
+            WebSocket客户端请求
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.WebSocket.WebSocket.HasWebSocketClient">
+            <summary>
+            WebSocket客户端请求表（Key：SessionID）
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.WebSocket.WebSocket.WebSocServer">
+            <summary>
+            WebSocket服务
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.WebSocket.WebSocket.WebSocketClientCount">
+            <summary>
+            WebSocket客户端总数
+            </summary>
+        </member>
+        <member name="P:GTAMarketSocket.WebSocket.WebSocket.IntPort">
+            <summary>
+            WebSocket服务端口
+            </summary>
+        </member>
+    </members>
+</doc>

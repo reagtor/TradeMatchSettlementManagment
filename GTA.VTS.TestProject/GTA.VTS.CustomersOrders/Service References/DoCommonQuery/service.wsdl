@@ -1,0 +1,857 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="TraderQueryService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ITraderQuery_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_HistoryTradeByFilterAndUserIDPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_HistoryTradeByFilterAndUserIDPwd" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_HistoryTradeByFilterAndUserIDPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_HistoryTradeByFilterAndUserIDPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_TodayTradeByFilterAndUserIDPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_TodayTradeByFilterAndUserIDPwd" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_TodayTradeByFilterAndUserIDPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_TodayTradeByFilterAndUserIDPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwd" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwd" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_HistoryTradeByFilterAndUserIDPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_HistoryTradeByFilterAndUserIDPwd" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_HistoryTradeByFilterAndUserIDPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_HistoryTradeByFilterAndUserIDPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_TodayTradeByFilterAndUserIDPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_TodayTradeByFilterAndUserIDPwd" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_TodayTradeByFilterAndUserIDPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_TodayTradeByFilterAndUserIDPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PaginQueryUA_CapitalFlowTableByFilter_InputMessage">
+    <wsdl:part name="parameters" element="tns:PaginQueryUA_CapitalFlowTableByFilter" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PaginQueryUA_CapitalFlowTableByFilter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PaginQueryUA_CapitalFlowTableByFilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryUA_BankAccountByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryUA_BankAccountByUserID" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryUA_BankAccountByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryUA_BankAccountByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryUA_BankAccountByBankAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryUA_BankAccountByBankAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryUA_BankAccountByBankAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryUA_BankAccountByBankAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_TradeCapitalFlowDetailByAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_TradeCapitalFlowDetailByAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_TradeCapitalFlowDetailByAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_TradeCapitalFlowDetailByAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQuerySPQH_TradeCapitalFlowDetailByAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQuerySPQH_TradeCapitalFlowDetailByAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQuerySPQH_TradeCapitalFlowDetailByAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQuerySPQH_TradeCapitalFlowDetailByAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQuerySpotCapital_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQuerySpotCapital" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQuerySpotCapital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQuerySpotCapitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryFuturesCapital_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryFuturesCapital" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryFuturesCapital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryFuturesCapitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQuerySpotHold_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQuerySpotHold" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQuerySpotHold_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQuerySpotHoldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryFuturesHold_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryFuturesHold" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryFuturesHold_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryFuturesHoldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_SpotCapitalTradeAmountFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpotCapitalTradeAmountFind" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_SpotCapitalTradeAmountFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpotCapitalTradeAmountFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryAssetSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAssetSummary" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryAssetSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAssetSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_AccountHoldTableByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_AccountHoldTableByUserID" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_AccountHoldTableByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_AccountHoldTableByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_AccountHoldTableByUserIDAndPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_AccountHoldTableByUserIDAndPwd" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_AccountHoldTableByUserIDAndPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_AccountHoldTableByUserIDAndPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_AccountHoldTableByAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_AccountHoldTableByAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_AccountHoldTableByAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_AccountHoldTableByAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_AcccountHoldFreezeTableByEntrustNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_AcccountHoldFreezeTableByEntrustNo" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_AcccountHoldFreezeTableByEntrustNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_AcccountHoldFreezeTableByEntrustNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_AcccountHoldFreezeTableByAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_AcccountHoldFreezeTableByAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_AcccountHoldFreezeTableByAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_AcccountHoldFreezeTableByAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_AcccountHoldFreezeTableByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_AcccountHoldFreezeTableByUserID" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_AcccountHoldFreezeTableByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_AcccountHoldFreezeTableByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_HoldAccountTableByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_HoldAccountTableByUserID" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_HoldAccountTableByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_HoldAccountTableByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_HoldAccountTableByUserIDAndPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_HoldAccountTableByUserIDAndPwd" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_HoldAccountTableByUserIDAndPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_HoldAccountTableByUserIDAndPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_HoldAccountTableByAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_HoldAccountTableByAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_HoldAccountTableByAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_HoldAccountTableByAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_HoldAccountFreezeTableByEntrustNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_HoldAccountFreezeTableByEntrustNo" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_HoldAccountFreezeTableByEntrustNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_HoldAccountFreezeTableByEntrustNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_HoldAccountFreezeTableByAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_HoldAccountFreezeTableByAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_HoldAccountFreezeTableByAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_HoldAccountFreezeTableByAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_HoldAccountFreezeTableByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_HoldAccountFreezeTableByUserID" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_HoldAccountFreezeTableByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_HoldAccountFreezeTableByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_CapitalAccountTableByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_CapitalAccountTableByUserID" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_CapitalAccountTableByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_CapitalAccountTableByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_CapitalAccountTableByUserIDAndPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_CapitalAccountTableByUserIDAndPwd" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_CapitalAccountTableByUserIDAndPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_CapitalAccountTableByUserIDAndPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_CapitalAccountTableByAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_CapitalAccountTableByAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_CapitalAccountTableByAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_CapitalAccountTableByAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_CapitalAccountFreezeTableByEntrustNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_CapitalAccountFreezeTableByEntrustNo" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryQH_CapitalAccountFreezeTableByEntrustNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryQH_CapitalAccountFreezeTableByEntrustNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_CapitalAccountFreezeTableByAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_CapitalAccountFreezeTableByAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_CapitalAccountFreezeTableByAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_CapitalAccountFreezeTableByAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_CapitalAccountFreezeTableByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_CapitalAccountFreezeTableByUserID" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryQH_CapitalAccountFreezeTableByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryQH_CapitalAccountFreezeTableByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_CapitalAccountTableByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_CapitalAccountTableByUserID" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_CapitalAccountTableByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_CapitalAccountTableByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_CapitalAccountTableByUserIDAndPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_CapitalAccountTableByUserIDAndPwd" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_CapitalAccountTableByUserIDAndPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_CapitalAccountTableByUserIDAndPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_CapitalAccountTableByAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_CapitalAccountTableByAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_CapitalAccountTableByAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_CapitalAccountTableByAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_CapitalAccountFreezeTableByEntrustNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_CapitalAccountFreezeTableByEntrustNo" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_QueryXH_CapitalAccountFreezeTableByEntrustNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryXH_CapitalAccountFreezeTableByEntrustNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_CapitalAccountFreezeTableByAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_CapitalAccountFreezeTableByAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_CapitalAccountFreezeTableByAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_CapitalAccountFreezeTableByAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_CapitalAccountFreezeTableByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_CapitalAccountFreezeTableByUserID" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_CapitalAccountFreezeTableByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_CapitalAccountFreezeTableByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwd" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwd" />
+  </wsdl:message>
+  <wsdl:message name="ITraderQuery_PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITraderQuery">
+    <wsdl:operation name="PagingQueryXH_HistoryTradeByFilterAndUserIDPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_HistoryTradeByFilterAndUserIDPwd" message="tns:ITraderQuery_PagingQueryXH_HistoryTradeByFilterAndUserIDPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_HistoryTradeByFilterAndUserIDPwdResponse" message="tns:ITraderQuery_PagingQueryXH_HistoryTradeByFilterAndUserIDPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_TodayTradeByFilterAndUserIDPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_TodayTradeByFilterAndUserIDPwd" message="tns:ITraderQuery_PagingQueryXH_TodayTradeByFilterAndUserIDPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_TodayTradeByFilterAndUserIDPwdResponse" message="tns:ITraderQuery_PagingQueryXH_TodayTradeByFilterAndUserIDPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwd" message="tns:ITraderQuery_PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwdResponse" message="tns:ITraderQuery_PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwd" message="tns:ITraderQuery_PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwdResponse" message="tns:ITraderQuery_PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_HistoryTradeByFilterAndUserIDPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_HistoryTradeByFilterAndUserIDPwd" message="tns:ITraderQuery_PagingQueryQH_HistoryTradeByFilterAndUserIDPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_HistoryTradeByFilterAndUserIDPwdResponse" message="tns:ITraderQuery_PagingQueryQH_HistoryTradeByFilterAndUserIDPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_TodayTradeByFilterAndUserIDPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_TodayTradeByFilterAndUserIDPwd" message="tns:ITraderQuery_PagingQueryQH_TodayTradeByFilterAndUserIDPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_TodayTradeByFilterAndUserIDPwdResponse" message="tns:ITraderQuery_PagingQueryQH_TodayTradeByFilterAndUserIDPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PaginQueryUA_CapitalFlowTableByFilter">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PaginQueryUA_CapitalFlowTableByFilter" message="tns:ITraderQuery_PaginQueryUA_CapitalFlowTableByFilter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PaginQueryUA_CapitalFlowTableByFilterResponse" message="tns:ITraderQuery_PaginQueryUA_CapitalFlowTableByFilter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUA_BankAccountByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryUA_BankAccountByUserID" message="tns:ITraderQuery_QueryUA_BankAccountByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryUA_BankAccountByUserIDResponse" message="tns:ITraderQuery_QueryUA_BankAccountByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUA_BankAccountByBankAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryUA_BankAccountByBankAccount" message="tns:ITraderQuery_QueryUA_BankAccountByBankAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryUA_BankAccountByBankAccountResponse" message="tns:ITraderQuery_QueryUA_BankAccountByBankAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_TradeCapitalFlowDetailByAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_TradeCapitalFlowDetailByAccount" message="tns:ITraderQuery_PagingQueryQH_TradeCapitalFlowDetailByAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_TradeCapitalFlowDetailByAccountResponse" message="tns:ITraderQuery_PagingQueryQH_TradeCapitalFlowDetailByAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQuerySPQH_TradeCapitalFlowDetailByAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQuerySPQH_TradeCapitalFlowDetailByAccount" message="tns:ITraderQuery_PagingQuerySPQH_TradeCapitalFlowDetailByAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQuerySPQH_TradeCapitalFlowDetailByAccountResponse" message="tns:ITraderQuery_PagingQuerySPQH_TradeCapitalFlowDetailByAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQuerySpotCapital">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQuerySpotCapital" message="tns:ITraderQuery_PagingQuerySpotCapital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQuerySpotCapitalResponse" message="tns:ITraderQuery_PagingQuerySpotCapital_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryFuturesCapital">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryFuturesCapital" message="tns:ITraderQuery_PagingQueryFuturesCapital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryFuturesCapitalResponse" message="tns:ITraderQuery_PagingQueryFuturesCapital_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQuerySpotHold">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQuerySpotHold" message="tns:ITraderQuery_PagingQuerySpotHold_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQuerySpotHoldResponse" message="tns:ITraderQuery_PagingQuerySpotHold_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryFuturesHold">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryFuturesHold" message="tns:ITraderQuery_PagingQueryFuturesHold_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryFuturesHoldResponse" message="tns:ITraderQuery_PagingQueryFuturesHold_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpotCapitalTradeAmountFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/SpotCapitalTradeAmountFind" message="tns:ITraderQuery_SpotCapitalTradeAmountFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/SpotCapitalTradeAmountFindResponse" message="tns:ITraderQuery_SpotCapitalTradeAmountFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAssetSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryAssetSummary" message="tns:ITraderQuery_QueryAssetSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryAssetSummaryResponse" message="tns:ITraderQuery_QueryAssetSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_AccountHoldTableByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_AccountHoldTableByUserID" message="tns:ITraderQuery_QueryXH_AccountHoldTableByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_AccountHoldTableByUserIDResponse" message="tns:ITraderQuery_QueryXH_AccountHoldTableByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_AccountHoldTableByUserIDAndPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_AccountHoldTableByUserIDAndPwd" message="tns:ITraderQuery_QueryXH_AccountHoldTableByUserIDAndPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_AccountHoldTableByUserIDAndPwdResponse" message="tns:ITraderQuery_QueryXH_AccountHoldTableByUserIDAndPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_AccountHoldTableByAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_AccountHoldTableByAccount" message="tns:ITraderQuery_QueryXH_AccountHoldTableByAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_AccountHoldTableByAccountResponse" message="tns:ITraderQuery_QueryXH_AccountHoldTableByAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_AcccountHoldFreezeTableByEntrustNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_AcccountHoldFreezeTableByEntrustNo" message="tns:ITraderQuery_QueryXH_AcccountHoldFreezeTableByEntrustNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_AcccountHoldFreezeTableByEntrustNoResponse" message="tns:ITraderQuery_QueryXH_AcccountHoldFreezeTableByEntrustNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_AcccountHoldFreezeTableByAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_AcccountHoldFreezeTableByAccount" message="tns:ITraderQuery_PagingQueryXH_AcccountHoldFreezeTableByAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_AcccountHoldFreezeTableByAccountResponse" message="tns:ITraderQuery_PagingQueryXH_AcccountHoldFreezeTableByAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_AcccountHoldFreezeTableByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_AcccountHoldFreezeTableByUserID" message="tns:ITraderQuery_PagingQueryXH_AcccountHoldFreezeTableByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_AcccountHoldFreezeTableByUserIDResponse" message="tns:ITraderQuery_PagingQueryXH_AcccountHoldFreezeTableByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_HoldAccountTableByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_HoldAccountTableByUserID" message="tns:ITraderQuery_QueryQH_HoldAccountTableByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_HoldAccountTableByUserIDResponse" message="tns:ITraderQuery_QueryQH_HoldAccountTableByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_HoldAccountTableByUserIDAndPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_HoldAccountTableByUserIDAndPwd" message="tns:ITraderQuery_QueryQH_HoldAccountTableByUserIDAndPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_HoldAccountTableByUserIDAndPwdResponse" message="tns:ITraderQuery_QueryQH_HoldAccountTableByUserIDAndPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_HoldAccountTableByAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_HoldAccountTableByAccount" message="tns:ITraderQuery_QueryQH_HoldAccountTableByAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_HoldAccountTableByAccountResponse" message="tns:ITraderQuery_QueryQH_HoldAccountTableByAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_HoldAccountFreezeTableByEntrustNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_HoldAccountFreezeTableByEntrustNo" message="tns:ITraderQuery_QueryQH_HoldAccountFreezeTableByEntrustNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_HoldAccountFreezeTableByEntrustNoResponse" message="tns:ITraderQuery_QueryQH_HoldAccountFreezeTableByEntrustNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_HoldAccountFreezeTableByAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_HoldAccountFreezeTableByAccount" message="tns:ITraderQuery_PagingQueryQH_HoldAccountFreezeTableByAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_HoldAccountFreezeTableByAccountResponse" message="tns:ITraderQuery_PagingQueryQH_HoldAccountFreezeTableByAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_HoldAccountFreezeTableByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_HoldAccountFreezeTableByUserID" message="tns:ITraderQuery_PagingQueryQH_HoldAccountFreezeTableByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_HoldAccountFreezeTableByUserIDResponse" message="tns:ITraderQuery_PagingQueryQH_HoldAccountFreezeTableByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_CapitalAccountTableByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_CapitalAccountTableByUserID" message="tns:ITraderQuery_QueryQH_CapitalAccountTableByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_CapitalAccountTableByUserIDResponse" message="tns:ITraderQuery_QueryQH_CapitalAccountTableByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_CapitalAccountTableByUserIDAndPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_CapitalAccountTableByUserIDAndPwd" message="tns:ITraderQuery_QueryQH_CapitalAccountTableByUserIDAndPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_CapitalAccountTableByUserIDAndPwdResponse" message="tns:ITraderQuery_QueryQH_CapitalAccountTableByUserIDAndPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_CapitalAccountTableByAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_CapitalAccountTableByAccount" message="tns:ITraderQuery_QueryQH_CapitalAccountTableByAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_CapitalAccountTableByAccountResponse" message="tns:ITraderQuery_QueryQH_CapitalAccountTableByAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_CapitalAccountFreezeTableByEntrustNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_CapitalAccountFreezeTableByEntrustNo" message="tns:ITraderQuery_QueryQH_CapitalAccountFreezeTableByEntrustNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryQH_CapitalAccountFreezeTableByEntrustNoResponse" message="tns:ITraderQuery_QueryQH_CapitalAccountFreezeTableByEntrustNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_CapitalAccountFreezeTableByAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_CapitalAccountFreezeTableByAccount" message="tns:ITraderQuery_PagingQueryQH_CapitalAccountFreezeTableByAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_CapitalAccountFreezeTableByAccountResponse" message="tns:ITraderQuery_PagingQueryQH_CapitalAccountFreezeTableByAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_CapitalAccountFreezeTableByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_CapitalAccountFreezeTableByUserID" message="tns:ITraderQuery_PagingQueryQH_CapitalAccountFreezeTableByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryQH_CapitalAccountFreezeTableByUserIDResponse" message="tns:ITraderQuery_PagingQueryQH_CapitalAccountFreezeTableByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_CapitalAccountTableByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_CapitalAccountTableByUserID" message="tns:ITraderQuery_QueryXH_CapitalAccountTableByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_CapitalAccountTableByUserIDResponse" message="tns:ITraderQuery_QueryXH_CapitalAccountTableByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_CapitalAccountTableByUserIDAndPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_CapitalAccountTableByUserIDAndPwd" message="tns:ITraderQuery_QueryXH_CapitalAccountTableByUserIDAndPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_CapitalAccountTableByUserIDAndPwdResponse" message="tns:ITraderQuery_QueryXH_CapitalAccountTableByUserIDAndPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_CapitalAccountTableByAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_CapitalAccountTableByAccount" message="tns:ITraderQuery_QueryXH_CapitalAccountTableByAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_CapitalAccountTableByAccountResponse" message="tns:ITraderQuery_QueryXH_CapitalAccountTableByAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_CapitalAccountFreezeTableByEntrustNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_CapitalAccountFreezeTableByEntrustNo" message="tns:ITraderQuery_QueryXH_CapitalAccountFreezeTableByEntrustNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/QueryXH_CapitalAccountFreezeTableByEntrustNoResponse" message="tns:ITraderQuery_QueryXH_CapitalAccountFreezeTableByEntrustNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_CapitalAccountFreezeTableByAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_CapitalAccountFreezeTableByAccount" message="tns:ITraderQuery_PagingQueryXH_CapitalAccountFreezeTableByAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_CapitalAccountFreezeTableByAccountResponse" message="tns:ITraderQuery_PagingQueryXH_CapitalAccountFreezeTableByAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_CapitalAccountFreezeTableByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_CapitalAccountFreezeTableByUserID" message="tns:ITraderQuery_PagingQueryXH_CapitalAccountFreezeTableByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_CapitalAccountFreezeTableByUserIDResponse" message="tns:ITraderQuery_PagingQueryXH_CapitalAccountFreezeTableByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwd" message="tns:ITraderQuery_PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwdResponse" message="tns:ITraderQuery_PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwd" message="tns:ITraderQuery_PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderQuery/PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwdResponse" message="tns:ITraderQuery_PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwd_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ITraderQuery" type="tns:ITraderQuery">
+    <wsp:PolicyReference URI="#NetTcpBinding_ITraderQuery_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="PagingQueryXH_HistoryTradeByFilterAndUserIDPwd">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryXH_HistoryTradeByFilterAndUserIDPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_TodayTradeByFilterAndUserIDPwd">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryXH_TodayTradeByFilterAndUserIDPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwd">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwd">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_HistoryTradeByFilterAndUserIDPwd">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryQH_HistoryTradeByFilterAndUserIDPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_TodayTradeByFilterAndUserIDPwd">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryQH_TodayTradeByFilterAndUserIDPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaginQueryUA_CapitalFlowTableByFilter">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PaginQueryUA_CapitalFlowTableByFilter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUA_BankAccountByUserID">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryUA_BankAccountByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUA_BankAccountByBankAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryUA_BankAccountByBankAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_TradeCapitalFlowDetailByAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryQH_TradeCapitalFlowDetailByAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQuerySPQH_TradeCapitalFlowDetailByAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQuerySPQH_TradeCapitalFlowDetailByAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQuerySpotCapital">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQuerySpotCapital" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryFuturesCapital">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryFuturesCapital" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQuerySpotHold">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQuerySpotHold" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryFuturesHold">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryFuturesHold" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpotCapitalTradeAmountFind">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/SpotCapitalTradeAmountFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAssetSummary">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryAssetSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_AccountHoldTableByUserID">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryXH_AccountHoldTableByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_AccountHoldTableByUserIDAndPwd">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryXH_AccountHoldTableByUserIDAndPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_AccountHoldTableByAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryXH_AccountHoldTableByAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_AcccountHoldFreezeTableByEntrustNo">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryXH_AcccountHoldFreezeTableByEntrustNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_AcccountHoldFreezeTableByAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryXH_AcccountHoldFreezeTableByAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_AcccountHoldFreezeTableByUserID">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryXH_AcccountHoldFreezeTableByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_HoldAccountTableByUserID">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryQH_HoldAccountTableByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_HoldAccountTableByUserIDAndPwd">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryQH_HoldAccountTableByUserIDAndPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_HoldAccountTableByAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryQH_HoldAccountTableByAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_HoldAccountFreezeTableByEntrustNo">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryQH_HoldAccountFreezeTableByEntrustNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_HoldAccountFreezeTableByAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryQH_HoldAccountFreezeTableByAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_HoldAccountFreezeTableByUserID">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryQH_HoldAccountFreezeTableByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_CapitalAccountTableByUserID">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryQH_CapitalAccountTableByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_CapitalAccountTableByUserIDAndPwd">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryQH_CapitalAccountTableByUserIDAndPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_CapitalAccountTableByAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryQH_CapitalAccountTableByAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryQH_CapitalAccountFreezeTableByEntrustNo">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryQH_CapitalAccountFreezeTableByEntrustNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_CapitalAccountFreezeTableByAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryQH_CapitalAccountFreezeTableByAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryQH_CapitalAccountFreezeTableByUserID">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryQH_CapitalAccountFreezeTableByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_CapitalAccountTableByUserID">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryXH_CapitalAccountTableByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_CapitalAccountTableByUserIDAndPwd">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryXH_CapitalAccountTableByUserIDAndPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_CapitalAccountTableByAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryXH_CapitalAccountTableByAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryXH_CapitalAccountFreezeTableByEntrustNo">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/QueryXH_CapitalAccountFreezeTableByEntrustNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_CapitalAccountFreezeTableByAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryXH_CapitalAccountFreezeTableByAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_CapitalAccountFreezeTableByUserID">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryXH_CapitalAccountFreezeTableByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwd">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwd">
+      <soap12:operation soapAction="http://tempuri.org/ITraderQuery/PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TraderQueryService">
+    <wsdl:port name="NetTcpBinding_ITraderQuery" binding="tns:NetTcpBinding_ITraderQuery">
+      <soap12:address location="net.tcp://localhost:9183/DoCommonQuery" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:9183/DoCommonQuery</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

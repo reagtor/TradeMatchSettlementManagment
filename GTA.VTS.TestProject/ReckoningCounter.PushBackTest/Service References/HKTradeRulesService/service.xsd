@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" />
+  <xs:element name="GetAllMinVolumeOfBusiness">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMinVolumeOfBusinessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllMinVolumeOfBusinessResult" nillable="true" type="q1:ArrayOfXH_MinVolumeOfBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMinVolumeOfBusinessByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMinVolumeOfBusinessByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetMinVolumeOfBusinessByBreedClassIDResult" nillable="true" type="q2:ArrayOfXH_MinVolumeOfBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpotPosition">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpotPositionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllSpotPositionResult" nillable="true" type="q3:ArrayOfXH_SpotPosition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotPositionByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotPositionByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetSpotPositionByBreedClassIDResult" nillable="true" type="q4:XH_SpotPosition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllHKCommodity">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllHKCommodityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllHKCommodityResult" nillable="true" type="q5:ArrayOfHK_Commodity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKCommodityByHKCommodityCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hkcommodityCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKCommodityByHKCommodityCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetHKCommodityByHKCommodityCodeResult" nillable="true" type="q6:HK_Commodity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKCommodityByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKCommodityByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetHKCommodityByBreedClassIDResult" nillable="true" type="q7:ArrayOfHK_Commodity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewHKCommodity">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewHKCommodityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetNewHKCommodityResult" nillable="true" type="q8:ArrayOfHK_Commodity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllHKSpotCosts">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllHKSpotCostsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllHKSpotCostsResult" nillable="true" type="q9:ArrayOfHK_SpotCosts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKSpotCostsByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKSpotCostsByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetHKSpotCostsByBreedClassIDResult" nillable="true" type="q10:HK_SpotCosts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllHKSpotTradeRules">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllHKSpotTradeRulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllHKSpotTradeRulesResult" nillable="true" type="q11:ArrayOfHK_SpotTradeRules" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKSpotTradeRulesByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKSpotTradeRulesByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetHKSpotTradeRulesByBreedClassIDResult" nillable="true" type="q12:HK_SpotTradeRules" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllHKMinPriceFieldRange">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllHKMinPriceFieldRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllHKMinPriceFieldRangeResult" nillable="true" type="q13:ArrayOfHK_MinPriceFieldRange" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKCommodityListArray">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHKCommodityListArrayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetHKCommodityListArrayResult" nillable="true" type="q14:ArrayOfOnstageHK_Commodity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListHKProfessionInfoArray">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListHKProfessionInfoArrayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetListHKProfessionInfoArrayResult" nillable="true" type="q15:ArrayOfHKProfessionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

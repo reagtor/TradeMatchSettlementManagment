@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" />
+  <xs:element name="GetALLAgreementDeliveryMonth">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetALLAgreementDeliveryMonthResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetALLAgreementDeliveryMonthResult" nillable="true" type="q1:ArrayOfQH_AgreementDeliveryMonth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementDeliveryMonthByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementDeliveryMonthByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAgreementDeliveryMonthByBreedClassIDResult" nillable="true" type="q2:ArrayOfQH_AgreementDeliveryMonth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCFPositionMonth">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCFPositionMonthResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllCFPositionMonthResult" nillable="true" type="q3:ArrayOfQH_CFPositionMonth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllConsignInstructionType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllConsignInstructionTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllConsignInstructionTypeResult" nillable="true" type="q4:ArrayOfQH_ConsignInstructionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllConsignQuantum">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllConsignQuantumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllConsignQuantumResult" nillable="true" type="q5:ArrayOfQH_ConsignQuantum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsignQuantumByConsignQuantumID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="consignQuantumID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsignQuantumByConsignQuantumIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetConsignQuantumByConsignQuantumIDResult" nillable="true" type="q6:QH_ConsignQuantum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFutureCosts">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFutureCostsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllFutureCostsResult" nillable="true" type="q7:ArrayOfQH_FutureCosts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFutureCostsByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFutureCostsByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetFutureCostsByBreedClassIDResult" nillable="true" type="q8:QH_FutureCosts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFuturesTradeRules">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFuturesTradeRulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllFuturesTradeRulesResult" nillable="true" type="q9:ArrayOfQH_FuturesTradeRules" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuturesTradeRulesByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuturesTradeRulesByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetFuturesTradeRulesByBreedClassIDResult" nillable="true" type="q10:QH_FuturesTradeRules" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllHighLowStopScopeType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllHighLowStopScopeTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllHighLowStopScopeTypeResult" nillable="true" type="q11:ArrayOfQH_HighLowStopScopeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLastTradingDay">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLastTradingDayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllLastTradingDayResult" nillable="true" type="q12:ArrayOfQH_LastTradingDay" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastTradingDayByLastTradingDayID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lastTradingDayID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastTradingDayByLastTradingDayIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetLastTradingDayByLastTradingDayIDResult" nillable="true" type="q13:QH_LastTradingDay" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLastTradingDayType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLastTradingDayTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllLastTradingDayTypeResult" nillable="true" type="q14:ArrayOfQH_LastTradingDayType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMonth">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMonthResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllMonthResult" nillable="true" type="q15:ArrayOfQH_Month" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSIFBail">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSIFBailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllSIFBailResult" nillable="true" type="q16:ArrayOfQH_SIFBail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSIFBailByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSIFBailByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetSIFBailByBreedClassIDResult" nillable="true" type="q17:QH_SIFBail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSIFPosition">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSIFPositionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllSIFPositionResult" nillable="true" type="q18:ArrayOfQH_SIFPosition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSIFPositionByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSIFPositionByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetSIFPositionByBreedClassIDResult" nillable="true" type="q19:QH_SIFPosition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSingleRequestQuantity">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSingleRequestQuantityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllSingleRequestQuantityResult" nillable="true" type="q20:ArrayOfQH_SingleRequestQuantity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSingleRequestQuantityByConsignQuantumID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="consignQuantumID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSingleRequestQuantityByConsignQuantumIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetSingleRequestQuantityByConsignQuantumIDResult" nillable="true" type="q21:ArrayOfQH_SingleRequestQuantity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCFBailScaleValue">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCFBailScaleValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllCFBailScaleValueResult" nillable="true" type="q22:ArrayOfQH_CFBailScaleValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCFBailScaleValueByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCFBailScaleValueByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetCFBailScaleValueByBreedClassIDResult" nillable="true" type="q23:ArrayOfQH_CFBailScaleValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCFBailScaleValueByCFBailScaleValueID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cFBailScaleValueID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCFBailScaleValueByCFBailScaleValueIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetCFBailScaleValueByCFBailScaleValueIDResult" nillable="true" type="q24:QH_CFBailScaleValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPositionBailType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPositionBailTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllPositionBailTypeResult" nillable="true" type="q25:ArrayOfQH_PositionBailType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllQHPositionLimitValue">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllQHPositionLimitValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllQHPositionLimitValueResult" nillable="true" type="q26:ArrayOfQH_PositionLimitValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPositionLimitValueByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPositionLimitValueByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetPositionLimitValueByBreedClassIDResult" nillable="true" type="q27:ArrayOfQH_PositionLimitValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPositionLimitValueByPositionLimitValueID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="positionLimitValueID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPositionLimitValueByPositionLimitValueIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetPositionLimitValueByPositionLimitValueIDResult" nillable="true" type="q28:QH_PositionLimitValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPositionValueType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPositionValueTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllPositionValueTypeResult" nillable="true" type="q29:ArrayOfQH_PositionValueType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

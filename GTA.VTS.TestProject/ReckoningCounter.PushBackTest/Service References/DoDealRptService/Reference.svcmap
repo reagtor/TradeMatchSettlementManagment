@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="05c6b478-d215-452a-b487-b2674f1a76df" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:9188/DoDealRptService/MEX" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="58bc57bf-cecb-4654-aff4-57bb289e0e78" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoDealRptService/MEX" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="07fac0b6-85b1-4ab0-8976-cb69012b385f" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoDealRptService/MEX" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="16a4582e-3a47-4385-b389-2844b43d9383" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoDealRptService/MEX" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="5398c40a-26a7-4851-8597-3bd3f2f9c6da" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoDealRptService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.xsd" MetadataType="Schema" ID="6f0da906-56e2-4143-9168-8c3337f90a03" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoDealRptService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.Model.XH.xsd" MetadataType="Schema" ID="a75a4911-204a-4d8d-87d1-bca30332844a" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoDealRptService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Model.xsd" MetadataType="Schema" ID="dc3445f1-7b68-4fd4-9a57-69cb2aa1bdbb" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoDealRptService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.Model.QH.xsd" MetadataType="Schema" ID="1e80252e-f8a1-4831-bafe-60f47bb09232" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoDealRptService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.Model.HK.xsd" MetadataType="Schema" ID="a03413f1-7966-4c25-a6c3-f3559b3b68c6" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoDealRptService/MEX" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

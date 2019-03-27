@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8976AEC0-C6B0-4C8F-B782-45786A0A2D80}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GTA.VTS.BatOpenTradeUserInfo</RootNamespace>
+    <AssemblyName>GTA.VTS.BatOpenTradeUserInfo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Service References\CommonParaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HKTradingRulesService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SpotTradeRulesService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TransactionManagerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="WCFManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CommonParaService\" />
+    <WCFMetadataStorage Include="Service References\HKTradingRulesService\" />
+    <WCFMetadataStorage Include="Service References\SpotTradeRulesService\" />
+    <WCFMetadataStorage Include="Service References\TransactionManagerService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransactionManagerService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransactionManagerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransactionManagerService\GTA.VTS.BatOpenTradeUserInfo.TransactionManagerService.CT_Counter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionManagerService\GTA.VTS.BatOpenTradeUserInfo.TransactionManagerService.UM_UserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionManagerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommonParaService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommonParaService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_BourseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_BreedClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_BreedClassType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_Commodity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_CommodityFuse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_CurrencyBreedClassType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_CurrencyType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_FuseTimesection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_NotTradeDate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_StockMelonCash.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_StockMelonStock.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_TradeTime.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_TradeWay.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_UnitConversion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_Units.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CM_ValueType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.CT_Counter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.OnstageCommodity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.Profession.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.RC_MatchCenter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.RC_MatchMachine.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.RC_TradeCommodityAssign.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.UM_AccountType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.UM_DealerTradeBreedClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.ZFInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SpotTradeRulesService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SpotTradeRulesService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SpotTradeRulesService\GTA.VTS.BatOpenTradeUserInfo.SpotTradeRulesService.XH_MinVolumeOfBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradeRulesService\GTA.VTS.BatOpenTradeUserInfo.SpotTradeRulesService.XH_RightHightLowPrices.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradeRulesService\GTA.VTS.BatOpenTradeUserInfo.SpotTradeRulesService.XH_SpotCosts.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradeRulesService\GTA.VTS.BatOpenTradeUserInfo.SpotTradeRulesService.XH_SpotHighLowControlType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradeRulesService\GTA.VTS.BatOpenTradeUserInfo.SpotTradeRulesService.XH_SpotHighLowValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradeRulesService\GTA.VTS.BatOpenTradeUserInfo.SpotTradeRulesService.XH_SpotPosition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradeRulesService\GTA.VTS.BatOpenTradeUserInfo.SpotTradeRulesService.XH_SpotTradeRules.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradeRulesService\GTA.VTS.BatOpenTradeUserInfo.SpotTradeRulesService.XH_ValidDeclareType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradeRulesService\GTA.VTS.BatOpenTradeUserInfo.SpotTradeRulesService.XH_ValidDeclareValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpotTradeRulesService\ManagementCenter.Model1.xsd" />
+    <None Include="Service References\SpotTradeRulesService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SpotTradeRulesService\service1.wsdl" />
+    <None Include="Service References\SpotTradeRulesService\service2.xsd" />
+    <None Include="Service References\SpotTradeRulesService\service21.xsd" />
+    <None Include="Service References\TransactionManagerService\ManagementCenter.Model.CommonClass1.xsd" />
+    <None Include="Service References\TransactionManagerService\ManagementCenter.Model1.xsd" />
+    <None Include="Service References\TransactionManagerService\service1.wsdl" />
+    <None Include="Service References\TransactionManagerService\service2.xsd" />
+    <None Include="Service References\TransactionManagerService\service21.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HKTradingRulesService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HKTradingRulesService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommonParaService\GTA.VTS.BatOpenTradeUserInfo.CommonParaService.ClosePriceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommonParaService\ManagementCenter.Model.CommonTable.xsd" />
+    <None Include="Service References\CommonParaService\ManagementCenter.Model.xsd" />
+    <None Include="Service References\CommonParaService\service.wsdl" />
+    <None Include="Service References\CommonParaService\service.xsd" />
+    <None Include="Service References\CommonParaService\service1.xsd" />
+    <None Include="Service References\HKTradingRulesService\GTA.VTS.BatOpenTradeUserInfo.HKTradingRulesService.HKProfessionInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\GTA.VTS.BatOpenTradeUserInfo.HKTradingRulesService.HK_Commodity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\GTA.VTS.BatOpenTradeUserInfo.HKTradingRulesService.HK_MinPriceFieldRange.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\GTA.VTS.BatOpenTradeUserInfo.HKTradingRulesService.HK_SpotCosts.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\GTA.VTS.BatOpenTradeUserInfo.HKTradingRulesService.HK_SpotTradeRules.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\GTA.VTS.BatOpenTradeUserInfo.HKTradingRulesService.OnstageHK_Commodity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\GTA.VTS.BatOpenTradeUserInfo.HKTradingRulesService.XH_MinVolumeOfBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\GTA.VTS.BatOpenTradeUserInfo.HKTradingRulesService.XH_SpotPosition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HKTradingRulesService\ManagementCenter.Model1.xsd" />
+    <None Include="Service References\HKTradingRulesService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HKTradingRulesService\service1.wsdl" />
+    <None Include="Service References\HKTradingRulesService\service2.xsd" />
+    <None Include="Service References\HKTradingRulesService\service21.xsd" />
+    <None Include="Service References\SpotTradeRulesService\ManagementCenter.Model.xsd" />
+    <None Include="Service References\SpotTradeRulesService\service.wsdl" />
+    <None Include="Service References\SpotTradeRulesService\service.xsd" />
+    <None Include="Service References\SpotTradeRulesService\service1.xsd" />
+    <None Include="Service References\TransactionManagerService\Arrays.xsd" />
+    <None Include="Service References\TransactionManagerService\GTA.VTS.BatOpenTradeUserInfo.TransactionManagerService.AccountEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionManagerService\GTA.VTS.BatOpenTradeUserInfo.TransactionManagerService.TradersAccountCapitalInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionManagerService\ManagementCenter.Model.CommonClass.xsd" />
+    <None Include="Service References\TransactionManagerService\ManagementCenter.Model.UserManage.xsd" />
+    <None Include="Service References\TransactionManagerService\ManagementCenter.Model.xsd" />
+    <None Include="Service References\TransactionManagerService\ReckoningCounter.Entity.AccountManagementAndFindEntity.xsd" />
+    <None Include="Service References\TransactionManagerService\service.wsdl" />
+    <None Include="Service References\TransactionManagerService\service.xsd" />
+    <None Include="Service References\TransactionManagerService\service1.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

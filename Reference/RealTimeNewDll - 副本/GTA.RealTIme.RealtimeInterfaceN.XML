@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTA.RealTIme.RealtimeInterfaceN</name>
+    </assembly>
+    <members>
+        <member name="T:CommonRealtimeMarket.ISocket">
+            <summary>
+            从GTASocket类和GTAStockWcf抽取出来。目的：为了动态地调用GTASocket和GTAStockWcf
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.ISocket.AddEventDelegate(GTAMarketSocket.OnEventDelegate)">
+            <summary>
+            服务器或客户端添回SOCKET事件消息委托
+            </summary>
+            <param name="fevent"></param>
+        </member>
+        <member name="P:CommonRealtimeMarket.ISocket.StockDataService">
+            <summary>
+            获取行情数据服务
+            </summary>
+            <returns>IStockDataService</returns>
+        </member>
+        <member name="P:CommonRealtimeMarket.ISocket.SocketStatus">
+            <summary>
+            通讯服务组件的状态。
+            </summary>
+        </member>
+        <member name="T:CommonRealtimeMarket.SocketServiceStatusEventArg">
+            <summary>
+            Socket服务状态改变时的事件数据
+            </summary>
+        </member>
+        <member name="T:CommonRealtimeMarket.StockHqDataChangeEventArg">
+            <summary>
+            股票现货
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.StockHqDataChangeEventArg.HqData">
+            <summary>
+            股票现货
+            </summary>
+        </member>
+        <member name="T:CommonRealtimeMarket.FutDataChangeEventArg">
+            <summary>
+            股指期货
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.FutDataChangeEventArg.HqData">
+            <summary>
+            股指期货
+            </summary>
+        </member>
+        <member name="T:CommonRealtimeMarket.MercantileFutDataChangeEventArg">
+            <summary>
+            商品期货
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.MercantileFutDataChangeEventArg.HqData">
+            <summary>
+            商品期货
+            </summary>
+        </member>
+        <member name="T:CommonRealtimeMarket.HKStockDataChangeEventArg">
+            <summary>
+            港股
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.HKStockDataChangeEventArg.HqData">
+            <summary>
+            港股
+            </summary>
+        </member>
+        <member name="T:CommonRealtimeMarket.HKStockStatusDataChangeEventArg">
+            <summary>
+            港股交易状态
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.HKStockStatusDataChangeEventArg.Status">
+            <summary>
+            港股交易状态
+            </summary>
+        </member>
+        <member name="T:CommonRealtimeMarket.HKPreMarketPriTabChangeEventArg">
+            <summary>
+            港股盘前价格变动信息表数据
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.HKPreMarketPriTabChangeEventArg.HKPreMarketPriTab">
+            <summary>
+            港股盘前价格变动信息表数据
+            </summary>
+        </member>
+        <member name="T:CommonRealtimeMarket.HKPreMarketStaticDataChangeEventArg">
+            <summary>
+            港股盘前静态数据
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.HKPreMarketStaticDataChangeEventArg.PreMarketStatic">
+            <summary>
+            港股盘前静态数据
+            </summary>
+        </member>
+        <member name="T:CommonRealtimeMarket.SocketServiceStatusHandler">
+            <summary>
+            客户端Socket服务状态改变时发生
+            </summary>
+            <param name="socketStatus">Socket服务状态</param>
+        </member>
+        <member name="T:CommonRealtimeMarket.IRealtimeMarketService">
+            <summary>
+            实时行情获取接口
+            (包括现货,股指期货,商品期货,港股)
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.InitializeService">
+            <summary>
+            初始化组件
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.Login(System.String,System.String,CommonRealtimeMarket.SocketServiceStatusHandler)">
+            <summary>
+            登陆
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.SocketStatusHandle(CommonRealtimeMarket.SocketServiceStatusHandler)">
+            <summary>
+            socket状态发生变化时调用
+            </summary>
+            <param name="?"></param>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.StopSocketService(System.Boolean)">
+            <summary>
+            中断连接
+            <para>可设置是否自动重新连接</para>
+            <param name="ReConnect">是否自动重新连接,如果为ture则会自动重新连接</param>
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.StopSocketService">
+            <summary>
+            中断连接
+            <para>系统还会自动重新连接</para>
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.StartSocketService">
+            <summary>
+            开始连接
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.Reset">
+            <summary>
+            重新连接
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.BeginAResetCycle">
+            <summary>
+            异步重新开始一个重连周期
+            </summary>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetStockHqData(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取指定现货代码列表
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetStockDataList">
+            <summary>
+            获取现货代码列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetStockHqData(System.String)">
+            <summary>
+            获取指定现货行情
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetFutDataList(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取指定股指期货行情列表
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetFutDataList">
+            <summary>
+            获取指定股指期货代码列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetFutData(System.String)">
+            <summary>
+            获取股指期货行情
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetMercantileFutDataList(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取指定商品期货行情列表
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetMercantileFutDataList">
+            <summary>
+            获取商品期货代码列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetMercantileFutData(System.String)">
+            <summary>
+            获取商品期货行情
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetHKStockDataList(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取指定港股行情列表
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetHKStockDataList">
+            <summary>
+            获取港股代码列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetHKStockData(System.String)">
+            <summary>
+            获取港股行情
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetHKStockStatusDataList(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取指定港股代码列表的交易状态
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetHKStockStatusDataList">
+            <summary>
+            获取全部港股代码的交易状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetHKStockStatusData(System.String)">
+            <summary>
+            获取指定单个港股代码的交易状态
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetHKPreMarketDataList(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取指定港股代码列表的盘前数据
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetHKPreMarketDataList">
+            <summary>
+            获取全部港股代码的盘前数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetHKPreMarketData(System.String)">
+            <summary>
+            获取指定单个港股代码的盘前数据
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetHKPrePriceDataList">
+            <summary>
+            获取全部港股代码的盘前价格变动数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.GetHKPrePriceDataList(System.String)">
+            <summary>
+            获取指定单个港股代码的盘前价格变动数据
+            </summary>
+            <param name="strCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonRealtimeMarket.IRealtimeMarketService.Release">
+            <summary>
+            释放资源，以便重新登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:CommonRealtimeMarket.IRealtimeMarketService.ServerIPandPort">
+            <summary>
+            设置或获取连接服务器的ip和端口
+            <para>格式:127.0.0.1:8050</para>
+            <para>如果不设置，则缺省为配置文件中指定的</para>
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.IRealtimeMarketService.SocketService">
+            <summary>
+            获取Socket 连接适配器,最终获取类型为GTASocket或GTAStockWcf
+            </summary>
+        </member>
+        <member name="P:CommonRealtimeMarket.IRealtimeMarketService.SocketStatus">
+            <summary>
+            通讯组件状态
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.IRealtimeMarketService.OnSocketDisconnectedNotify">
+            <summary>
+            客户端断开连接的事件
+            <para>socket客户端断开通知,通知外部的事件,在这个事件不要做重连等操作,内部已经处理</para>
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.IRealtimeMarketService.OnSocketConnectedNotify">
+            <summary>
+            客户端连接成功通知的事件
+            <para>客户端连接成功,并且验证通过后的事件通知</para>
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.IRealtimeMarketService.StockRealtimeMarketChangeEvent">
+            <summary>
+            现货每代码行情变化事件
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.IRealtimeMarketService.FutRealtimeMarketChangeEvent">
+            <summary>
+            股指期货每代码行情变化事件
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.IRealtimeMarketService.MercantileFutRealtimeMarketChangeEvent">
+            <summary>
+            商品期货每代码行情变化事件
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.IRealtimeMarketService.HKStockRealtimeMarketChangeEvent">
+            <summary>
+            港股代码行情变化事件
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.IRealtimeMarketService.HKStockStatusChangeEvent">
+            <summary>
+            港股交易状态信息推送事件
+            </summary>
+        </member>
+        <member name="E:CommonRealtimeMarket.IRealtimeMarketService.HKPreMarketStaticChangeEvent">
+            <summary>
+            港股盘前静态数据推送事件
+            </summary>
+        </member>
+    </members>
+</doc>

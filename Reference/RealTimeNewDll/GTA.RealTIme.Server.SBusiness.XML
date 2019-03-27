@@ -1,0 +1,1328 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTA.RealTIme.Server.SBusiness</name>
+    </assembly>
+    <members>
+        <member name="F:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSZConfigHandler.m_MarketOpenTime">
+            <summary>
+            开市时间
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSZConfigHandler.m_MarketCloseTime">
+            <summary>
+             闭市时间
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSZConfigHandler.m_TimerOrWatchFile">
+            <summary>
+            分解行情的方式
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSZConfigHandler.m_MyPath">
+            <summary>
+            文件拷贝到的路径
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSZConfigHandler.m_WatchSZFilePath">
+            <summary>
+            深圳文件路径
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSZConfigHandler.m_Port">
+            <summary>
+            Udp发送端口
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSZConfigHandler.Port">
+            <summary>
+            端口  
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSZConfigHandler.MarketOpenTime">
+            <summary>
+            开市时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSZConfigHandler.MarketCloseTime">
+            <summary>
+             闭市时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSZConfigHandler.TimerOrWatchFile">
+            <summary>
+            分解行情的方式
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSZConfigHandler.MyPath">
+            <summary>
+            文件拷贝到的路径
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSZConfigHandler.WatchSZFilePath">
+            <summary>
+            深圳文件路径
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSHConfigHandler.m_MarketOpenTime">
+            <summary>
+            开市时间
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSHConfigHandler.m_MarketCloseTime">
+            <summary>
+             闭市时间
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSHConfigHandler.m_TimerOrWatchFile">
+            <summary>
+            分解行情的方式
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSHConfigHandler.m_WatchSHFilePath">
+            <summary>
+            上海文件路径
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSHConfigHandler.m_MyPath">
+            <summary>
+            文件拷贝到的路径
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSHConfigHandler.m_Port">
+            <summary>
+            Udp发送端口
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSHConfigHandler.Port">
+            <summary>
+            端口  
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSHConfigHandler.MarketOpenTime">
+            <summary>
+            开市时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSHConfigHandler.MarketCloseTime">
+            <summary>
+             闭市时间
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSHConfigHandler.TimerOrWatchFile">
+            <summary>
+            分解行情的方式
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSHConfigHandler.WatchSHFilePath">
+            <summary>
+            上海文件路径
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpSHConfigHandler.MyPath">
+            <summary>
+            文件拷贝到的路径
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpQHConfigHandler.m_Port">
+            <summary>
+            Udp发送端口
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.BreakUpMarket.SBreakUpQHConfigHandler.Port">
+            <summary>
+            端口  
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.BizCapchg">
+            <summary>
+            作者：未知
+            修改：段进雄
+            修改日期：20091225
+            功能：股本业务类
+            修改内容：统一数据库访问方式(改调用SqlHelper)
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketMinPriceFlu">
+            <summary>
+            作者：Jacky（段进雄）
+            日期：2009-10-22
+            功能：用于处理港股盘前最小价位变动数据的业务逻辑
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketMinPriceFlu.Add(RealTime.Server.SModelData.HqData.PreMarketPriceTable)">
+            <summary>
+            增加一条数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketMinPriceFlu.Update(RealTime.Server.SModelData.HqData.PreMarketPriceTable)">
+            <summary>
+            更新一条数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketMinPriceFlu.Delete(System.String)">
+            <summary>
+            删除满足条件的数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketMinPriceFlu.GetModel">
+            <summary>
+            得到一个对象实体
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketMinPriceFlu.GetModelByCache">
+            <summary>
+            得到一个对象实体，从缓存中。
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketMinPriceFlu.GetList(System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketMinPriceFlu.GetModelList(System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketMinPriceFlu.DataTableToList(System.Data.DataTable)">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketMinPriceFlu.GetAllList">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketstaticData">
+            <summary>
+            作者：Jacky（段进雄）
+            日期：2009-10-22
+            功能：用于处理港股盘前最小价位变动数据的业务逻辑
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketstaticData.Add(RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            增加一条数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketstaticData.Update(RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            更新一条数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketstaticData.Delete">
+            <summary>
+            删除一条数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketstaticData.GetModel(System.String)">
+            <summary>
+            得到一个对象实体
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketstaticData.GetModelByCache(System.String)">
+            <summary>
+            得到一个对象实体，从缓存中。
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketstaticData.GetList(System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketstaticData.GetlAllModeList">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketstaticData.DataTableToList(System.Data.DataTable)">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketstaticData.GetAllList">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketTcp">
+            <summary>
+            作者：Jacky（段进雄）
+            日期：2009-10-22
+            功能：用于处理港股盘前数据未收到的TCP请求
+            修改者：段进雄
+            修改时间：20100408
+            修改内容：增加国内现货初始化数据的请求
+            只要服务器发出连接成功，由上一级服务器自动发送初始化数据
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketTcp.TcpIP">
+            <summary>
+            请求接收港股盘前TCP请求的服务器IP
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketTcp.TcpPort">
+            <summary>
+            请求接收港股盘前TCP请求的服务器端口
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketTcp.requestShIniHQDataIP">
+            <summary>
+            请求接收国内(上海)现货初始化数据的服务器IP
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketTcp.requestShIniHQDataPort">
+            <summary>
+            请求接收国内现货(海)初始化数据的服务器端口
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketTcp.requestSzIniHQDataIP">
+            <summary>
+            请求接收国内现货(深圳)初始化数据的服务器IP
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketTcp.requestSzIniHQDataPort">
+            <summary>
+            请求接收国内现货(深圳)初始化数据的服务器端口
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketTcp.SendPreMarketRequest">
+            <summary>
+            发送港股盘前数据请求
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketTcp.RequestIniHQData(GTAMarketSocket.MarketType)">
+            <summary>
+             请求接收国内现货初始化数据
+             只要与服务器端连接成功，服务端便会发送初始化数据
+             服务端何发荣定的逻辑
+             截止到8点的最新数据. 我们自己刷一次最新数据.
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketTcp.ConnectTcp(System.String,System.String)">
+            <summary>
+            TCP连接
+            </summary>
+            <param name="IP"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketTcp.SendTcp(System.Byte[])">
+            <summary>
+            发送数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketTcp.CloseTcp">
+            <summary>
+            关闭连接
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKPreMarketTcp.BuildProtocolHeader(RealTime.Server.SBusiness.HKPreMarket.MessageType)">
+            <summary>
+            打包协议头
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.HKPreMarket.MessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.HKPreMarket.MessageType.PriMarketStatic">
+            <summary>
+            盘前静态数据
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.HKPreMarket.MessageType.MinPriceFlu">
+            <summary>
+            价位变动表
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.HKPreMarket.HKStockDataBLL">
+            <summary>
+            功能：保存港股实时行情的业务类
+            作者：段进雄
+            日期：2009-11-10
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKStockDataBLL.Save(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            增加一条数据 需要用事务处理
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKStockDataBLL.HanleString(System.String)">
+             <summary>
+            处理字符串
+             </summary>
+             <param name="str"></param>
+             <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKStockDataBLL.GetAllModelList">
+            <summary>
+            得到一个对象实体集合
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HKPreMarket.HKStockDataBLL.GetModel(System.String)">
+            <summary>
+            根据代码返回对象实体
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.HqRecorder.BizHqRecorder">
+            <summary>
+            业务实现层
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.HqRecorder.BizHqRecorder.HqDataTable">
+            <summary>
+            公共变量
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.BizHqRecorder.ProcessShRecord(GTAMarketSocket.IHqDiffEntity)">
+            <summary>
+             上海高频数据接收
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.BizHqRecorder.ProcessSzRecord(GTAMarketSocket.IHqDiffEntity)">
+            <summary>
+            深圳高频数据接收
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.BizHqRecorder.ProcessDataFormByteStream(System.Byte[])">
+            <summary>
+            反序列化操作
+            </summary>
+            <param name="sourceData"></param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.BizHqRecorder.ProcessDataFormArrayList(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData},GTAMarketSocket.MarketType)">
+            <summary>
+            获取高频变化数据通知
+            </summary>
+            <param name="sourceData"></param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.BizHqRecorder.InitDataFolder(System.String,System.String)">
+            <summary>
+            创建目录和文件
+            </summary>
+            <param name="path"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.BizHqRecorder.BuildDbfFileName(System.String)">
+            <summary>
+            构构DBF文件名
+            </summary>
+            <param name="filePrefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.BizHqRecorder.CreateHqDataTable">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.BizHqRecorder.DataColumns">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.BizHqRecorder.CreateToDbf">
+            <summary>
+            创建DBF格式文件
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.BizHqRecorder.CreateHqTable(System.Data.DataTable)">
+            <summary>
+            
+            </summary>
+            <param name="myData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.BizHqRecorder.WriteLog(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="errorInfo"></param>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.ConstVar.LANGUAGEDRIVERID">
+            <summary>
+            DBF语言版本
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.ConstVar.FILEHEADERRECORDSSIZE">
+            <summary>
+            文件头的保留大小
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.ConstVar.FILEHEADENDFLAG">
+            <summary>
+            文件头结束标志
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.ConstVar.FILEIINFOSIZE">
+            <summary>
+            文件信息头的大小
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.ConstVar.FIELD_DESCRIPT_LEN">
+            <summary>
+            字段描述长度
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.ConstVar.DBFVERSION">
+            <summary>
+            DBF 版本 此处为Foxpro的
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.ConstVar.FILEENDCHAR">
+            <summary>
+            文件结束符
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.ConstVar.HAVEMEMOFILE">
+            <summary>
+            有备注文件标志，不考虑其它文件，如索引文件等
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.ConstVar.COLUMNSDESCLENGTH">
+            <summary>
+            一个字段描述的大小
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.ConstVar.COLUMNNAMEMAXLENGTH">
+            <summary>
+            字段名称最大长度
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBF.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="fileName">文件名</param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBF.AddField(System.String,RealTime.Server.SBusiness.DBFDataType,System.Byte,System.Byte)">
+            <summary>
+            增加一个字段
+            </summary>
+            <param name="fieldName">字段名</param>
+            <param name="fieldType">字段类型</param>
+            <param name="fieldLen">字段长度</param>
+            <param name="decimalPlace">小数点位数</param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBF.NewRow">
+            <summary>
+            创建新行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBF.Begin">
+            <summary>
+            开始写文件
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBF.SaveRow(RealTime.Server.SBusiness.DBFRow)">
+            <summary>
+            保存一行
+            </summary>
+            <param name="row">DBF行</param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBF.Close">
+            <summary>
+            结束写文件
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBFColumns.#ctor(System.String,RealTime.Server.SBusiness.DBFDataType,System.Byte,System.Byte)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">字段名</param>
+            <param name="type">字段类型</param>
+            <param name="length">字段长度</param>
+            <param name="plc">小数点位数</param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBFColumns.ToBytes">
+            <summary>
+            转为字节
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.DBFColumns.FieldName">
+            <summary>
+            字段名，英文10个字母汉字5个
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.DBFColumns.DataType">
+            <summary>
+            字段类型
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.DBFColumns.DataLength">
+            <summary>
+            字段长度
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.DBFColumns.DecimalPlc">
+            <summary>
+            小数点位数
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.IDataExport.Export">
+            <summary>
+            数据导出
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.DBFExport.#ctor(System.String,System.Data.DataTable,System.Data.DataTable)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_fileName">文件路径</param>
+            <param name="_dtData">表格数据</param>
+            <param name="_dtSchema">表格结构</param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.DBFExport.Export">
+            <summary>
+            IDataExport 成员
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.DBFExport.GetColumnInfo(System.String)">
+            <summary>
+            取得列信息
+            </summary>
+            <param name="_FieldName">字段物理名</param>
+            <returns>字段数据类</returns>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.HqRecorder.ColumnData">
+            <summary>
+            字段数据类
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.ColumnData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.HqRecorder.ColumnData.FieldName">
+            <summary>
+            字段物理名称(FieldName)
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.HqRecorder.ColumnData.FieldCaption">
+            <summary>
+            字段中文名称(FieldCaption)
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.HqRecorder.ColumnData.FieldType">
+            <summary>
+            索引字段类型(FieldType)
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.HqRecorder.ColumnData.FieldLength">
+            <summary>
+            索引字段长度(FieldLength)
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.HqRecorder.ColumnData.NumPrec">
+            <summary>
+            索引小数位数(NumPrec)
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBFHeader.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBFHeader.ToBytes">
+            <summary>
+            转为字节
+            </summary>
+            <returns>字节</returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBFHeader.Add(System.Int32,System.Int32,System.Byte[])">
+            <summary>
+            private Add to buf
+            </summary>
+            <param name="startPoint">开始点</param>
+            <param name="length">长度</param>
+            <param name="content">内容</param>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.DBFHeader.Version">
+            <summary>
+            00 Version
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.DBFHeader.Update">
+            <summary>
+            01-03 Update Date
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.DBFHeader.Records">
+            <summary>
+            04-07 Records
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.DBFHeader.HeaderBytes">
+            <summary>
+            08-09 Header Length
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.DBFHeader.RecordBytes">
+            <summary>
+            10-11 Number of bytes in record (16-bit number)
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.DBFHeader.HaveIndexOrMemo">
+            <summary>
+            28	Production index exists - 0x01 else 0x00 或是0x02表示有备注
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.DBFHeader.LanguageDriverId">
+            <summary>
+             29	dBaseIV language driver ID
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBFRow.#ctor(System.Int32,System.Collections.IList,RealTime.Server.SBusiness.FPTFile)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="rowLength">长度</param>
+            <param name="columns">字段列表</param>
+            <param name="fpt">文件</param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBFRow.ToBytes">
+            <summary>
+            转化为字节
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.DBFRow.Clear(System.Byte[])">
+            <summary>
+            清除内容为空格
+            </summary>
+            <param name="buf"></param>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.DBFRow.Item(System.Int32)">
+            <summary>
+            索引器
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.FPTFile.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="fileName">文件名</param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.FPTFile.NewFile(System.String)">
+            <summary>
+            创建新文件
+            </summary>
+            <param name="fileName">文件名</param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.FPTFile.Add(System.Object)">
+            <summary>
+            添加内容
+            </summary>
+            <param name="_value">值</param>
+            <returns>长度</returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.FPTFile.Close">
+            <summary>
+            关闭文件
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.HqRecorder.HqQueueManagerSingleTon">
+            <summary>
+            高频数据记录队列管理器单例
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.HqRecorder.HqQueueManager._hqListQueue">
+            <summary>
+            磁盘数据库文件名队列
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.HqQueueManager.#ctor">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.HqQueueManager.EnQueueItem(System.Collections.Generic.List{RealTime.Server.SModelData.HqData.HqExData})">
+            <summary>
+            添加元素到队列中
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.HqQueueManager.DeQueueItem">
+            <summary>
+            从队列中取出开始元素并删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.HqQueueManager.PeekQueueItem">
+            <summary>
+            取队列中开始处第一个元素但不删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.HqRecorder.HqQueueManager.ClearQueue">
+            <summary>
+            清除队列中元素
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.HqRecorder.HqQueueManager.HqListQueue">
+            <summary>
+            磁盘数据库文件名队列
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.HqRecorder.HqQueueManager.QueueCount">
+            <summary>
+            队排中元素个数
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.DBFDataType">
+            <summary>
+            字段类型，详细请看文件DatatypesDESC.htm,暂时就支持这几个类型吧
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.DBFDataType.Integer">
+            <summary>
+            I:整型 为4个字节长度
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.DBFDataType.Character">
+            <summary>
+            C:ASCII text 小于 254 characters long in dBASE.
+             Character fields can be up to 32 KB long (in Clipper and FoxPro) using decimal count as high byte in _udpDLMerDataQueue length.
+             It's possible to use up to 64KB long fields by reading length as unsigned. 
+             Only fields 小于等于 100 characters can be indexed. 
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.DBFDataType.Float">
+            <summary>
+            F:(dBASE IV and later, FoxPro, Clipper) 20 digits
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.DBFDataType.Date">
+            <summary>
+            D:Date in format YYYYMMDD. A date like 0000-00-00 is *NOT* valid.  
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.DBFDataType.Memo">
+            <summary>
+            M:Pointer to ASCII text _udpDLMerDataQueue in memo file 10 digits representing a pointer to a DBT block (default is blanks).  
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.DBFDataType.Number">
+            <summary>
+            ASCII text 18 characters long. Valid characters:
+             "0" - "9" and "-". Number fields can be up to 20 characters long in FoxPro and Clipper. 
+            </summary>
+        </member>
+        <!-- 对于成员“T:RealTime.Server.SBusiness.DBFDataTypeMaxLength”忽略有格式错误的 XML 注释 -->
+        <member name="F:RealTime.Server.SBusiness.DBFDataTypeMaxLength.Integer">
+            <summary>
+            整型为4个字节，这个和操作系统有关的
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.DBFDataTypeMaxLength.Character">
+            <summary>
+            字符最大长度 
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.DBFDataTypeMaxLength.Float">
+            <summary>
+            浮点型
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.DBFDataTypeMaxLength.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.DBFDataTypeMaxLength.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.DBFDataTypeMaxLength.Number">
+            <summary>
+            数字型是字符串来的
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.ServiceReference1.UserData">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.MarketPower">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.RealName">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.DepartmentName">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.DepartmentID">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.UpdateTime">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.UserType">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.BeginTime">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.EndTime">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.ID">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.Deleted">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.Name">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.Password">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.Ip">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.IsLogOK">
+            <remarks/>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.ServiceReference1.UserData.Message">
+            <remarks/>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.SystemSet.SSystemSetHandle.#ctor">
+            <summary>构造函数
+            构造函数
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.SystemSet.SSystemSetHandle.GetConfigData">
+            <summary>设置数据
+            设置数据
+            </summary>
+            <param name="_SSystemSetData"></param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.SystemSet.SSystemSetHandle.SaveConfigData(RealTime.Server.SModelData.SystemSet.SSystemSetData)">
+            <summary>保存数据到配置文件
+            保存数据到配置文件
+            </summary>
+            <param name="_SSystemSetData"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.InitDataAcceptHandler">
+            <summary>
+            初始数据对象接收句柄
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.InitCollectionDataAcceptHandler">
+            <summary>
+            初始数据对象集合接收句柄
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.MarketDiffDataAcceptHandler">
+            <param name="e"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.MarketDiffCollectionDataAcceptHandler">
+            <summary>
+            差异数据集合对象接收句柄
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.QhDiffDataAcceptHandler">
+            <summary>
+            股指期货对象接收句柄
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.MerQhDiffDataAcceptHandler">
+            <summary>
+            商品期货对象接收句柄
+            </summary>
+            <param name="arg"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.HKDataAcceptHandler">
+            <summary>
+            港股对象接收句柄
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.HKStaticDataAcceptHandler">
+            <summary>
+            港股盘前静态数据对象接收句柄
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.HKPreMarketPriceTableAcceptHandler">
+            <summary>
+            港股盘前价位表接收句柄
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.HKStockStatusDataAcceptHandler">
+            <summary>
+            港股盘中交易状态数据对象接收句柄
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.FOREXBatchDataAcceptHandler">
+            <summary>
+            udp数据接收时,处理batch数据的事件委托
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.FOREXContractDataAcceptHandler">
+            <summary>
+            udp数据接收时,处理Contract数据的事件委托
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.FOREXClosingPirceDataAcceptHandler">
+            <summary>
+            udp数据接收时,处理ClosingPirce数据的事件委托
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter">
+            <summary>
+            UDP数据接收缓冲器
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter._transferProtocoler">
+            <summary>
+            协议管理器
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter._udpDataQueue">
+            <summary>
+            数据缓冲池
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter._processMergeThread">
+            <summary>
+            数据处理线程
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.#ctor">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.StartProcessThread">
+            <summary>
+            启动处理线程
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter._udpDataQueue_EnQueueEvent(System.Object,System.EventArgs)">
+            <summary>
+            数据接收回调，数据入缓冲区响应事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.HandlerCallBack(System.Byte[])">
+            <summary>
+            数据接收回调
+            </summary>
+            <param name="_bytes"></param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.ThreadStartPort">
+            <summary>
+            UDP数据处理入口
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.ProcessByteData(System.Byte[])">
+            <summary>
+            数据处理逻辑,根据市场调用解包方法
+            </summary>
+            <param name="_bytes"></param>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.TestCodes">
+            <summary>
+            到要测试的代码列表
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptShDiffEvent">
+            <summary>
+            上海差异处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptSzDiffEvent">
+            <summary>
+            深圳差异处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptSzDiffCollectionEvent">
+            <summary>
+            深圳差异集合处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptShDiffCollectionEvent">
+            <summary>
+            上海差异集合处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptShInitEvent">
+            <summary>
+            上海初始数据处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptSzInitEvent">
+            <summary>
+            深圳初始数据处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptShInitCollectionEvent">
+            <summary>
+            上海初始数据集合处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptSzInitCollectionEvent">
+            <summary>
+            深圳初始数据集合处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptQhDiffEvent">
+            <summary>
+            期货数据处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptMerQhDiffEvent">
+            <summary>
+            商品期货数据处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptHKStockDiffEvent">
+            <summary>
+            港股数据处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptHKStockStaticDataDiffEvent">
+            <summary>
+            港股盘前静态数据处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptHKPreMarketPriceTableDiffEvent">
+            <summary>
+            港股盘前价位表数据处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.AcceptHKStockStatusDiffEvent">
+            <summary>
+            港股交易状态数据处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.OnFOREXBatchDataAccept">
+            <summary>
+            外汇udp Batch 数据接收后的处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.OnFOREXContractDataAccept">
+            <summary>
+            外汇udp Contract 数据接收后的处理事件
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpAccepter.OnFOREXClosingPirceDataAccept">
+            <summary>
+            外汇udp ClosingPirce 数据接收后的处理事件
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.UdpDataQueueManager">
+            <summary>
+            Udp广播数据接收缓冲
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.UdpAccepter.UdpDataQueueManager._udpDataQueue">
+            <summary>
+            磁盘数据库文件名队列
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.UdpAccepter.UdpDataQueueManager.#ctor">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.UdpAccepter.UdpDataQueueManager.EnQueueItem(System.Byte[])">
+            <summary>
+            添加元素到相应队列中
+            </summary>
+            <param name="item">udp数据包</param>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.UdpAccepter.UdpDataQueueManager.DeQueueItem">
+            <summary>
+            从队列中取出开始元素并删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.UdpAccepter.UdpDataQueueManager.PeekQueueItem">
+            <summary>
+            取队列中开始处第一个元素但不删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.UdpAccepter.UdpDataQueueManager.ClearQueue">
+            <summary>
+            清除队列中元素
+            </summary>
+        </member>
+        <member name="E:RealTime.Server.SBusiness.UdpAccepter.UdpDataQueueManager.EnQueueEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpAccepter.UdpDataQueueManager.HqDbFileNameQueue">
+            <summary>
+            磁盘数据库文件名队列
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpAccepter.UdpDataQueueManager.QueueCount">
+            <summary>
+            队排中元素个数
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SBusiness.UdpAccepter.UdpAccepterSingleTon">
+            <summary>
+            UDP消息接收者管理器
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpAccepter.UdpAccepterSingleTon.ShUdpAccepter">
+            <summary>
+            上海UDP消息接收者
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpAccepter.UdpAccepterSingleTon.SzUdpAccepter">
+            <summary>
+            深圳UDP消息接收者
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpAccepter.UdpAccepterSingleTon.QhUdpAccepter">
+            <summary>
+            期货UDP消息接收者
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpAccepter.UdpAccepterSingleTon.DLMerQhUdpAccepter">
+            <summary>
+            大连商品期货接收者
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpAccepter.UdpAccepterSingleTon.ZZMerQhUdpAccepter">
+            <summary>
+            郑州商品期货接收者
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpAccepter.UdpAccepterSingleTon.SHMerQhUdpAccepter">
+            <summary>
+            上海商品期货接收者
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpAccepter.UdpAccepterSingleTon.HKUdpAccepter">
+            <summary>
+            港股接收者
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpAccepter.UdpAccepterSingleTon.FEUdpAccepter">
+            <summary>
+            包汇接收者
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.UdpSend.UdpSend.m_iudpShServer">
+            <summary>
+            上海server
+            </summary>
+        </member>
+        <member name="F:RealTime.Server.SBusiness.UdpSend.UdpSend.m_iudpQhServer">
+            <summary>
+            期货server
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpSend.UdpSend.iudpServer">
+            <summary>
+            深圳
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpSend.UdpSend.iudpShServer">
+            <summary>
+            上海server
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SBusiness.UdpSend.UdpSend.iudpQhServer">
+            <summary>
+            期货server
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.Users.SCheckUserHandle.Login(RealTime.Server.SModelData.Users.UserData)">
+            <summary>
+            登录
+            </summary>
+            <param name="_UserData">用户信息</param>
+            <returns>登录结果</returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.Users.SCheckUserHandle.Logout(RealTime.Server.SModelData.Users.UserData)">
+            <summary>
+            登出
+            </summary>
+            <param name="_UserData">用户信息</param>
+            <returns>登出结果</returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.Users.SCheckUserHandle.GetInterface">
+            <summary>
+            取得远程业务组件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.Users.SCheckUserHandle.IsPassedAnthentication(System.String,System.String,System.String,System.String@)">
+            <summary>
+            主服务器登录验证
+            </summary>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <param name="strIp"></param>
+            <param name="strErrorMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.Users.SCheckUserHandle.GetMarketByUser(RealTime.Server.SModelData.Users.UserData)">
+            <summary>
+            获取用户拥有的可订阅的品种权限
+            </summary>
+            <param name="ud"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.Users.SCheckUserHandle.CheckUser(RealTime.Server.SModelData.Users.UserData,System.String)">
+            <summary>
+            用户登录验证，带服务器类型参数
+            </summary>
+            <param name="ud"></param>
+            <param name="serverType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.Users.SCheckUserHandle.CheckUser(RealTime.Server.SModelData.Users.UserData)">
+            <summary>
+            用户验证
+            </summary>
+            <param name="ud"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.Users.SCheckUserHandle.ORMapingForStock(System.Data.DataTable)">
+            <summary>
+            关系对象转换
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SBusiness.Users.SCheckUserHandle.ORMapingForUser(System.Data.DataTable)">
+            <summary>
+            关系对象转换
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

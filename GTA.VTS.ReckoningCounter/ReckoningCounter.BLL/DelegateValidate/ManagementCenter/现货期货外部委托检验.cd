@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="委托检验接口">
+    <Position X="12.271" Y="2.323" Height="0.292" Width="0.96" />
+  </Comment>
+  <Comment CommentText="现货(股票)品种交易规则">
+    <Position X="8.042" Y="8.176" Height="0.417" Width="1.7" />
+  </Comment>
+  <Comment CommentText="期货品种交易规则">
+    <Position X="3.104" Y="8.938" Height="0.333" Width="1.294" />
+  </Comment>
+  <Comment CommentText="商品期货和&#xD;&#xA;股指期货的检验方法">
+    <Position X="0.5" Y="2.972" Height="0.427" Width="1.2" />
+  </Comment>
+  <Comment CommentText="现货(股票)品种交易检验方法">
+    <Position X="4.884" Y="0.5" Height="0.406" Width="1.7" />
+  </Comment>
+  <Comment CommentText="检验交易员是否有交易某个品种的权限">
+    <Position X="11.234" Y="7.047" Height="0.656" Width="1.221" />
+  </Comment>
+  <Comment CommentText="根据交易商品品种类型调用现货或期货方法,调用返回现货或期货的清算公式">
+    <Position X="4.99" Y="4.573" Height="0.74" Width="1.242" />
+  </Comment>
+  <Comment CommentText="根据商品代码获取品种规则及清算公式接口">
+    <Position X="14.052" Y="2.355" Height="0.76" Width="0.7" />
+  </Comment>
+  <Class Name="ReckoningCounter.BLL.DelegateValidate.ManagementCenter.StockTradingRuleValidater">
+    <Position X="6.75" Y="0.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DelegateValidate\ManagementCenter\StockTradingRuleValidater.cs</FileName>
+      <NewMemberFileName>delegatevalidate\managementcenter\StockTradingRuleValidater.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.DelegateValidate.ManagementCenter.FutureTradingRuleValidater">
+    <Position X="0.5" Y="3.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DelegateValidate\ManagementCenter\FutureTradingRuleValidater.cs</FileName>
+      <NewMemberFileName>delegatevalidate\managementcenter\FutureTradingRuleValidater.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.DelegateValidate.ManagementCenter.McValidater">
+    <Position X="6.25" Y="3" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAgACAAAAABQAEAAAABQBABgAAAIAAAAAAAAEAA=</HashCode>
+      <FileName>DelegateValidate\ManagementCenter\McValidater.cs</FileName>
+      <NewMemberFileName>delegatevalidate\managementcenter\McValidater.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="StockTradingRuleValidater" />
+      <Property Name="FutureTradingRuleValidater" />
+      <Property Name="DealerTradeBreedRight" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReckoningCounter.BLL.DelegateValidate.ManagementCenter.StockRuleContainer" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CASAAABAAAAIBAQAAAEAAAAAgwAAgAAQgAAAAAggACA=</HashCode>
+      <FileName>DelegateValidate\ManagementCenter\StockRuleContainer.cs</FileName>
+      <NewMemberFileName>delegatevalidate\managementcenter\StockRuleContainer.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.Delegatevalidate.ManagementCenter.FutureRuleContainer" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAwAEYACgQABAAAABAoAAQQIAAQAAEAAAAAQA=</HashCode>
+      <FileName>DelegateValidate\ManagementCenter\FutureRuleContainer.cs</FileName>
+      <NewMemberFileName>delegatevalidate\managementcenter\FutureRuleContainer.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.DelegateValidate.ManagementCenter.DealerTradeBreedRight">
+    <Position X="6.5" Y="7" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAACAAAAAAAAAAAAACIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DelegateValidate\ManagementCenter\DealerTradeBreedRight.cs</FileName>
+      <NewMemberFileName>delegatevalidate\managementcenter\DealerTradeBreedRight.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ReckoningCounter.BLL.Delegatevalidate.ManagementCenter.IMcValidater" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAEAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DelegateValidate\ManagementCenter\IMcValidater.cs</FileName>
+      <NewMemberFileName>delegatevalidate\managementcenter\IMcValidater.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReckoningCounter.BLL.DelegateValidate.ManagementCenter.IMTradingRule" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DelegateValidate\ManagementCenter\IMTradingRule.cs</FileName>
+      <NewMemberFileName>delegatevalidate\managementcenter\IMTradingRule.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="SimSun" Size="9" />
+</ClassDiagram>

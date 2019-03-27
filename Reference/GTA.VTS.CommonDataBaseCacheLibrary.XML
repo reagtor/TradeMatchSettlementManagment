@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTA.VTS.CommonDataBaseCacheLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:GTA.VTS.CommonDataBaseCacheLibrary.CacheUtil`2">
+            <summary>
+             缓存公共单元
+             本类所有方法都使用静态方法锁定类型，而实例方法锁定实例。
+             在任何实例函数中只能有一个线程执行，并且在任何类的静态函数中只能有一个线程执行加锁
+            </summary>
+        </member>
+        <member name="M:GTA.VTS.CommonDataBaseCacheLibrary.CacheUtil`2.#ctor">
+            <summary>
+            构造函数初始化
+            </summary>
+        </member>
+        <member name="M:GTA.VTS.CommonDataBaseCacheLibrary.CacheUtil`2.HasValue">
+            <summary>
+            是否有数据
+            </summary>
+        </member>
+        <member name="M:GTA.VTS.CommonDataBaseCacheLibrary.CacheUtil`2.Count">
+            <summary>
+            当前缓存数据记录总数据
+            </summary>
+        </member>
+        <member name="M:GTA.VTS.CommonDataBaseCacheLibrary.CacheUtil`2.Add(`0,`1)">
+            <summary>
+            添加一条记录，如果已经存在则先删除该记录再添加
+            </summary>
+            <param name="key">key</param>
+            <param name="value">要添回的记录</param>
+        </member>
+        <member name="M:GTA.VTS.CommonDataBaseCacheLibrary.CacheUtil`2.Add(System.Func{`1,`0},System.Collections.Generic.List{`1})">
+            <summary>
+            向记录中添加多条记录，如果其中有某条记录已经，则先删除再添加。
+            </summary>
+            <param name="key">key（记录key委托方法val=>val.id）</param>
+            <param name="value">要添加的记录列表</param>
+        </member>
+        <member name="M:GTA.VTS.CommonDataBaseCacheLibrary.CacheUtil`2.Fill(System.Func{`1,`0},System.Collections.Generic.List{`1})">
+            <summary>
+            用一组数据列表初始化缓存数据,即内部先调用Reset()方法请空后再逐条添加
+            </summary>
+            <param name="key">key（记录key委托方法val=>val.id）</param>
+            <param name="value">要添加的记录列表</param>
+        </member>
+        <member name="M:GTA.VTS.CommonDataBaseCacheLibrary.CacheUtil`2.Remove(`0)">
+            <summary>
+            删除一个一个特定记录
+            </summary>
+            <param name="key">记录key</param>
+        </member>
+        <member name="M:GTA.VTS.CommonDataBaseCacheLibrary.CacheUtil`2.Contains(`0)">
+            <summary>
+            是否存在指定key的记录
+            </summary>
+            <param name="key">key</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:GTA.VTS.CommonDataBaseCacheLibrary.CacheUtil`2.Reset">
+            <summary>
+            重置缓存(即清空所有缓存数据)
+            </summary>
+        </member>
+        <member name="M:GTA.VTS.CommonDataBaseCacheLibrary.CacheUtil`2.GetByKey(`0)">
+            <summary>
+            根据key获取记录
+            </summary>
+            <param name="k"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTA.VTS.CommonDataBaseCacheLibrary.CacheUtil`2.GetAll">
+            <summary>
+            根据获取当前所有缓存记录
+            [MethodImpl(MethodImplOptions.Synchronized)]这里不用上锁，即使有其他线程在添加数据，
+            但添加数据已经是锁定当前实例对象，所以也不可以在使用获取
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

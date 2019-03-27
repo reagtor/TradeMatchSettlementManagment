@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfXH_MinChangePriceValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XH_MinChangePriceValue" nillable="true" type="tns:XH_MinChangePriceValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXH_MinChangePriceValue" nillable="true" type="tns:ArrayOfXH_MinChangePriceValue" />
+  <xs:complexType name="XH_MinChangePriceValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassID" type="xs:int" />
+      <xs:element minOccurs="0" name="FieldRangeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XH_MinChangePriceValue" nillable="true" type="tns:XH_MinChangePriceValue" />
+  <xs:complexType name="ArrayOfXH_MinVolumeOfBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XH_MinVolumeOfBusiness" nillable="true" type="tns:XH_MinVolumeOfBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXH_MinVolumeOfBusiness" nillable="true" type="tns:ArrayOfXH_MinVolumeOfBusiness" />
+  <xs:complexType name="XH_MinVolumeOfBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MinVolumeOfBusinessID" type="xs:int" />
+      <xs:element minOccurs="0" name="TradeWayID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UnitID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="VolumeOfBusiness" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XH_MinVolumeOfBusiness" nillable="true" type="tns:XH_MinVolumeOfBusiness" />
+  <xs:complexType name="ArrayOfXH_SpotCosts">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XH_SpotCosts" nillable="true" type="tns:XH_SpotCosts" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXH_SpotCosts" nillable="true" type="tns:ArrayOfXH_SpotCosts" />
+  <xs:complexType name="XH_SpotCosts">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassID" type="xs:int" />
+      <xs:element minOccurs="0" name="ClearingFees" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Commision" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CommisionStartingpoint" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="GetValueTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MonitoringFee" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PoundageSingleValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StampDuty" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StampDutyStartingpoint" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StampDutyTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SystemToll" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransferToll" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransferTollStartingpoint" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransferTollTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XH_SpotCosts" nillable="true" type="tns:XH_SpotCosts" />
+  <xs:complexType name="ArrayOfXH_SpotHighLowControlType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XH_SpotHighLowControlType" nillable="true" type="tns:XH_SpotHighLowControlType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXH_SpotHighLowControlType" nillable="true" type="tns:ArrayOfXH_SpotHighLowControlType" />
+  <xs:complexType name="XH_SpotHighLowControlType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassHighLowID" type="xs:int" />
+      <xs:element minOccurs="0" name="HighLowTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XH_SpotHighLowControlType" nillable="true" type="tns:XH_SpotHighLowControlType" />
+  <xs:complexType name="ArrayOfXH_SpotPosition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XH_SpotPosition" nillable="true" type="tns:XH_SpotPosition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXH_SpotPosition" nillable="true" type="tns:ArrayOfXH_SpotPosition" />
+  <xs:complexType name="XH_SpotPosition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassID" type="xs:int" />
+      <xs:element minOccurs="0" name="Rate" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XH_SpotPosition" nillable="true" type="tns:XH_SpotPosition" />
+  <xs:complexType name="ArrayOfXH_SpotRangeCost">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XH_SpotRangeCost" nillable="true" type="tns:XH_SpotRangeCost" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXH_SpotRangeCost" nillable="true" type="tns:ArrayOfXH_SpotRangeCost" />
+  <xs:complexType name="XH_SpotRangeCost">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassID" type="xs:int" />
+      <xs:element minOccurs="0" name="FieldRangeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XH_SpotRangeCost" nillable="true" type="tns:XH_SpotRangeCost" />
+  <xs:complexType name="ArrayOfXH_SpotTradeRules">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XH_SpotTradeRules" nillable="true" type="tns:XH_SpotTradeRules" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXH_SpotTradeRules" nillable="true" type="tns:ArrayOfXH_SpotTradeRules" />
+  <xs:complexType name="XH_SpotTradeRules">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassHighLowID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BreedClassID" type="xs:int" />
+      <xs:element minOccurs="0" name="BreedClassValidID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FundDeliveryInstitution" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSlew" type="xs:int" />
+      <xs:element minOccurs="0" name="MarketUnitID" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxLeaveQuantity" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxLeaveQuantityUnit" type="xs:int" />
+      <xs:element minOccurs="0" name="MinChangePrice" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MinVolumeMultiples" type="xs:int" />
+      <xs:element minOccurs="0" name="PriceUnit" type="xs:int" />
+      <xs:element minOccurs="0" name="StockDeliveryInstitution" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ValueTypeMinChangePrice" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XH_SpotTradeRules" nillable="true" type="tns:XH_SpotTradeRules" />
+  <xs:complexType name="ArrayOfXH_SpotHighLowValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XH_SpotHighLowValue" nillable="true" type="tns:XH_SpotHighLowValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXH_SpotHighLowValue" nillable="true" type="tns:ArrayOfXH_SpotHighLowValue" />
+  <xs:complexType name="XH_SpotHighLowValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassHighLowID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FundYestClosePriceScale" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HightLowValueID" type="xs:int" />
+      <xs:element minOccurs="0" name="NormalValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RightHighLowScale" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StValue" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XH_SpotHighLowValue" nillable="true" type="tns:XH_SpotHighLowValue" />
+  <xs:complexType name="ArrayOfXH_RightHightLowPrices">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XH_RightHightLowPrices" nillable="true" type="tns:XH_RightHightLowPrices" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXH_RightHightLowPrices" nillable="true" type="tns:ArrayOfXH_RightHightLowPrices" />
+  <xs:complexType name="XH_RightHightLowPrices">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HightLowID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RightFrontDayClosePrice" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RightHightLowPriceID" type="xs:int" />
+      <xs:element minOccurs="0" name="SetScale" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StockFrontDayClosePrice" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XH_RightHightLowPrices" nillable="true" type="tns:XH_RightHightLowPrices" />
+  <xs:complexType name="ArrayOfXH_ValidDeclareType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XH_ValidDeclareType" nillable="true" type="tns:XH_ValidDeclareType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXH_ValidDeclareType" nillable="true" type="tns:ArrayOfXH_ValidDeclareType" />
+  <xs:complexType name="XH_ValidDeclareType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassValidID" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidDeclareTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XH_ValidDeclareType" nillable="true" type="tns:XH_ValidDeclareType" />
+  <xs:complexType name="ArrayOfXH_ValidDeclareValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XH_ValidDeclareValue" nillable="true" type="tns:XH_ValidDeclareValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXH_ValidDeclareValue" nillable="true" type="tns:ArrayOfXH_ValidDeclareValue" />
+  <xs:complexType name="XH_ValidDeclareValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedClassValidID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LowerLimit" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NewDayLowerLimit" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NewDayUpperLimit" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpperLimit" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ValidDeclareValueID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XH_ValidDeclareValue" nillable="true" type="tns:XH_ValidDeclareValue" />
+</xs:schema>

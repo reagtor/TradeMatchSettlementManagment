@@ -1,0 +1,906 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61FCAC70-4225-4402-9360-1323EFF99E40}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ManagementCenterConsole.UI</RootNamespace>
+    <AssemblyName>瑞尔格特-柜台管理中心客户端</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <StartupObject>
+    </StartupObject>
+    <ApplicationIcon>ManagementCConsoleExe.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\应用程序\管理中心\客户端\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\瑞尔格特-柜台管理中心客户端.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\应用程序\管理中心\客户端\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v6.3, Version=6.3.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\DevExpress.Data.v6.3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DevLocalizer.v6.3, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\DevExpress.DevLocalizer.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v6.3, Version=6.3.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\DevExpress.Utils.v6.3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v6.3, Version=6.3.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\DevExpress.XtraBars.v6.3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v6.3, Version=6.3.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\DevExpress.XtraEditors.v6.3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v6.3, Version=6.3.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\DevExpress.XtraGrid.v6.3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v6.3, Version=6.3.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\DevExpress.XtraNavBar.v6.3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v6.3, Version=6.3.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\DevExpress.XtraTreeList.v6.3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonClass\BindData.cs" />
+    <Compile Include="CommonClass\ComboBoxDataSource.cs" />
+    <Compile Include="CommonClass\CommonParameterSetCommon.cs" />
+    <Compile Include="CommonClass\FuturesManageCommon.cs" />
+    <Compile Include="CommonClass\HKManageCommon.cs" />
+    <Compile Include="CommonClass\InputTest.cs" />
+    <Compile Include="CommonClass\ParameterSetting.cs" />
+    <Compile Include="CommonClass\ShowMessageBox.cs" />
+    <Compile Include="CommonClass\SpotManageCommon.cs" />
+    <Compile Include="CommonClass\UITypes.cs" />
+    <Compile Include="CommonClass\UComboItem.cs" />
+    <Compile Include="CommonClass\ValueToEntity.cs" />
+    <Compile Include="CommonControl\UCPageNavigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonControl\UCPageNavigation.designer.cs">
+      <DependentUpon>UCPageNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonParameterSet\BourseManagerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonParameterSet\BourseManagerUI.Designer.cs">
+      <DependentUpon>BourseManagerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonParameterSet\BreedClassManagerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonParameterSet\BreedClassManagerUI.Designer.cs">
+      <DependentUpon>BreedClassManagerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonParameterSet\CommodityManagerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonParameterSet\CommodityManagerUI.Designer.cs">
+      <DependentUpon>CommodityManagerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonParameterSet\TodaySettlementPriceManagerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonParameterSet\TodaySettlementPriceManagerUI.Designer.cs">
+      <DependentUpon>TodaySettlementPriceManagerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonParameterSet\NotTradeDateManagerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonParameterSet\NotTradeDateManagerUI.Designer.cs">
+      <DependentUpon>NotTradeDateManagerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonParameterSet\TradeTimeManagerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonParameterSet\TradeTimeManagerUI.Designer.cs">
+      <DependentUpon>TradeTimeManagerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CounterManage\CounterEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CounterManage\CounterEdit.Designer.cs">
+      <DependentUpon>CounterEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CounterManage\CounterManger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CounterManage\CounterManger.Designer.cs">
+      <DependentUpon>CounterManger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AddCFBailScaleValueUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AddCFBailScaleValueUI.Designer.cs">
+      <DependentUpon>AddCFBailScaleValueUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AddCFMinScaleValueUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AddCFMinScaleValueUI.Designer.cs">
+      <DependentUpon>AddCFMinScaleValueUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AddFuturesTradeRulesUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AddFuturesTradeRulesUI.Designer.cs">
+      <DependentUpon>AddFuturesTradeRulesUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AddLastTradingDayUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AddLastTradingDayUI.Designer.cs">
+      <DependentUpon>AddLastTradingDayUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AddMinAndMaxConsignQuantumUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AddMinAndMaxConsignQuantumUI.Designer.cs">
+      <DependentUpon>AddMinAndMaxConsignQuantumUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AddPositionLimitValueUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AddPositionLimitValueUI.Designer.cs">
+      <DependentUpon>AddPositionLimitValueUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AgreementDeliMonthManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\AgreementDeliMonthManageUI.Designer.cs">
+      <DependentUpon>AgreementDeliMonthManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\CFBailScaleValueManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\CFBailScaleValueManageUI.Designer.cs">
+      <DependentUpon>CFBailScaleValueManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\CommodityFuseManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\CommodityFuseManageUI.Designer.cs">
+      <DependentUpon>CommodityFuseManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\FuseTimesectionManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\FuseTimesectionManageUI.Designer.cs">
+      <DependentUpon>FuseTimesectionManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\FutureCostsManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\FutureCostsManageUI.Designer.cs">
+      <DependentUpon>FutureCostsManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\FuturesTradeRulesManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\FuturesTradeRulesManageUI.Designer.cs">
+      <DependentUpon>FuturesTradeRulesManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\PositionLimitValueManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\PositionLimitValueManageUI.Designer.cs">
+      <DependentUpon>PositionLimitValueManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\SIFPositionAndBailManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuturesRuleManageUI\SIFPositionAndBailManageUI.Designer.cs">
+      <DependentUpon>SIFPositionAndBailManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HKRuleManageUI\HKCommodityManagerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HKRuleManageUI\HKCommodityManagerUI.Designer.cs">
+      <DependentUpon>HKCommodityManagerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HKRuleManageUI\HKCostsManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HKRuleManageUI\HKCostsManageUI.Designer.cs">
+      <DependentUpon>HKCostsManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HKRuleManageUI\HKTradeRulesManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HKRuleManageUI\HKTradeRulesManageUI.Designer.cs">
+      <DependentUpon>HKTradeRulesManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LookBackPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookBackPwd.Designer.cs">
+      <DependentUpon>LookBackPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerManage\RightEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerManage\RightEdit.Designer.cs">
+      <DependentUpon>RightEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerManage\RightManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerManage\RightManage.Designer.cs">
+      <DependentUpon>RightManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerManage\ManagerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerManage\ManagerEdit.Designer.cs">
+      <DependentUpon>ManagerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerManage\ManagerManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerManage\ManagerManage.Designer.cs">
+      <DependentUpon>ManagerManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchCenterManage\Bourse-Machine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MatchCenterManage\Bourse-Machine.Designer.cs">
+      <DependentUpon>Bourse-Machine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchCenterManage\CenterInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MatchCenterManage\CenterInfo.Designer.cs">
+      <DependentUpon>CenterInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchCenterManage\CenterManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MatchCenterManage\CenterManage.Designer.cs">
+      <DependentUpon>CenterManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchCenterManage\CodeAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchCenterManage\CodeAssign.Designer.cs">
+      <DependentUpon>CodeAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchCenterManage\Complete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MatchCenterManage\Complete.Designer.cs">
+      <DependentUpon>Complete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchCenterManage\DispositionGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchCenterManage\DispositionGuide.Designer.cs">
+      <DependentUpon>DispositionGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchCenterManage\LeftNavControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MatchCenterManage\LeftNavControl.Designer.cs">
+      <DependentUpon>LeftNavControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchCenterManage\MachineManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MatchCenterManage\MachineManage.Designer.cs">
+      <DependentUpon>MachineManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchCenterManage\MatchCenterManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchCenterManage\MatchCenterManage.Designer.cs">
+      <DependentUpon>MatchCenterManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchCenterManage\Welcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MatchCenterManage\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\AddSpotCostsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\AddSpotCostsUI.Designer.cs">
+      <DependentUpon>AddSpotCostsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\AddSpotHighLowValueUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\AddSpotHighLowValueUI.Designer.cs">
+      <DependentUpon>AddSpotHighLowValueUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\AddSpotTradeRulesUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\AddSpotTradeRulesUI.Designer.cs">
+      <DependentUpon>AddSpotTradeRulesUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\MinVolumeOfBusinessManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\MinVolumeOfBusinessManageUI.Designer.cs">
+      <DependentUpon>MinVolumeOfBusinessManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\SpotCostsManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\SpotCostsManageUI.Designer.cs">
+      <DependentUpon>SpotCostsManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\SpotPositionManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\SpotPositionManageUI.Designer.cs">
+      <DependentUpon>SpotPositionManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\SpotTradeRulesManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\SpotTradeRulesManageUI.Designer.cs">
+      <DependentUpon>SpotTradeRulesManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\SpotUnitConversionManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpotRuleManageUI\SpotUnitConversionManageUI.Designer.cs">
+      <DependentUpon>SpotUnitConversionManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionManage\AccountManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransactionManage\AccountManage.Designer.cs">
+      <DependentUpon>AccountManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionManage\AddFundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionManage\AddFundForm.Designer.cs">
+      <DependentUpon>AddFundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionManage\FreezeManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransactionManage\FreezeManage.Designer.cs">
+      <DependentUpon>FreezeManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionManage\FundQuery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransactionManage\FundQuery.Designer.cs">
+      <DependentUpon>FundQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionManage\LeftControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransactionManage\LeftControl.Designer.cs">
+      <DependentUpon>LeftControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionManage\TransactionManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionManage\TransactionManageForm.Designer.cs">
+      <DependentUpon>TransactionManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionManage\TransferManageUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransactionManage\TransferManageUI.Designer.cs">
+      <DependentUpon>TransferManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionManage\UserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionManage\UserInfoForm.Designer.cs">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CommonControl\UCPageNavigation.resx">
+      <DependentUpon>UCPageNavigation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonParameterSet\BourseManagerUI.resx">
+      <DependentUpon>BourseManagerUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonParameterSet\BreedClassManagerUI.resx">
+      <DependentUpon>BreedClassManagerUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonParameterSet\CommodityManagerUI.resx">
+      <DependentUpon>CommodityManagerUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonParameterSet\TodaySettlementPriceManagerUI.resx">
+      <DependentUpon>TodaySettlementPriceManagerUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonParameterSet\NotTradeDateManagerUI.resx">
+      <DependentUpon>NotTradeDateManagerUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonParameterSet\TradeTimeManagerUI.resx">
+      <DependentUpon>TradeTimeManagerUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CounterManage\CounterEdit.resx">
+      <DependentUpon>CounterEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CounterManage\CounterManger.resx">
+      <DependentUpon>CounterManger.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\AddCFBailScaleValueUI.resx">
+      <DependentUpon>AddCFBailScaleValueUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\AddCFMinScaleValueUI.resx">
+      <DependentUpon>AddCFMinScaleValueUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\AddFuturesTradeRulesUI.resx">
+      <DependentUpon>AddFuturesTradeRulesUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\AddLastTradingDayUI.resx">
+      <DependentUpon>AddLastTradingDayUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\AddMinAndMaxConsignQuantumUI.resx">
+      <DependentUpon>AddMinAndMaxConsignQuantumUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\AddPositionLimitValueUI.resx">
+      <DependentUpon>AddPositionLimitValueUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\AgreementDeliMonthManageUI.resx">
+      <DependentUpon>AgreementDeliMonthManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\CFBailScaleValueManageUI.resx">
+      <DependentUpon>CFBailScaleValueManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\CommodityFuseManageUI.resx">
+      <DependentUpon>CommodityFuseManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\FuseTimesectionManageUI.resx">
+      <DependentUpon>FuseTimesectionManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\FutureCostsManageUI.resx">
+      <DependentUpon>FutureCostsManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\FuturesTradeRulesManageUI.resx">
+      <DependentUpon>FuturesTradeRulesManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\PositionLimitValueManageUI.resx">
+      <DependentUpon>PositionLimitValueManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuturesRuleManageUI\SIFPositionAndBailManageUI.resx">
+      <DependentUpon>SIFPositionAndBailManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HKRuleManageUI\HKCommodityManagerUI.resx">
+      <DependentUpon>HKCommodityManagerUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HKRuleManageUI\HKCostsManageUI.resx">
+      <DependentUpon>HKCostsManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HKRuleManageUI\HKTradeRulesManageUI.resx">
+      <DependentUpon>HKTradeRulesManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookBackPwd.resx">
+      <DependentUpon>LookBackPwd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerManage\ManagerEdit.resx">
+      <DependentUpon>ManagerEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerManage\ManagerManage.resx">
+      <DependentUpon>ManagerManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerManage\RightEdit.resx">
+      <DependentUpon>RightEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerManage\RightManage.resx">
+      <DependentUpon>RightManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchCenterManage\Bourse-Machine.resx">
+      <DependentUpon>Bourse-Machine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchCenterManage\CenterInfo.resx">
+      <DependentUpon>CenterInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchCenterManage\CenterManage.resx">
+      <DependentUpon>CenterManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchCenterManage\CodeAssign.resx">
+      <DependentUpon>CodeAssign.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchCenterManage\Complete.resx">
+      <DependentUpon>Complete.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchCenterManage\DispositionGuide.resx">
+      <DependentUpon>DispositionGuide.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchCenterManage\LeftNavControl.resx">
+      <DependentUpon>LeftNavControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchCenterManage\MachineManage.resx">
+      <DependentUpon>MachineManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchCenterManage\MatchCenterManage.resx">
+      <DependentUpon>MatchCenterManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchCenterManage\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="SpotRuleManageUI\AddSpotCostsUI.resx">
+      <DependentUpon>AddSpotCostsUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpotRuleManageUI\AddSpotHighLowValueUI.resx">
+      <DependentUpon>AddSpotHighLowValueUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpotRuleManageUI\AddSpotTradeRulesUI.resx">
+      <DependentUpon>AddSpotTradeRulesUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpotRuleManageUI\MinVolumeOfBusinessManageUI.resx">
+      <DependentUpon>MinVolumeOfBusinessManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpotRuleManageUI\SpotCostsManageUI.resx">
+      <DependentUpon>SpotCostsManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpotRuleManageUI\SpotPositionManageUI.resx">
+      <DependentUpon>SpotPositionManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpotRuleManageUI\SpotTradeRulesManageUI.resx">
+      <DependentUpon>SpotTradeRulesManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpotRuleManageUI\SpotUnitConversionManageUI.resx">
+      <DependentUpon>SpotUnitConversionManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionManage\AccountManage.resx">
+      <DependentUpon>AccountManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionManage\AddFundForm.resx">
+      <DependentUpon>AddFundForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionManage\FreezeManage.resx">
+      <DependentUpon>FreezeManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionManage\FundQuery.resx">
+      <DependentUpon>FundQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionManage\LeftControl.resx">
+      <DependentUpon>LeftControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionManage\TransactionManageForm.resx">
+      <DependentUpon>TransactionManageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionManage\TransferManageUI.resx">
+      <DependentUpon>TransferManageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionManage\UserInfoForm.resx">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ManagementCenterConsoleHelp.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\11副本.jpg" />
+    <Content Include="Icon\12副本.jpg" />
+    <Content Include="Icon\14副本.jpg" />
+    <Content Include="Icon\16副本.jpg" />
+    <Content Include="Icon\18副本.jpg" />
+    <Content Include="Icon\19副本.jpg" />
+    <Content Include="Icon\About.gif" />
+    <Content Include="Icon\AboutLeft.jpg" />
+    <Content Include="Icon\AddFundForLeft.png" />
+    <Content Include="Icon\AddFutureCosts.ico" />
+    <Content Include="Icon\AddLastTradingDay.ico" />
+    <Content Include="Icon\AddMinAndMaxConsign.ico" />
+    <Content Include="Icon\AddPositionLimitV.ico" />
+    <Content Include="Icon\20副本.jpg" />
+    <Content Include="Icon\21副本.jpg" />
+    <Content Include="Icon\3副本.jpg" />
+    <Content Include="Icon\5副本.jpg" />
+    <Content Include="Icon\6副本.jpg" />
+    <Content Include="Icon\8副本.jpg" />
+    <Content Include="Icon\9副本.jpg" />
+    <Content Include="Icon\AddCFBailScaleV.ico" />
+    <Content Include="Icon\AddCFBailScaleV.png" />
+    <Content Include="Icon\AddFund.ico" />
+    <Content Include="Icon\AddFund.png" />
+    <Content Include="Icon\AddFuturesTradeRules.ico" />
+    <Content Include="Icon\AddFuturesTradeRules.png" />
+    <Content Include="Icon\AddPositionLimitV.png" />
+    <Content Include="Icon\AddSpotCost.ico" />
+    <Content Include="Icon\AddSpotHighLowValue.ico" />
+    <Content Include="Icon\AddSpotTradeRules.ico" />
+    <Content Include="Icon\AddSpotTradeRules.png" />
+    <Content Include="Icon\AddValidDeclareValueU.ico" />
+    <Content Include="Icon\AgreementDeliMonthM.ico" />
+    <Content Include="Icon\Background.jpg" />
+    <Content Include="Icon\BourseM.ico" />
+    <Content Include="Icon\BourseM.png" />
+    <Content Include="Icon\BreedClassM.png" />
+    <Content Include="Icon\CFBailScaleValueM.png" />
+    <Content Include="Icon\CodeAssign.gif" />
+    <Content Include="Icon\CodeAssign.ico" />
+    <Content Include="Icon\CommodityFuseM.png" />
+    <Content Include="Icon\CommodityM.ico" />
+    <Content Include="Icon\CommodityM.png" />
+    <Content Include="Icon\CounterEdit.gif" />
+    <Content Include="Icon\CounterEdit.ico" />
+    <Content Include="Icon\CounterEdit.png" />
+    <Content Include="Icon\Exit.png" />
+    <Content Include="Icon\FieldRangeM.ico" />
+    <Content Include="Icon\FuseTimesectionM.ico" />
+    <Content Include="Icon\FutureCostsM.png" />
+    <Content Include="Icon\FuturesRuleM.png" />
+    <Content Include="Icon\Help.gif" />
+    <Content Include="Icon\HKCommodityM.ico" />
+    <Content Include="Icon\HKCommodityM.png" />
+    <Content Include="Icon\HKSpotCostM.ico" />
+    <Content Include="Icon\HKSpotCostM.png" />
+    <Content Include="Icon\HKSpotRulesM.ico" />
+    <Content Include="Icon\HKSpotRulesM.png" />
+    <Content Include="Icon\Login.jpg" />
+    <Content Include="Icon\LoginResult.jpg" />
+    <Content Include="Icon\ManagementCConsoleExe-old.ico" />
+    <Content Include="Icon\ManagementCConsoleExe.ico" />
+    <Content Include="Icon\ManagementCConsoleForm-old.ico" />
+    <Content Include="Icon\ManagementCServiceExe-old.ico" />
+    <Content Include="Icon\ManagementCServiceExe.ico" />
+    <Content Include="Icon\ManagementCServiceForm-old.ico" />
+    <Content Include="Icon\ManagerM.ico" />
+    <Content Include="Icon\ManagerM.png" />
+    <Content Include="Icon\ManagerRightM.png" />
+    <Content Include="Icon\MatchCenterSet.png" />
+    <Content Include="Icon\MatchConfig.gif" />
+    <Content Include="Icon\MinUnitM.png" />
+    <Content Include="Icon\NotTradeDateM.ico" />
+    <Content Include="Icon\OneInfo.ico" />
+    <Content Include="Icon\OneInfo.png" />
+    <Content Include="Icon\PositionLimitValueM.png" />
+    <Content Include="Icon\RightEdit.ico" />
+    <Content Include="Icon\RightEdit.png" />
+    <Content Include="Icon\SIFPositionAndBailM.png" />
+    <Content Include="Icon\SpotCostM.png" />
+    <Content Include="Icon\SpotPositionM.png" />
+    <Content Include="Icon\SpotRulesM.png" />
+    <Content Include="Icon\SpotUnitConversionM.png" />
+    <Content Include="Icon\TodaySetPrice.ico" />
+    <Content Include="Icon\TodaySetPrice.png" />
+    <Content Include="Icon\TradeEdit.ico" />
+    <Content Include="Icon\TradeEdit.png" />
+    <Content Include="Icon\TradeM.png" />
+    <Content Include="Icon\TradeTimeM.ico" />
+    <Content Include="Icon\Transfer.ico" />
+    <Content Include="Icon\Transfer.png" />
+    <Content Include="ManagementCConsoleExe.ico" />
+    <None Include="Resources\pictureEdit1.EditValue.jpg" />
+    <Content Include="帐户管理中心业务管理器.sdm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GTA.VTS.Common\GTA.VTS.Common.CommonObject\GTA.VTS.Common.CommonObject.csproj">
+      <Project>{17E3419C-E66D-42B0-84F8-B0A15636D44C}</Project>
+      <Name>GTA.VTS.Common.CommonObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GTA.VTS.Common\GTA.VTS.Common.CommonUtility\GTA.VTS.Common.CommonUtility.csproj">
+      <Project>{1203CAC4-E92D-4948-BD36-F45B065C37AC}</Project>
+      <Name>GTA.VTS.Common.CommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManagementCenter.BLL\ManagementCenter.BLL.csproj">
+      <Project>{51FA91A4-365A-4615-9864-0C93EC44488A}</Project>
+      <Name>ManagementCenter.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManagementCenter.Entity\ManagementCenter.Entity.csproj">
+      <Project>{AEBA574D-04D6-46EB-A0E8-F6497143CD58}</Project>
+      <Name>ManagementCenter.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ReckoningCounter.BLL.delegateoffer.OrderOfferCenter">
+    <Position X="4.25" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>QEAEAAABIAAYAAAAABAJAAAAgAAAARAARAgAAAAAgAA=</HashCode>
+      <FileName>DelegateAcceptOffer\OrderOffer\OrderOfferCenter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_seviceChannelManager" />
+      <Field Name="_orderCache" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_mercantileFutureQueueList" />
+      <Field Name="_stockIndexFuturesFutureQueueList" />
+      <Field Name="_stockQueueList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.OrderAccepter">
+    <Position X="1.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAABAAAAQAEIAAIIAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DelegateAcceptOffer\OrderAccepter\OrderAccepter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_orderOfferCenter" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.SeviceChannelManager">
+    <Position X="4.5" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABAAQIABEAgAEAAAAAADUAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>DelegateAcceptOffer\OrderOffer\SeviceChannelManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_wcfDoOrderChannelList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ReckoningCounter.DAL.MatchCenterService.DoOrderClient">
+    <Position X="1.5" Y="7" Width="1.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReckoningCounter.BLL.DelegateValidate.ValidateCenter" Collapsed="true">
+    <Position X="8.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>DelegateValidate\ValidateCenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.DelegateAcceptOffer.OrderOffer.OrderCache">
+    <Position X="7.75" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAgAAAAAACAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>DelegateAcceptOffer\OrderOffer\OrderCache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReckoningCounter.BLL.ScheduleManagement.MarketProcessJob" Collapsed="true">
+    <Position X="7.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScheduleManagement\MarketProcessJob.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CommonUtility.QueueBufferBase&lt;QueueItem&gt;">
+    <Position X="9.75" Y="3" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="SimSun" Size="9" />
+</ClassDiagram>

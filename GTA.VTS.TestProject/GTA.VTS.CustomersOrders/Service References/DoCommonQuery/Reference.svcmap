@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="74b376b7-6dd8-4081-97d1-8b43c91ac439" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:9188/DoCommonQuery/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="44496c02-93ad-4ee8-9ea1-0e2ba92de63a" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoCommonQuery/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="d0a083a9-5671-46a0-96c5-1f56e9dc3b55" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoCommonQuery/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="caf4c153-9e90-40d5-829b-2d7c60c10bb6" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoCommonQuery/mex" />
+    <MetadataFile FileName="ReckoningCounter.Entity.xsd" MetadataType="Schema" ID="5d4e8231-0f09-4809-914e-18db0036977b" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoCommonQuery/mex" />
+    <MetadataFile FileName="ReckoningCounter.Entity.Model.xsd" MetadataType="Schema" ID="0070d282-8c2d-4c37-8748-71a63d8e3af1" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoCommonQuery/mex" />
+    <MetadataFile FileName="ReckoningCounter.Model.xsd" MetadataType="Schema" ID="f0761267-4b86-4772-9724-d61801ab036c" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoCommonQuery/mex" />
+    <MetadataFile FileName="ReckoningCounter.Entity.AccountManagementAndFindEntity.xsd" MetadataType="Schema" ID="32e5538c-bede-4a30-99d2-ef86ddc51f53" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoCommonQuery/mex" />
+    <MetadataFile FileName="ReckoningCounter.Entity.Model.QueryFilter.xsd" MetadataType="Schema" ID="afd4dffd-c7d6-425d-9fe9-d23ccbbb7eae" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoCommonQuery/mex" />
+    <MetadataFile FileName="GTA.VTS.Common.CommonObject.xsd" MetadataType="Schema" ID="a6e50a86-51b4-440f-b96c-c43ddfd03eb7" SourceId="1" SourceUrl="net.tcp://localhost:9188/DoCommonQuery/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

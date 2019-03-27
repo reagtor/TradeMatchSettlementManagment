@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity.HK" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.HK" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" />
+  <xs:element name="HKCapitalFind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="capitalAccountID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" minOccurs="0" name="currencyType" type="q1:Types.CurrencyType" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HKCapitalFindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity.HK" minOccurs="0" name="HKCapitalFindResult" nillable="true" type="q2:HKCapitalEntity" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HKHoldFind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="capitalAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity.HK" minOccurs="0" name="findCondition" nillable="true" type="q3:HKHoldConditionFindEntity" />
+        <xs:element minOccurs="0" name="start" type="xs:int" />
+        <xs:element minOccurs="0" name="pageLength" type="xs:int" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HKHoldFindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity.HK" minOccurs="0" name="HKHoldFindResult" nillable="true" type="q4:ArrayOfHKHoldFindResultyEntity" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HKTodayEntrustFindByHKCapitalAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="capitalAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="start" type="xs:int" />
+        <xs:element minOccurs="0" name="pageLength" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity.HK" minOccurs="0" name="findCondition" nillable="true" type="q5:HKEntrustConditionFindEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HKTodayEntrustFindByHKCapitalAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.HK" minOccurs="0" name="HKTodayEntrustFindByHKCapitalAccountResult" nillable="true" type="q6:ArrayOfHK_TodayEntrustInfo" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HKHistoryEntrustFind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="capitalAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="start" type="xs:int" />
+        <xs:element minOccurs="0" name="pageLength" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity.HK" minOccurs="0" name="findCondition" nillable="true" type="q7:HKEntrustConditionFindEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HKHistoryEntrustFindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.HK" minOccurs="0" name="HKHistoryEntrustFindResult" nillable="true" type="q8:ArrayOfHK_HistoryEntrustInfo" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HKHistoryTradeFind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="capitalAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="start" type="xs:int" />
+        <xs:element minOccurs="0" name="pageLength" type="xs:int" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity.HK" minOccurs="0" name="findCondition" nillable="true" type="q9:HKTradeConditionFindEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HKHistoryTradeFindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.HK" minOccurs="0" name="HKHistoryTradeFindResult" nillable="true" type="q10:ArrayOfHK_HistoryTradeInfo" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HKTodayTradeFindByCapitalAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="capitalAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="start" type="xs:int" />
+        <xs:element minOccurs="0" name="pageLength" type="xs:int" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity.HK" minOccurs="0" name="findCondition" nillable="true" type="q11:HKTradeConditionFindEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HKTodayTradeFindByCapitalAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.HK" minOccurs="0" name="HKTodayTradeFindByCapitalAccountResult" nillable="true" type="q12:ArrayOfHK_TodayTradeInfo" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HKCapitalAccountTransferFlowFind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="capitalAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="start" type="xs:int" />
+        <xs:element minOccurs="0" name="pageLength" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HKCapitalAccountTransferFlowFindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="HKCapitalAccountTransferFlowFindResult" nillable="true" type="q13:ArrayOfUA_CapitalFlowTableInfo" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

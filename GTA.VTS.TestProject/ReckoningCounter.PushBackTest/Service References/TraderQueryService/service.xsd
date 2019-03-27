@@ -1,0 +1,815 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" />
+  <xs:element name="PagingQuerySpotCapital">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" minOccurs="0" name="currencyType" type="q1:Types.CurrencyType" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQuerySpotCapitalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="PagingQuerySpotCapitalResult" nillable="true" type="q2:SpotCapitalEntity" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryFuturesCapital">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" minOccurs="0" name="currencyType" type="q3:Types.CurrencyType" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryFuturesCapitalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="PagingQueryFuturesCapitalResult" nillable="true" type="q4:FuturesCapitalEntity" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQuerySpotHold">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element minOccurs="0" name="strPassword" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="findCondition" nillable="true" type="q5:SpotHoldConditionFindEntity" />
+        <xs:element minOccurs="0" name="start" type="xs:int" />
+        <xs:element minOccurs="0" name="pageLength" type="xs:int" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQuerySpotHoldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="PagingQuerySpotHoldResult" nillable="true" type="q6:ArrayOfSpotHoldFindResultEntity" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryFuturesHold">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element minOccurs="0" name="strPassword" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="findCondition" nillable="true" type="q7:FuturesHoldConditionFindEntity" />
+        <xs:element minOccurs="0" name="start" type="xs:int" />
+        <xs:element minOccurs="0" name="pageLength" type="xs:int" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryFuturesHoldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="PagingQueryFuturesHoldResult" nillable="true" type="q8:ArrayOfFuturesHoldFindResultEntity" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+        <xs:element minOccurs="0" name="strErrorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpotCapitalTradeAmountFind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stockCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpotCapitalTradeAmountFindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SpotCapitalTradeAmountFindResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAssetSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="traderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAssetSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="QueryAssetSummaryResult" nillable="true" type="q9:ArrayOfAssetSummaryEntity" />
+        <xs:element minOccurs="0" name="outMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_AccountHoldTableByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencytype" type="q10:QueryType.QueryCurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_AccountHoldTableByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryXH_AccountHoldTableByUserIDResult" nillable="true" type="q11:ArrayOfXH_AccountHoldTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_AccountHoldTableByUserIDAndPwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q12:QueryType.QueryCurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_AccountHoldTableByUserIDAndPwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryXH_AccountHoldTableByUserIDAndPwdResult" nillable="true" type="q13:ArrayOfXH_AccountHoldTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_AccountHoldTableByAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xh_Cap_Account" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q14:QueryType.QueryCurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_AccountHoldTableByAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryXH_AccountHoldTableByAccountResult" nillable="true" type="q15:ArrayOfXH_AccountHoldTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_AcccountHoldFreezeTableByEntrustNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entrustNo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="freezeType" type="q16:QueryType.QueryFreezeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_AcccountHoldFreezeTableByEntrustNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryXH_AcccountHoldFreezeTableByEntrustNoResult" nillable="true" type="q17:ArrayOfXH_AcccountHoldFreezeTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_AcccountHoldFreezeTableByAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="holdAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q18:QueryType.QueryCurrencyType" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="freezeType" type="q19:QueryType.QueryFreezeType" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q20:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_AcccountHoldFreezeTableByAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryXH_AcccountHoldFreezeTableByAccountResult" nillable="true" type="q21:ArrayOfXH_AcccountHoldFreezeTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_AcccountHoldFreezeTableByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q22:QueryType.QueryCurrencyType" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="freezeType" type="q23:QueryType.QueryFreezeType" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q24:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_AcccountHoldFreezeTableByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryXH_AcccountHoldFreezeTableByUserIDResult" nillable="true" type="q25:ArrayOfXH_AcccountHoldFreezeTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_HoldAccountTableByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q26:QueryType.QueryCurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_HoldAccountTableByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryQH_HoldAccountTableByUserIDResult" nillable="true" type="q27:ArrayOfQH_HoldAccountTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_HoldAccountTableByUserIDAndPwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q28:QueryType.QueryCurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_HoldAccountTableByUserIDAndPwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryQH_HoldAccountTableByUserIDAndPwdResult" nillable="true" type="q29:ArrayOfQH_HoldAccountTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_HoldAccountTableByAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xh_Cap_Account" nillable="true" type="xs:string" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q30:QueryType.QueryCurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_HoldAccountTableByAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryQH_HoldAccountTableByAccountResult" nillable="true" type="q31:ArrayOfQH_HoldAccountTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_HoldAccountFreezeTableByEntrustNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entrustNo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="freezeType" type="q32:QueryType.QueryFreezeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_HoldAccountFreezeTableByEntrustNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryQH_HoldAccountFreezeTableByEntrustNoResult" nillable="true" type="q33:ArrayOfQH_HoldAccountFreezeTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_HoldAccountFreezeTableByAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="holdAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q34:QueryType.QueryCurrencyType" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="freezeType" type="q35:QueryType.QueryFreezeType" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q36:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_HoldAccountFreezeTableByAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryQH_HoldAccountFreezeTableByAccountResult" nillable="true" type="q37:ArrayOfQH_HoldAccountFreezeTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_HoldAccountFreezeTableByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q38:QueryType.QueryCurrencyType" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="freezeType" type="q39:QueryType.QueryFreezeType" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q40:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_HoldAccountFreezeTableByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryQH_HoldAccountFreezeTableByUserIDResult" nillable="true" type="q41:ArrayOfQH_HoldAccountFreezeTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_CapitalAccountTableByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q42:QueryType.QueryCurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_CapitalAccountTableByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryQH_CapitalAccountTableByUserIDResult" nillable="true" type="q43:ArrayOfQH_CapitalAccountTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_CapitalAccountTableByUserIDAndPwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q44:QueryType.QueryCurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_CapitalAccountTableByUserIDAndPwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryQH_CapitalAccountTableByUserIDAndPwdResult" nillable="true" type="q45:ArrayOfQH_CapitalAccountTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_CapitalAccountTableByAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="qh_Cap_Account" nillable="true" type="xs:string" />
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q46:QueryType.QueryCurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_CapitalAccountTableByAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryQH_CapitalAccountTableByAccountResult" nillable="true" type="q47:ArrayOfQH_CapitalAccountTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_CapitalAccountFreezeTableByEntrustNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entrustNo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="freezeType" type="q48:QueryType.QueryFreezeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryQH_CapitalAccountFreezeTableByEntrustNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryQH_CapitalAccountFreezeTableByEntrustNoResult" nillable="true" type="q49:ArrayOfQH_CapitalAccountFreezeTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_CapitalAccountFreezeTableByAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="account" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q50:QueryType.QueryCurrencyType" />
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="freezeType" type="q51:QueryType.QueryFreezeType" />
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q52:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_CapitalAccountFreezeTableByAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryQH_CapitalAccountFreezeTableByAccountResult" nillable="true" type="q53:ArrayOfQH_CapitalAccountFreezeTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_CapitalAccountFreezeTableByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q54:QueryType.QueryCurrencyType" />
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="freezeType" type="q55:QueryType.QueryFreezeType" />
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q56:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_CapitalAccountFreezeTableByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryQH_CapitalAccountFreezeTableByUserIDResult" nillable="true" type="q57:ArrayOfQH_CapitalAccountFreezeTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_CapitalAccountTableByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q58:QueryType.QueryCurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_CapitalAccountTableByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryXH_CapitalAccountTableByUserIDResult" nillable="true" type="q59:ArrayOfXH_CapitalAccountTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_CapitalAccountTableByUserIDAndPwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q60:QueryType.QueryCurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_CapitalAccountTableByUserIDAndPwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryXH_CapitalAccountTableByUserIDAndPwdResult" nillable="true" type="q61:ArrayOfXH_CapitalAccountTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_CapitalAccountTableByAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xh_Cap_Account" nillable="true" type="xs:string" />
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q62:QueryType.QueryCurrencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_CapitalAccountTableByAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryXH_CapitalAccountTableByAccountResult" nillable="true" type="q63:ArrayOfXH_CapitalAccountTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_CapitalAccountFreezeTableByEntrustNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entrustNo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="freezeType" type="q64:QueryType.QueryFreezeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryXH_CapitalAccountFreezeTableByEntrustNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryXH_CapitalAccountFreezeTableByEntrustNoResult" nillable="true" type="q65:ArrayOfXH_CapitalAccountFreezeTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_CapitalAccountFreezeTableByAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="account" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q66:QueryType.QueryCurrencyType" />
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="freezeType" type="q67:QueryType.QueryFreezeType" />
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q68:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_CapitalAccountFreezeTableByAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryXH_CapitalAccountFreezeTableByAccountResult" nillable="true" type="q69:ArrayOfXH_CapitalAccountFreezeTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_CapitalAccountFreezeTableByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q70:QueryType.QueryCurrencyType" />
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="freezeType" type="q71:QueryType.QueryFreezeType" />
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q72:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_CapitalAccountFreezeTableByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryXH_CapitalAccountFreezeTableByUserIDResult" nillable="true" type="q73:ArrayOfXH_CapitalAccountFreezeTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" minOccurs="0" name="filter" nillable="true" type="q74:SpotEntrustConditionFindEntity" />
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q75:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryXH_TodayEntrustInfoByFilterAndUserIDPwdResult" nillable="true" type="q76:ArrayOfXH_TodayEntrustTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" minOccurs="0" name="filter" nillable="true" type="q77:SpotEntrustConditionFindEntity" />
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q78:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryXH_HistoryEntrustInfoByFilterAndUserIDPwdResult" nillable="true" type="q79:ArrayOfXH_HistoryEntrustTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_HistoryTradeByFilterAndUserIDPwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" minOccurs="0" name="filter" nillable="true" type="q80:SpotTradeConditionFindEntity" />
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q81:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_HistoryTradeByFilterAndUserIDPwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryXH_HistoryTradeByFilterAndUserIDPwdResult" nillable="true" type="q82:ArrayOfXH_HistoryTradeTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_TodayTradeByFilterAndUserIDPwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" minOccurs="0" name="filter" nillable="true" type="q83:SpotTradeConditionFindEntity" />
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q84:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryXH_TodayTradeByFilterAndUserIDPwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryXH_TodayTradeByFilterAndUserIDPwdResult" nillable="true" type="q85:ArrayOfXH_TodayTradeTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="filter" nillable="true" type="q86:FuturesEntrustConditionFindEntity" />
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q87:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryQH_TodayEntrustInfoByFilterAndUserIDPwdResult" nillable="true" type="q88:ArrayOfQH_TodayEntrustTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" minOccurs="0" name="filter" nillable="true" type="q89:FuturesEntrustConditionFindEntity" />
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q90:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryQH_HistoryEntrustInfoByFilterAndUserIDPwdResult" nillable="true" type="q91:ArrayOfQH_HistoryEntrustTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_HistoryTradeByFilterAndUserIDPwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" minOccurs="0" name="filter" nillable="true" type="q92:FuturesTradeConditionFindEntity" />
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q93:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_HistoryTradeByFilterAndUserIDPwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryQH_HistoryTradeByFilterAndUserIDPwdResult" nillable="true" type="q94:ArrayOfQH_HistoryTradeTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_TodayTradeByFilterAndUserIDPwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" minOccurs="0" name="filter" nillable="true" type="q95:FuturesTradeConditionFindEntity" />
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q96:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_TodayTradeByFilterAndUserIDPwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryQH_TodayTradeByFilterAndUserIDPwdResult" nillable="true" type="q97:ArrayOfQH_TodayTradeTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaginQueryUA_CapitalFlowTableByFilter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" type="xs:int" />
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="filter" nillable="true" type="q98:QueryUA_CapitalFlowFilter" />
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q99:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaginQueryUA_CapitalFlowTableByFilterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PaginQueryUA_CapitalFlowTableByFilterResult" nillable="true" type="q100:ArrayOfUA_CapitalFlowTableInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryUA_BankAccountByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryUA_BankAccountByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryUA_BankAccountByUserIDResult" nillable="true" type="q101:ArrayOfUA_BankAccountTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryUA_BankAccountByBankAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bankAccount" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryUA_BankAccountByBankAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="QueryUA_BankAccountByBankAccountResult" nillable="true" type="q102:ArrayOfUA_BankAccountTableInfo" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_TradeCapitalFlowDetailByAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q103:QueryType.QueryCurrencyType" />
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q104:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQueryQH_TradeCapitalFlowDetailByAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQueryQH_TradeCapitalFlowDetailByAccountResult" nillable="true" type="q105:ArrayOfQH_TradeCapitalFlowDetailInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQuerySPQH_TradeCapitalFlowDetailByAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model.QueryFilter" minOccurs="0" name="currencyType" type="q106:QueryType.QueryCurrencyType" />
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.Model" minOccurs="0" name="pageInfo" nillable="true" type="q107:PagingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PagingQuerySPQH_TradeCapitalFlowDetailByAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" minOccurs="0" name="PagingQuerySPQH_TradeCapitalFlowDetailByAccountResult" nillable="true" type="q108:ArrayOfQH_TradeCapitalFlowDetailInfo" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

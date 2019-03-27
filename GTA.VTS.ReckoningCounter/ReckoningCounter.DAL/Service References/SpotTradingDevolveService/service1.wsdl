@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SpotTradeRulesService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ISpotTradeRules_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISpotTradeRules_GetAllMinVolumeOfBusiness_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMinVolumeOfBusiness" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllMinVolumeOfBusiness_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMinVolumeOfBusinessResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetMinVolumeOfBusinessByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinVolumeOfBusinessByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetMinVolumeOfBusinessByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinVolumeOfBusinessByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllSpotCosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpotCosts" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllSpotCosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpotCostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetSpotCostsByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotCostsByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetSpotCostsByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotCostsByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllSpotHighLowControlType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpotHighLowControlType" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllSpotHighLowControlType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpotHighLowControlTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllSpotPosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpotPosition" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllSpotPosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpotPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetSpotPositionByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotPositionByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetSpotPositionByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotPositionByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllSpotTradeRules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpotTradeRules" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllSpotTradeRules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpotTradeRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetSpotTradeRulesByBreedClassID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotTradeRulesByBreedClassID" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetSpotTradeRulesByBreedClassID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotTradeRulesByBreedClassIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllSpotHighLowValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpotHighLowValue" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllSpotHighLowValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpotHighLowValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetSpotHighLowValueByHightLowID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotHighLowValueByHightLowID" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetSpotHighLowValueByHightLowID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotHighLowValueByHightLowIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetSpotHighLowValueByBreedClassHighLowID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotHighLowValueByBreedClassHighLowID" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetSpotHighLowValueByBreedClassHighLowID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpotHighLowValueByBreedClassHighLowIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetRightHightLowPricesByHightLowID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRightHightLowPricesByHightLowID" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetRightHightLowPricesByHightLowID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRightHightLowPricesByHightLowIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllValidDeclareType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllValidDeclareType" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllValidDeclareType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllValidDeclareTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetValidDeclareTypeByBreedClassValidID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidDeclareTypeByBreedClassValidID" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetValidDeclareTypeByBreedClassValidID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidDeclareTypeByBreedClassValidIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllValidDeclareValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllValidDeclareValue" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetAllValidDeclareValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllValidDeclareValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetValidDeclareValueByValidDeclareValueID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidDeclareValueByValidDeclareValueID" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetValidDeclareValueByValidDeclareValueID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidDeclareValueByValidDeclareValueIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetValidDeclareValueByBreedClassValidID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidDeclareValueByBreedClassValidID" />
+  </wsdl:message>
+  <wsdl:message name="ISpotTradeRules_GetValidDeclareValueByBreedClassValidID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidDeclareValueByBreedClassValidIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISpotTradeRules">
+    <wsdl:operation name="GetAllMinVolumeOfBusiness">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllMinVolumeOfBusiness" message="tns:ISpotTradeRules_GetAllMinVolumeOfBusiness_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllMinVolumeOfBusinessResponse" message="tns:ISpotTradeRules_GetAllMinVolumeOfBusiness_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMinVolumeOfBusinessByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetMinVolumeOfBusinessByBreedClassID" message="tns:ISpotTradeRules_GetMinVolumeOfBusinessByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetMinVolumeOfBusinessByBreedClassIDResponse" message="tns:ISpotTradeRules_GetMinVolumeOfBusinessByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpotCosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllSpotCosts" message="tns:ISpotTradeRules_GetAllSpotCosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllSpotCostsResponse" message="tns:ISpotTradeRules_GetAllSpotCosts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotCostsByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetSpotCostsByBreedClassID" message="tns:ISpotTradeRules_GetSpotCostsByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetSpotCostsByBreedClassIDResponse" message="tns:ISpotTradeRules_GetSpotCostsByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpotHighLowControlType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllSpotHighLowControlType" message="tns:ISpotTradeRules_GetAllSpotHighLowControlType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllSpotHighLowControlTypeResponse" message="tns:ISpotTradeRules_GetAllSpotHighLowControlType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpotPosition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllSpotPosition" message="tns:ISpotTradeRules_GetAllSpotPosition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllSpotPositionResponse" message="tns:ISpotTradeRules_GetAllSpotPosition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotPositionByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetSpotPositionByBreedClassID" message="tns:ISpotTradeRules_GetSpotPositionByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetSpotPositionByBreedClassIDResponse" message="tns:ISpotTradeRules_GetSpotPositionByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpotTradeRules">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllSpotTradeRules" message="tns:ISpotTradeRules_GetAllSpotTradeRules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllSpotTradeRulesResponse" message="tns:ISpotTradeRules_GetAllSpotTradeRules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotTradeRulesByBreedClassID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetSpotTradeRulesByBreedClassID" message="tns:ISpotTradeRules_GetSpotTradeRulesByBreedClassID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetSpotTradeRulesByBreedClassIDResponse" message="tns:ISpotTradeRules_GetSpotTradeRulesByBreedClassID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpotHighLowValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllSpotHighLowValue" message="tns:ISpotTradeRules_GetAllSpotHighLowValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllSpotHighLowValueResponse" message="tns:ISpotTradeRules_GetAllSpotHighLowValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotHighLowValueByHightLowID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetSpotHighLowValueByHightLowID" message="tns:ISpotTradeRules_GetSpotHighLowValueByHightLowID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetSpotHighLowValueByHightLowIDResponse" message="tns:ISpotTradeRules_GetSpotHighLowValueByHightLowID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotHighLowValueByBreedClassHighLowID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetSpotHighLowValueByBreedClassHighLowID" message="tns:ISpotTradeRules_GetSpotHighLowValueByBreedClassHighLowID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetSpotHighLowValueByBreedClassHighLowIDResponse" message="tns:ISpotTradeRules_GetSpotHighLowValueByBreedClassHighLowID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRightHightLowPricesByHightLowID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetRightHightLowPricesByHightLowID" message="tns:ISpotTradeRules_GetRightHightLowPricesByHightLowID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetRightHightLowPricesByHightLowIDResponse" message="tns:ISpotTradeRules_GetRightHightLowPricesByHightLowID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllValidDeclareType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllValidDeclareType" message="tns:ISpotTradeRules_GetAllValidDeclareType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllValidDeclareTypeResponse" message="tns:ISpotTradeRules_GetAllValidDeclareType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidDeclareTypeByBreedClassValidID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetValidDeclareTypeByBreedClassValidID" message="tns:ISpotTradeRules_GetValidDeclareTypeByBreedClassValidID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetValidDeclareTypeByBreedClassValidIDResponse" message="tns:ISpotTradeRules_GetValidDeclareTypeByBreedClassValidID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllValidDeclareValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllValidDeclareValue" message="tns:ISpotTradeRules_GetAllValidDeclareValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetAllValidDeclareValueResponse" message="tns:ISpotTradeRules_GetAllValidDeclareValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidDeclareValueByValidDeclareValueID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetValidDeclareValueByValidDeclareValueID" message="tns:ISpotTradeRules_GetValidDeclareValueByValidDeclareValueID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetValidDeclareValueByValidDeclareValueIDResponse" message="tns:ISpotTradeRules_GetValidDeclareValueByValidDeclareValueID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidDeclareValueByBreedClassValidID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpotTradeRules/GetValidDeclareValueByBreedClassValidID" message="tns:ISpotTradeRules_GetValidDeclareValueByBreedClassValidID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpotTradeRules/GetValidDeclareValueByBreedClassValidIDResponse" message="tns:ISpotTradeRules_GetValidDeclareValueByBreedClassValidID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ISpotTradeRules" type="tns:ISpotTradeRules">
+    <wsp:PolicyReference URI="#NetTcpBinding_ISpotTradeRules_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetAllMinVolumeOfBusiness">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetAllMinVolumeOfBusiness" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMinVolumeOfBusinessByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetMinVolumeOfBusinessByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpotCosts">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetAllSpotCosts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotCostsByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetSpotCostsByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpotHighLowControlType">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetAllSpotHighLowControlType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpotPosition">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetAllSpotPosition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotPositionByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetSpotPositionByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpotTradeRules">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetAllSpotTradeRules" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotTradeRulesByBreedClassID">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetSpotTradeRulesByBreedClassID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpotHighLowValue">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetAllSpotHighLowValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotHighLowValueByHightLowID">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetSpotHighLowValueByHightLowID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpotHighLowValueByBreedClassHighLowID">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetSpotHighLowValueByBreedClassHighLowID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRightHightLowPricesByHightLowID">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetRightHightLowPricesByHightLowID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllValidDeclareType">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetAllValidDeclareType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidDeclareTypeByBreedClassValidID">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetValidDeclareTypeByBreedClassValidID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllValidDeclareValue">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetAllValidDeclareValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidDeclareValueByValidDeclareValueID">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetValidDeclareValueByValidDeclareValueID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidDeclareValueByBreedClassValidID">
+      <soap12:operation soapAction="http://tempuri.org/ISpotTradeRules/GetValidDeclareValueByBreedClassValidID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SpotTradeRulesService">
+    <wsdl:port name="NetTcpBinding_ISpotTradeRules" binding="tns:NetTcpBinding_ISpotTradeRules">
+      <soap12:address location="net.tcp://localhost:9381/WcfSpotTradingRulesProvider" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:9381/WcfSpotTradingRulesProvider</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

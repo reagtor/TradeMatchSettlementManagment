@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/CommonObject" />
+  <xs:complexType name="StockOrderEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChannelNo" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="IsMarketPrice" type="q1:Types.MarketPriceType" />
+      <xs:element minOccurs="0" name="OrderPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OrderVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SholderCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StockCode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="TransactionDirection" type="q2:Types.TransactionDirection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockOrderEntity" nillable="true" type="tns:StockOrderEntity" />
+  <xs:complexType name="ResultDataEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultDataEntity" nillable="true" type="tns:ResultDataEntity" />
+  <xs:complexType name="FutureOrderEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChannelNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direction" type="tns:CHDirection" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="IsMarketPrice" type="q3:Types.MarketPriceType" />
+      <xs:element minOccurs="0" name="OrderPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OrderVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SholderCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StockCode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="TransactionDirection" type="q4:Types.TransactionDirection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FutureOrderEntity" nillable="true" type="tns:FutureOrderEntity" />
+  <xs:simpleType name="CHDirection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Open" />
+      <xs:enumeration value="Shut" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CHDirection" nillable="true" type="tns:CHDirection" />
+  <xs:complexType name="CommoditiesOrderEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChannelNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direction" type="tns:CHDirection" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="IsMarketPrice" type="q5:Types.MarketPriceType" />
+      <xs:element minOccurs="0" name="OrderPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OrderVolume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StockCode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/CommonObject" minOccurs="0" name="TransactionDirection" type="q6:Types.TransactionDirection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommoditiesOrderEntity" nillable="true" type="tns:CommoditiesOrderEntity" />
+  <xs:complexType name="CancelEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CancelCount" type="xs:int" />
+      <xs:element minOccurs="0" name="ChannelNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OldOrderNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StockCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CancelEntity" nillable="true" type="tns:CancelEntity" />
+  <xs:complexType name="CancelResultEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CancelResultEntity" nillable="true" type="tns:CancelResultEntity" />
+</xs:schema>

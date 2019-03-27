@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e9acd7a6-6690-44c0-87ba-59e7ec21bf06" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://192.168.5.12:9388/WcfCommonalityProvider/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="eecc03b8-ec73-4534-b60d-40c6d12787da" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9388/WcfCommonalityProvider/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="e1f3cc48-58fc-4d25-ae52-13313ac60f57" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9388/WcfCommonalityProvider/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="cc430f0a-9584-496d-b7d7-296264c676ed" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9388/WcfCommonalityProvider/mex" />
+    <MetadataFile FileName="ManagementCenter.Model.xsd" MetadataType="Schema" ID="fed49770-754d-42b0-a2bb-39b2db5e2e49" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9388/WcfCommonalityProvider/mex" />
+    <MetadataFile FileName="ManagementCenter.Model.CommonTable.xsd" MetadataType="Schema" ID="63cd85ae-3a11-4889-a576-d357311fecc2" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9388/WcfCommonalityProvider/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

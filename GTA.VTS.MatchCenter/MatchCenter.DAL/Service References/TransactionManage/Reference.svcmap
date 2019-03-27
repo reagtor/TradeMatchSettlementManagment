@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="be02b19d-3461-4a3e-becf-e070832d66ea" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:9388/WcfTransactionManageProvider/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="be8c9cf8-73cd-49aa-9e08-b67785909471" SourceId="1" SourceUrl="net.tcp://localhost:9388/WcfTransactionManageProvider/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="f7ef4c59-2378-4f63-b0e1-b4cd12117bbe" SourceId="1" SourceUrl="net.tcp://localhost:9388/WcfTransactionManageProvider/mex" />
+    <MetadataFile FileName="service3.xsd" MetadataType="Schema" ID="223282f1-2d47-4bb1-8ffd-222e54afc825" SourceId="1" SourceUrl="net.tcp://localhost:9388/WcfTransactionManageProvider/mex" />
+    <MetadataFile FileName="ManagementCenter.Model.CommonClass1.xsd" MetadataType="Schema" ID="b202a186-0051-4b6c-9a03-c85a412f793e" SourceId="1" SourceUrl="net.tcp://localhost:9388/WcfTransactionManageProvider/mex" />
+    <MetadataFile FileName="ManagementCenter.Model1.xsd" MetadataType="Schema" ID="cb3dfbf3-8784-4b93-a1f8-337301c9a5ba" SourceId="1" SourceUrl="net.tcp://localhost:9388/WcfTransactionManageProvider/mex" />
+    <MetadataFile FileName="ManagementCenter.Model.UserManage1.xsd" MetadataType="Schema" ID="f2e0b6eb-1b87-429f-a709-5e29c22bab78" SourceId="1" SourceUrl="net.tcp://localhost:9388/WcfTransactionManageProvider/mex" />
+    <MetadataFile FileName="Arrays1.xsd" MetadataType="Schema" ID="9f066421-1bb1-401b-a4b4-2165932f4953" SourceId="1" SourceUrl="net.tcp://localhost:9388/WcfTransactionManageProvider/mex" />
+    <MetadataFile FileName="ReckoningCounter.Entity.AccountManagementAndFindEntity1.xsd" MetadataType="Schema" ID="d02d5281-8fc7-4cfb-9302-2ff0fc8e1c63" SourceId="1" SourceUrl="net.tcp://localhost:9388/WcfTransactionManageProvider/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

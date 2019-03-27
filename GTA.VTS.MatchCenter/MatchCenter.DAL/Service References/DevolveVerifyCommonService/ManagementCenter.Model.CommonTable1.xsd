@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ManagementCenter.Model.CommonTable" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model.CommonTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" />
+  <xs:complexType name="ArrayOfOnstageCommodity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OnstageCommodity" nillable="true" type="tns:OnstageCommodity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOnstageCommodity" nillable="true" type="tns:ArrayOfOnstageCommodity" />
+  <xs:complexType name="OnstageCommodity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" base="q1:CM_Commodity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Nindcd" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OnstageCommodity" nillable="true" type="tns:OnstageCommodity" />
+</xs:schema>

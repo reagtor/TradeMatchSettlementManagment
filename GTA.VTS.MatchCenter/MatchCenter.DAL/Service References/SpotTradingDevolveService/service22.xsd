@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" />
+  <xs:element name="GetAllMinVolumeOfBusiness">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMinVolumeOfBusinessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllMinVolumeOfBusinessResult" nillable="true" type="q1:ArrayOfXH_MinVolumeOfBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMinVolumeOfBusinessByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMinVolumeOfBusinessByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetMinVolumeOfBusinessByBreedClassIDResult" nillable="true" type="q2:ArrayOfXH_MinVolumeOfBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpotCosts">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpotCostsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllSpotCostsResult" nillable="true" type="q3:ArrayOfXH_SpotCosts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotCostsByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotCostsByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetSpotCostsByBreedClassIDResult" nillable="true" type="q4:XH_SpotCosts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpotHighLowControlType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpotHighLowControlTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllSpotHighLowControlTypeResult" nillable="true" type="q5:ArrayOfXH_SpotHighLowControlType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpotPosition">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpotPositionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllSpotPositionResult" nillable="true" type="q6:ArrayOfXH_SpotPosition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotPositionByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotPositionByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetSpotPositionByBreedClassIDResult" nillable="true" type="q7:XH_SpotPosition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpotTradeRules">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpotTradeRulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllSpotTradeRulesResult" nillable="true" type="q8:ArrayOfXH_SpotTradeRules" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotTradeRulesByBreedClassID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotTradeRulesByBreedClassIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetSpotTradeRulesByBreedClassIDResult" nillable="true" type="q9:XH_SpotTradeRules" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpotHighLowValue">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpotHighLowValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllSpotHighLowValueResult" nillable="true" type="q10:ArrayOfXH_SpotHighLowValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotHighLowValueByHightLowID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hightLowValueID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotHighLowValueByHightLowIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetSpotHighLowValueByHightLowIDResult" nillable="true" type="q11:XH_SpotHighLowValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotHighLowValueByBreedClassHighLowID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassHighLowID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpotHighLowValueByBreedClassHighLowIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetSpotHighLowValueByBreedClassHighLowIDResult" nillable="true" type="q12:ArrayOfXH_SpotHighLowValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRightHightLowPricesByHightLowID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hightLowID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRightHightLowPricesByHightLowIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetRightHightLowPricesByHightLowIDResult" nillable="true" type="q13:ArrayOfXH_RightHightLowPrices" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllValidDeclareType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllValidDeclareTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllValidDeclareTypeResult" nillable="true" type="q14:ArrayOfXH_ValidDeclareType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidDeclareTypeByBreedClassValidID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassValidID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidDeclareTypeByBreedClassValidIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetValidDeclareTypeByBreedClassValidIDResult" nillable="true" type="q15:XH_ValidDeclareType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllValidDeclareValue">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllValidDeclareValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetAllValidDeclareValueResult" nillable="true" type="q16:ArrayOfXH_ValidDeclareValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidDeclareValueByValidDeclareValueID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="validDeclareValueID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidDeclareValueByValidDeclareValueIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetValidDeclareValueByValidDeclareValueIDResult" nillable="true" type="q17:XH_ValidDeclareValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidDeclareValueByBreedClassValidID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breedClassValidID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidDeclareValueByBreedClassValidIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ManagementCenter.Model" minOccurs="0" name="GetValidDeclareValueByBreedClassValidIDResult" nillable="true" type="q18:ArrayOfXH_ValidDeclareValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

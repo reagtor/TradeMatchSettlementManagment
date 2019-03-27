@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8825e84a-2dc2-4a10-b859-76763229ef9b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ArrayList" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://192.168.5.12:9188/DoOrderService/MEX" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="602c0aeb-2d7e-406c-880c-e1caf8564892" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9188/DoOrderService/MEX" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="1297d0a5-7fa5-45b4-868f-455a5a40a38f" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9188/DoOrderService/MEX" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="d0035a4e-d956-4520-94b6-767baa16bc26" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9188/DoOrderService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.xsd" MetadataType="Schema" ID="d8fab86e-c22d-46b7-bd96-37918e0852c4" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9188/DoOrderService/MEX" />
+    <MetadataFile FileName="GTA.VTS.Common.CommonObject.xsd" MetadataType="Schema" ID="e38466b0-e882-4539-889f-548949c79e66" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9188/DoOrderService/MEX" />
+    <MetadataFile FileName="ReckoningCounter.Entity.Contants.xsd" MetadataType="Schema" ID="770b4af0-a6aa-41fc-a608-6d667594df0d" SourceId="1" SourceUrl="net.tcp://192.168.5.12:9188/DoOrderService/MEX" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

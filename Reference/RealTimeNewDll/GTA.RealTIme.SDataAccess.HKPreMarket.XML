@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTA.RealTIme.SDataAccess.HKPreMarket</name>
+    </assembly>
+    <members>
+        <member name="T:RealTime.Server.SDataAccess.BreakUpMarket.SCapchgDataDao">
+            <summary>
+            作者：未知
+            修改：段进雄
+            修改日期：20091225
+            功能：股本数据访问类
+            修改内容：统一数据库访问方式(改调用SqlHelper)
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.BreakUpMarket.SCapchgDataDao.#ctor">
+            <summary>构造函数
+            构造函数
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.BreakUpMarket.SCapchgDataDao.GetCapchgDataReader">
+            <summary>
+            得到股本的阅读器
+            直接拼sql语句，放弃之前在股本库中使用的视图，便于sql代码统一管理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketMinPriceFlu">
+            <summary>
+            作者：Jacky（段进雄）
+            修改：段进雄
+            日期：2009-10-22
+            修改日期：20091225
+            功能：数据访问类HKPreMarketMinPriceFlu。
+            修改内容：统一数据库访问方式
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketMinPriceFlu.#ctor">
+            <summary>
+            数据库访问对象
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketMinPriceFlu.Add(RealTime.Server.SModelData.HqData.PreMarketPriceTable)">
+            <summary>
+            增加一条数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketMinPriceFlu.Update(RealTime.Server.SModelData.HqData.PreMarketPriceTable)">
+            <summary>
+            更新一条数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketMinPriceFlu.Delete(System.String)">
+            <summary>
+            删除SpreadTableCode等于strWhere数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketMinPriceFlu.GetModel">
+            <summary>
+            得到一个对象实体
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketMinPriceFlu.GetList(System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketMinPriceFlu.GetListArray(System.String)">
+            <summary>
+            获得数据列表（比DataSet效率高，推荐使用）
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketMinPriceFlu.ReaderBind(System.Data.IDataReader)">
+            <summary>
+            对象关系数据转换
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketstaticData">
+            <summary>
+             修改：段进雄
+            作者：Jacky（段进雄）
+            日期：2009-10-22
+            修改日期：20091225
+            功能：数据访问类HKPreMarketstaticData。
+            修改内容：统一数据库访问方式
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketstaticData.#ctor">
+            <summary>
+            数据库访问对象
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketstaticData.Exists(System.String)">
+            <summary>
+            是否存在该记录
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketstaticData.Add(RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            增加一条数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketstaticData.Update(RealTime.Server.SModelData.HqData.HKStaticData)">
+            <summary>
+            更新一条数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketstaticData.Delete">
+            <summary>
+            删除一条数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketstaticData.GetModel(System.String)">
+            <summary>
+            得到一个对象实体
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketstaticData.GetList(System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketstaticData.GetListArray(System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketstaticData.GetData(System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKPreMarketstaticData.ReaderBind(System.Data.IDataReader)">
+            <summary>
+            对象实体绑定数据(下一步建议使用ORM的一些框架)
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SDataAccess.HKPreMarket.HKStockDAL">
+            <summary>
+            作者：段进雄
+            日期：2009-11-10
+            功能：实时行情实体数据操作类。
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKStockDAL.Exists(System.String)">
+            <summary>
+            是否存在该记录
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKStockDAL.Add(RealTime.Server.SModelData.HqData.HKStock,System.Data.SqlClient.SqlTransaction)">
+            <summary>
+            增加一条数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKStockDAL.Update(RealTime.Server.SModelData.HqData.HKStock)">
+            <summary>
+            更新一条数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKStockDAL.Delete(System.String,System.Data.SqlClient.SqlTransaction)">
+            <summary>
+            删除一条数据 不再使用
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKStockDAL.GetModel(System.String)">
+            <summary>
+            得到一个对象实体
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKStockDAL.GetList(System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKStockDAL.GetListArray(System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKStockDAL.ReaderBind(System.Data.DataRow)">
+            <summary>
+            对象实体绑定数据
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.HKPreMarket.HKStockDAL.HanleString(System.String)">
+            <summary>
+            处理字符串
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RealTime.Server.SDataAccess.HqRecorder">
+            <summary>
+            历史遗留代码，已不再使用
+            暂留(段进雄)
+            
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SDataAccess.HKPreMarket.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SDataAccess.HKPreMarket.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:RealTime.Server.SDataAccess.HKPreMarket.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="T:RealTime.Server.SDataAccess.Users.SCheckUserDao">
+            <summary>
+            作者：未知
+            修改：段进雄
+            修改日期：20091225
+            功能：用户数据访问类
+            修改内容：统一数据库访问方式(改调用SqlHelper)
+            修改日期：20100113
+            修改内容：增加用户及市场品种权限等的验证
+            </summary>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.Users.SCheckUserDao.Login(RealTime.Server.SModelData.Users.UserData)">
+            <summary>
+            登录
+            </summary>
+            <param name="_UserData">用户信息</param>
+            <returns>登录结果</returns>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.Users.SCheckUserDao.Logout(RealTime.Server.SModelData.Users.UserData)">
+            <summary>
+            登出
+            </summary>
+            <param name="_UserData">用户信息</param>
+            <returns>登录结果</returns>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.Users.SCheckUserDao.GetMarketByUser(RealTime.Server.SModelData.Users.UserData)">
+            <summary>
+            获取用户所拥有的可接收品种的权限
+            </summary>
+            <param name="_UserData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.Users.SCheckUserDao.CheckUser(RealTime.Server.SModelData.Users.UserData)">
+            <summary>
+            用户验证
+            </summary>
+            <param name="ud"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.Users.SCheckUserDao.IsCheckUser(RealTime.Server.SModelData.Users.UserData)">
+            <summary>
+            检测用户是否合法
+            </summary>
+            <param name="_UserData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RealTime.Server.SDataAccess.Users.SCheckUserDao.CheckIpTrue(System.String,System.String,System.String)">
+            <summary>
+             检测IP是否在合法范围里
+            </summary>
+            <param name="_StartIP">起始IP</param>
+            <param name="_EndIP">结束IP</param>
+            <param name="_IP">IP</param>
+            <returns>是否在IP范围内</returns>
+        </member>
+    </members>
+</doc>

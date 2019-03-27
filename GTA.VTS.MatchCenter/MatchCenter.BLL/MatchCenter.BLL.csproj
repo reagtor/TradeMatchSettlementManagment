@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA0BEF11-5547-458A-A368-02412425D9DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MatchCenter.BLL</RootNamespace>
+    <AssemblyName>MatchCenter.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\MatchCenter.BLL.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GTA.RealTIme.CommonRealtimeMarketN, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.CommonRealtimeMarketN.dll</HintPath>
+    </Reference>
+    <Reference Include="GTA.RealTIme.RealtimeInterfaceN, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.RealtimeInterfaceN.dll</HintPath>
+    </Reference>
+    <Reference Include="GTA.RealTIme.SModelData, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\RealTimeNewDll\GTA.RealTIme.SModelData.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartThreadPool, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\SmartThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Net">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ShowMessage.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="ManagementCenter\CommonDataCacheProxy.cs" />
+    <Compile Include="Common\Singleton.cs" />
+    <Compile Include="Common\AppConfig.cs" />
+    <Compile Include="ManagementCenter\CommonDataManagerOperate.cs" />
+    <Compile Include="ManagementCenter\GetAllCommonDataFromManagerCenter.cs" />
+    <Compile Include="ManagementCenter\ManagementCenterDataAgent.cs" />
+    <Compile Include="MatchData\EntrustOrderData.cs" />
+    <Compile Include="MatchData\MarketVolumeData.cs" />
+    <Compile Include="MatchData\MatchCodeDictionary.cs" />
+    <Compile Include="MatchRules\CostPriceCalculate.cs" />
+    <Compile Include="MatchRules\DelegateMethodManager.cs" />
+    <Compile Include="MatchRules\EntrustOrderDataSort.cs" />
+    <Compile Include="MatchRules\FuseManager.cs" />
+    <Compile Include="MatchRules\MarketOpenClose.cs" />
+    <Compile Include="MatchRules\RulesDefaultValue.cs" />
+    <Compile Include="Match\CanceFailHKBack.cs" />
+    <Compile Include="Match\HKStockMatcher.cs" />
+    <Compile Include="Match\ModifyFailHKStockBack.cs" />
+    <Compile Include="Match\SPQHMatcher.cs" />
+    <Compile Include="Match\CanceFailCommoditiesBack.cs" />
+    <Compile Include="PushBack\TradePushBackImpl.cs" />
+    <Compile Include="PushBack\DobackService.cs" />
+    <Compile Include="Match\CanceFailBack.cs" />
+    <Compile Include="Match\CanceFailFutureBack.cs" />
+    <Compile Include="Match\CanceFailStockBack.cs" />
+    <Compile Include="Match\FutureMatcher.cs" />
+    <Compile Include="RealTime\RealTimeDataCache.cs" />
+    <Compile Include="RealTime\RealtimeMarketService.cs" />
+    <Compile Include="InitMatchCenter\InitMatchCenter.cs" />
+    <Compile Include="RealTime\RealtimeMarketSimulate.cs" />
+    <Compile Include="Service\DoOrderService.cs" />
+    <Compile Include="Service\OrderDealRpt.cs" />
+    <Compile Include="MatchRules\TradeTimeManager.cs" />
+    <Compile Include="wcfservice_out\interface\IDoOrder.cs" />
+    <Compile Include="wcfservice_out\interface\IDoOrderCallback.cs" />
+    <Compile Include="InitMatchCenter\MatchCenterManager.cs" />
+    <Compile Include="Match\MatchDevice.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Match\StockMatcher.cs" />
+    <Compile Include="wcfservice_out\interface\IOrderDealRpt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="类关系图.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GTA.VTS.Common\GTA.VTS.Common.CommonObject\GTA.VTS.Common.CommonObject.csproj">
+      <Project>{17E3419C-E66D-42B0-84F8-B0A15636D44C}</Project>
+      <Name>GTA.VTS.Common.CommonObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GTA.VTS.Common\GTA.VTS.Common.CommonUtility\GTA.VTS.Common.CommonUtility.csproj">
+      <Project>{1203CAC4-E92D-4948-BD36-F45B065C37AC}</Project>
+      <Name>GTA.VTS.Common.CommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MatchCenter.DAL\MatchCenter.DAL.csproj">
+      <Project>{95F6A5DA-C6A4-4C71-8130-C694F8506B00}</Project>
+      <Name>MatchCenter.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MatchCenter.Entity\MatchCenter.Entity.csproj">
+      <Project>{3AC6FAB7-8E95-4CE8-84C8-A203CEE9AE6A}</Project>
+      <Name>MatchCenter.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

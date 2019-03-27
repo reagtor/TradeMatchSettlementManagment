@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TraderFindService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ITraderFind_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Model" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/GTA.VTS.Common.CommonObject" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity.AccountManagementAndFindEntity" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ReckoningCounter.Entity" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITraderFind_BankCapitalFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:BankCapitalFind" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_BankCapitalFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BankCapitalFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotCapitalFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpotCapitalFind" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotCapitalFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpotCapitalFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesCapitalFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesCapitalFind" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesCapitalFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesCapitalFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotTodayEntrustFindByXhCapitalAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpotTodayEntrustFindByXhCapitalAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotTodayEntrustFindByXhCapitalAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpotTodayEntrustFindByXhCapitalAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesTodayEntrustFindByQhCapitalAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesTodayEntrustFindByQhCapitalAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesTodayEntrustFindByQhCapitalAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesTodayEntrustFindByQhCapitalAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotTodayTradeFindByCapitalAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpotTodayTradeFindByCapitalAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotTodayTradeFindByCapitalAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpotTodayTradeFindByCapitalAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesTodayTradeFindByXhCapitalAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesTodayTradeFindByXhCapitalAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesTodayTradeFindByXhCapitalAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesTodayTradeFindByXhCapitalAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotHistoryEntrustFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpotHistoryEntrustFind" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotHistoryEntrustFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpotHistoryEntrustFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesHistoryEntrustFindByQhCapitalAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesHistoryEntrustFindByQhCapitalAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesHistoryEntrustFindByQhCapitalAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesHistoryEntrustFindByQhCapitalAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotHistoryTradeFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpotHistoryTradeFind" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotHistoryTradeFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpotHistoryTradeFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesHistoryTradeFindByXhCapitalAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesHistoryTradeFindByXhCapitalAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesHistoryTradeFindByXhCapitalAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesHistoryTradeFindByXhCapitalAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotHoldFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpotHoldFind" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotHoldFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpotHoldFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesHoldFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesHoldFind" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesHoldFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesHoldFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_BankCapitalAccountTransferFlowFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:BankCapitalAccountTransferFlowFind" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_BankCapitalAccountTransferFlowFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BankCapitalAccountTransferFlowFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotCapitalAccountTransferFlowFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpotCapitalAccountTransferFlowFind" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_SpotCapitalAccountTransferFlowFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpotCapitalAccountTransferFlowFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesCapitalAccountTransferFlowFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesCapitalAccountTransferFlowFind" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_FuturesCapitalAccountTransferFlowFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FuturesCapitalAccountTransferFlowFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_TwoAccountsFreeTransferFunds_InputMessage">
+    <wsdl:part name="parameters" element="tns:TwoAccountsFreeTransferFunds" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_TwoAccountsFreeTransferFunds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TwoAccountsFreeTransferFundsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_AssetSummaryFind_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssetSummaryFind" />
+  </wsdl:message>
+  <wsdl:message name="ITraderFind_AssetSummaryFind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssetSummaryFindResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITraderFind">
+    <wsdl:operation name="BankCapitalFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/BankCapitalFind" message="tns:ITraderFind_BankCapitalFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/BankCapitalFindResponse" message="tns:ITraderFind_BankCapitalFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpotCapitalFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/SpotCapitalFind" message="tns:ITraderFind_SpotCapitalFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/SpotCapitalFindResponse" message="tns:ITraderFind_SpotCapitalFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FuturesCapitalFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/FuturesCapitalFind" message="tns:ITraderFind_FuturesCapitalFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/FuturesCapitalFindResponse" message="tns:ITraderFind_FuturesCapitalFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpotTodayEntrustFindByXhCapitalAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/SpotTodayEntrustFindByXhCapitalAccount" message="tns:ITraderFind_SpotTodayEntrustFindByXhCapitalAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/SpotTodayEntrustFindByXhCapitalAccountResponse" message="tns:ITraderFind_SpotTodayEntrustFindByXhCapitalAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FuturesTodayEntrustFindByQhCapitalAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/FuturesTodayEntrustFindByQhCapitalAccount" message="tns:ITraderFind_FuturesTodayEntrustFindByQhCapitalAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/FuturesTodayEntrustFindByQhCapitalAccountResponse" message="tns:ITraderFind_FuturesTodayEntrustFindByQhCapitalAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpotTodayTradeFindByCapitalAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/SpotTodayTradeFindByCapitalAccount" message="tns:ITraderFind_SpotTodayTradeFindByCapitalAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/SpotTodayTradeFindByCapitalAccountResponse" message="tns:ITraderFind_SpotTodayTradeFindByCapitalAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FuturesTodayTradeFindByXhCapitalAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/FuturesTodayTradeFindByXhCapitalAccount" message="tns:ITraderFind_FuturesTodayTradeFindByXhCapitalAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/FuturesTodayTradeFindByXhCapitalAccountResponse" message="tns:ITraderFind_FuturesTodayTradeFindByXhCapitalAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpotHistoryEntrustFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/SpotHistoryEntrustFind" message="tns:ITraderFind_SpotHistoryEntrustFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/SpotHistoryEntrustFindResponse" message="tns:ITraderFind_SpotHistoryEntrustFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FuturesHistoryEntrustFindByQhCapitalAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/FuturesHistoryEntrustFindByQhCapitalAccount" message="tns:ITraderFind_FuturesHistoryEntrustFindByQhCapitalAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/FuturesHistoryEntrustFindByQhCapitalAccountResponse" message="tns:ITraderFind_FuturesHistoryEntrustFindByQhCapitalAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpotHistoryTradeFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/SpotHistoryTradeFind" message="tns:ITraderFind_SpotHistoryTradeFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/SpotHistoryTradeFindResponse" message="tns:ITraderFind_SpotHistoryTradeFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FuturesHistoryTradeFindByXhCapitalAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/FuturesHistoryTradeFindByXhCapitalAccount" message="tns:ITraderFind_FuturesHistoryTradeFindByXhCapitalAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/FuturesHistoryTradeFindByXhCapitalAccountResponse" message="tns:ITraderFind_FuturesHistoryTradeFindByXhCapitalAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpotHoldFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/SpotHoldFind" message="tns:ITraderFind_SpotHoldFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/SpotHoldFindResponse" message="tns:ITraderFind_SpotHoldFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FuturesHoldFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/FuturesHoldFind" message="tns:ITraderFind_FuturesHoldFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/FuturesHoldFindResponse" message="tns:ITraderFind_FuturesHoldFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BankCapitalAccountTransferFlowFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/BankCapitalAccountTransferFlowFind" message="tns:ITraderFind_BankCapitalAccountTransferFlowFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/BankCapitalAccountTransferFlowFindResponse" message="tns:ITraderFind_BankCapitalAccountTransferFlowFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpotCapitalAccountTransferFlowFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/SpotCapitalAccountTransferFlowFind" message="tns:ITraderFind_SpotCapitalAccountTransferFlowFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/SpotCapitalAccountTransferFlowFindResponse" message="tns:ITraderFind_SpotCapitalAccountTransferFlowFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FuturesCapitalAccountTransferFlowFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/FuturesCapitalAccountTransferFlowFind" message="tns:ITraderFind_FuturesCapitalAccountTransferFlowFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/FuturesCapitalAccountTransferFlowFindResponse" message="tns:ITraderFind_FuturesCapitalAccountTransferFlowFind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TwoAccountsFreeTransferFunds">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/TwoAccountsFreeTransferFunds" message="tns:ITraderFind_TwoAccountsFreeTransferFunds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/TwoAccountsFreeTransferFundsResponse" message="tns:ITraderFind_TwoAccountsFreeTransferFunds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssetSummaryFind">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITraderFind/AssetSummaryFind" message="tns:ITraderFind_AssetSummaryFind_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITraderFind/AssetSummaryFindResponse" message="tns:ITraderFind_AssetSummaryFind_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ITraderFind" type="tns:ITraderFind">
+    <wsp:PolicyReference URI="#NetTcpBinding_ITraderFind_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="BankCapitalFind">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/BankCapitalFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpotCapitalFind">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/SpotCapitalFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuturesCapitalFind">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/FuturesCapitalFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpotTodayEntrustFindByXhCapitalAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/SpotTodayEntrustFindByXhCapitalAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuturesTodayEntrustFindByQhCapitalAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/FuturesTodayEntrustFindByQhCapitalAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpotTodayTradeFindByCapitalAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/SpotTodayTradeFindByCapitalAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuturesTodayTradeFindByXhCapitalAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/FuturesTodayTradeFindByXhCapitalAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpotHistoryEntrustFind">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/SpotHistoryEntrustFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuturesHistoryEntrustFindByQhCapitalAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/FuturesHistoryEntrustFindByQhCapitalAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpotHistoryTradeFind">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/SpotHistoryTradeFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuturesHistoryTradeFindByXhCapitalAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/FuturesHistoryTradeFindByXhCapitalAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpotHoldFind">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/SpotHoldFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuturesHoldFind">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/FuturesHoldFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BankCapitalAccountTransferFlowFind">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/BankCapitalAccountTransferFlowFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpotCapitalAccountTransferFlowFind">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/SpotCapitalAccountTransferFlowFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuturesCapitalAccountTransferFlowFind">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/FuturesCapitalAccountTransferFlowFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TwoAccountsFreeTransferFunds">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/TwoAccountsFreeTransferFunds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssetSummaryFind">
+      <soap12:operation soapAction="http://tempuri.org/ITraderFind/AssetSummaryFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TraderFindService">
+    <wsdl:port name="NetTcpBinding_ITraderFind" binding="tns:NetTcpBinding_ITraderFind">
+      <soap12:address location="net.tcp://localhost:9183/DoQueryService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:9183/DoQueryService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

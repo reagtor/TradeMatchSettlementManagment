@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OrderDealRpt" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IOrderDealRpt_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MatchCenter.Entity" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MatchCenter.Entity.HK" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOrderDealRpt_RegisterChannel_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterChannel" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_RegisterChannel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterChannelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_UnRegisterChannel_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnRegisterChannel" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_UnRegisterChannel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnRegisterChannelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_CheckChannel_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckChannel" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_CheckChannel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckChannelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessStockDealRpt_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStockDealRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessStockDealRpt_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStockDealRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessMercantileDealRpt_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessMercantileDealRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessMercantileDealRpt_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessMercantileDealRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessStockIndexFuturesDealRpt_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStockIndexFuturesDealRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessStockIndexFuturesDealRpt_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStockIndexFuturesDealRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessHKStockDealRpt_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessHKStockDealRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessHKStockDealRpt_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessHKStockDealRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessStockOrderRpt_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStockOrderRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessStockOrderRpt_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStockOrderRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessCommoditiesOrderRpt_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessCommoditiesOrderRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessCommoditiesOrderRpt_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessCommoditiesOrderRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessStockIndexFuturesOrderRpt_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStockIndexFuturesOrderRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessStockIndexFuturesOrderRpt_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStockIndexFuturesOrderRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessHKStockOrderRpt_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessHKStockOrderRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ProcessHKStockOrderRpt_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ProcessHKStockOrderRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_CancelStockOrderRpt_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CancelStockOrderRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_CancelStockOrderRpt_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CancelStockOrderRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_CancelCommoditiesOrderRpt_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CancelCommoditiesOrderRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_CancelCommoditiesOrderRpt_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CancelCommoditiesOrderRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_CancelStockIndexFuturesOrderRpt_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CancelStockIndexFuturesOrderRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_CancelStockIndexFuturesOrderRpt_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CancelStockIndexFuturesOrderRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_CancelHKStockOrderRpt_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CancelHKStockOrderRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_CancelHKStockOrderRpt_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CancelHKStockOrderRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ModifyHKStockOrderRpt_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ModifyHKStockOrderRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOrderDealRpt_ModifyHKStockOrderRpt_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ModifyHKStockOrderRptResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOrderDealRpt">
+    <wsdl:operation name="RegisterChannel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/RegisterChannel" message="tns:IOrderDealRpt_RegisterChannel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/RegisterChannelResponse" message="tns:IOrderDealRpt_RegisterChannel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnRegisterChannel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/UnRegisterChannel" message="tns:IOrderDealRpt_UnRegisterChannel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/UnRegisterChannelResponse" message="tns:IOrderDealRpt_UnRegisterChannel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckChannel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/CheckChannel" message="tns:IOrderDealRpt_CheckChannel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/CheckChannelResponse" message="tns:IOrderDealRpt_CheckChannel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessStockDealRpt">
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessStockDealRpt" message="tns:IOrderDealRpt_ProcessStockDealRpt_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessStockDealRptResponse" message="tns:IOrderDealRpt_ProcessStockDealRpt_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMercantileDealRpt">
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessMercantileDealRpt" message="tns:IOrderDealRpt_ProcessMercantileDealRpt_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessMercantileDealRptResponse" message="tns:IOrderDealRpt_ProcessMercantileDealRpt_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessStockIndexFuturesDealRpt">
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessStockIndexFuturesDealRpt" message="tns:IOrderDealRpt_ProcessStockIndexFuturesDealRpt_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessStockIndexFuturesDealRptResponse" message="tns:IOrderDealRpt_ProcessStockIndexFuturesDealRpt_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessHKStockDealRpt">
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessHKStockDealRpt" message="tns:IOrderDealRpt_ProcessHKStockDealRpt_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessHKStockDealRptResponse" message="tns:IOrderDealRpt_ProcessHKStockDealRpt_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessStockOrderRpt">
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessStockOrderRpt" message="tns:IOrderDealRpt_ProcessStockOrderRpt_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessStockOrderRptResponse" message="tns:IOrderDealRpt_ProcessStockOrderRpt_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCommoditiesOrderRpt">
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessCommoditiesOrderRpt" message="tns:IOrderDealRpt_ProcessCommoditiesOrderRpt_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessCommoditiesOrderRptResponse" message="tns:IOrderDealRpt_ProcessCommoditiesOrderRpt_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessStockIndexFuturesOrderRpt">
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessStockIndexFuturesOrderRpt" message="tns:IOrderDealRpt_ProcessStockIndexFuturesOrderRpt_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessStockIndexFuturesOrderRptResponse" message="tns:IOrderDealRpt_ProcessStockIndexFuturesOrderRpt_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessHKStockOrderRpt">
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessHKStockOrderRpt" message="tns:IOrderDealRpt_ProcessHKStockOrderRpt_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/ProcessHKStockOrderRptResponse" message="tns:IOrderDealRpt_ProcessHKStockOrderRpt_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelStockOrderRpt">
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/CancelStockOrderRpt" message="tns:IOrderDealRpt_CancelStockOrderRpt_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/CancelStockOrderRptResponse" message="tns:IOrderDealRpt_CancelStockOrderRpt_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelCommoditiesOrderRpt">
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/CancelCommoditiesOrderRpt" message="tns:IOrderDealRpt_CancelCommoditiesOrderRpt_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/CancelCommoditiesOrderRptResponse" message="tns:IOrderDealRpt_CancelCommoditiesOrderRpt_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelStockIndexFuturesOrderRpt">
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/CancelStockIndexFuturesOrderRpt" message="tns:IOrderDealRpt_CancelStockIndexFuturesOrderRpt_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/CancelStockIndexFuturesOrderRptResponse" message="tns:IOrderDealRpt_CancelStockIndexFuturesOrderRpt_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelHKStockOrderRpt">
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/CancelHKStockOrderRpt" message="tns:IOrderDealRpt_CancelHKStockOrderRpt_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/CancelHKStockOrderRptResponse" message="tns:IOrderDealRpt_CancelHKStockOrderRpt_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyHKStockOrderRpt">
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderDealRpt/ModifyHKStockOrderRpt" message="tns:IOrderDealRpt_ModifyHKStockOrderRpt_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderDealRpt/ModifyHKStockOrderRptResponse" message="tns:IOrderDealRpt_ModifyHKStockOrderRpt_InputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IOrderDealRpt" type="tns:IOrderDealRpt">
+    <wsp:PolicyReference URI="#NetTcpBinding_IOrderDealRpt_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="RegisterChannel">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/RegisterChannel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnRegisterChannel">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/UnRegisterChannel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckChannel">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/CheckChannel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessStockDealRpt">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/ProcessStockDealRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMercantileDealRpt">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/ProcessMercantileDealRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessStockIndexFuturesDealRpt">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/ProcessStockIndexFuturesDealRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessHKStockDealRpt">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/ProcessHKStockDealRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessStockOrderRpt">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/ProcessStockOrderRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCommoditiesOrderRpt">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/ProcessCommoditiesOrderRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessStockIndexFuturesOrderRpt">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/ProcessStockIndexFuturesOrderRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessHKStockOrderRpt">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/ProcessHKStockOrderRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelStockOrderRpt">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/CancelStockOrderRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelCommoditiesOrderRpt">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/CancelCommoditiesOrderRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelStockIndexFuturesOrderRpt">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/CancelStockIndexFuturesOrderRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelHKStockOrderRpt">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/CancelHKStockOrderRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyHKStockOrderRpt">
+      <soap12:operation soapAction="http://tempuri.org/IOrderDealRpt/ModifyHKStockOrderRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrderDealRpt">
+    <wsdl:port name="NetTcpBinding_IOrderDealRpt" binding="tns:NetTcpBinding_IOrderDealRpt">
+      <soap12:address location="net.tcp://localhost:9288/OrderDealRpt" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:9288/OrderDealRpt</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
